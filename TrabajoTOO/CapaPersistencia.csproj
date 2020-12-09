@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="ExtraDatos.cs" />
+    <Compile Include="ExtraTabla.cs" />
+    <Compile Include="VNuevoDatos.cs" />
+    <Compile Include="VNuevoTabla.cs" />
+    <Compile Include="VSegundaManoTabla.cs" />
+    <Compile Include="VSegundaManoDatos.cs" />
     <Compile Include="VehiculoTabla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VehiculoDatos.cs" />

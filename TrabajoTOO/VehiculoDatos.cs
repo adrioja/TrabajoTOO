@@ -44,13 +44,6 @@ namespace TrabajoTOO
                 return this.potencia;
             }
         }
-        public double Pvp 
-        {
-            get
-            {
-                return this.pvp;
-            }
-        }
         public double PvRecomendado 
         {
             get
