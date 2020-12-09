@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabajoTOO
+namespace Vehiculo
 {
-    public class TablaClientes: KeyedColection
+    public class Vehiculo
     {
+        public Vehiculo()
+        {
+
+        }
     }
 }
