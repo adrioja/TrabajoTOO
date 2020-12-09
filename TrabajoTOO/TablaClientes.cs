@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    public class Class1
+    public class TablaClientes: KeyedColection
     {
     }
 }
