@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace TrabajoTOO
 {
-    class VehiculoDatos 
+   abstract class VehiculoDatos 
     {
         private String numBastidor;
         private String marca;

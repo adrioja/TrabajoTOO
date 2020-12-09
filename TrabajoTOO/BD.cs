@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace TrabajoTOO
 {
     class BD
     {
+        private BD() { }
+        //-------------------------------------------------------------------------------------------------------------------------
         private static VehiculoTabla vehiculos;
         public static VehiculoTabla Vehiculos
         {
@@ -18,7 +21,7 @@ namespace TrabajoTOO
                 return vehiculos;
             }
         }
-
+        //-------------------------------------------------------------------------------------------------------------------------
         private static VSegundaManoTabla vSegundaMano;
         public static VSegundaManoTabla VSegundaMano
         {
@@ -30,6 +33,23 @@ namespace TrabajoTOO
             }
         }
 
+        public static void InsertVSegundaMano(VSegundaManoDatos v)
+        {
+            BD.VSegundaMano.Add(v);
+        }
+        public static void DeleteVSegundaMano(VSegundaManoDatos v)
+        {
+            BD.VSegundaMano.Remove(v.NumBastidor);
+        }
+        public static void SelectVSegundaMano(VSegundaManoDatos v)
+        {
+            //FALTA HACERLO EN TODOS
+        }
+        public static void UpdateVSegundaMano(VSegundaManoDatos v)
+        {
+            //FALTA //FALTA HACERLO EN TODOS
+        }
+        //-------------------------------------------------------------------------------------------------------------------------
         private static VNuevoTabla vNuevos;
         public static VNuevoTabla VNuevos
         {
@@ -40,7 +60,15 @@ namespace TrabajoTOO
                 return vNuevos;
             }
         }
-
+        public static void InsertVNuevos(VNuevoDatos v)
+        {
+            BD.VNuevos.Add(v);
+        }
+        public static void DeleteVNuevos(VNuevoDatos v)
+        {
+            BD.VNuevos.Remove(v.NumBastidor);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------
         private static ExtraTabla extras;
         public static ExtraTabla Extras
         {
@@ -51,6 +79,14 @@ namespace TrabajoTOO
                 return extras;
             }
         }
-
+        public static void InsertExtras(ExtraDatos e)
+        {
+            BD.Extras.Add(e);
+        }
+        public static void DeleteExtras(ExtraDatos e)
+        {
+            BD.Extras.Remove(e.Nombre);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------
     }
 }

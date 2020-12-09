@@ -44,6 +44,7 @@
     <Compile Include="BD.cs" />
     <Compile Include="ExtraDatos.cs" />
     <Compile Include="ExtraTabla.cs" />
+    <Compile Include="Persistencia.cs" />
     <Compile Include="VNuevoDatos.cs" />
     <Compile Include="VNuevoTabla.cs" />
     <Compile Include="VSegundaManoTabla.cs" />
