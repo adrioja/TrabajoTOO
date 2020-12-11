@@ -9,6 +9,8 @@ namespace TrabajoTOO
 {
     class VSegundaManoTabla : KeyedCollection<String, VSegundaManoDatos>
     {
+        public VSegundaManoTabla() : base() { }
+
         protected override string GetKeyForItem(VSegundaManoDatos item)
         {
             return item.NumBastidor;

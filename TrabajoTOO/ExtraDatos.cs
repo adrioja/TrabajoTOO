@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class ExtraDatos
+    public class ExtraDatos
     {
         private String nombre;
         public String Nombre
@@ -23,6 +23,12 @@ namespace TrabajoTOO
             {
                 return this.precioFijo;
             }
+        }
+
+        public ExtraDatos(String nombre, double precioFijo)
+        {
+            this.nombre = nombre;
+            this.precioFijo = precioFijo;
         }
     }
 }

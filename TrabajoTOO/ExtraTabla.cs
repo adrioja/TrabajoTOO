@@ -9,6 +9,8 @@ namespace TrabajoTOO
 {
     class ExtraTabla : KeyedCollection<String, ExtraDatos>
     {
+        public ExtraTabla() : base() { }
+
         protected override string GetKeyForItem(ExtraDatos item)
         {
             return item.Nombre;

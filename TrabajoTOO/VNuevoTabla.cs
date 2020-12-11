@@ -9,6 +9,8 @@ namespace TrabajoTOO
 {
     class VNuevoTabla : KeyedCollection<String, VNuevoDatos>
     {
+        public VNuevoTabla() : base() { }
+
         protected override string GetKeyForItem(VNuevoDatos item)
         {
             return item.NumBastidor;

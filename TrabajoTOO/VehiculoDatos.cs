@@ -6,15 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 namespace TrabajoTOO
 {
-   abstract class VehiculoDatos 
+   public class VehiculoDatos 
     {
         private String numBastidor;
         private String marca;
         private String modelo;
         private int potencia;
-        private double pvp;
         private double pvRecomendado;
-        private double iva;
 
         public string NumBastidor 
         {
@@ -51,12 +49,14 @@ namespace TrabajoTOO
                 return this.pvRecomendado;
             }
         }
-        public double Iva 
+
+        public VehiculoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen)
         {
-            get
-            {
-                return this.iva;
-            }
+            this.numBastidor = numBastidor;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.potencia = potencia;
+            this.pvRecomendado = pvRecomen;
         }
     }
 }

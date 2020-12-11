@@ -9,6 +9,8 @@ namespace TrabajoTOO
 {
     class VehiculoTabla : KeyedCollection<String, VehiculoDatos>
     {
+        public VehiculoTabla() : base() { }
+
         protected override string GetKeyForItem(VehiculoDatos item)
         {
             return item.NumBastidor;

@@ -21,6 +21,29 @@ namespace TrabajoTOO
                 return vehiculos;
             }
         }
+
+        private static void InsertVehiculo(VehiculoDatos v)
+        {
+            BD.Vehiculos.Add(v);
+        }
+        private static void DeleteVehiculo(VehiculoDatos v)
+        {
+            BD.Vehiculos.Remove(v.NumBastidor);
+        }
+        private static VehiculoDatos SelectVehiculo(VehiculoDatos v)
+        {
+            IEnumerable<VehiculoDatos> vehiculo = BD.Vehiculos.Select(Vehiculos => v);
+            if (vehiculo == null)
+            {
+                return null;
+            }
+            else
+                return vehiculo.First();
+        }
+        private static void UpdateVehiculo(VehiculoDatos v)
+        {
+            //FALTA //FALTA HACERLO EN TODOS
+        }
         //-------------------------------------------------------------------------------------------------------------------------
         private static VSegundaManoTabla vSegundaMano;
         public static VSegundaManoTabla VSegundaMano
@@ -36,14 +59,22 @@ namespace TrabajoTOO
         public static void InsertVSegundaMano(VSegundaManoDatos v)
         {
             BD.VSegundaMano.Add(v);
+            BD.InsertVehiculo(v);
         }
         public static void DeleteVSegundaMano(VSegundaManoDatos v)
         {
             BD.VSegundaMano.Remove(v.NumBastidor);
+            BD.DeleteVehiculo(v);
         }
-        public static void SelectVSegundaMano(VSegundaManoDatos v)
+        public static VSegundaManoDatos SelectVSegundaMano(VSegundaManoDatos v)
         {
-            //FALTA HACERLO EN TODOS
+            IEnumerable<VSegundaManoDatos> vehiculo = BD.VSegundaMano.Select(VSegundaMano=>v);
+            if (vehiculo==null)
+            {
+                return null;
+            }
+            else
+                return vehiculo.First();
         }
         public static void UpdateVSegundaMano(VSegundaManoDatos v)
         {
@@ -63,10 +94,26 @@ namespace TrabajoTOO
         public static void InsertVNuevos(VNuevoDatos v)
         {
             BD.VNuevos.Add(v);
+            BD.InsertVehiculo(v);
         }
         public static void DeleteVNuevos(VNuevoDatos v)
         {
             BD.VNuevos.Remove(v.NumBastidor);
+            BD.DeleteVehiculo(v);
+        }
+        public static VNuevoDatos SelectVNuevo(VNuevoDatos v)
+        {
+            IEnumerable<VNuevoDatos> vehiculo = BD.VNuevos.Select(VNuevos => v);
+            if (vehiculo == null)
+            {
+                return null;
+            }
+            else
+                return vehiculo.First();
+        }
+        public static void UpdateVNuevo(VNuevoDatos v)
+        {
+            //FALTA //FALTA HACERLO EN TODOS
         }
         //-------------------------------------------------------------------------------------------------------------------------
         private static ExtraTabla extras;
@@ -86,6 +133,20 @@ namespace TrabajoTOO
         public static void DeleteExtras(ExtraDatos e)
         {
             BD.Extras.Remove(e.Nombre);
+        }
+        public static ExtraDatos SelectExtra(ExtraDatos e)
+        {
+            IEnumerable<ExtraDatos> extra = BD.Extras.Select(Extras => e);
+            if (extra == null)
+            {
+                return null;
+            }
+            else
+                return extra.First();
+        }
+        public static void UpdateExtra(ExtraDatos e)
+        {
+            //FALTA //FALTA HACERLO EN TODOS
         }
         //-------------------------------------------------------------------------------------------------------------------------
     }

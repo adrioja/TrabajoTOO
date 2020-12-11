@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class VNuevoDatos:VehiculoDatos
+    public class VNuevoDatos:VehiculoDatos
     {
+        public VNuevoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen) : base(numBastidor, marca, modelo, potencia, pvRecomen)
+        {
 
+        }
     }
 }
