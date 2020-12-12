@@ -11,7 +11,7 @@ namespace TrabajoTOO
         String cliente;
         DateTime fechaRealizacion;
         String estado;
-        
+
         public string Cliente
         {
             get { return this.cliente; }
@@ -24,7 +24,7 @@ namespace TrabajoTOO
 
         public String Estado
         {
-            get { return this.estado;}
+            get { return this.estado; }
         }
     }
 }

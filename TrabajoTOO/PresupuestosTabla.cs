@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class PresupuestosTabla : KeyedCollection<string,PresupuestosDato>
+    class PresupuestosTabla : KeyedCollection<string, PresupuestosDato>
     {
         protected override string GetKeyForItem(PresupuestosDato item)
         {

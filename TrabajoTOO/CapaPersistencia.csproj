@@ -47,6 +47,11 @@
     <Compile Include="ExtraDatos.cs" />
     <Compile Include="ExtraTabla.cs" />
     <Compile Include="Persistencia.cs" />
+    <Compile Include="PresupuestosDato.cs" />
+    <Compile Include="PresupuestosTabla.cs" />
+    <Compile Include="Presupuesto_VehiculoClave.cs" />
+    <Compile Include="Presupuesto_VehiculosDato.cs" />
+    <Compile Include="Presupuesto_VehiculosTabla.cs" />
     <Compile Include="VNuevoDatos.cs" />
     <Compile Include="VNuevoTabla.cs" />
     <Compile Include="VSegundaManoTabla.cs" />
