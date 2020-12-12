@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
-    class Presupuesto:IEquatable<Presupuesto>
+    public class Presupuesto:IEquatable<Presupuesto>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
         private DateTime fechaRealizacion;
@@ -60,7 +60,7 @@ namespace modeloDominio
         /////////////////////////// METODOS ///////////////////////////
         public bool Equals(Presupuesto other)
         {
-            //Terminar
+            return ((other.FechaRealizacion.Equals(this.FechaRealizacion) && (other.VehiculoComprado.Equals(this.VehiculoComprado))));
         }
 
         public override string ToString()

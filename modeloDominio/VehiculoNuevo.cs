@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
-    class VehiculoNuevo: Vehiculo
+    public class VehiculoNuevo: Vehiculo
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
         private List<Extra> extrasAñadidos;
@@ -20,8 +20,20 @@ namespace modeloDominio
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
-        
 
+        public override double PVP
+        {
+            
+            get
+            {
+                double extras = 0;
+                foreach(Extra e in this.extrasAñadidos)
+                {
+                    extras += e.PrecioFijo;
+                }
+                return base.PVP + extras;
+            }
+        }
 
         /////////////////////////// METODOS ///////////////////////////
         public void anadirExtra(Extra e)

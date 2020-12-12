@@ -44,9 +44,13 @@ namespace TrabajoTOO
             else
                 return vehiculo.First();
         }
-        public static void UpdateVehiculo(VehiculoDatos v)
+        public static void UpdateVehiculo(VehiculoDatos v1 , VehiculoDatos v2)
         {
-            //FALTA //FALTA HACERLO EN TODOS
+            if (SelectVehiculo(v1) != null && v1.NumBastidor == v2.NumBastidor)
+            {
+                BD.DeleteVehiculo(v1);
+                BD.InsertVehiculo(v2);
+            }
         }
         
         
@@ -84,9 +88,14 @@ namespace TrabajoTOO
             else
                 return vehiculo.First();
         }
-        public static void UpdateVSegundaMano(VSegundaManoDatos v)
+        public static void UpdateVSegundaMano(VSegundaManoDatos v1, VSegundaManoDatos v2 )
         {
-            //FALTA //FALTA HACERLO EN TODOS
+            if (SelectVSegundaMano(v1) != null && v1.NumBastidor == v2.NumBastidor)
+            {
+                BD.DeleteVSegundaMano(v1);
+                BD.UpdateVehiculo(v1, v2);
+                BD.InsertVSegundaMano(v2);
+            }
         }
         
         
@@ -124,9 +133,14 @@ namespace TrabajoTOO
             else
                 return vehiculo.First();
         }
-        public static void UpdateVNuevo(VNuevoDatos v)
+        public static void UpdateVNuevo(VNuevoDatos v1, VNuevoDatos v2)
         {
-            //FALTA //FALTA HACERLO EN TODOS
+            if (SelectVNuevo(v1) != null && v1.NumBastidor == v2.NumBastidor)
+            {
+                BD.DeleteVNuevos(v1);
+                BD.UpdateVehiculo(v1, v2);
+                BD.InsertVNuevos(v2);
+            }
         }
        
         
@@ -161,9 +175,13 @@ namespace TrabajoTOO
             else
                 return extra.First();
         }
-        public static void UpdateExtra(ExtraDatos e)
+        public static void UpdateExtra(ExtraDatos e1, ExtraDatos e2)
         {
-            //FALTA //FALTA HACERLO EN TODOS
+            if (SelectExtra(e1) != null && e1.Nombre==e2.Nombre)
+            {
+                BD.DeleteExtras(e1);
+                BD.InsertExtras(e2);
+            }
         }
 
 
@@ -197,9 +215,10 @@ namespace TrabajoTOO
             else
                 return cliente.First();
         }
+
         public static void UpdateCliente(ClienteDatos c, ClienteDatos c2)
         {
-            if (c.DNI == c2.DNI)
+            if(SelectCliente(c)!=null && c.DNI==c2.DNI)
             {
                 BD.DeleteCliente(c);
                 BD.InsertCliente(c2);

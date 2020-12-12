@@ -81,15 +81,22 @@ namespace modeloDominio
         {
             get
             {
-                //Terminar
+                if (this is VehiculoNuevo)
+                {
+                    return 10;
+                }
+                else
+                {
+                    return 21;
+                }
             }
         }
 
-        public double PVP
+        public virtual double PVP
         {
             get
             {
-                //Terminar
+                return (this.PvRecomendado*(1+IVA));
             }
         }
 

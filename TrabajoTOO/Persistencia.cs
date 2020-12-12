@@ -13,57 +13,72 @@ namespace TrabajoTOO
         public Persistencia() { }
         //--------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO NUEVO------------------------------------------
-        public static void Añadir(VNuevoDatos v)
+        public static void Añadir(VehiculoNuevo v1)
         {
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor,v1.Marca,v1.Modelo,v1.Potencia,v1.PvRecomendado);
             BD.InsertVNuevos(v);
         }
-        public static void Borrar(VNuevoDatos v)
+        public static void Borrar(VehiculoNuevo v1)
         {
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             BD.DeleteVNuevos(v);
         }
-        public static VNuevoDatos Buscar(VNuevoDatos v)
+        public static VNuevoDatos Buscar(VehiculoNuevo v1)
         {
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             return BD.SelectVNuevo(v);
         }
-        public static void Actualizar(VNuevoDatos v)
+        public static void Actualizar(VehiculoNuevo v1, VehiculoNuevo v2)
         {
-            //Falta
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            VNuevoDatos v3 = new VNuevoDatos(v2.NumBastidor, v2.Marca, v2.Modelo, v2.Potencia, v2.PvRecomendado);
+            BD.UpdateVNuevo(v, v3);
         }
         //---------------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO SEGUNDA MANO------------------------------------------
-        public static void Añadir(VSegundaManoDatos v)
+        public static void Añadir(VehiculoSegundaMano v1)
         {
+            VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion,v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             BD.InsertVSegundaMano(v);
         }
-        public static void Borrar(VSegundaManoDatos v)
+        public static void Borrar(VehiculoSegundaMano v1)
         {
+            VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion, v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             BD.DeleteVSegundaMano(v);
         }
-        public static VSegundaManoDatos Buscar(VSegundaManoDatos v)
+        public static VSegundaManoDatos Buscar(VehiculoSegundaMano v1)
         {
+            VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion, v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             return BD.SelectVSegundaMano(v);
         }
-        public static void Actualizar(VSegundaManoDatos v)
+        public static void Actualizar(VehiculoSegundaMano v1, VehiculoSegundaMano v2)
         {
-            //Falta
+            VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion, v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            VSegundaManoDatos v3 = new VSegundaManoDatos(v2.Matricula, v2.FechaMatriculacion, v2.NumBastidor, v2.Marca, v2.Modelo, v2.Potencia, v2.PvRecomendado);
+            BD.UpdateVSegundaMano(v, v3);
         }
         //----------------------------------------------------------------------------------------------------------------
         //------------------------------------------------EXTRA-----------------------------------------------------------
-        public static void Añadir(ExtraDatos v)
+        public static void Añadir(Extra v1)
         {
+            ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             BD.InsertExtras(v);
         }
-        public static void Borrar(ExtraDatos v)
+        public static void Borrar(Extra v1)
         {
+            ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             BD.DeleteExtras(v);
         }
-        public static ExtraDatos Buscar(ExtraDatos v)
+        public static ExtraDatos Buscar(Extra v1)
         {
+            ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             return BD.SelectExtra(v);
         }
-        public static void Actualizar(ExtraDatos v)
+        public static void Actualizar(Extra v1, Extra v2)
         {
-            //Falta
+            ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
+            ExtraDatos v3 = new ExtraDatos(v2.Nombre, v2.PrecioFijo);
+            BD.UpdateExtra(v, v3);
         }
         //-------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------CLIENTE------------------------------------------------------------
@@ -104,11 +119,7 @@ namespace TrabajoTOO
         {
             ClienteDatos clienteViejo = new ClienteDatos(c1.DNI, c1.Nombre, c1.Telefono, c1.Categoria.ToString());
             ClienteDatos clienteNuevo = new ClienteDatos(c2.DNI, c2.Nombre, c2.Telefono, c2.Categoria.ToString());
-
-            if (c1.Equals(c2))
-            {
-                BD.UpdateCliente(clienteViejo, clienteNuevo);
-            }
+            BD.UpdateCliente(clienteViejo, clienteNuevo);
         }
     }
 }

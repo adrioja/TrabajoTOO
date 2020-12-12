@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
-    class Extra: IEquatable<Extra>
+    public class Extra: IEquatable<Extra>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
         private string nombre;

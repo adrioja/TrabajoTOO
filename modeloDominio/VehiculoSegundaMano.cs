@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
-    class VehiculoSegundaMano: Vehiculo
+    public class VehiculoSegundaMano: Vehiculo
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
         private string matricula;
@@ -37,6 +37,14 @@ namespace modeloDominio
                 return this.fechaMatriculacion;
             }
             
+        }
+
+        public override double PVP
+        {
+            get
+            {
+                return base.PVP;
+            }
         }
 
 
