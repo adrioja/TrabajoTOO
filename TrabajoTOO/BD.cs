@@ -10,7 +10,11 @@ namespace TrabajoTOO
     class BD
     {
         private BD() { }
-        //-------------------------------------------------------------------------------------------------------------------------
+        
+        
+        
+        //-----------------VEHICULO------------------------------------------------------------------------------------------
+        
         private static VehiculoTabla vehiculos;
         public static VehiculoTabla Vehiculos
         {
@@ -22,15 +26,15 @@ namespace TrabajoTOO
             }
         }
 
-        private static void InsertVehiculo(VehiculoDatos v)
+        public static void InsertVehiculo(VehiculoDatos v)
         {
             BD.Vehiculos.Add(v);
         }
-        private static void DeleteVehiculo(VehiculoDatos v)
+        public static void DeleteVehiculo(VehiculoDatos v)
         {
             BD.Vehiculos.Remove(v.NumBastidor);
         }
-        private static VehiculoDatos SelectVehiculo(VehiculoDatos v)
+        public static VehiculoDatos SelectVehiculo(VehiculoDatos v)
         {
             IEnumerable<VehiculoDatos> vehiculo = BD.Vehiculos.Select(Vehiculos => v);
             if (vehiculo == null)
@@ -40,11 +44,15 @@ namespace TrabajoTOO
             else
                 return vehiculo.First();
         }
-        private static void UpdateVehiculo(VehiculoDatos v)
+        public static void UpdateVehiculo(VehiculoDatos v)
         {
             //FALTA //FALTA HACERLO EN TODOS
         }
-        //-------------------------------------------------------------------------------------------------------------------------
+        
+        
+       
+        //--------------VEHICULO SEGUNDA MANO-------------------------------------------------------------------------------------------------------
+        
         private static VSegundaManoTabla vSegundaMano;
         public static VSegundaManoTabla VSegundaMano
         {
@@ -80,7 +88,12 @@ namespace TrabajoTOO
         {
             //FALTA //FALTA HACERLO EN TODOS
         }
-        //-------------------------------------------------------------------------------------------------------------------------
+        
+        
+        
+        
+        //-------------VEHICULO NUEVO-------------------------------------------------------------------------------------------
+        
         private static VNuevoTabla vNuevos;
         public static VNuevoTabla VNuevos
         {
@@ -115,7 +128,11 @@ namespace TrabajoTOO
         {
             //FALTA //FALTA HACERLO EN TODOS
         }
-        //-------------------------------------------------------------------------------------------------------------------------
+       
+        
+        
+        //-------------EXTRA-----------------------------------------------------------------------------------------------------------
+        
         private static ExtraTabla extras;
         public static ExtraTabla Extras
         {
@@ -148,6 +165,46 @@ namespace TrabajoTOO
         {
             //FALTA //FALTA HACERLO EN TODOS
         }
-        //-------------------------------------------------------------------------------------------------------------------------
+
+
+        //---------------------CLIENTE----------------------------------------------------------------------------------------
+
+        private static ClienteTabla clientes;
+        public static ClienteTabla Clientes
+        {
+            get
+            {
+                if (clientes == null)
+                    clientes = new ClienteTabla();
+                return clientes;
+            }
+        }
+        public static void InsertCliente(ClienteDatos c)
+        {
+            BD.Clientes.Add(c);
+        }
+        public static void DeleteCliente(ClienteDatos c)
+        {
+            BD.Clientes.Remove(c.DNI);
+        }
+        public static ClienteDatos SelectCliente(ClienteDatos c)
+        {
+            IEnumerable<ClienteDatos> cliente = BD.Clientes.Select(Clientes => c);
+            if (cliente == null)
+            {
+                return null;
+            }
+            else
+                return cliente.First();
+        }
+        public static void UpdateCliente(ClienteDatos c, ClienteDatos c2)
+        {
+            if (c.DNI == c2.DNI)
+            {
+                BD.DeleteCliente(c);
+                BD.InsertCliente(c2);
+            }
+        }
+
     }
 }
