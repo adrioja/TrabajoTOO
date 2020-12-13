@@ -10,7 +10,7 @@ namespace modeloDominio
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
         private String id;
-        private Cliente cliente;
+        private Cliente clienteAsociado;
         private DateTime fechaRealizacion;
         private string estado;
         private List<Vehiculo> vehiculos;
@@ -21,7 +21,7 @@ namespace modeloDominio
         public Presupuesto(String id, Cliente cliente,DateTime fechaRealizacion, string estado, List<Vehiculo> vehiculos)
         {
             this.id = id;
-            this.cliente=cliente;
+            this.clienteAsociado=cliente;
             this.fechaRealizacion = fechaRealizacion;
             this.estado = estado;
             this.vehiculos = vehiculos;
@@ -38,11 +38,11 @@ namespace modeloDominio
                 return this.id;
             }
         }
-        public Cliente Cliente
+        public Cliente ClienteAsociado
         {
             get
             {
-                return this.cliente;
+                return this.clienteAsociado;
             }
         }
         public DateTime FechaRealizacion
@@ -93,7 +93,7 @@ namespace modeloDominio
 
         public override string ToString()
         {
-            return "- Presupuesto: [Fecha realización: " + this.FechaRealizacion.ToString() + "], [Estado: " + this.Estado + "], [Vehiculo comprado: " + this.VehiculoComprado.ToString() +"]";
+            return "- Presupuesto: [Numero de referencia: " + this.Id +" ], [Fecha realización: " + this.FechaRealizacion.ToString() + "], [Estado: " + this.Estado + "], [Vehiculo comprado: " + this.VehiculoComprado.ToString() +"]";
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class PresupuestosDato
+    public class PresupuestosDato
     {
         String id;
         String cliente;

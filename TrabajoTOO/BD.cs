@@ -266,7 +266,7 @@ namespace TrabajoTOO
         }
         //---------------------PRESUPUESTO_VEHICULOS----------------------------------------------------------------------------------------
 
-        private static Presupuesto_VehiculosTabla presupuesto_vehiculos;
+        /*private static Presupuesto_VehiculosTabla presupuesto_vehiculos;
         public static Presupuesto_VehiculosTabla Presupuesto_vehiculos
         {
             get
@@ -302,6 +302,8 @@ namespace TrabajoTOO
                 BD.DeletePresupuesto_Vehiculos(p);
                 BD.InsertPresupuesto_Vehiculos(p2);
             }
-        }
+        }*/
+
+        //
     }
 }

@@ -92,9 +92,9 @@ namespace TrabajoTOO
             ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             BD.DeleteCliente(cliente);
         }
-        public static Cliente Buscar(Cliente c)
+        public static ClienteDatos Buscar(Cliente c)
         {
-            ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
+            /*ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             if (BD.SelectCliente(cliente) != null)
             {
                 ClienteDatos datosClienteNuevo = BD.SelectCliente(cliente);
@@ -113,7 +113,11 @@ namespace TrabajoTOO
                 Cliente clienteNuevo =new Cliente(datosClienteNuevo.DNI,datosClienteNuevo.Nombre, datosClienteNuevo.Telefono, categoria);
                 return clienteNuevo;
             }
-            else return null;
+            else return null;*/
+
+            ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
+            return BD.SelectCliente(cliente);
+
         }
         public static void Actualizar(Cliente c1, Cliente c2)
         {
@@ -125,28 +129,23 @@ namespace TrabajoTOO
         //------------------------------------------------PRESUPUESTO------------------------------------------------------------
         public static void Añadir(Presupuesto p)
         {
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado);
             BD.InsertPresupuesto(presupuesto);
         }
         public static void Borrar(Presupuesto p)
         {
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado);
             BD.DeletePresupuesto(presupuesto);
         }
-        public static Presupuesto Buscar(Presupuesto p)
+        public static PresupuestosDato Buscar(Presupuesto p)
         {
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
-            if (BD.SelectPresupuesto(presupuesto) != null)
-            {
-                PresupuestosDato datosPresupuestoNuevo = BD.SelectPresupuesto(presupuesto);
-    
-            }
-            else return null;
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado);
+            return BD.SelectPresupuesto(presupuesto);
         }
         public static void Actualizar(Presupuesto p1, Presupuesto p2)
         {
-            PresupuestosDato presupuestoViejo = new PresupuestosDato(p1.Id, p1.Cliente.DNI, p1.FechaRealizacion, p1.Estado);
-            PresupuestosDato presupuestoNuevo = new PresupuestosDato(p2.Id, p2.Cliente.DNI, p2.FechaRealizacion, p2.Estado);
+            PresupuestosDato presupuestoViejo = new PresupuestosDato(p1.Id, p1.ClienteAsociado.DNI, p1.FechaRealizacion, p1.Estado);
+            PresupuestosDato presupuestoNuevo = new PresupuestosDato(p2.Id, p2.ClienteAsociado.DNI, p2.FechaRealizacion, p2.Estado);
             BD.UpdatePresupuesto(presupuestoViejo, presupuestoNuevo);
         }
     }
