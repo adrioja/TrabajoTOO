@@ -225,5 +225,83 @@ namespace TrabajoTOO
             }
         }
 
+        //---------------------PRESUPUESTO----------------------------------------------------------------------------------------
+
+        private static PresupuestosTabla presupuestos;
+        public static PresupuestosTabla Presupuestos
+        {
+            get
+            {
+                if (presupuestos == null)
+                    presupuestos = new PresupuestosTabla();
+                return presupuestos;
+            }
+        }
+        public static void InsertPresupuesto(PresupuestosDato p)
+        {
+            BD.Presupuestos.Add(p);
+        }
+        public static void DeletePresupuesto(PresupuestosDato p)
+        {
+            BD.Presupuestos.Remove(p.Id);
+        }
+        public static PresupuestosDato SelectPresupuesto(PresupuestosDato p)
+        {
+            IEnumerable<PresupuestosDato> presupuesto = BD.Presupuestos.Select(Presupuestos => p);
+            if (presupuestos == null)
+            {
+                return null;
+            }
+            else
+                return presupuesto.First();
+        }
+
+        public static void UpdatePresupuesto(PresupuestosDato p, PresupuestosDato p2)
+        {
+            if (SelectPresupuesto(p) != null && p.Id == p2.Id)
+            {
+                BD.DeletePresupuesto(p);
+                BD.InsertPresupuesto(p2);
+            }
+        }
+        //---------------------PRESUPUESTO_VEHICULOS----------------------------------------------------------------------------------------
+
+        private static Presupuesto_VehiculosTabla presupuesto_vehiculos;
+        public static Presupuesto_VehiculosTabla Presupuesto_vehiculos
+        {
+            get
+            {
+                if (presupuesto_vehiculos == null)
+                    presupuesto_vehiculos = new Presupuesto_VehiculosTabla();
+                return presupuesto_vehiculos;
+            }
+        }
+        public static void InsertPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
+        {
+            BD.Presupuesto_vehiculos.Add(p);
+        }
+        public static void DeletePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
+        {
+            BD.Presupuesto_vehiculos.Remove(p.Clave);
+        }
+        public static Presupuesto_VehiculosDato SelectPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
+        {
+            IEnumerable<Presupuesto_VehiculosDato> presupuesto_vehiculo = BD.Presupuesto_vehiculos.Select(Presupuesto_vehiculos => p);
+            if (presupuesto_vehiculos == null)
+            {
+                return null;
+            }
+            else
+                return presupuesto_vehiculo.First();
+        }
+
+        public static void UpdatePresupuesto_Vehiculos(Presupuesto_VehiculosDato p, Presupuesto_VehiculosDato p2)
+        {
+            if (SelectPresupuesto_Vehiculos(p) != null && p.Clave == p2.Clave)
+            {
+                BD.DeletePresupuesto_Vehiculos(p);
+                BD.InsertPresupuesto_Vehiculos(p2);
+            }
+        }
     }
 }

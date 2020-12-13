@@ -121,5 +121,33 @@ namespace TrabajoTOO
             ClienteDatos clienteNuevo = new ClienteDatos(c2.DNI, c2.Nombre, c2.Telefono, c2.Categoria.ToString());
             BD.UpdateCliente(clienteViejo, clienteNuevo);
         }
+
+        //------------------------------------------------PRESUPUESTO------------------------------------------------------------
+        public static void Añadir(Presupuesto p)
+        {
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
+            BD.InsertPresupuesto(presupuesto);
+        }
+        public static void Borrar(Presupuesto p)
+        {
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
+            BD.DeletePresupuesto(presupuesto);
+        }
+        public static Presupuesto Buscar(Presupuesto p)
+        {
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.Cliente.DNI, p.FechaRealizacion, p.Estado);
+            if (BD.SelectPresupuesto(presupuesto) != null)
+            {
+                PresupuestosDato datosPresupuestoNuevo = BD.SelectPresupuesto(presupuesto);
+    
+            }
+            else return null;
+        }
+        public static void Actualizar(Presupuesto p1, Presupuesto p2)
+        {
+            PresupuestosDato presupuestoViejo = new PresupuestosDato(p1.Id, p1.Cliente.DNI, p1.FechaRealizacion, p1.Estado);
+            PresupuestosDato presupuestoNuevo = new PresupuestosDato(p2.Id, p2.Cliente.DNI, p2.FechaRealizacion, p2.Estado);
+            BD.UpdatePresupuesto(presupuestoViejo, presupuestoNuevo);
+        }
     }
 }

@@ -14,5 +14,10 @@ namespace TrabajoTOO
         {
             get { return this.clave; }
         }
+
+        public Presupuesto_VehiculosDato(Presupuesto_VehiculoClave clave)
+        {
+            this.clave = clave;
+        }
     }
 }

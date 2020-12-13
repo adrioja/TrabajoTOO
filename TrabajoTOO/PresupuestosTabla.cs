@@ -11,7 +11,7 @@ namespace TrabajoTOO
     {
         protected override string GetKeyForItem(PresupuestosDato item)
         {
-            return item.Cliente;
+            return item.Id;
         }
     }
 }

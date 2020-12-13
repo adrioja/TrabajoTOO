@@ -26,5 +26,11 @@ namespace TrabajoTOO
         {
             get { return this.vehiculo; }
         }
+        public Presupuesto_VehiculoClave(String cliente, DateTime fecha, String vehiculo)
+        {
+            this.cliente = cliente;
+            this.fechaRealizacion = fecha;
+            this.vehiculo = vehiculo;
+        }
     }
 }

@@ -9,21 +9,42 @@ namespace modeloDominio
     public class Presupuesto:IEquatable<Presupuesto>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
+        private String id;
+        private Cliente cliente;
         private DateTime fechaRealizacion;
         private string estado;
-        private Vehiculo vehiculoComprado;
+        private List<Vehiculo> vehiculos;
+        private String vehiculoComprado;
 
 
         /////////////////////////// CONSTRUCTOR ///////////////////////////
-        public Presupuesto(DateTime fechaRealizacion, string estado, Vehiculo vehiculoComprado)
+        public Presupuesto(String id, Cliente cliente,DateTime fechaRealizacion, string estado, List<Vehiculo> vehiculos)
         {
+            this.id = id;
+            this.cliente=cliente;
             this.fechaRealizacion = fechaRealizacion;
             this.estado = estado;
-            this.vehiculoComprado = vehiculoComprado;
+            this.vehiculos = vehiculos;
+            this.vehiculoComprado = " ";
         }
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
+        
+        public String Id
+        {
+            get 
+            {
+                return this.id;
+            }
+        }
+        public Cliente Cliente
+        {
+            get
+            {
+                return this.cliente;
+            }
+        }
         public DateTime FechaRealizacion
         {
             get
@@ -44,7 +65,14 @@ namespace modeloDominio
             }
         }
 
-        public Vehiculo VehiculoComprado
+        public List<Vehiculo> Vehiculos
+        {
+            get
+            {
+                return this.vehiculos;
+            }
+        }
+        public String VehiculoComprado
         {
             get
             {
@@ -60,7 +88,7 @@ namespace modeloDominio
         /////////////////////////// METODOS ///////////////////////////
         public bool Equals(Presupuesto other)
         {
-            return ((other.FechaRealizacion.Equals(this.FechaRealizacion) && (other.VehiculoComprado.Equals(this.VehiculoComprado))));
+            return (other.id.Equals(this.id));
         }
 
         public override string ToString()
