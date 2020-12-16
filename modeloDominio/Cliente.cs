@@ -13,8 +13,7 @@ namespace modeloDominio
         private string nombre;
         private string telefono;
         private CategoriaCliente categoria;
-        //private List<Presupuesto> listaPresupuestos;
-
+        
 
         /////////////////////////// CONSTRUCTOR ///////////////////////////
         public Cliente(string dni, string nombre, string telefono, CategoriaCliente categoria)
@@ -23,7 +22,11 @@ namespace modeloDominio
             this.nombre = nombre;
             this.telefono = telefono;
             this.categoria = categoria;
-            //this.listaPresupuestos = new List<Presupuesto>();
+            
+        }
+        public Cliente(string dni)
+        {
+            this.dni = dni;                     
         }
 
 
@@ -87,14 +90,7 @@ namespace modeloDominio
             }
         }
 
-       /* public List<Presupuesto> ListaPresupuestos
-        {
-            get
-            {
-                return this.listaPresupuestos;
-            }
-
-        }*/
+       
 
         /////////////////////////// METODOS ///////////////////////////
         public bool Equals(Cliente other)

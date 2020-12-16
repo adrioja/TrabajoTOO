@@ -20,6 +20,11 @@ namespace modeloDominio
             this.fechaMatriculacion = fechaMatriculacion;
         }
 
+        public VehiculoSegundaMano(String numBastidor) : base(numBastidor)
+        {
+            
+        }
+
 
         /////////////////////////// PROPIEDADES ///////////////////////////
         public string Matricula

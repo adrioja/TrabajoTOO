@@ -28,9 +28,14 @@ namespace modeloDominio
             this.vehiculoComprado = " ";
         }
 
+        public Presupuesto(String id)
+        {
+            this.id = id;
+        }
+
 
         /////////////////////////// PROPIEDADES ///////////////////////////
-        
+
         public String Id
         {
             get 

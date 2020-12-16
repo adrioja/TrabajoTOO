@@ -8,28 +8,21 @@ namespace TrabajoTOO
 {
     class Presupuesto_VehiculoClave
     {
-        String cliente;
-        DateTime fechaRealizacion;
+        String id;
         String vehiculo;
 
-        public string Cliente
+        public string Id
         {
-            get { return this.cliente; }
-        }
-
-        public DateTime FechaRealizacion
-        {
-            get { return this.fechaRealizacion; }
+            get { return this.id; }
         }
 
         public String Vehiculo
         {
             get { return this.vehiculo; }
         }
-        public Presupuesto_VehiculoClave(String cliente, DateTime fecha, String vehiculo)
+        public Presupuesto_VehiculoClave(String id, String vehiculo)
         {
-            this.cliente = cliente;
-            this.fechaRealizacion = fecha;
+            this.id = id;
             this.vehiculo = vehiculo;
         }
     }

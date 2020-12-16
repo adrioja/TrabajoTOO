@@ -27,6 +27,11 @@ namespace modeloDominio
             this.pvRecomendado = pvRecomendado;
         }
 
+        public Vehiculo(String numBastidor)
+        {
+            this.numBastidor = numBastidor;
+        }
+
 
         /////////////////////////// PROPIEDADES ///////////////////////////
         public string NumBastidor

@@ -18,12 +18,16 @@ namespace modeloDominio
             this.extrasAñadidos = new List<Extra>();
         }
 
+        public VehiculoNuevo(String numBastidor) : base(numBastidor)
+        {
+            
+        }
+
 
         /////////////////////////// PROPIEDADES ///////////////////////////
 
         public override double PVP
-        {
-            
+        {           
             get
             {
                 double extras = 0;
@@ -31,7 +35,15 @@ namespace modeloDominio
                 {
                     extras += e.PrecioFijo;
                 }
-                return base.PVP + extras;
+                return base.PVP + extras*IVA;
+            }
+        }
+
+        public List<Extra> Extras
+        {
+            get
+            {
+                return this.extrasAñadidos;
             }
         }
 
@@ -50,7 +62,7 @@ namespace modeloDominio
                 this.extrasAñadidos.Remove(e);
             }
         }
-        public List<String> listaExtrasAñadidos()
+        private List<String> listaExtrasAñadidos()
         {
             List<String> extras = new List<string>();
             foreach (Extra e in this.extrasAñadidos)

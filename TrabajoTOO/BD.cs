@@ -26,32 +26,28 @@ namespace TrabajoTOO
             }
         }
 
-        public static void InsertVehiculo(VehiculoDatos v)
+        private static void InsertVehiculo(VehiculoDatos v)
         {
             BD.Vehiculos.Add(v);
         }
-        public static void DeleteVehiculo(VehiculoDatos v)
+        private static void DeleteVehiculo(VehiculoDatos v)
         {
             BD.Vehiculos.Remove(v.NumBastidor);
         }
-        public static VehiculoDatos SelectVehiculo(VehiculoDatos v)
-        {
-            IEnumerable<VehiculoDatos> vehiculo = BD.Vehiculos.Select(Vehiculos => v);
-            if (vehiculo == null)
-            {
-                return null;
-            }
-            else
-                return vehiculo.First();
+        private static VehiculoDatos SelectVehiculo(VehiculoDatos v)
+        {    
+           return BD.vehiculos[v.NumBastidor];
         }
-        public static void UpdateVehiculo(VehiculoDatos v1 , VehiculoDatos v2)
+        private static void UpdateVehiculo(VehiculoDatos v)
         {
-            if (SelectVehiculo(v1) != null && v1.NumBastidor == v2.NumBastidor)
-            {
-                BD.DeleteVehiculo(v1);
-                BD.InsertVehiculo(v2);
-            }
+            BD.DeleteVehiculo(v);
+            BD.InsertVehiculo(v);           
         }
+        private static bool ExistsVehiculo(VehiculoDatos v)
+        {
+            return BD.vehiculos.Contains(v.NumBastidor);
+        }
+
         
         
        
@@ -70,8 +66,8 @@ namespace TrabajoTOO
 
         public static void InsertVSegundaMano(VSegundaManoDatos v)
         {
-            BD.VSegundaMano.Add(v);
             BD.InsertVehiculo(v);
+            BD.VSegundaMano.Add(v);           
         }
         public static void DeleteVSegundaMano(VSegundaManoDatos v)
         {
@@ -80,29 +76,25 @@ namespace TrabajoTOO
         }
         public static VSegundaManoDatos SelectVSegundaMano(VSegundaManoDatos v)
         {
-            IEnumerable<VSegundaManoDatos> vehiculo = BD.VSegundaMano.Select(VSegundaMano=>v);
-            if (vehiculo==null)
-            {
-                return null;
-            }
-            else
-                return vehiculo.First();
+            return BD.vSegundaMano[v.NumBastidor];
         }
-        public static void UpdateVSegundaMano(VSegundaManoDatos v1, VSegundaManoDatos v2 )
+        public static void UpdateVSegundaMano(VSegundaManoDatos v)
         {
-            if (SelectVSegundaMano(v1) != null && v1.NumBastidor == v2.NumBastidor)
-            {
-                BD.DeleteVSegundaMano(v1);
-                BD.UpdateVehiculo(v1, v2);
-                BD.InsertVSegundaMano(v2);
-            }
+            BD.DeleteVSegundaMano(v);
+            BD.DeleteVehiculo(v);
+            BD.InsertVehiculo(v);
+            BD.InsertVSegundaMano(v);
         }
-        
-        
-        
-        
+        public static bool ExistsVSegundaMano(VSegundaManoDatos v)
+        {
+            return BD.ExistsVehiculo(v);
+        }
+
+
+
+
         //-------------VEHICULO NUEVO-------------------------------------------------------------------------------------------
-        
+
         private static VNuevoTabla vNuevos;
         public static VNuevoTabla VNuevos
         {
@@ -115,38 +107,35 @@ namespace TrabajoTOO
         }
         public static void InsertVNuevos(VNuevoDatos v)
         {
-            BD.VNuevos.Add(v);
             BD.InsertVehiculo(v);
+            BD.vNuevos.Add(v);
         }
         public static void DeleteVNuevos(VNuevoDatos v)
         {
-            BD.VNuevos.Remove(v.NumBastidor);
+            BD.vNuevos.Remove(v.NumBastidor);
             BD.DeleteVehiculo(v);
         }
+
         public static VNuevoDatos SelectVNuevo(VNuevoDatos v)
         {
-            IEnumerable<VNuevoDatos> vehiculo = BD.VNuevos.Select(VNuevos => v);
-            if (vehiculo == null)
-            {
-                return null;
-            }
-            else
-                return vehiculo.First();
+            return BD.vNuevos[v.NumBastidor];
         }
-        public static void UpdateVNuevo(VNuevoDatos v1, VNuevoDatos v2)
+        public static void UpdateVNuevo(VNuevoDatos v)
         {
-            if (SelectVNuevo(v1) != null && v1.NumBastidor == v2.NumBastidor)
-            {
-                BD.DeleteVNuevos(v1);
-                BD.UpdateVehiculo(v1, v2);
-                BD.InsertVNuevos(v2);
-            }
+            BD.DeleteVNuevos(v);
+            BD.DeleteVehiculo(v);
+            BD.InsertVehiculo(v);
+            BD.InsertVNuevos(v);
         }
-       
-        
-        
+        public static bool ExistsVNuevo(VNuevoDatos v)
+        {
+            return BD.ExistsVehiculo(v);
+        }
+
+
+
         //-------------EXTRA-----------------------------------------------------------------------------------------------------------
-        
+
         private static ExtraTabla extras;
         public static ExtraTabla Extras
         {
@@ -167,21 +156,12 @@ namespace TrabajoTOO
         }
         public static ExtraDatos SelectExtra(ExtraDatos e)
         {
-            IEnumerable<ExtraDatos> extra = BD.Extras.Select(Extras => e);
-            if (extra == null)
-            {
-                return null;
-            }
-            else
-                return extra.First();
+            return BD.extras[e.Nombre];
         }
-        public static void UpdateExtra(ExtraDatos e1, ExtraDatos e2)
-        {
-            if (SelectExtra(e1) != null && e1.Nombre==e2.Nombre)
-            {
-                BD.DeleteExtras(e1);
-                BD.InsertExtras(e2);
-            }
+        public static void UpdateExtra(ExtraDatos e)
+        {          
+                BD.DeleteExtras(e);
+                BD.InsertExtras(e);
         }
 
 
@@ -207,22 +187,13 @@ namespace TrabajoTOO
         }
         public static ClienteDatos SelectCliente(ClienteDatos c)
         {
-            IEnumerable<ClienteDatos> cliente = BD.Clientes.Select(Clientes => c);
-            if (cliente == null)
-            {
-                return null;
-            }
-            else
-                return cliente.First();
+            return BD.clientes[c.DNI];
         }
 
-        public static void UpdateCliente(ClienteDatos c, ClienteDatos c2)
+        public static void UpdateCliente(ClienteDatos c)
         {
-            if(SelectCliente(c)!=null && c.DNI==c2.DNI)
-            {
                 BD.DeleteCliente(c);
-                BD.InsertCliente(c2);
-            }
+                BD.InsertCliente(c);
         }
 
         //---------------------PRESUPUESTO----------------------------------------------------------------------------------------
@@ -247,26 +218,18 @@ namespace TrabajoTOO
         }
         public static PresupuestosDato SelectPresupuesto(PresupuestosDato p)
         {
-            IEnumerable<PresupuestosDato> presupuesto = BD.Presupuestos.Select(Presupuestos => p);
-            if (presupuestos == null)
-            {
-                return null;
-            }
-            else
-                return presupuesto.First();
+            return BD.presupuestos[p.Id];
         }
 
-        public static void UpdatePresupuesto(PresupuestosDato p, PresupuestosDato p2)
+        public static void UpdatePresupuesto(PresupuestosDato p)
         {
-            if (SelectPresupuesto(p) != null && p.Id == p2.Id)
-            {
                 BD.DeletePresupuesto(p);
-                BD.InsertPresupuesto(p2);
-            }
+                BD.InsertPresupuesto(p);
         }
+        
         //---------------------PRESUPUESTO_VEHICULOS----------------------------------------------------------------------------------------
 
-        /*private static Presupuesto_VehiculosTabla presupuesto_vehiculos;
+        private static Presupuesto_VehiculosTabla presupuesto_vehiculos;
         public static Presupuesto_VehiculosTabla Presupuesto_vehiculos
         {
             get
@@ -286,24 +249,49 @@ namespace TrabajoTOO
         }
         public static Presupuesto_VehiculosDato SelectPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            IEnumerable<Presupuesto_VehiculosDato> presupuesto_vehiculo = BD.Presupuesto_vehiculos.Select(Presupuesto_vehiculos => p);
-            if (presupuesto_vehiculos == null)
-            {
-                return null;
-            }
-            else
-                return presupuesto_vehiculo.First();
+            return BD.presupuesto_vehiculos[p.Clave];
         }
 
-        public static void UpdatePresupuesto_Vehiculos(Presupuesto_VehiculosDato p, Presupuesto_VehiculosDato p2)
+        public static void UpdatePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            if (SelectPresupuesto_Vehiculos(p) != null && p.Clave == p2.Clave)
-            {
                 BD.DeletePresupuesto_Vehiculos(p);
-                BD.InsertPresupuesto_Vehiculos(p2);
-            }
-        }*/
+                BD.InsertPresupuesto_Vehiculos(p);
+        }
 
-        //
+
+
+
+        //---------------------VEHICULONUEVO_EXTRA----------------------------------------------------------------------------------------
+
+        private static VNuevoExtrasTabla vNuevo_Extra;
+        public static VNuevoExtrasTabla VNuevo_Extra
+        {
+            get
+            {
+                if (vNuevo_Extra == null)
+                    vNuevo_Extra = new VNuevoExtrasTabla();
+                return vNuevo_Extra;
+            }
+        }
+        public static void InsertVNuevo_Extra(VNuevoExtrasDatos p)
+        {
+            BD.vNuevo_Extra.Add(p);
+        }
+        public static void DeleteVNuevo_Extra(VNuevoExtrasDatos p)
+        {
+            BD.vNuevo_Extra.Remove(p.Clave);
+        }
+        public static VNuevoExtrasDatos SelectVNuevo_Extra(VNuevoExtrasDatos p)
+        {
+            return BD.vNuevo_Extra[p.Clave];
+        }
+
+        public static void UpdateVNuevo_Extra(VNuevoExtrasDatos p)
+        {
+            BD.DeleteVNuevo_Extra(p);
+            BD.InsertVNuevo_Extra(p);
+        }
+
+
     }
 }

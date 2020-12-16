@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    public class ClienteDatos
+    class ClienteDatos
     {
         private string dni;
         private string nombre;

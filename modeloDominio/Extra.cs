@@ -20,6 +20,11 @@ namespace modeloDominio
             this.precioFijo = precioFijo;
         }
 
+        public Extra(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
 
         /////////////////////////// PROPIEDADES ///////////////////////////
         public string Nombre
