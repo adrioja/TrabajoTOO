@@ -34,7 +34,7 @@ namespace TrabajoTOO
         {
             BD.Vehiculos.Remove(v.NumBastidor);
         }
-        private static VehiculoDatos SelectVehiculo(VehiculoDatos v)
+        public static VehiculoDatos SelectVehiculo(VehiculoDatos v)
         {    
            return BD.vehiculos[v.NumBastidor];
         }
@@ -109,6 +109,7 @@ namespace TrabajoTOO
         {
             BD.InsertVehiculo(v);
             BD.vNuevos.Add(v);
+            
         }
         public static void DeleteVNuevos(VNuevoDatos v)
         {
