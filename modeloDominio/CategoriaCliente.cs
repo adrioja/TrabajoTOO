@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+
+    /// <summary>
+    /// Posibles categorias que puede ser un cliente
+    /// </summary>
     public enum CategoriaCliente
     {
         A,

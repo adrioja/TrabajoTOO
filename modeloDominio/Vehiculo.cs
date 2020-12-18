@@ -18,6 +18,15 @@ namespace modeloDominio
 
 
         /////////////////////////// CONSTRUCTOR ///////////////////////////
+        
+        /// <summary>
+        /// Inicializa la clase por completo
+        /// </summary>
+        /// <param name="numBastidor"></param>
+        /// <param name="potencia"></param>
+        /// <param name="modelo"></param>
+        /// <param name="marca"></param>
+        /// <param name="pvRecomendado"></param>
         public Vehiculo(String numBastidor, int potencia, string modelo, string marca, double pvRecomendado)
         {
             this.numBastidor = numBastidor;
@@ -27,6 +36,11 @@ namespace modeloDominio
             this.pvRecomendado = pvRecomendado;
         }
 
+
+        /// <summary>
+        /// Inicializa la clase, solo el atributo numBastidor
+        /// </summary>
+        /// <param name="numBastidor"></param>
         public Vehiculo(String numBastidor)
         {
             this.numBastidor = numBastidor;
@@ -34,6 +48,11 @@ namespace modeloDominio
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
+        
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve el numero de bastidor
+        /// </summary>
         public string NumBastidor
         {
             get
@@ -42,6 +61,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve o asigna la potencia
+        /// </summary>
         public int Potencia
         {
             get
@@ -54,6 +77,11 @@ namespace modeloDominio
             }
         }
 
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el modelo
+        /// </summary>
         public string Modelo
         {
             get
@@ -62,6 +90,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST:devuelve la marca
+        /// </summary>
         public string Marca
         {
             get
@@ -70,6 +102,11 @@ namespace modeloDominio
             }
         }
 
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST:devuleve o asigna el precio recomendado
+        /// </summary>
         public double PvRecomendado
         {
             get
@@ -82,6 +119,11 @@ namespace modeloDominio
             }
         }
 
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el IVA correspondiente en funcion del tipo de vehiculo
+        /// </summary>
         public double IVA
         {
             get
@@ -97,6 +139,11 @@ namespace modeloDominio
             }
         }
 
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el pvp de dicho vehiculo
+        /// </summary>
         public virtual double PVP
         {
             get
@@ -107,11 +154,23 @@ namespace modeloDominio
 
 
         /////////////////////////// METODOS ///////////////////////////
+        
+        /// <summary>
+        /// PRE: la clase y el parametro deben de estar inicializadas
+        /// POST: devuelve true si ambos vehiculos tienen el mismo numero de bastidor y falso en caso contrario
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Vehiculo other)
         {
             return this.NumBastidor == other.NumBastidor;
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar inicializada
+        /// POST:POST: devuelve una cadena con los datos del vehiculo
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "- Vehiculo: [Nº Bastidor: " + this.NumBastidor + "], [Potencia: " + this.Potencia + "], [Modelo: " + this.Modelo + "], [Marca: " + this.Marca + "], [Precio de venta recomendado: "+this.PvRecomendado+"], [PVP: "+this.PVP+"], [IVA: "+this.IVA+"]";

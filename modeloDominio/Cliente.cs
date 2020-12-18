@@ -16,6 +16,13 @@ namespace modeloDominio
         
 
         /////////////////////////// CONSTRUCTOR ///////////////////////////
+        /// <summary>
+        /// Inicializa los atributos
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="telefono"></param>
+        /// <param name="categoria"></param>
         public Cliente(string dni, string nombre, string telefono, CategoriaCliente categoria)
         {
             this.dni = dni;
@@ -24,6 +31,11 @@ namespace modeloDominio
             this.categoria = categoria;
             
         }
+
+        /// <summary>
+        /// Incializa el atributo DNI
+        /// </summary>
+        /// <param name="dni"></param>
         public Cliente(string dni)
         {
             this.dni = dni;                     
@@ -31,6 +43,11 @@ namespace modeloDominio
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
+        
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve DNI
+        /// </summary>
         public string DNI
         {
             get
@@ -39,6 +56,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST:devuelve el nombre del cliente
+        /// </summary>
         public string Nombre
         {
             get
@@ -47,6 +68,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el telefono o da la posibilidad de cambiarlo
+        /// </summary>
         public string Telefono
         {
             get
@@ -59,6 +84,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve la categoria o da la posibilidad de cambiarla
+        /// </summary>
         public CategoriaCliente Categoria
         {
             get
@@ -71,6 +100,10 @@ namespace modeloDominio
             }
         }
 
+        /// <summary>
+        /// PRE:la clase debe de estar incializada por completo
+        /// POST:Devuelve el descuento segun la categoria del cliente, si el descuento es del 10%, devuelve 0.10 
+        /// </summary>
         public double Descuento {
             /* Devuelve el descuento segun la categoria del cliente,
              * Si el descuento es del 10%, devuelve 0.10 */
@@ -93,11 +126,24 @@ namespace modeloDominio
        
 
         /////////////////////////// METODOS ///////////////////////////
+
+
+        /// <summary>
+        /// PRE: el parametro debe de estar incializado
+        /// POST: devuelve true si ambos clientes son iguales comparando su DNI y falso en caso contrario
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Cliente other)
         {
             return this.DNI == other.DNI;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar inicializada
+        /// POST: devuelve una cadena con los datos del cliente
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "- Cliente: [DNI: " + this.DNI + "], [Nombre: " + this.Nombre + "], [Telefono: " + this.Telefono + "], [Categoria: " + this.Categoria + "]";

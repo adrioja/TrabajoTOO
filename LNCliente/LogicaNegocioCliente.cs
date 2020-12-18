@@ -10,9 +10,14 @@ namespace LNCliente
 {
     public class LogicaNegocioCliente
     {
+
+        /// <summary>
+        /// PRE: el atributo debe de estar incializado;
+        /// POST:Si el cliente c no existe lo añade y devuelve true, en caso cotrario devuelve false y no hace nada.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public bool añadir(Cliente c)
-            /* Si el cliente c no existe lo añade y devuelve true,
-             * en caso cotrario devuelve false y no hace nada. */
         {
             if(!Persistencia.Existe(c))
             {
@@ -22,17 +27,26 @@ namespace LNCliente
             return false;
         }
 
+
+        /// <summary>
+        /// PRE:el atributo debe de estar incializado;
+        /// POST: Si el cliente existe devuelve true y falso en caso contrario
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         private bool existe(Cliente c)
-            /* Si el cliente existe devuelve true */
         {
             return Persistencia.Existe(c);
         }
 
-        public bool eliminar(Cliente c)
-            /* C puede contener solo la clave
-             * Si c existe en la bd, lo elimina y devuelve true
-             * En caso contrario no hace nada y devuelve false. */
 
+        /// <summary>
+        /// PRE:el atributo debe de estar incializado(C puede contener solo la clave)
+        /// POST:Si c existe en la bd, lo elimina y devuelve true ,en caso contrario no hace nada y devuelve false.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public bool eliminar(Cliente c)
         {
             if (!Persistencia.Existe(c))
             {
@@ -42,10 +56,14 @@ namespace LNCliente
             return true;
         }
 
+
+        /// <summary>
+        /// PRE:el atributo debe de estar incializado(C puede contener solo la clave)
+        /// POST:Si c existe en la BD, nos devuelve el objeto Cliente con sus campos,En caso contrario nos devuelve null
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public Cliente buscar(Cliente c)
-            /* C puede contener solo la clave
-             * Si c existe en la BD, nos devuelve el objeto Cliente con sus campos.
-             * En caso contrario nos devuelve null */
         {
             if (Persistencia.Existe(c))
             {
@@ -54,10 +72,14 @@ namespace LNCliente
             return null;
         }
 
+
+        /// <summary>
+        /// PRE:el atributo debe de estar incializado
+        /// POST:Dado el cliente c, busca en la bd al cliente cuyo dni coincide, y modifica sus campos por los valores de c. En caso de que los datos se modifiquen devuelve true, en caso contrario devuelve false
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public bool actualizar(Cliente c)
-            /* Dado el cliente c, busca en la bd al cliente cuyo dni coincide, y modifica sus campos por los valores de c.
-             * En caso de que los datos se modifiquen devuelve true,
-             * En caso contrario devuelve false. */
         {
             if (Persistencia.Existe(c))
             {
