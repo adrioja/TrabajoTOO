@@ -17,9 +17,13 @@ namespace TrabajoTOO
         //--------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO NUEVO------------------------------------------
         //--------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// PRE:el parametro debe de estar incializado
+        /// POST: Dado un VehiculoNuevo, se añade a la BD (Sin comprobar si ya existe), (Los extras que este vehiculo tiene asociados deben de ser añadidos explicitamente antes)
+        /// </summary>
+        /// <param name="v"></param>
         public static void Añadir(VehiculoNuevo v)
-            /* Dado un VehiculoNuevo, se añade a la BD (Sin comprobar si ya existe), (Los extras que este vehiculo tiene asociados
-             * deben de ser añadidos explicitamente antes) */
         {           
             VNuevoDatos v1 = new VNuevoDatos(v.NumBastidor,v.Marca,v.Modelo,v.Potencia,v.PvRecomendado);
             BD.InsertVNuevos(v1);
@@ -32,9 +36,13 @@ namespace TrabajoTOO
                 }
             }
         }
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST:Dado un VehiculoNuevo (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+        /// </summary>
+        /// <param name="v"></param>
         public static void Borrar(VehiculoNuevo v)
-            /* Dado un VehiculoNuevo (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, 
-             * su aparicion en la bd */
         {
             //Como el objeto que recibimos puede tener solo la clave, primero obtenemos los extras de ese vehiculo:
             VehiculoNuevo vehiculo = Persistencia.Buscar(v);
