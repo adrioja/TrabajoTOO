@@ -83,6 +83,12 @@ namespace TrabajoTOO
             VSegundaManoDatos v1 = new VSegundaManoDatos(v.Matricula, v.FechaMatriculacion, v.NumBastidor, v.Marca, v.Modelo, v.Potencia, v.PvRecomendado);
             BD.UpdateVSegundaMano(v1);
         }
+
+        public static bool Existe(VehiculoSegundaMano v1)
+        {
+            VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula,v1.FechaMatriculacion,v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            return BD.ExistsVSegundaMano(v);
+        }
         //----------------------------------------------------------------------------------------------------------------
         //------------------------------------------------EXTRA-----------------------------------------------------------
         public static void Añadir(Extra v1)
