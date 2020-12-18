@@ -12,6 +12,7 @@ namespace TrabajoTOO
         String cliente;
         DateTime fechaRealizacion;
         String estado;
+        String vehiculoComprado;
 
         public string Id
         {
@@ -32,12 +33,18 @@ namespace TrabajoTOO
             get { return this.estado; }
         }
 
-        public PresupuestosDato(String id, String cliente, DateTime fecha, String estado)
+        public String VehiculoComprado
+        {
+            get { return this.vehiculoComprado; }
+        }
+
+        public PresupuestosDato(String id, String cliente, DateTime fecha, String estado, String vehiculoComprado)
         {
             this.id= id;
             this.cliente = cliente;
             this.fechaRealizacion = fecha;
             this.estado = estado;
+            this.vehiculoComprado = vehiculoComprado;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace LNVehiculo
         }
 
         public bool eliminar(VehiculoNuevo v)
-            //v debe de estar incializado
+            //v puede contener solo la clave
             //comprueba que existe y si es asi lo borra y devuelve true y en cualquier otro caso false
         {
             bool eliminar = false;

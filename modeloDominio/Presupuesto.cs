@@ -14,18 +14,18 @@ namespace modeloDominio
         private DateTime fechaRealizacion;
         private string estado;
         private List<Vehiculo> vehiculos;
-        private String vehiculoComprado;
+        private Vehiculo vehiculoComprado;
 
 
         /////////////////////////// CONSTRUCTOR ///////////////////////////
-        public Presupuesto(String id, Cliente cliente,DateTime fechaRealizacion, string estado, List<Vehiculo> vehiculos)
+        public Presupuesto(String id, Cliente cliente,DateTime fechaRealizacion, string estado, List<Vehiculo> vehiculos, Vehiculo vehiculoComprado)
         {
             this.id = id;
             this.clienteAsociado=cliente;
             this.fechaRealizacion = fechaRealizacion;
             this.estado = estado;
             this.vehiculos = vehiculos;
-            this.vehiculoComprado = " ";
+            this.vehiculoComprado = vehiculoComprado;
         }
 
         public Presupuesto(String id)
@@ -77,7 +77,7 @@ namespace modeloDominio
                 return this.vehiculos;
             }
         }
-        public String VehiculoComprado
+        public Vehiculo VehiculoComprado
         {
             get
             {
