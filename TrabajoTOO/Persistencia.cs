@@ -38,7 +38,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE:la clase debe de estar incializada
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
         /// POST:Dado un VehiculoNuevo (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
         /// </summary>
         /// <param name="v"></param>
@@ -54,25 +54,38 @@ namespace TrabajoTOO
             VNuevoDatos v1 = new VNuevoDatos(v.NumBastidor, v.Marca, v.Modelo, v.Potencia, v.PvRecomendado);
             BD.DeleteVNuevos(v1);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), obtendremos un vehiculoNuevo con todos sus campos, no se contempla el caso en el que el VehiculoNuevo no esta en la BD 
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static VehiculoNuevo Buscar(VehiculoNuevo v1)
-            /* Dado un VehiculoNuevo (Del que solo se utilizara la clave), obtendremos un vehiculoNuevo con todos sus campos,
-             * no se contempla el caso en el que el VehiculoNuevo no esta en la BD */
         {
             VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             VNuevoDatos dev = BD.SelectVNuevo(v);
             return new VehiculoNuevo(dev.NumBastidor, dev.Potencia, dev.Modelo, dev.Marca, dev.PvRecomendado);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un VehiculoNuevo, se actualizara el vehiculo cuya clave coincida con v1 (No se contempla el caso en el que no existe ningun vehiculo con dicha clave), cambiando todos sus campos a los valores que trae v1
+        /// </summary>
+        /// <param name="v1"></param>
         public static void Actualizar(VehiculoNuevo v1)
-            /* Dado un VehiculoNuevo, se actualizara el vehiculo cuya clave coincida con v1 
-             * (No se contempla el caso en el que no existe ningun vehiculo con dicha clave),
-             * cambiando todos sus campos a los valores que trae v1 */
         {
             Persistencia.Borrar(v1);
             Persistencia.Añadir(v1);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo nuevo cuya clave coincida con v1, false en caso contrario
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static bool Existe(VehiculoNuevo v1)
-            /* Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo nuevo cuya
-             * clave coincida con v1, false en caso contrario */
         {
             VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             return BD.ExistsVNuevo(v);
@@ -83,38 +96,60 @@ namespace TrabajoTOO
         //---------------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO SEGUNDA MANO------------------------------------------
         //---------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un VehiculoSegundaMano, se añade a la BD (Sin comprobar si existe ya)
+        /// </summary>
+        /// <param name="v1"></param>
         public static void Añadir(VehiculoSegundaMano v1)
-            /* Dado un VehiculoSegundaMano, se añade a la BD (Sin comprobar si existe ya) */
         {
             VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion,v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             BD.InsertVSegundaMano(v);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:  Dado un VehiculoSegundaMano (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+        /// </summary>
+        /// <param name="v1"></param>
         public static void Borrar(VehiculoSegundaMano v1)
-            /* Dado un VehiculoSegundaMano (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, 
-             * su aparicion en la bd */
         {
             VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion, v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             BD.DeleteVSegundaMano(v);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un VehiculoSegundaMano (Del que solo se utilizara la clave), obtendremos un VehiculoSegundaMano con todos sus campos, no se contempla el caso en el que el VehiculoSegundaMano no esta en la BD
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static VehiculoSegundaMano Buscar(VehiculoSegundaMano v1)
-            /* Dado un VehiculoSegundaMano (Del que solo se utilizara la clave), obtendremos un VehiculoSegundaMano con todos sus campos,
-             * no se contempla el caso en el que el VehiculoSegundaMano no esta en la BD*/
         {
             VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula, v1.FechaMatriculacion, v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             VSegundaManoDatos dev =  BD.SelectVSegundaMano(v);
             return new VehiculoSegundaMano(dev.NumBastidor, dev.Potencia, dev.Modelo, dev.Marca, dev.PvRecomendado, dev.Matricula, dev.FechaMatriculacion);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un VehiculoSegundaMano, se actualizara el vehiculo cuya clave coincida con v ,(No se contempla el caso en el que no existe ningun vehiculo con dicha clave),cambiando todos sus campos a los valores que trae v(los actualiza)
+        /// </summary>
+        /// <param name="v"></param>
         public static void Actualizar(VehiculoSegundaMano v)
-            /* Dado un VehiculoSegundaMano, se actualizara el vehiculo cuya clave coincida con v 
-             * (No se contempla el caso en el que no existe ningun vehiculo con dicha clave),
-            * cambiando todos sus campos a los valores que trae v */
         {
             VSegundaManoDatos v1 = new VSegundaManoDatos(v.Matricula, v.FechaMatriculacion, v.NumBastidor, v.Marca, v.Modelo, v.Potencia, v.PvRecomendado);
             BD.UpdateVSegundaMano(v1);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculoSegundaMano cuya clave coincida con v1, false en caso contrario
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static bool Existe(VehiculoSegundaMano v1)
-            /* Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculoSegundaMano cuya
-             * clave coincida con v1, false en caso contrario */
         {
             VSegundaManoDatos v = new VSegundaManoDatos(v1.Matricula,v1.FechaMatriculacion,v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             return BD.ExistsVSegundaMano(v);
@@ -125,38 +160,60 @@ namespace TrabajoTOO
         //----------------------------------------------------------------------------------------------------------------
         //------------------------------------------------EXTRA-----------------------------------------------------------
         //----------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Extra, se añade a la BD (Sin comprobar si existe ya) 
+        /// </summary>
+        /// <param name="v1"></param>
         public static void Añadir(Extra v1)
-            /* Dado un Extra, se añade a la BD (Sin comprobar si existe ya) */
         {
             ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             BD.InsertExtras(v);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Extra (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+        /// </summary>
+        /// <param name="v1"></param>
         public static void Borrar(Extra v1)
-            /* Dado un Extra (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, 
-            * su aparicion en la bd */
         {
             ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             BD.DeleteExtras(v);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Extra (Del que solo se utilizara la clave), obtendremos un Extra con todos sus campos, no se contempla el caso en el que el Extra no esta en la BD
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static Extra Buscar(Extra v1)
-            /* Dado un Extra (Del que solo se utilizara la clave), obtendremos un Extra con todos sus campos,
-            * no se contempla el caso en el que el Extra no esta en la BD*/
         {
             ExtraDatos v = new ExtraDatos(v1.Nombre, v1.PrecioFijo);
             ExtraDatos dev = BD.SelectExtra(v);
             return new Extra(dev.Nombre, dev.PrecioFijo);
         }
+
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Extra, se actualizara el extra cuya clave coincida con e (no se contempla el caso en el que no existe ningun extra con dicha clave), cambiando todos sus campos a los valores que trae e
+        /// </summary>
+        /// <param name="e"></param>
         public static void Actualizar(Extra e)
-            /* Dado un Extra, se actualizara el extra cuya clave coincida con e 
-            * (No se contempla el caso en el que no existe ningun extra con dicha clave),
-            * cambiando todos sus campos a los valores que trae e */
         {
             ExtraDatos v = new ExtraDatos(e.Nombre, e.PrecioFijo);
             BD.UpdateExtra(v);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Extra (Del que solo se utilizara la clave), devuelve true si existe un extra cuya clave coincida con e, false en caso contrario
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
         public static bool Existe(Extra e)
-            /* Dado un Extra (Del que solo se utilizara la clave), devuelve true si existe un extra cuya
-             * clave coincida con e, false en caso contrario */
         {
             ExtraDatos ed = new ExtraDatos(e.Nombre, e.PrecioFijo);
             return BD.ExistsExtra(ed);
@@ -167,22 +224,37 @@ namespace TrabajoTOO
         //-------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------CLIENTE------------------------------------------------------------
         //-------------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Cliente, se añade a la BD (Sin comprobar si existe ya)
+        /// </summary>
+        /// <param name="c"></param>
         public static void Añadir(Cliente c)
-            /* Dado un Cliente, se añade a la BD (Sin comprobar si existe ya) */
         {
             ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             BD.InsertCliente(cliente);
         }
+
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Cliente (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+        /// </summary>
+        /// <param name="c"></param>
         public static void Borrar(Cliente c)
-            /* Dado un Cliente (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, 
-            * su aparicion en la bd */
         {
             ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             BD.DeleteCliente(cliente);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Cliente (Del que solo se utilizara la clave), obtendremos un Cliente con todos sus campos, no se contempla el caso en el que el Cliente no esta en la BD
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static Cliente Buscar(Cliente c)
-            /* Dado un Cliente (Del que solo se utilizara la clave), obtendremos un Cliente con todos sus campos,
-            * no se contempla el caso en el que el Cliente no esta en la BD*/
         {
             ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             ClienteDatos dev = BD.SelectCliente(cliente) ;
@@ -202,17 +274,25 @@ namespace TrabajoTOO
 
             return new Cliente(dev.DNI, dev.Nombre, dev.Telefono, categoria);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Cliente, se actualizara el cliente cuya clave coincida con c (no se contempla el caso en el que no existe ningun cliente con dicha clave),cambiando todos sus campos a los valores que trae c 
+        /// </summary>
+        /// <param name="c"></param>
         public static void Actualizar(Cliente c)
-            /* Dado un Cliente, se actualizara el cliente cuya clave coincida con c 
-            * (No se contempla el caso en el que no existe ningun cliente con dicha clave),
-            * cambiando todos sus campos a los valores que trae c */
         {
             ClienteDatos c1 = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             BD.UpdateCliente(c1);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Cliente (Del que solo se utilizara la clave), devuelve true si existe un cliente cuya clave coincida con c, false en caso contrario
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static bool Existe(Cliente c)
-            /* Dado un Cliente (Del que solo se utilizara la clave), devuelve true si existe un cliente cuya
-             * clave coincida con c, false en caso contrario */
         {
             ClienteDatos cd = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             return BD.ExistsCliente(cd);

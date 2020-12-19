@@ -14,6 +14,10 @@ namespace TrabajoTOO
         private int potencia;
         private double pvRecomendado;
 
+        /// <summary>
+        /// PRE: la clase debe de de estar incializada
+        /// POST: devuelve el numero de bastidor
+        /// </summary>
         public string NumBastidor 
         {
             get
@@ -21,6 +25,11 @@ namespace TrabajoTOO
                 return this.numBastidor;
             }
         }
+
+        /// <summary>
+        /// PRE: la clase debe de de estar incializada
+        /// POST:devuelve la marca
+        /// </summary>
         public string Marca
         {
             get
@@ -28,6 +37,11 @@ namespace TrabajoTOO
                 return this.marca;
             }
         }
+
+        /// <summary>
+        /// PRE: la clase debe de de estar incializada
+        /// POST: devuelve el modelo
+        /// </summary>
         public string Modelo 
         {
             get
@@ -35,6 +49,11 @@ namespace TrabajoTOO
                 return this.modelo;
             }
         }
+
+        /// <summary>
+        /// PRE: la clase debe de de estar incializada
+        /// POST:devuelve la potencia
+        /// </summary>
         public int Potencia 
         {
             get
@@ -42,6 +61,11 @@ namespace TrabajoTOO
                 return this.potencia;
             }
         }
+
+        /// <summary>
+        /// PRE: la clase debe de de estar incializada
+        /// POST:devuelve el pv recomendado
+        /// </summary>
         public double PvRecomendado 
         {
             get
@@ -50,6 +74,14 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// Incializa la clase
+        /// </summary>
+        /// <param name="numBastidor"></param>
+        /// <param name="marca"></param>
+        /// <param name="modelo"></param>
+        /// <param name="potencia"></param>
+        /// <param name="pvRecomen"></param>
         public VehiculoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen)
         {
             this.numBastidor = numBastidor;

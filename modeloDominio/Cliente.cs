@@ -38,7 +38,11 @@ namespace modeloDominio
         /// <param name="dni"></param>
         public Cliente(string dni)
         {
-            this.dni = dni;                     
+            this.dni = dni;
+            //valores que inciamos por defecto
+            this.nombre = "";
+            this.telefono = "";
+            this.categoria = CategoriaCliente.A;
         }
 
 

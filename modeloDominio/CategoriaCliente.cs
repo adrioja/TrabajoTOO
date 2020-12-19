@@ -8,7 +8,7 @@ namespace modeloDominio
 {
 
     /// <summary>
-    /// Posibles categorias que puede ser un cliente
+    /// Posibles categorias a las que puede pertenecer un cliente
     /// </summary>
     public enum CategoriaCliente
     {

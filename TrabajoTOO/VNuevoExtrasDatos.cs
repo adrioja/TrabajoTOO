@@ -10,7 +10,10 @@ namespace TrabajoTOO
     {
         private VNuevoExtrasClave clave;
         
-        
+        /// <summary>
+        /// PRE: la clase debe  de estar incializada
+        /// POST: devuelve la clave
+        /// </summary>
         public VNuevoExtrasClave Clave
         {
             get
@@ -19,7 +22,10 @@ namespace TrabajoTOO
             }
         }
        
-
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
+        /// <param name="clave"></param>
         public VNuevoExtrasDatos(VNuevoExtrasClave clave)
         {
             this.clave = clave;              

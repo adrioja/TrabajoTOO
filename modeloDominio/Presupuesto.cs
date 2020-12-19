@@ -31,6 +31,13 @@ namespace modeloDominio
         public Presupuesto(String id)
         {
             this.id = id;
+            //valores que inciamos por defecto
+            this.clienteAsociado = null;
+            this.fechaRealizacion = DateTime.Now;
+            this.estado = "";
+            this.vehiculos = null;
+            this.vehiculoComprado = null;
+
         }
 
 

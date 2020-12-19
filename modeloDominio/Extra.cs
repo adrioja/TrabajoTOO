@@ -33,6 +33,8 @@ namespace modeloDominio
         public Extra(string nombre)
         {
             this.nombre = nombre;
+            //valores que inciamos por defecto
+            this.precioFijo = 0;
         }
 
 

@@ -13,6 +13,14 @@ namespace TrabajoTOO
         private string telefono;
         private string categoria;
 
+
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <param name="nombre"></param>
+        /// <param name="telefono"></param>
+        /// <param name="categoria"></param>
         public ClienteDatos(string dni, string nombre, string telefono, string categoria)
         {
             this.dni = dni;
@@ -21,6 +29,11 @@ namespace TrabajoTOO
             this.categoria = categoria;
         }
 
+
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve el dni
+        /// </summary>
         public string DNI
         {
             get
@@ -29,6 +42,10 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve el nombre
+        /// </summary>
         public string Nombre
         {
             get
@@ -37,6 +54,10 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST:devueleve o asigna el telefono
+        /// </summary>
         public string Telefono
         {
             get
@@ -49,6 +70,10 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST:devueleve o asigna la categoria
+        /// </summary>
         public string Categoria
         {
             get

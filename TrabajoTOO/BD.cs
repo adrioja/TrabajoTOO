@@ -32,7 +32,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: añade el vehiculo
         /// </summary>
         /// <param name="v"></param>
@@ -42,7 +42,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: elimina el vehiculo
         /// </summary>
         /// <param name="v"></param>
@@ -52,7 +52,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: devuelve el vehiculo
         /// </summary>
         /// <param name="v"></param>
@@ -63,7 +63,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: actualiza el vehiculo con los datos del vehiculo que se pasa por parametro
         /// </summary>
         /// <param name="v"></param>
@@ -74,7 +74,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: devuelve true si el vehiculo se encuentra en nuestra coleccion y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
@@ -102,7 +102,7 @@ namespace TrabajoTOO
             }
         }
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: añade el vehiculo de segunda mano a la bd 
         /// </summary>
         /// <param name="v"></param>
@@ -113,7 +113,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: elimina el vehiculo de segunda mano a la bd 
         /// </summary>
         /// <param name="v"></param>
@@ -124,7 +124,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:busca el vehiculo de segunda mano en la bd 
         /// </summary>
         /// <param name="v"></param>
@@ -135,7 +135,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:actualiza el vehiculode segunda mano en la bd el parametro contiene los datos del vehiculo actualizado
         /// </summary>
         /// <param name="v"></param>
@@ -148,7 +148,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:dice si el vehiculode segunda mano existe en la bd si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
@@ -179,7 +179,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: añade el vehiculo nuevo a la bd
         /// </summary>
         /// <param name="v"></param>
@@ -191,7 +191,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: elimina el vehiculo nuevo de la bd
         /// </summary>
         /// <param name="v"></param>
@@ -202,7 +202,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: devuelve el vehiculo nuevo 
         /// </summary>
         /// <param name="v"></param>
@@ -213,7 +213,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: actualiza el vehiculo nuevo en la bd, el parametro es el que contiene los datos actualizados
         /// </summary>
         /// <param name="v"></param>
@@ -226,7 +226,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
@@ -255,7 +255,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: añade el extra a la bd
         /// </summary>
         /// <param name="e"></param>
@@ -265,7 +265,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: elimina el extra de la bd
         /// </summary>
         /// <param name="e"></param>
@@ -275,7 +275,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: devuleve el extra
         /// </summary>
         /// <param name="e"></param>
@@ -286,7 +286,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: actualiza el extra de la bd, el extra que se pasa como parametro es el que contiene los datos actualizados
         /// </summary>
         /// <param name="e"></param>
@@ -297,7 +297,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST: dice si el extra existe en la bd si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="e"></param>
@@ -325,9 +325,9 @@ namespace TrabajoTOO
                 return clientes;
             }
         }
-        
+
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:añade cliente a la bd
         /// </summary>
         /// <param name="c"></param>
@@ -337,7 +337,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:elimina cliente de la bd
         /// </summary>
         /// <param name="c"></param>
@@ -347,7 +347,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:devuelve el cliente
         /// </summary>
         /// <param name="c"></param>
@@ -358,7 +358,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:actualiza el cliente de la bd, el cliente que se pasa como parametro es el que tiene los datos actualizados
         /// </summary>
         /// <param name="c"></param>
@@ -369,7 +369,7 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
         /// POST:dice si existe el cliente en la bd, si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="c"></param>
@@ -524,7 +524,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
+        /// POST:añade p a la bd
         /// </summary>
         /// <param name="p"></param>
         public static void InsertVNuevo_Extra(VNuevoExtrasDatos p)
@@ -534,7 +535,8 @@ namespace TrabajoTOO
 
 
         /// <summary>
-        /// 
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
+        /// POST:borra p de la bd
         /// </summary>
         /// <param name="p"></param>
         public static void DeleteVNuevo_Extra(VNuevoExtrasDatos p)
@@ -543,7 +545,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
+        /// POST:busca p en la bd y la devuelve
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -553,7 +556,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: la clase que se pasa como parametro debe de estar incializada
+        /// POST:actualiza p en la bd, p contiene los datos del onjeto actualizados
         /// </summary>
         /// <param name="p"></param>
         public static void UpdateVNuevo_Extra(VNuevoExtrasDatos p)

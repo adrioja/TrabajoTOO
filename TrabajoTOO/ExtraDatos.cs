@@ -9,6 +9,11 @@ namespace TrabajoTOO
     public class ExtraDatos
     {
         private String nombre;
+        
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el nombre del extra
+        /// </summary>
         public String Nombre
         {
             get
@@ -17,6 +22,11 @@ namespace TrabajoTOO
             }
         }
         private double precioFijo;
+
+        /// <summary>
+        /// PRE:la clase debe de estar incializada
+        /// POST: devuelve el precio de dicho extra
+        /// </summary>
         public double PrecioFijo
         {
             get
@@ -24,7 +34,11 @@ namespace TrabajoTOO
                 return this.precioFijo;
             }
         }
-
+        /// <summary>
+        /// Incializa la clase
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="precioFijo"></param>
         public ExtraDatos(String nombre, double precioFijo)
         {
             this.nombre = nombre;

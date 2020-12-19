@@ -8,6 +8,14 @@ namespace TrabajoTOO
 {
     public class VNuevoDatos:VehiculoDatos
     {
+        /// <summary>
+        /// Inicializa la clase y llama al constructor de la clase padre
+        /// </summary>
+        /// <param name="numBastidor"></param>
+        /// <param name="marca"></param>
+        /// <param name="modelo"></param>
+        /// <param name="potencia"></param>
+        /// <param name="pvRecomen"></param>
         public VNuevoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen) : base(numBastidor, marca, modelo, potencia, pvRecomen)
         {
 

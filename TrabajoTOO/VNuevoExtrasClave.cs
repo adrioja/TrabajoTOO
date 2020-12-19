@@ -11,6 +11,10 @@ namespace TrabajoTOO
         private string numBastidor;
         private string nombreExtra;
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devukve el numero de bastidor
+        /// </summary>
         public string NumBastidor
         {
             get
@@ -19,6 +23,10 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devukve el nombre del extra
+        /// </summary>
         public string NombreExtra
         {
             get
@@ -27,6 +35,11 @@ namespace TrabajoTOO
             }
         }
 
+        /// <summary>
+        /// Incializa la clase
+        /// </summary>
+        /// <param name="numBastidor"></param>
+        /// <param name="nombreExtra"></param>
         public VNuevoExtrasClave(string numBastidor,string nombreExtra)
         {
             this.numBastidor = numBastidor;

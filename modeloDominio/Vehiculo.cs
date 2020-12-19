@@ -44,11 +44,16 @@ namespace modeloDominio
         public Vehiculo(String numBastidor)
         {
             this.numBastidor = numBastidor;
+            //valores que inciamos por defecto
+            this.potencia = 0;
+            this.modelo = "";
+            this.marca = "";
+            this.pvRecomendado = 0;
         }
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
-        
+
         /// <summary>
         /// PRE: la clase debe de estar incializada
         /// POST: devuelve el numero de bastidor
