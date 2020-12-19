@@ -10,6 +10,29 @@ namespace LNVehiculo
 {
     public class LogicaNegocioVehiculo
     {
+        //--------------------------------------METODOS VARIOS---------------------------------------
+
+        /// <summary>
+        /// PRE: marca debe contener la marca del vehiculo y modelo el nombre al completo o parte del nombre del modelo
+        /// POST: devuelve una lista de coches de dicha marca y cuyo nombre contenga un su modelo parte del modelo que se le ha pasado coomo parametro
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="modelo"></param>
+        /// <returns></returns>
+        public static List<Vehiculo> buscarPorMarcaModelo(String marca,String modelo)
+        {
+            List<Vehiculo> l = new List<Vehiculo>();
+            foreach(Vehiculo v in Persistencia.listaVehiculos())
+            {
+                if(v.Marca.Equals(marca) && v.Modelo.Contains(modelo))
+                {
+                    l.Add(v);
+                }
+            }
+            return l;
+        }
+
+
         //--------------------------------------METODOS VEHICULO NUEVO---------------------------------------
         /// <summary>
         /// PRE: v debe de estar inicializado

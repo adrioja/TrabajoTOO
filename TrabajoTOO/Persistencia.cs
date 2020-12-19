@@ -12,7 +12,23 @@ namespace TrabajoTOO
     {
         public Persistencia() { }
 
-
+        //------------------------------------------METODOS VARIOS---------------------------------------------
+        /// <summary>
+        /// Devuelve la lista de todos los vehiculos que posee el concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<Vehiculo> listaVehiculos()
+        {
+            List<Vehiculo> lista = new List<Vehiculo>();
+            int tam = BD.Vehiculos.Count;
+            for(int i=0;i<tam;i++)
+            {
+                VehiculoDatos v = BD.Vehiculos[i];
+                Vehiculo v1 = new VehiculoNuevo(v.NumBastidor, v.Potencia, v.Modelo, v.Marca, v.PvRecomendado);
+                lista.Add(v1);
+            }
+            return lista;
+        }
 
         //--------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO NUEVO------------------------------------------
