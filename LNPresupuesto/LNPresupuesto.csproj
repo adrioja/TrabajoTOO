@@ -41,10 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="LogicaNegocioPresupuesto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\modeloDominio\modeloDominio.csproj">
+      <Project>{e0bd98b3-4442-493d-8e47-d7096c971879}</Project>
+      <Name>modeloDominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TrabajoTOO\capaPersistencia.csproj">
       <Project>{7352e82e-fe56-4e3b-89e2-aec397769e0c}</Project>
       <Name>capaPersistencia</Name>
