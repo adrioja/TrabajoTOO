@@ -30,6 +30,41 @@ namespace TrabajoTOO
             return lista;
         }
 
+
+        /// <summary>
+        /// Devuelve la lista de todos los vehiculos nuevos que posee el concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<VehiculoNuevo> listaVehiculosNuevos()
+        {
+            List<VehiculoNuevo> lista = new List<VehiculoNuevo>();
+            int tam = BD.VNuevos.Count;
+            for (int i = 0; i < tam; i++)
+            {
+                VNuevoDatos v = BD.VNuevos[i];
+                VehiculoNuevo v1 = new VehiculoNuevo(v.NumBastidor, v.Potencia, v.Modelo, v.Marca, v.PvRecomendado);
+                lista.Add(v1);
+            }
+            return lista;
+        }
+
+        /// <summary>
+        /// Devuelve la lista de todos los vehiculos de segunda mano que posee el concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<VehiculoSegundaMano> listaVehiculosSegundaMano()
+        {
+            List<VehiculoSegundaMano> lista = new List<VehiculoSegundaMano>();
+            int tam = BD.VSegundaMano.Count;
+            for (int i = 0; i < tam; i++)
+            {
+                VSegundaManoDatos v = BD.VSegundaMano[i];
+                VehiculoSegundaMano v1 = new VehiculoSegundaMano(v.NumBastidor, v.Potencia, v.Modelo, v.Marca, v.PvRecomendado,v.Matricula,v.FechaMatriculacion);
+                lista.Add(v1);
+            }
+            return lista;
+        }
+
         //--------------------------------------------------------------------------------------------------------
         //------------------------------------------------VEHICULO NUEVO------------------------------------------
         //--------------------------------------------------------------------------------------------------------

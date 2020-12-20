@@ -32,6 +32,72 @@ namespace LNVehiculo
             return l;
         }
 
+        /// <summary>
+        /// Devuelve una lista con todos los vehiculos del concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<Vehiculo> listaDeTodosLosVehiculos()
+        {
+            List<Vehiculo> l = new List<Vehiculo>();
+            foreach (Vehiculo v in Persistencia.listaVehiculos())
+            {
+                    l.Add(v);
+            }
+            return l;
+        }
+
+        /// <summary>
+        /// Devuelve una lista con todos los vehiculos NUEVOS del concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<VehiculoNuevo> listaDeTodosLosVehiculosNuevos()
+        {
+            List<VehiculoNuevo> l = new List<VehiculoNuevo>();
+            foreach (VehiculoNuevo v in Persistencia.listaVehiculosNuevos())
+            {
+                l.Add(v);
+            }
+            return l;
+        }
+
+
+        /// <summary>
+        /// Devuelve una lista con todos los vehiculos de SEGUNDA MANO del concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<VehiculoSegundaMano> listaDeTodosLosVehiculosSegundaMano()
+        {
+            List<VehiculoSegundaMano> l = new List<VehiculoSegundaMano>();
+            foreach (VehiculoSegundaMano v in Persistencia.listaVehiculosSegundaMano())
+            {
+                l.Add(v);
+            }
+            return l;
+        }
+
+        /// <summary>
+        /// DEvuelve una lista con los vehiculos que poseen dichas caracteristicas, si en algun campo no se pone nada(se pone como vacio o si es de tipo numerico 0) no se filtra por dicho parametro
+        /// </summary>
+        /// <param name="numBastidor"></param>
+        /// <param name="potencia"></param>
+        /// <param name="modelo"></param>
+        /// <param name="marca"></param>
+        /// <param name="pvRecomendado"></param>
+        /// <returns></returns>
+        public static List<Vehiculo> busquedaFiltrada(string numBastidor, int potencia, string modelo, string marca, double pvRecomendado)
+        {
+            List<Vehiculo> l = new List<Vehiculo>();
+            bool bastidor = !numBastidor.Equals("");
+            bool potenci = potencia != 0;
+            bool mode = !modelo.Equals("");
+            bool marc = !modelo.Equals("");
+            bool pcRec = pvRecomendado != 0;
+            foreach(Vehiculo v in Persistencia.listaVehiculos())
+            {
+                
+            }
+            return l;
+        }
 
         //--------------------------------------METODOS VEHICULO NUEVO---------------------------------------
         /// <summary>
