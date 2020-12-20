@@ -13,6 +13,25 @@ namespace TrabajoTOO
         public Persistencia() { }
 
         //------------------------------------------METODOS VARIOS---------------------------------------------
+
+        /// <summary>
+        /// Devuelve la lista de todos los extras que se pueden poner
+        /// </summary>
+        /// <returns></returns>
+        public static List<Extra> listaTodosExtras()
+        {
+            List<Extra> lista = new List<Extra>();
+            int tam = BD.Extras.Count;
+            for (int i = 0; i < tam; i++)
+            {
+                ExtraDatos e1 = BD.Extras[i];
+                Extra e = new Extra(e1.Nombre, e1.PrecioFijo);
+                lista.Add(e);
+            }
+
+            return lista;
+        }
+        
         /// <summary>
         /// Devuelve la lista de todos los vehiculos que posee el concesionario
         /// </summary>
