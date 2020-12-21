@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LNVehiculo", "LNVehiculo\LN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LNPresupuesto", "LNPresupuesto\LNPresupuesto.csproj", "{093E7AEC-E4C7-4B2E-84C9-774180DF86A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capaPresentacion", "capaPresentacion\capaPresentacion.csproj", "{798ABCBA-610F-4669-9AFA-BCA121CBAEF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{093E7AEC-E4C7-4B2E-84C9-774180DF86A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{093E7AEC-E4C7-4B2E-84C9-774180DF86A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{093E7AEC-E4C7-4B2E-84C9-774180DF86A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798ABCBA-610F-4669-9AFA-BCA121CBAEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798ABCBA-610F-4669-9AFA-BCA121CBAEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798ABCBA-610F-4669-9AFA-BCA121CBAEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798ABCBA-610F-4669-9AFA-BCA121CBAEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

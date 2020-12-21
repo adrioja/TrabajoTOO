@@ -1,0 +1,10 @@
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.exe.config
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.exe
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csprojAssemblyReference.cache
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FLogearse.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.Properties.Resources.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.GenerateResource.cache
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.exe
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
