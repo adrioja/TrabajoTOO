@@ -49,7 +49,6 @@ namespace TrabajoTOO
             return lista;
         }
 
-
         /// <summary>
         /// Devuelve la lista de todos los vehiculos nuevos que posee el concesionario
         /// </summary>
@@ -82,6 +81,37 @@ namespace TrabajoTOO
                 lista.Add(v1);
             }
             return lista;
+        }
+
+        /// <summary>
+        /// Devuelve la lista de todos los clientes del concesionario
+        /// </summary>
+        /// <returns></returns>
+        public static List<Cliente> listaClientes()
+        {
+            List<Cliente> lista = new List<Cliente>();
+            int tam = BD.Clientes.Count;
+            for (int i = 0; i < tam; i++)
+            {
+                ClienteDatos cd = BD.Clientes[i];
+                CategoriaCliente categoria;
+                if(cd.Categoria == "A")
+                {
+                    categoria = CategoriaCliente.A;
+                }
+                else if (cd.Categoria=="B")
+                {
+                    categoria = CategoriaCliente.B;
+                }
+                else
+                {
+                    categoria = CategoriaCliente.C;
+                }
+                Cliente c = new Cliente(cd.DNI, cd.Nombre, cd.Telefono, categoria);
+                lista.Add(c);
+            }
+            return lista;
+
         }
 
         //--------------------------------------------------------------------------------------------------------
@@ -265,7 +295,6 @@ namespace TrabajoTOO
             return new Extra(dev.Nombre, dev.PrecioFijo);
         }
 
-
         /// <summary>
         /// PRE:la clase que se pasa como parametro debe de estar incializada
         /// POST: Dado un Extra, se actualizara el extra cuya clave coincida con e (no se contempla el caso en el que no existe ningun extra con dicha clave), cambiando todos sus campos a los valores que trae e
@@ -305,7 +334,6 @@ namespace TrabajoTOO
             ClienteDatos cliente = new ClienteDatos(c.DNI, c.Nombre, c.Telefono, c.Categoria.ToString());
             BD.InsertCliente(cliente);
         }
-
 
         /// <summary>
         /// PRE:la clase que se pasa como parametro debe de estar incializada
@@ -373,11 +401,15 @@ namespace TrabajoTOO
         //-----------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------PRESUPUESTO------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------------------------
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Presupuesto, se añade a la BD (Sin comprobar si existe ya).
+        /// Se añade tambien a la tabla presupuestoVehiculo las filas correspondientes
+        /// dando por echo que los vehiculos asociados ya se encuentran en la bd.
+        /// (Se da por echo tambien que el cliente asociado y el vehiculo comprado ya existen en la bd)
+        /// </summary>
+        /// <param name="p"></param>
         public static void Añadir(Presupuesto p)
-            /* Dado un Presupuesto, se añade a la BD (Sin comprobar si existe ya).
-             * Se añade tambien a la tabla presupuestoVehiculo las filas correspondientes
-             * dando por echo que los vehiculos asociados ya se encuentran en la bd.
-             * (Se da por echo tambien que el cliente asociado y el vehiculo comprado ya existen en la bd)*/
         {
             String vehiculoComprado;
             if (p.VehiculoComprado ==null)
@@ -400,10 +432,14 @@ namespace TrabajoTOO
                 }
             }
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Presupuesto (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+        /// Se borran tambien las filas de presupuestoVehiculo
+        /// </summary>
+        /// <param name="p"></param>
         public static void Borrar(Presupuesto p)
-            /* Dado un Presupuesto (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, 
-            * su aparicion en la bd.
-            * Se borran tambien las filas de presupuestoVehiculo*/
         {
             foreach (Vehiculo v in p.Vehiculos) //borramos las referencias en la tabla intermedia
             {
@@ -413,9 +449,15 @@ namespace TrabajoTOO
             BD.DeletePresupuesto(presupuesto);
 
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Presupuesto (Del que solo se utilizara la clave), obtendremos un Presupuesto con todos sus campos, 
+        /// no se contempla el caso en el que el Presupuesto no esta en la BD
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static Presupuesto Buscar(Presupuesto p)
-            /* Dado un Presupuesto (Del que solo se utilizara la clave), obtendremos un Presupuesto con todos sus campos,
-            * no se contempla el caso en el que el presupuesto no esta en la BD*/
         {
             PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
             PresupuestosDato dev =  BD.SelectPresupuesto(presupuesto);
@@ -467,17 +509,27 @@ namespace TrabajoTOO
             
             return new Presupuesto(dev.Id, c, dev.FechaRealizacion, dev.Estado, l, vehiculoComprado);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Presupuesto, se actualizara el presupuesto cuya clave coincida con c 
+        /// (No se contempla el caso en el que no existe ningun presupuesto con dicha clave),
+        /// cambiando todos sus campos a los valores que trae p (Incluso la lista de vehiculos asociados)
+        /// </summary>
+        /// <param name="p"></param>
         public static void Actualizar(Presupuesto p)
-            /* Dado un Presupuesto, se actualizara el presupuesto cuya clave coincida con p 
-            * (No se contempla el caso en el que no existe ningun presupuesto con dicha clave),
-            * cambiando todos sus campos a los valores que trae p (Incluso la lista de vehiculos asociados)*/
         {
             Persistencia.Borrar(p);
             Persistencia.Añadir(p);
         }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST:Dado un Presupuesto (Del que solo se utilizara la clave), devuelve true si existe un presupuesto cuya clave coincida con c, false en caso contrario
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static bool Existe(Presupuesto p)
-            /* Dado un Cliente (Del que solo se utilizara la clave), devuelve true si existe un cliente cuya
-             * clave coincida con c, false en caso contrario */
         {
             PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
             return BD.ExistsPresupuesto(presupuesto);

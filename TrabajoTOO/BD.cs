@@ -13,6 +13,8 @@ namespace TrabajoTOO
         /// incializa la bd
         /// </summary>
         private BD() { }
+
+
         //-------------------------------------------------------------------------------------------------------------------
         //-----------------VEHICULO------------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------------------------------------
@@ -32,8 +34,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: añade el vehiculo
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el vehiculo
         /// </summary>
         /// <param name="v"></param>
         private static void InsertVehiculo(VehiculoDatos v)
@@ -42,8 +44,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: elimina el vehiculo
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el vehiculo
         /// </summary>
         /// <param name="v"></param>
         private static void DeleteVehiculo(VehiculoDatos v)
@@ -52,8 +54,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: devuelve el vehiculo
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el vehiculo
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -63,8 +65,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: actualiza el vehiculo con los datos del vehiculo que se pasa por parametro
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el vehiculo con los datos del vehiculo que se pasa por parametro
         /// </summary>
         /// <param name="v"></param>
         private static void UpdateVehiculo(VehiculoDatos v)
@@ -74,8 +76,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: devuelve true si el vehiculo se encuentra en nuestra coleccion y falso en caso contrario
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve true si el vehiculo se encuentra en nuestra coleccion y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -101,9 +103,10 @@ namespace TrabajoTOO
                 return vSegundaMano;
             }
         }
+
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: añade el vehiculo de segunda mano a la bd 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el vehiculo de segunda mano a la bd 
         /// </summary>
         /// <param name="v"></param>
         public static void InsertVSegundaMano(VSegundaManoDatos v)
@@ -113,8 +116,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: elimina el vehiculo de segunda mano a la bd 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el vehiculo de segunda mano a la bd 
         /// </summary>
         /// <param name="v"></param>
         public static void DeleteVSegundaMano(VSegundaManoDatos v)
@@ -124,8 +127,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:busca el vehiculo de segunda mano en la bd 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Busca el vehiculo de segunda mano en la bd 
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -135,8 +138,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:actualiza el vehiculode segunda mano en la bd el parametro contiene los datos del vehiculo actualizado
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el vehiculode segunda mano en la bd el parametro contiene los datos del vehiculo actualizado
         /// </summary>
         /// <param name="v"></param>
         public static void UpdateVSegundaMano(VSegundaManoDatos v)
@@ -148,8 +151,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:dice si el vehiculode segunda mano existe en la bd si es asi devuelve true y falso en caso contrario
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si el vehiculo de segunda mano existe en la bd, si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -157,7 +160,6 @@ namespace TrabajoTOO
         {
             return BD.ExistsVehiculo(v);
         }
-
 
 
         //-------------------------------------------------------------------------------------------------------------------
@@ -179,8 +181,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: añade el vehiculo nuevo a la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el vehiculo nuevo a la bd
         /// </summary>
         /// <param name="v"></param>
         public static void InsertVNuevos(VNuevoDatos v)
@@ -191,8 +193,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: elimina el vehiculo nuevo de la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el vehiculo nuevo de la bd
         /// </summary>
         /// <param name="v"></param>
         public static void DeleteVNuevos(VNuevoDatos v)
@@ -202,8 +204,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: devuelve el vehiculo nuevo 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el vehiculo nuevo 
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -213,8 +215,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: actualiza el vehiculo nuevo en la bd, el parametro es el que contiene los datos actualizados
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el vehiculo nuevo en la bd, el parametro es el que contiene los datos actualizados
         /// </summary>
         /// <param name="v"></param>
         public static void UpdateVNuevo(VNuevoDatos v)
@@ -226,8 +228,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -241,6 +243,7 @@ namespace TrabajoTOO
         //-------------EXTRA-------------------------------------------------------------------------------------------------
         //-------------------------------------------------------------------------------------------------------------------
         private static ExtraTabla extras;
+
         /// <summary>
         /// Devuelve la tabla de extras
         /// </summary>
@@ -255,8 +258,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: añade el extra a la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el extra a la bd
         /// </summary>
         /// <param name="e"></param>
         public static void InsertExtras(ExtraDatos e)
@@ -265,8 +268,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: elimina el extra de la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el extra de la bd
         /// </summary>
         /// <param name="e"></param>
         public static void DeleteExtras(ExtraDatos e)
@@ -275,8 +278,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: devuleve el extra
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuleve el extra
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
@@ -286,8 +289,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: actualiza el extra de la bd, el extra que se pasa como parametro es el que contiene los datos actualizados
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el extra de la bd, el extra que se pasa como parametro es el que contiene los datos actualizados
         /// </summary>
         /// <param name="e"></param>
         public static void UpdateExtra(ExtraDatos e)
@@ -297,8 +300,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST: dice si el extra existe en la bd si es asi devuelve true y falso en caso contrario
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si el extra existe en la bd si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
@@ -327,8 +330,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:añade cliente a la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade cliente a la bd
         /// </summary>
         /// <param name="c"></param>
         public static void InsertCliente(ClienteDatos c)
@@ -337,8 +340,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:elimina cliente de la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina cliente de la bd
         /// </summary>
         /// <param name="c"></param>
         public static void DeleteCliente(ClienteDatos c)
@@ -347,8 +350,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:devuelve el cliente
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el cliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
@@ -358,8 +361,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:actualiza el cliente de la bd, el cliente que se pasa como parametro es el que tiene los datos actualizados
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el cliente de la bd, el cliente que se pasa como parametro es el que tiene los datos actualizados
         /// </summary>
         /// <param name="c"></param>
         public static void UpdateCliente(ClienteDatos c)
@@ -369,8 +372,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:dice si existe el cliente en la bd, si es asi devuelve true y falso en caso contrario
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si existe el cliente en la bd, si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
@@ -399,7 +402,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el presupuesto a la bd
         /// </summary>
         /// <param name="p"></param>
         public static void InsertPresupuesto(PresupuestosDato p)
@@ -408,7 +412,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el presupuesto de la bd 
         /// </summary>
         /// <param name="p"></param>
         public static void DeletePresupuesto(PresupuestosDato p)
@@ -417,7 +422,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el Presupuesto 
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -427,7 +433,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza el Presupuesto con esa clave de la bd, el Presupuesto que se pasa como parametro es el que tiene los datos actualizados 
         /// </summary>
         /// <param name="p"></param>
         public static void UpdatePresupuesto(PresupuestosDato p)
@@ -437,7 +444,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si existe el Presupuesto en la bd, si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -466,7 +474,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade el presupuesto_vehiculo a la bd 
         /// </summary>
         /// <param name="p"></param>
         public static void InsertPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
@@ -475,7 +484,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Elimina el presupuesto_vehiculo de la bd 
         /// </summary>
         /// <param name="p"></param>
         public static void DeletePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
@@ -484,7 +494,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el Presupuesto_vehiculo 
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -494,7 +505,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// 
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si existe el Presupuesto_vehiculo en la bd, si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="p"></param>
         public static void UpdatePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
@@ -524,8 +536,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:añade p a la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Añade p a la bd
         /// </summary>
         /// <param name="p"></param>
         public static void InsertVNuevo_Extra(VNuevoExtrasDatos p)
@@ -535,8 +547,8 @@ namespace TrabajoTOO
 
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:borra p de la bd
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Borra p de la bd
         /// </summary>
         /// <param name="p"></param>
         public static void DeleteVNuevo_Extra(VNuevoExtrasDatos p)
@@ -545,8 +557,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:busca p en la bd y la devuelve
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Busca p en la bd y la devuelve
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -556,8 +568,8 @@ namespace TrabajoTOO
         }
 
         /// <summary>
-        /// PRE: la clase que se pasa como parametro debe de estar incializada
-        /// POST:actualiza p en la bd, p contiene los datos del onjeto actualizados
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Actualiza p en la bd, p contiene los datos del onjeto actualizados
         /// </summary>
         /// <param name="p"></param>
         public static void UpdateVNuevo_Extra(VNuevoExtrasDatos p)

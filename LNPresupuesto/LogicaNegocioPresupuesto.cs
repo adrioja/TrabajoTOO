@@ -12,19 +12,19 @@ namespace LNPresupuesto
     {
         /// <summary>
         /// Pre: P debe estar inicializado.
-        /// Post: Si el presupuesto existe, se añade a la base de datos y devuelve true, en caso contrario devuelve false.
+        /// Post: Si el presupuesto no existe, se añade a la base de datos y devuelve true, en caso contrario devuelve false.
         /// </summary>
         /// <param name="p"></param>
         public bool añadirPresupuesto(Presupuesto p)
         {
             if (Persistencia.Existe(p))
             {
-                Persistencia.Añadir(p);
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                Persistencia.Añadir(p);
+                return true;
             }
         }
 

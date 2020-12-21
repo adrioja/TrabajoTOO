@@ -11,13 +11,20 @@ namespace LNCliente
     public class LogicaNegocioCliente
     {
 
+        //--------------------------Metodos de busqueda---------------------------------------------------------------------
+
+
+        
+        
+
+        //--------------------------Metodos CRUD----------------------------------------------------------------------------
         /// <summary>
         /// PRE: el atributo debe de estar incializado;
         /// POST:Si el cliente c no existe lo añade y devuelve true, en caso cotrario devuelve false y no hace nada.
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool añadir(Cliente c)
+        public bool Añadir(Cliente c)
         {
             if(!Persistencia.Existe(c))
             {
@@ -34,7 +41,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        private bool existe(Cliente c)
+        private bool Existe(Cliente c)
         {
             return Persistencia.Existe(c);
         }
@@ -46,7 +53,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool eliminar(Cliente c)
+        public bool Eliminar(Cliente c)
         {
             if (!Persistencia.Existe(c))
             {
@@ -63,7 +70,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public Cliente buscar(Cliente c)
+        public Cliente Buscar(Cliente c)
         {
             if (Persistencia.Existe(c))
             {
@@ -79,7 +86,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool actualizar(Cliente c)
+        public bool Actualizar(Cliente c)
         {
             if (Persistencia.Existe(c))
             {
