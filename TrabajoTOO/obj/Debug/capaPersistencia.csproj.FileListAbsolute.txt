@@ -1,0 +1,9 @@
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.pdb
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.dll
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.pdb
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csprojAssemblyReference.cache
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb

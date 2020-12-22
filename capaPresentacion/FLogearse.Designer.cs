@@ -63,6 +63,7 @@ namespace capaPresentacion
             resources.ApplyResources(this.btEntrar, "btEntrar");
             this.btEntrar.Name = "btEntrar";
             this.btEntrar.UseVisualStyleBackColor = true;
+            this.btEntrar.Click += new System.EventHandler(this.btEntrar_Click);
             // 
             // lDescripcion
             // 

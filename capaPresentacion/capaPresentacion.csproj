@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirExtra.Designer.cs">
+      <DependentUpon>AñadirExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FLogearse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AñadirExtra.resx">
+      <DependentUpon>AñadirExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FLogearse.resx">
       <DependentUpon>FLogearse.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +96,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LNCliente\LNCliente.csproj">
+      <Project>{5751d26b-f70a-4bdd-ae7e-28f95b93165d}</Project>
+      <Name>LNCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LNPresupuesto\LNPresupuesto.csproj">
+      <Project>{093e7aec-e4c7-4b2e-84c9-774180df86a0}</Project>
+      <Name>LNPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LNVehiculo\LNVehiculo.csproj">
+      <Project>{f2cc52ee-ca22-4030-a452-39f9b7ae92e7}</Project>
+      <Name>LNVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\modeloDominio\modeloDominio.csproj">
+      <Project>{e0bd98b3-4442-493d-8e47-d7096c971879}</Project>
+      <Name>modeloDominio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,11 @@
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csprojAssemblyReference.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.pdb

@@ -12,9 +12,21 @@ namespace capaPresentacion
 {
     public partial class FPrincipal : Form
     {
-        public FPrincipal()
+        public FPrincipal(FLogearse log,String usuario)
         {
+            log.Hide();
             InitializeComponent();
+            this.IsMdiContainer = true;
+            this.tsslUsuarioSesion.Text = usuario;
+            this.tsslFechaActual.Text = DateTime.Now.ToLongDateString();
+            
+        }
+
+        private void añadirNuevoExtraDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AñadirExtra fextra = new AñadirExtra();
+            fextra.MdiParent = this;
+            fextra.Show();
         }
     }
 }

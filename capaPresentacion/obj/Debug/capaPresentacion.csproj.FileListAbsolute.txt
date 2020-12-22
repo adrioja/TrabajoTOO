@@ -8,3 +8,16 @@ C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.cs
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CoreCompileInputs.cache
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FPrincipal.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.AñadirExtra.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNCliente.dll
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNPresupuesto.dll
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNVehiculo.dll
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\modeloDominio.dll
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNCliente.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNPresupuesto.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNVehiculo.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\modeloDominio.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\TrabajoTOO.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete

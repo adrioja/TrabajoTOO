@@ -61,7 +61,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VehiculoDatos SelectVehiculo(VehiculoDatos v)
         {    
-           return BD.vehiculos[v.Identificador];
+           return BD.Vehiculos[v.Identificador];
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         private static bool ExistsVehiculo(VehiculoDatos v)
         {
-            return BD.vehiculos.Contains(v.Identificador);
+            return BD.Vehiculos.Contains(v.Identificador);
         }
 
         //-------------------------------------------------------------------------------------------------------------------
@@ -188,7 +188,7 @@ namespace TrabajoTOO
         public static void InsertVNuevos(VNuevoDatos v)
         {
             BD.InsertVehiculo(v);
-            BD.vNuevos.Add(v);
+            BD.VNuevos.Add(v);
             
         }
 
@@ -199,7 +199,7 @@ namespace TrabajoTOO
         /// <param name="v"></param>
         public static void DeleteVNuevos(VNuevoDatos v)
         {
-            BD.vNuevos.Remove(v.Identificador);
+            BD.VNuevos.Remove(v.Identificador);
             BD.DeleteVehiculo(v);
         }
 
@@ -211,7 +211,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VNuevoDatos SelectVNuevo(VNuevoDatos v)
         {
-            return BD.vNuevos[v.Identificador];
+            return BD.VNuevos[v.Identificador];
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static ExtraDatos SelectExtra(ExtraDatos e)
         {
-            return BD.extras[e.Identificador];
+            return BD.Extras[e.Identificador];
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsExtra(ExtraDatos e)
         {
-            return BD.extras.Contains(e.Identificador);
+            return BD.Extras.Contains(e.Identificador);
         }
 
 
@@ -357,7 +357,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static ClienteDatos SelectCliente(ClienteDatos c)
         {
-            return BD.clientes[c.Identificador];
+            return BD.Clientes[c.Identificador];
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsCliente(ClienteDatos c)
         {
-            return BD.clientes.Contains(c.Identificador);
+            return BD.Clientes.Contains(c.Identificador);
         }
 
 
@@ -429,7 +429,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static PresupuestosDato SelectPresupuesto(PresupuestosDato p)
         {
-            return BD.presupuestos[p.Identificador];
+            return BD.Presupuestos[p.Identificador];
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsPresupuesto(PresupuestosDato p)
         {
-            return BD.presupuestos.Contains(p.Identificador);
+            return BD.Presupuestos.Contains(p.Identificador);
         }
 
 
@@ -501,7 +501,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static Presupuesto_VehiculosDato SelectPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            return BD.presupuesto_vehiculos[p.Identificador];
+            return BD.Presupuesto_vehiculos[p.Identificador];
         }
 
         /// <summary>
@@ -542,7 +542,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void InsertVNuevo_Extra(VNuevoExtrasDatos p)
         {
-            BD.vNuevo_Extra.Add(p);
+            BD.VNuevo_Extra.Add(p);
         }
 
 
@@ -553,7 +553,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void DeleteVNuevo_Extra(VNuevoExtrasDatos p)
         {
-            BD.vNuevo_Extra.Remove(p.Identificador);
+            BD.VNuevo_Extra.Remove(p.Identificador);
         }
 
         /// <summary>
@@ -564,7 +564,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VNuevoExtrasDatos SelectVNuevo_Extra(VNuevoExtrasDatos p)
         {
-            return BD.vNuevo_Extra[p.Identificador];
+            return BD.VNuevo_Extra[p.Identificador];
         }
 
         /// <summary>

@@ -1,0 +1,11 @@
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\LNCliente.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\LNCliente.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csprojAssemblyReference.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb

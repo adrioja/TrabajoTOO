@@ -1,0 +1,11 @@
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\LNPresupuesto.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\LNPresupuesto.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\modeloDominio.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\TrabajoTOO.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\modeloDominio.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\bin\Debug\TrabajoTOO.pdb
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csprojAssemblyReference.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csproj.CopyComplete
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.dll
+C:\Users\adria\Desktop\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.pdb
