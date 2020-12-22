@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    public class ExtraDatos
+    public class ExtraDatos : Entity<String>
     {
         private String nombre;
         
@@ -39,7 +39,7 @@ namespace TrabajoTOO
         /// </summary>
         /// <param name="nombre"></param>
         /// <param name="precioFijo"></param>
-        public ExtraDatos(String nombre, double precioFijo)
+        public ExtraDatos(String nombre, double precioFijo): base(nombre)
         {
             this.nombre = nombre;
             this.precioFijo = precioFijo;

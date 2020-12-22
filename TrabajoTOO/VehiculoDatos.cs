@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace TrabajoTOO
 {
-   public class VehiculoDatos 
+   public class VehiculoDatos :Entity<String>
     {
         private String numBastidor;
         private String marca;
@@ -82,7 +82,7 @@ namespace TrabajoTOO
         /// <param name="modelo"></param>
         /// <param name="potencia"></param>
         /// <param name="pvRecomen"></param>
-        public VehiculoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen)
+        public VehiculoDatos(String numBastidor, String marca, String modelo, int potencia, double pvRecomen):base(numBastidor)
         {
             this.numBastidor = numBastidor;
             this.marca = marca;

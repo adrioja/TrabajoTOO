@@ -8,15 +8,10 @@ using System.Threading.Tasks;
 namespace TrabajoTOO
 {
     /// <summary>
-    /// la clase hereda de  KeyedCollection y le decimos que id es nuestra clave
+    /// la clase hereda de  KeyedGeneral y le decimos que id es nuestra clave
     /// </summary>
-    class PresupuestosTabla : KeyedCollection<string, PresupuestosDato>
+    class PresupuestosTabla : KeyedGeneral<string, PresupuestosDato>
     {
         public PresupuestosTabla() : base() { }
-
-        protected override string GetKeyForItem(PresupuestosDato item)
-        {
-            return item.Id;
-        }
     }
 }

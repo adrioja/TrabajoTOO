@@ -8,15 +8,10 @@ using System.Collections.ObjectModel;
 namespace TrabajoTOO
 {
     /// <summary>
-    /// la clase hereda de  KeyedCollection y le decimos que el numero de bastidor es nuestra clave
+    /// la clase hereda de  KeyedGeneral y le decimos que el numero de bastidor es nuestra clave
     /// </summary>
-    class VSegundaManoTabla : KeyedCollection<String, VSegundaManoDatos>
+    class VSegundaManoTabla : KeyedGeneral<String, VSegundaManoDatos>
     {
         public VSegundaManoTabla() : base() { }
-
-        protected override string GetKeyForItem(VSegundaManoDatos item)
-        {
-            return item.NumBastidor;
-        }
     }
 }

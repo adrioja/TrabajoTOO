@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class ClienteDatos
+    class ClienteDatos : Entity<String>
     {
         private string dni;
         private string nombre;
@@ -21,7 +21,7 @@ namespace TrabajoTOO
         /// <param name="nombre"></param>
         /// <param name="telefono"></param>
         /// <param name="categoria"></param>
-        public ClienteDatos(string dni, string nombre, string telefono, string categoria)
+        public ClienteDatos(string dni, string nombre, string telefono, string categoria) : base(dni)
         {
             this.dni = dni;
             this.nombre = nombre;

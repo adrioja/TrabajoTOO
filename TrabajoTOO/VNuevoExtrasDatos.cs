@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class VNuevoExtrasDatos
+    class VNuevoExtrasDatos : Entity<VNuevoExtrasClave>
     {
         private VNuevoExtrasClave clave;
         
@@ -26,7 +26,7 @@ namespace TrabajoTOO
         /// Inicializa la clase
         /// </summary>
         /// <param name="clave"></param>
-        public VNuevoExtrasDatos(VNuevoExtrasClave clave)
+        public VNuevoExtrasDatos(VNuevoExtrasClave clave):base(clave)
         {
             this.clave = clave;              
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    class Presupuesto_VehiculosDato
+    class Presupuesto_VehiculosDato : Entity<Presupuesto_VehiculoClave>
     {
         Presupuesto_VehiculoClave clave;
 
@@ -15,7 +15,7 @@ namespace TrabajoTOO
             get { return this.clave; }
         }
 
-        public Presupuesto_VehiculosDato(Presupuesto_VehiculoClave clave)
+        public Presupuesto_VehiculosDato(Presupuesto_VehiculoClave clave):base(clave)
         {
             this.clave = clave;
         }

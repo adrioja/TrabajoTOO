@@ -8,15 +8,10 @@ using System.Threading.Tasks;
 namespace TrabajoTOO
 {
     /// <summary>
-    /// la clase hereda de  KeyedCollection y le decimos que el numero de bastidor y el nombre del extra es nuestra clave
+    /// la clase hereda de  KeyedGeneral y le decimos que el numero de bastidor y el nombre del extra es nuestra clave
     /// </summary>
-    class VNuevoExtrasTabla : KeyedCollection<VNuevoExtrasClave, VNuevoExtrasDatos>
+    class VNuevoExtrasTabla : KeyedGeneral<VNuevoExtrasClave, VNuevoExtrasDatos>
     {
         public VNuevoExtrasTabla() : base() { }
-
-        protected override VNuevoExtrasClave GetKeyForItem(VNuevoExtrasDatos item)
-        {
-            return item.Clave;
-        }
     }
 }

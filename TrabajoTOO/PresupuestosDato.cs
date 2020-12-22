@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
-    public class PresupuestosDato
+    public class PresupuestosDato : Entity<String>
     {
         String id;
         String cliente;
@@ -38,7 +38,7 @@ namespace TrabajoTOO
             get { return this.vehiculoComprado; }
         }
 
-        public PresupuestosDato(String id, String cliente, DateTime fecha, String estado, String vehiculoComprado)
+        public PresupuestosDato(String id, String cliente, DateTime fecha, String estado, String vehiculoComprado):base(id)
         {
             this.id= id;
             this.cliente = cliente;

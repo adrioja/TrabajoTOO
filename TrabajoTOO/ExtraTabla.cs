@@ -8,15 +8,10 @@ using System.Collections.ObjectModel;
 namespace TrabajoTOO 
 {
     /// <summary>
-    /// la clase hereda de  KeyedCollection y le decimos que el no,bre del extra es nuestra clave
+    /// la clase hereda de  KeyedGeneral y le decimos que el no,bre del extra es nuestra clave
     /// </summary>
-    class ExtraTabla : KeyedCollection<String, ExtraDatos>
+    class ExtraTabla : KeyedGeneral<String, ExtraDatos>
     {
         public ExtraTabla() : base() { }
-
-        protected override string GetKeyForItem(ExtraDatos item)
-        {
-            return item.Nombre;
-        }
     }
 }

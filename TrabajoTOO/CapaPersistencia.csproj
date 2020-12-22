@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="KeyedGeneral.cs" />
     <Compile Include="Presupuesto_VehiculosTabla.cs" />
     <Compile Include="Presupuesto_VehiculosDato.cs" />
     <Compile Include="Presupuesto_VehiculoClave.cs" />
