@@ -24,9 +24,9 @@ namespace capaPresentacion
 
         private void añadirNuevoExtraDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AñadirExtra fextra = new AñadirExtra();
-            fextra.MdiParent = this;
-            fextra.Show();
+            FClave f = new FClave("NOMBRE");
+            DialogResult dr= f.ShowDialog();
+            
         }
     }
 }
