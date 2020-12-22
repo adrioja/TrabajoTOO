@@ -50,7 +50,7 @@ namespace TrabajoTOO
         /// <param name="v"></param>
         private static void DeleteVehiculo(VehiculoDatos v)
         {
-            BD.Vehiculos.Remove(v.NumBastidor);
+            BD.Vehiculos.Remove(v.Identificador);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VehiculoDatos SelectVehiculo(VehiculoDatos v)
         {    
-           return BD.vehiculos[v.NumBastidor];
+           return BD.vehiculos[v.Identificador];
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         private static bool ExistsVehiculo(VehiculoDatos v)
         {
-            return BD.vehiculos.Contains(v.NumBastidor);
+            return BD.vehiculos.Contains(v.Identificador);
         }
 
         //-------------------------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ namespace TrabajoTOO
         /// <param name="v"></param>
         public static void DeleteVSegundaMano(VSegundaManoDatos v)
         {
-            BD.VSegundaMano.Remove(v.NumBastidor);
+            BD.VSegundaMano.Remove(v.Identificador);
             BD.DeleteVehiculo(v);
         }
 
@@ -134,7 +134,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VSegundaManoDatos SelectVSegundaMano(VSegundaManoDatos v)
         {
-            return BD.vSegundaMano[v.NumBastidor];
+            return BD.vSegundaMano[v.Identificador];
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace TrabajoTOO
         /// <param name="v"></param>
         public static void DeleteVNuevos(VNuevoDatos v)
         {
-            BD.vNuevos.Remove(v.NumBastidor);
+            BD.vNuevos.Remove(v.Identificador);
             BD.DeleteVehiculo(v);
         }
 
@@ -211,7 +211,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VNuevoDatos SelectVNuevo(VNuevoDatos v)
         {
-            return BD.vNuevos[v.NumBastidor];
+            return BD.vNuevos[v.Identificador];
         }
 
         /// <summary>
@@ -274,7 +274,7 @@ namespace TrabajoTOO
         /// <param name="e"></param>
         public static void DeleteExtras(ExtraDatos e)
         {
-            BD.Extras.Remove(e.Nombre);
+            BD.Extras.Remove(e.Identificador);
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static ExtraDatos SelectExtra(ExtraDatos e)
         {
-            return BD.extras[e.Nombre];
+            return BD.extras[e.Identificador];
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsExtra(ExtraDatos e)
         {
-            return BD.extras.Contains(e.Nombre);
+            return BD.extras.Contains(e.Identificador);
         }
 
 
@@ -346,7 +346,7 @@ namespace TrabajoTOO
         /// <param name="c"></param>
         public static void DeleteCliente(ClienteDatos c)
         {
-            BD.Clientes.Remove(c.DNI);
+            BD.Clientes.Remove(c.Identificador);
         }
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static ClienteDatos SelectCliente(ClienteDatos c)
         {
-            return BD.clientes[c.DNI];
+            return BD.clientes[c.Identificador];
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsCliente(ClienteDatos c)
         {
-            return BD.clientes.Contains(c.DNI);
+            return BD.clientes.Contains(c.Identificador);
         }
 
 
@@ -418,7 +418,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void DeletePresupuesto(PresupuestosDato p)
         {
-            BD.Presupuestos.Remove(p.Id);
+            BD.Presupuestos.Remove(p.Identificador);
         }
 
         /// <summary>
@@ -429,7 +429,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static PresupuestosDato SelectPresupuesto(PresupuestosDato p)
         {
-            return BD.presupuestos[p.Id];
+            return BD.presupuestos[p.Identificador];
         }
 
         /// <summary>
@@ -451,7 +451,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool ExistsPresupuesto(PresupuestosDato p)
         {
-            return BD.presupuestos.Contains(p.Id);
+            return BD.presupuestos.Contains(p.Identificador);
         }
 
 
@@ -490,7 +490,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void DeletePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            BD.Presupuesto_vehiculos.Remove(p.Clave);
+            BD.Presupuesto_vehiculos.Remove(p.Identificador);
         }
 
         /// <summary>
@@ -501,7 +501,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static Presupuesto_VehiculosDato SelectPresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            return BD.presupuesto_vehiculos[p.Clave];
+            return BD.presupuesto_vehiculos[p.Identificador];
         }
 
         /// <summary>
@@ -553,7 +553,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void DeleteVNuevo_Extra(VNuevoExtrasDatos p)
         {
-            BD.vNuevo_Extra.Remove(p.Clave);
+            BD.vNuevo_Extra.Remove(p.Identificador);
         }
 
         /// <summary>
@@ -564,7 +564,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static VNuevoExtrasDatos SelectVNuevo_Extra(VNuevoExtrasDatos p)
         {
-            return BD.vNuevo_Extra[p.Clave];
+            return BD.vNuevo_Extra[p.Identificador];
         }
 
         /// <summary>
