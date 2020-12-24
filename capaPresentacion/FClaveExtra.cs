@@ -15,9 +15,9 @@ namespace capaPresentacion
     public partial class FClaveExtra : Form
     {
 
-        private Opciones opcion;
+        private OpcionesOperacion opcion;
 
-        public FClaveExtra(Opciones o)
+        public FClaveExtra(OpcionesOperacion o)
         {
             this.opcion = o;
             this.inicializarComponentes();
@@ -32,7 +32,7 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(opcion.Equals(Opciones.Alta))
+            if(opcion.Equals(OpcionesOperacion.Alta))
             {
                 if (LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
                 {
@@ -48,7 +48,7 @@ namespace capaPresentacion
                     this.DialogResult = DialogResult.None;
                 }
             }
-            if(opcion.Equals(Opciones.Baja))
+            if(opcion.Equals(OpcionesOperacion.Baja))
             {
                 if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
                 {
@@ -64,7 +64,7 @@ namespace capaPresentacion
                     this.DialogResult = DialogResult.None;
                 }
             }
-            if(opcion.Equals(Opciones.Busqueda))
+            if(opcion.Equals(OpcionesOperacion.Busqueda))
             {
                 if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
                 {

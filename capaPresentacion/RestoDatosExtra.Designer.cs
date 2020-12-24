@@ -91,7 +91,7 @@ namespace capaPresentacion
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // AltaExtra
+            // RestoDatosExtra
             // 
             this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,7 +104,8 @@ namespace capaPresentacion
             this.Controls.Add(this.lNombre);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.tbNombre);
-            this.Name = "AltaExtra";
+            this.MaximizeBox = false;
+            this.Name = "RestoDatosExtra";
             this.Text = "AltaExtra";
             this.ResumeLayout(false);
             this.PerformLayout();

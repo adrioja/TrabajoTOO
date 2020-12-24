@@ -425,7 +425,16 @@ namespace LNVehiculo
                     lista.Add(e);
                 }
             }
+            return lista;
+        }
 
+        public static List<Extra> listaTodosLosExtras()
+        {
+            List<Extra> lista = new List<Extra>();
+            foreach (Extra e in Persistencia.listaTodosExtras())
+            {
+                lista.Add(e);
+            }
             return lista;
         }
     }

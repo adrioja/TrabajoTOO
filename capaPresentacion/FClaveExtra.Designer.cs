@@ -95,6 +95,7 @@ namespace capaPresentacion
             this.Controls.Add(this.lIdentificador);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
+            this.MaximizeBox = false;
             this.Name = "FClaveExtra";
             this.Text = "FClave";
             this.ResumeLayout(false);

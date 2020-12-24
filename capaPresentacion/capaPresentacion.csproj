@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OpcionesTipo.cs" />
     <Compile Include="RestoDatosExtra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,9 +71,15 @@
     <Compile Include="FPrincipal.Designer.cs">
       <DependentUpon>FPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Opciones.cs" />
+    <Compile Include="OpcionesOperacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VisualizadorGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizadorGeneral.Designer.cs">
+      <DependentUpon>VisualizadorGeneral.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="RestoDatosExtra.resx">
       <DependentUpon>RestoDatosExtra.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VisualizadorGeneral.resx">
+      <DependentUpon>VisualizadorGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

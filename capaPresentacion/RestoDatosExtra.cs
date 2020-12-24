@@ -14,9 +14,9 @@ namespace capaPresentacion
     public partial class RestoDatosExtra : Form
     {
         private Extra extra;
-        private Opciones opcion;
+        private OpcionesOperacion opcion;
 
-        public RestoDatosExtra(Extra e,Opciones o)
+        public RestoDatosExtra(Extra e,OpcionesOperacion o)
         {
             this.opcion = o;
             this.extra = e;
@@ -24,22 +24,26 @@ namespace capaPresentacion
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbNombre.Text = extra.Nombre;
-            if (opcion.Equals(Opciones.Baja) ||opcion.Equals(Opciones.Busqueda))
+            if (opcion.Equals(OpcionesOperacion.Baja) ||opcion.Equals(OpcionesOperacion.Busqueda))
             {
                 this.tbNombre.Enabled = false;
                 this.tbPrecio.Enabled = false;
                 this.tbPrecio.Text = this.extra.PrecioFijo+"";
-                if(opcion.Equals(Opciones.Busqueda))
+                if(opcion.Equals(OpcionesOperacion.Busqueda))
                 {
                     this.btCancelar.Visible = false;
                 }
+            }
+            if(opcion.Equals(OpcionesOperacion.Actualizar))
+            {
+                this.tbPrecio.Text = this.extra.PrecioFijo+"";
             }
             
         }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(opcion.Equals(Opciones.Alta))
+            if(opcion.Equals(OpcionesOperacion.Alta))
             {
                 double precio;
                 if (!Double.TryParse(this.tbPrecio.Text, out precio))
@@ -52,13 +56,26 @@ namespace capaPresentacion
                     this.extra.PrecioFijo = precio;
                 }
             }
-            if (opcion.Equals(Opciones.Baja))
+            if (opcion.Equals(OpcionesOperacion.Baja))
             {
                 DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este extra?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if(dr.Equals(DialogResult.No))
                 {
                     this.DialogResult = DialogResult.None;
                     this.Dispose();
+                }
+            }
+            if(opcion.Equals(OpcionesOperacion.Actualizar))
+            {
+                double precio;
+                if (!Double.TryParse(this.tbPrecio.Text, out precio))
+                {
+                    MessageBox.Show("Debes introducir una cantidad numerica para el precio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.DialogResult = DialogResult.None;
+                }
+                else
+                {
+                    this.extra.PrecioFijo = precio;
                 }
             }
 

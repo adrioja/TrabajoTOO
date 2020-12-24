@@ -42,12 +42,14 @@ namespace capaPresentacion
             this.visualizarDeSegunadaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBusquedaPorFiltros = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaDatosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaDeSegundaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExtra = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirNuevoExtraDisponibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
@@ -55,8 +57,8 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiBusquedaPorFiltros = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUnExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiActualizarExtra = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +167,12 @@ namespace capaPresentacion
             this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.busquedaToolStripMenuItem.Text = "Busqueda por numero de bastidor";
             // 
+            // tsmiBusquedaPorFiltros
+            // 
+            this.tsmiBusquedaPorFiltros.Name = "tsmiBusquedaPorFiltros";
+            this.tsmiBusquedaPorFiltros.Size = new System.Drawing.Size(254, 22);
+            this.tsmiBusquedaPorFiltros.Text = "Busqueda por filtros";
+            // 
             // actualizaDatosVehiculoToolStripMenuItem
             // 
             this.actualizaDatosVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -191,7 +199,9 @@ namespace capaPresentacion
             this.tsmiExtra.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirNuevoExtraDisponibleToolStripMenuItem,
             this.eliminarExtraToolStripMenuItem,
-            this.buscarUnExtraToolStripMenuItem});
+            this.buscarUnExtraToolStripMenuItem,
+            this.tsmiActualizarExtra,
+            this.visualizarToolStripMenuItem});
             this.tsmiExtra.Name = "tsmiExtra";
             this.tsmiExtra.Size = new System.Drawing.Size(50, 19);
             this.tsmiExtra.Text = "Extras";
@@ -209,6 +219,13 @@ namespace capaPresentacion
             this.eliminarExtraToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.eliminarExtraToolStripMenuItem.Text = "Eliminar extra";
             this.eliminarExtraToolStripMenuItem.Click += new System.EventHandler(this.eliminarExtraToolStripMenuItem_Click);
+            // 
+            // buscarUnExtraToolStripMenuItem
+            // 
+            this.buscarUnExtraToolStripMenuItem.Name = "buscarUnExtraToolStripMenuItem";
+            this.buscarUnExtraToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.buscarUnExtraToolStripMenuItem.Text = "Buscar un extra";
+            this.buscarUnExtraToolStripMenuItem.Click += new System.EventHandler(this.buscarUnExtraToolStripMenuItem_Click);
             // 
             // tsmiCliente
             // 
@@ -267,18 +284,19 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tsmiBusquedaPorFiltros
+            // tsmiActualizarExtra
             // 
-            this.tsmiBusquedaPorFiltros.Name = "tsmiBusquedaPorFiltros";
-            this.tsmiBusquedaPorFiltros.Size = new System.Drawing.Size(254, 22);
-            this.tsmiBusquedaPorFiltros.Text = "Busqueda por filtros";
+            this.tsmiActualizarExtra.Name = "tsmiActualizarExtra";
+            this.tsmiActualizarExtra.Size = new System.Drawing.Size(232, 22);
+            this.tsmiActualizarExtra.Text = "Actualizar un extra";
+            this.tsmiActualizarExtra.Click += new System.EventHandler(this.tsmiActualizarExtra_Click);
             // 
-            // buscarUnExtraToolStripMenuItem
+            // visualizarToolStripMenuItem
             // 
-            this.buscarUnExtraToolStripMenuItem.Name = "buscarUnExtraToolStripMenuItem";
-            this.buscarUnExtraToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.buscarUnExtraToolStripMenuItem.Text = "Buscar un extra";
-            this.buscarUnExtraToolStripMenuItem.Click += new System.EventHandler(this.buscarUnExtraToolStripMenuItem_Click);
+            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -330,5 +348,7 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem eliminarExtraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiBusquedaPorFiltros;
         private System.Windows.Forms.ToolStripMenuItem buscarUnExtraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiActualizarExtra;
+        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
     }
 }

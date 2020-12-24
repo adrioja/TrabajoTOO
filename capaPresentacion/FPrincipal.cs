@@ -27,11 +27,11 @@ namespace capaPresentacion
         private void añadirNuevoExtraDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            FClaveExtra f = new FClaveExtra(Opciones.Alta);
+            FClaveExtra f = new FClaveExtra(OpcionesOperacion.Alta);
             DialogResult dr = f.ShowDialog();
             if(dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
             {
-                RestoDatosExtra alta = new RestoDatosExtra(f.devolverExtra(),Opciones.Alta);
+                RestoDatosExtra alta = new RestoDatosExtra(f.devolverExtra(),OpcionesOperacion.Alta);
                 DialogResult drAlta = alta.ShowDialog();
                 if(drAlta.Equals(DialogResult.OK))
                 {
@@ -52,11 +52,11 @@ namespace capaPresentacion
 
         private void eliminarExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveExtra f = new FClaveExtra(Opciones.Baja);
+            FClaveExtra f = new FClaveExtra(OpcionesOperacion.Baja);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
             {
-                RestoDatosExtra baja = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), Opciones.Baja);
+                RestoDatosExtra baja = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Baja);
                 DialogResult drBaja = baja.ShowDialog();
                 if (drBaja.Equals(DialogResult.OK))
                 {
@@ -72,14 +72,48 @@ namespace capaPresentacion
 
         private void buscarUnExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveExtra f = new FClaveExtra(Opciones.Busqueda);
+            FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
             {
-                RestoDatosExtra busqueda = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), Opciones.Busqueda);
+                RestoDatosExtra busqueda = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Busqueda);
                 DialogResult drBusqueda = busqueda.ShowDialog();
                 busqueda.Dispose();
             }
+        }
+
+        private void tsmiActualizarExtra_Click(object sender, EventArgs e)
+        {
+            FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                RestoDatosExtra actualizar = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Actualizar);
+                DialogResult drActualizar = actualizar.ShowDialog();
+                if (drActualizar.Equals(DialogResult.OK))
+                {
+                    LNVehiculo.LogicaNegocioVehiculo.actualizar(actualizar.devExtra());
+                    MessageBox.Show("El extra se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    actualizar.Dispose();
+                }
+                
+            }
+
+        }
+
+        private void todosLosExtrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizadorGeneral visualizador = new VisualizadorGeneral("extras", OpcionesTipo.Extra);
+            DialogResult dr = visualizador.ShowDialog();
+            visualizador.Dispose();
         }
     }
 }

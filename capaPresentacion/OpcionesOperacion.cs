@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace capaPresentacion
 {
-    public enum Opciones
+    public enum OpcionesOperacion
     {Alta, Baja, Busqueda, Actualizar}
 }
