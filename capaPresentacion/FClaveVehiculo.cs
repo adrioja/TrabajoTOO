@@ -86,9 +86,19 @@ namespace capaPresentacion
         /// Solo se puede llamar si la clase esta incializada y si el nombre introducido no existe ya en el sistema
         /// </summary>
         /// <returns></returns>
-        internal Vehiculo devolverVehiculo()
+        internal Vehiculo devolverVehiculo() //-------------------------------------------------------------------------------MIRAR
         {
-            return new VehiculoNuevo(this.tbIdentificador.Text);
+            Vehiculo ve = new VehiculoNuevo(this.tbIdentificador.Text);
+            Vehiculo nuevo = LNVehiculo.LogicaNegocioVehiculo.buscar(ve);
+            if (nuevo!=null)
+            {
+                return nuevo;
+            }
+            else
+            {
+                return new VehiculoSegundaMano(this.tbIdentificador.Text);
+            }
+            
         }
     }
 }

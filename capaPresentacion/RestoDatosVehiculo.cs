@@ -27,6 +27,37 @@ namespace capaPresentacion
             this.rbtNuevo.Checked = true;
             this.opcion = o;
 
+            if(this.opcion.Equals(OpcionesOperacion.Baja))
+            {
+                this.asignarDatos();
+                VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
+                VehiculoSegundaMano v = LNVehiculo.LogicaNegocioVehiculo.buscar(this.vehiculo) as VehiculoSegundaMano;
+                if (v==null)
+                {
+                    this.rbtNuevo.Checked = true;
+                    
+                }
+                else
+                {
+                    this.rbtSegundaMano.Checked = true;
+                }
+                this.deshabilitar();
+            }
+
+        }
+
+        public void deshabilitar()
+        {
+
+        }
+
+        public void asignarDatos()
+        {
+            this.tbNumeroBastidor.Text = this.vehiculo.NumBastidor;
+            this.tbMarca.Text = this.vehiculo.Marca;
+            this.tbModelo.Text = this.vehiculo.Modelo;
+            this.tbPotencia.Text = this.vehiculo.Potencia + "";
+            this.tbPrecioRecomendado.Text = this.vehiculo.PvRecomendado + "";
         }
 
         /// <summary>
@@ -51,7 +82,11 @@ namespace capaPresentacion
 
         private void rbtSegundaMano_CheckedChanged(object sender, EventArgs e)
         {
-            this.rbtSegundaMano.Checked = false;
+            if(this.rbtSegundaMano.Checked)
+            {
+                this.rbtNuevo.Checked = false;
+            }
+            
             this.lMatricula.Visible = true;
             this.lFechaMatriculacion.Visible = true;
             this.tbMatricula.Visible = true;
@@ -60,7 +95,10 @@ namespace capaPresentacion
 
         private void rbtNuevo_CheckedChanged(object sender, EventArgs e)
         {
-            this.rbtNuevo.Checked = false;
+            if(this.rbtNuevo.Checked)
+            {
+                this.rbtSegundaMano.Checked = false;
+            }
             this.lMatricula.Visible = false;
             this.lFechaMatriculacion.Visible = false;
             this.tbMatricula.Visible = false;
@@ -93,6 +131,16 @@ namespace capaPresentacion
                         this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio,this.tbMatricula.Text,fecha);
                     }
 
+                }
+
+                if (opcion.Equals(OpcionesOperacion.Baja))
+                {
+                    DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este vehiculo?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr.Equals(DialogResult.No))
+                    {
+                        this.DialogResult = DialogResult.None;
+                        this.Dispose();
+                    }
                 }
 
                 //-----

@@ -149,5 +149,27 @@ namespace capaPresentacion
                 f.Dispose();
             }
         }
+
+        private void eliminarUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e) //mal CON SEGUNDA MANO
+        {
+            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Baja);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                Vehiculo v = f.devolverVehiculo();
+                Vehiculo ve = new VehiculoNuevo(v.NumBastidor);
+                RestoDatosVehiculo baja = new RestoDatosVehiculo(LNVehiculo.LogicaNegocioVehiculo.buscar(ve), OpcionesOperacion.Baja);
+                DialogResult drBaja = baja.ShowDialog();
+                if (drBaja.Equals(DialogResult.OK))
+                {
+                    /*LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devExtra());
+                    MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                }
+                else
+                {
+                    baja.Dispose();
+                }
+            }
+        }
     }
 }

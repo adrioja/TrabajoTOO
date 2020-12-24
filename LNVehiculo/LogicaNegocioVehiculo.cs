@@ -11,6 +11,8 @@ namespace LNVehiculo
     public class LogicaNegocioVehiculo
     {
         //--------------------------------------METODOS VARIOS---------------------------------------
+
+
         /// <summary>
         /// Devuelve una lista con todos los vehiculos del concesionario
         /// </summary>
@@ -117,6 +119,23 @@ namespace LNVehiculo
                 }
             }
             return l;
+        }
+
+
+        public static Vehiculo buscar(Vehiculo v)
+        {
+            Vehiculo dev = null;
+            if (existeYa(v))
+            {
+                dev = Persistencia.Buscar(v);
+            }
+
+            return dev;
+        }
+
+        public static bool existeYa(Vehiculo v)
+        {
+            return Persistencia.Existe(v);
         }
 
         //--------------------------------------METODOS VEHICULO NUEVO---------------------------------------
@@ -428,6 +447,11 @@ namespace LNVehiculo
             return lista;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve una lista de todos los extras
+        /// </summary>
+        /// <returns></returns>
         public static List<Extra> listaTodosLosExtras()
         {
             List<Extra> lista = new List<Extra>();

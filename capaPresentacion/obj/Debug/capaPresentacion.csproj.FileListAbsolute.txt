@@ -25,4 +25,3 @@ C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.Re
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.VisualizadorGeneral.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClaveVehiculo.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RestoDatosVehiculo.resources
-C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.aaaa.resources

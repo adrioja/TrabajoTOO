@@ -33,17 +33,11 @@ namespace capaPresentacion
             this.tsmiVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarDeSegundaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarLosVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarNuevosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarDeSegunadaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBusquedaPorFiltros = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaDatosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizaDeSegundaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExtra = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirNuevoExtraDisponibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,9 +74,9 @@ namespace capaPresentacion
             this.tsmiVehiculo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirUnVehiculoToolStripMenuItem,
             this.eliminarUnVehiculoToolStripMenuItem,
-            this.visualizarLosVehiculosToolStripMenuItem,
             this.buscarVehiculosToolStripMenuItem,
-            this.actualizaDatosVehiculoToolStripMenuItem});
+            this.actualizaDatosVehiculoToolStripMenuItem,
+            this.visualizarLosVehiculosToolStripMenuItem});
             this.tsmiVehiculo.Name = "tsmiVehiculo";
             this.tsmiVehiculo.Size = new System.Drawing.Size(64, 19);
             this.tsmiVehiculo.Text = "Vehiculo";
@@ -96,45 +90,16 @@ namespace capaPresentacion
             // 
             // eliminarUnVehiculoToolStripMenuItem
             // 
-            this.eliminarUnVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eliminarNuevoToolStripMenuItem,
-            this.eliminarDeSegundaManoToolStripMenuItem});
             this.eliminarUnVehiculoToolStripMenuItem.Name = "eliminarUnVehiculoToolStripMenuItem";
             this.eliminarUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.eliminarUnVehiculoToolStripMenuItem.Text = "Eliminar un vehiculo";
-            // 
-            // eliminarNuevoToolStripMenuItem
-            // 
-            this.eliminarNuevoToolStripMenuItem.Name = "eliminarNuevoToolStripMenuItem";
-            this.eliminarNuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.eliminarNuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // eliminarDeSegundaManoToolStripMenuItem
-            // 
-            this.eliminarDeSegundaManoToolStripMenuItem.Name = "eliminarDeSegundaManoToolStripMenuItem";
-            this.eliminarDeSegundaManoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.eliminarDeSegundaManoToolStripMenuItem.Text = "De segunda mano";
+            this.eliminarUnVehiculoToolStripMenuItem.Click += new System.EventHandler(this.eliminarUnVehiculoToolStripMenuItem_Click);
             // 
             // visualizarLosVehiculosToolStripMenuItem
             // 
-            this.visualizarLosVehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.visualizarNuevosToolStripMenuItem,
-            this.visualizarDeSegunadaManoToolStripMenuItem});
             this.visualizarLosVehiculosToolStripMenuItem.Name = "visualizarLosVehiculosToolStripMenuItem";
             this.visualizarLosVehiculosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.visualizarLosVehiculosToolStripMenuItem.Text = "Visualizar los vehiculos";
-            // 
-            // visualizarNuevosToolStripMenuItem
-            // 
-            this.visualizarNuevosToolStripMenuItem.Name = "visualizarNuevosToolStripMenuItem";
-            this.visualizarNuevosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.visualizarNuevosToolStripMenuItem.Text = "Nuevos";
-            // 
-            // visualizarDeSegunadaManoToolStripMenuItem
-            // 
-            this.visualizarDeSegunadaManoToolStripMenuItem.Name = "visualizarDeSegunadaManoToolStripMenuItem";
-            this.visualizarDeSegunadaManoToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.visualizarDeSegunadaManoToolStripMenuItem.Text = "De segunada mano";
             // 
             // buscarVehiculosToolStripMenuItem
             // 
@@ -159,24 +124,9 @@ namespace capaPresentacion
             // 
             // actualizaDatosVehiculoToolStripMenuItem
             // 
-            this.actualizaDatosVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actualizarNuevoToolStripMenuItem,
-            this.actualizaDeSegundaManoToolStripMenuItem});
             this.actualizaDatosVehiculoToolStripMenuItem.Name = "actualizaDatosVehiculoToolStripMenuItem";
             this.actualizaDatosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.actualizaDatosVehiculoToolStripMenuItem.Text = "Actualiza datos vehiculo";
-            // 
-            // actualizarNuevoToolStripMenuItem
-            // 
-            this.actualizarNuevoToolStripMenuItem.Name = "actualizarNuevoToolStripMenuItem";
-            this.actualizarNuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.actualizarNuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // actualizaDeSegundaManoToolStripMenuItem
-            // 
-            this.actualizaDeSegundaManoToolStripMenuItem.Name = "actualizaDeSegundaManoToolStripMenuItem";
-            this.actualizaDeSegundaManoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.actualizaDeSegundaManoToolStripMenuItem.Text = "De segunda mano";
             // 
             // tsmiExtra
             // 
@@ -308,18 +258,12 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem tsmiVehiculo;
         private System.Windows.Forms.ToolStripMenuItem añadirUnVehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarUnVehiculoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarNuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarDeSegundaManoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarLosVehiculosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarNuevosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarDeSegunadaManoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarVehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmiPresupuesto;
         private System.Windows.Forms.ToolStripMenuItem busquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizaDatosVehiculoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizarNuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizaDeSegundaManoToolStripMenuItem;
         private System.Windows.Forms.StatusStrip ssBarraEstado;
         private System.Windows.Forms.ToolStripStatusLabel tsslFecha;
         private System.Windows.Forms.ToolStripStatusLabel tsslFechaActual;

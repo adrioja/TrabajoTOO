@@ -36,7 +36,7 @@ namespace capaPresentacion
             }
             if(opcion.Equals(OpcionesOperacion.Actualizar))
             {
-                this.tbPrecio.Text = this.extra.PrecioFijo+"";
+                this.tbPrecio.Text = this.extra.PrecioFijo + "";
             }
             
         }
