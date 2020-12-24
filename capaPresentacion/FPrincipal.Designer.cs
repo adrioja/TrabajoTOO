@@ -32,8 +32,6 @@ namespace capaPresentacion
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmiVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirDeSegundaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarDeSegundaManoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +48,8 @@ namespace capaPresentacion
             this.añadirNuevoExtraDisponibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarUnExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiActualizarExtra = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
@@ -57,8 +57,6 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsmiActualizarExtra = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -91,24 +89,10 @@ namespace capaPresentacion
             // 
             // añadirUnVehiculoToolStripMenuItem
             // 
-            this.añadirUnVehiculoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.añadirNuevoToolStripMenuItem,
-            this.añadirDeSegundaManoToolStripMenuItem});
             this.añadirUnVehiculoToolStripMenuItem.Name = "añadirUnVehiculoToolStripMenuItem";
             this.añadirUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.añadirUnVehiculoToolStripMenuItem.Text = "Añadir un vehiculo";
-            // 
-            // añadirNuevoToolStripMenuItem
-            // 
-            this.añadirNuevoToolStripMenuItem.Name = "añadirNuevoToolStripMenuItem";
-            this.añadirNuevoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.añadirNuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // añadirDeSegundaManoToolStripMenuItem
-            // 
-            this.añadirDeSegundaManoToolStripMenuItem.Name = "añadirDeSegundaManoToolStripMenuItem";
-            this.añadirDeSegundaManoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.añadirDeSegundaManoToolStripMenuItem.Text = "De segunda mano";
+            this.añadirUnVehiculoToolStripMenuItem.Click += new System.EventHandler(this.añadirUnVehiculoToolStripMenuItem_Click);
             // 
             // eliminarUnVehiculoToolStripMenuItem
             // 
@@ -227,6 +211,20 @@ namespace capaPresentacion
             this.buscarUnExtraToolStripMenuItem.Text = "Buscar un extra";
             this.buscarUnExtraToolStripMenuItem.Click += new System.EventHandler(this.buscarUnExtraToolStripMenuItem_Click);
             // 
+            // tsmiActualizarExtra
+            // 
+            this.tsmiActualizarExtra.Name = "tsmiActualizarExtra";
+            this.tsmiActualizarExtra.Size = new System.Drawing.Size(232, 22);
+            this.tsmiActualizarExtra.Text = "Actualizar un extra";
+            this.tsmiActualizarExtra.Click += new System.EventHandler(this.tsmiActualizarExtra_Click);
+            // 
+            // visualizarToolStripMenuItem
+            // 
+            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
+            // 
             // tsmiCliente
             // 
             this.tsmiCliente.Name = "tsmiCliente";
@@ -284,20 +282,6 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tsmiActualizarExtra
-            // 
-            this.tsmiActualizarExtra.Name = "tsmiActualizarExtra";
-            this.tsmiActualizarExtra.Size = new System.Drawing.Size(232, 22);
-            this.tsmiActualizarExtra.Text = "Actualizar un extra";
-            this.tsmiActualizarExtra.Click += new System.EventHandler(this.tsmiActualizarExtra_Click);
-            // 
-            // visualizarToolStripMenuItem
-            // 
-            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.visualizarToolStripMenuItem.Text = "Visualizar";
-            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
-            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,8 +307,6 @@ namespace capaPresentacion
         private System.Windows.Forms.MenuStrip msPrincipal;
         private System.Windows.Forms.ToolStripMenuItem tsmiVehiculo;
         private System.Windows.Forms.ToolStripMenuItem añadirUnVehiculoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem añadirNuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem añadirDeSegundaManoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarUnVehiculoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarNuevoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarDeSegundaManoToolStripMenuItem;

@@ -144,7 +144,7 @@ namespace LNVehiculo
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
-        private static bool existeYa(VehiculoNuevo v)
+        public static bool existeYa(VehiculoNuevo v)
         {
             return Persistencia.Existe(v);
         }

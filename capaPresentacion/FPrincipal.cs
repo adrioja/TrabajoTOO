@@ -115,5 +115,38 @@ namespace capaPresentacion
             DialogResult dr = visualizador.ShowDialog();
             visualizador.Dispose();
         }
+
+        private void añadirUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Alta);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+            {
+                RestoDatosVehiculo alta = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Alta);
+                DialogResult drAlta = alta.ShowDialog();
+                if (drAlta.Equals(DialogResult.OK))
+                {
+                    Vehiculo vehiculo = alta.devVehiculo();
+                    VehiculoNuevo v = vehiculo as VehiculoNuevo;
+                    if(v!=null)
+                    {
+                        LNVehiculo.LogicaNegocioVehiculo.añadir(v);
+                    }
+                    else
+                    {
+                        LNVehiculo.LogicaNegocioVehiculo.añadir(vehiculo as VehiculoSegundaMano);
+                    }
+                    MessageBox.Show("El vehiculo se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    alta.Dispose();
+                }
+            }
+            else
+            {
+                f.Dispose();
+            }
+        }
     }
 }
