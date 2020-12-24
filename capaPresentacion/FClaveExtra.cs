@@ -14,8 +14,12 @@ namespace capaPresentacion
 {
     public partial class FClaveExtra : Form
     {
-        public FClaveExtra()
+
+        private Opciones opcion;
+
+        public FClaveExtra(Opciones o)
         {
+            this.opcion = o;
             this.inicializarComponentes();
         }
 
@@ -28,19 +32,55 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            /*if(LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text))) //cambiar
+            if(opcion.Equals(Opciones.Alta))
             {
-                DialogResult dr=  MessageBox.Show("¿Quieres introducir otro?", "Ya existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(dr.Equals(DialogResult.No))
+                if (LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
                 {
-                    this.Dispose();
-                }
-                else
-                {
-                    this.tbIdentificador.Text = "";
+                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr.Equals(DialogResult.No))
+                    {
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        this.tbIdentificador.Text = "";
+                    }
                     this.DialogResult = DialogResult.None;
                 }
-            }*/
+            }
+            if(opcion.Equals(Opciones.Baja))
+            {
+                if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
+                {
+                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr.Equals(DialogResult.No))
+                    {
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        this.tbIdentificador.Text = "";                        
+                    }
+                    this.DialogResult = DialogResult.None;
+                }
+            }
+            if(opcion.Equals(Opciones.Busqueda))
+            {
+                if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
+                {
+                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr.Equals(DialogResult.No))
+                    {
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        this.tbIdentificador.Text = "";                        
+                    }
+                    this.DialogResult = DialogResult.None;
+                }
+            }
+            
             
         }
 

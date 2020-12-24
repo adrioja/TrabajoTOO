@@ -1,7 +1,7 @@
 ﻿
 namespace capaPresentacion
 {
-    partial class AltaExtra
+    partial class RestoDatosExtra
     {
         /// <summary>
         /// Required designer variable.

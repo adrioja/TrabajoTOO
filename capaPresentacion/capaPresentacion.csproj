@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltaExtra.cs">
+    <Compile Include="RestoDatosExtra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaExtra.Designer.cs">
-      <DependentUpon>AltaExtra.cs</DependentUpon>
+    <Compile Include="RestoDatosExtra.Designer.cs">
+      <DependentUpon>RestoDatosExtra.cs</DependentUpon>
     </Compile>
     <Compile Include="FClaveExtra.cs">
       <SubType>Form</SubType>
@@ -70,10 +70,11 @@
     <Compile Include="FPrincipal.Designer.cs">
       <DependentUpon>FPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AltaExtra.resx">
-      <DependentUpon>AltaExtra.cs</DependentUpon>
+    <EmbeddedResource Include="RestoDatosExtra.resx">
+      <DependentUpon>RestoDatosExtra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FClaveExtra.resx">
       <DependentUpon>FClaveExtra.cs</DependentUpon>

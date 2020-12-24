@@ -55,6 +55,8 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsmiBusquedaPorFiltros = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -151,7 +153,8 @@ namespace capaPresentacion
             // buscarVehiculosToolStripMenuItem
             // 
             this.buscarVehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.busquedaToolStripMenuItem});
+            this.busquedaToolStripMenuItem,
+            this.tsmiBusquedaPorFiltros});
             this.buscarVehiculosToolStripMenuItem.Name = "buscarVehiculosToolStripMenuItem";
             this.buscarVehiculosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.buscarVehiculosToolStripMenuItem.Text = "Buscar vehiculos";
@@ -159,8 +162,8 @@ namespace capaPresentacion
             // busquedaToolStripMenuItem
             // 
             this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
-            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.busquedaToolStripMenuItem.Text = "Busqueda";
+            this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
+            this.busquedaToolStripMenuItem.Text = "Busqueda por numero de bastidor";
             // 
             // actualizaDatosVehiculoToolStripMenuItem
             // 
@@ -187,7 +190,8 @@ namespace capaPresentacion
             // 
             this.tsmiExtra.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirNuevoExtraDisponibleToolStripMenuItem,
-            this.eliminarExtraToolStripMenuItem});
+            this.eliminarExtraToolStripMenuItem,
+            this.buscarUnExtraToolStripMenuItem});
             this.tsmiExtra.Name = "tsmiExtra";
             this.tsmiExtra.Size = new System.Drawing.Size(50, 19);
             this.tsmiExtra.Text = "Extras";
@@ -263,10 +267,24 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // tsmiBusquedaPorFiltros
+            // 
+            this.tsmiBusquedaPorFiltros.Name = "tsmiBusquedaPorFiltros";
+            this.tsmiBusquedaPorFiltros.Size = new System.Drawing.Size(254, 22);
+            this.tsmiBusquedaPorFiltros.Text = "Busqueda por filtros";
+            // 
+            // buscarUnExtraToolStripMenuItem
+            // 
+            this.buscarUnExtraToolStripMenuItem.Name = "buscarUnExtraToolStripMenuItem";
+            this.buscarUnExtraToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.buscarUnExtraToolStripMenuItem.Text = "Buscar un extra";
+            this.buscarUnExtraToolStripMenuItem.Click += new System.EventHandler(this.buscarUnExtraToolStripMenuItem_Click);
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 395);
             this.Controls.Add(this.ssBarraEstado);
             this.Controls.Add(this.msPrincipal);
@@ -310,5 +328,7 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem tsmiExtra;
         private System.Windows.Forms.ToolStripMenuItem añadirNuevoExtraDisponibleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarExtraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBusquedaPorFiltros;
+        private System.Windows.Forms.ToolStripMenuItem buscarUnExtraToolStripMenuItem;
     }
 }
