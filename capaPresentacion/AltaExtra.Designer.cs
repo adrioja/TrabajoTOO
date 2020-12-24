@@ -41,6 +41,7 @@ namespace capaPresentacion
             // 
             this.tbNombre.Location = new System.Drawing.Point(134, 52);
             this.tbNombre.Name = "tbNombre";
+            this.tbNombre.ReadOnly = true;
             this.tbNombre.Size = new System.Drawing.Size(223, 20);
             this.tbNombre.TabIndex = 0;
             // 
@@ -77,6 +78,7 @@ namespace capaPresentacion
             this.btAceptar.TabIndex = 4;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // btCancelar
             // 
@@ -87,6 +89,7 @@ namespace capaPresentacion
             this.btCancelar.TabIndex = 5;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // AltaExtra
             // 

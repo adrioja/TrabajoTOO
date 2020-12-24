@@ -1,7 +1,7 @@
 ﻿
 namespace capaPresentacion
 {
-    partial class FClave
+    partial class FClaveExtra
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@ namespace capaPresentacion
             // 
             // btCancelar
             // 
+            this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancelar.Location = new System.Drawing.Point(203, 110);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
@@ -61,9 +62,9 @@ namespace capaPresentacion
             this.lIdentificador.AutoSize = true;
             this.lIdentificador.Location = new System.Drawing.Point(22, 70);
             this.lIdentificador.Name = "lIdentificador";
-            this.lIdentificador.Size = new System.Drawing.Size(65, 13);
+            this.lIdentificador.Size = new System.Drawing.Size(44, 13);
             this.lIdentificador.TabIndex = 2;
-            this.lIdentificador.Text = "Identificador";
+            this.lIdentificador.Text = "Nombre";
             // 
             // tbIdentificador
             // 
@@ -78,11 +79,11 @@ namespace capaPresentacion
             this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDescripcion.Location = new System.Drawing.Point(102, 13);
             this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(88, 18);
+            this.lbDescripcion.Size = new System.Drawing.Size(202, 18);
             this.lbDescripcion.TabIndex = 4;
-            this.lbDescripcion.Text = "Introduce el ";
+            this.lbDescripcion.Text = "Introduce el  nombre del extra";
             // 
-            // FClave
+            // FClaveExtra
             // 
             this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,7 +95,7 @@ namespace capaPresentacion
             this.Controls.Add(this.lIdentificador);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
-            this.Name = "FClave";
+            this.Name = "FClaveExtra";
             this.Text = "FClave";
             this.ResumeLayout(false);
             this.PerformLayout();

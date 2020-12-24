@@ -20,5 +20,5 @@ C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\LNVehiculo.pdb
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\modeloDominio.pdb
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\bin\Debug\TrabajoTOO.pdb
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
-C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClave.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.AltaExtra.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClaveExtra.resources

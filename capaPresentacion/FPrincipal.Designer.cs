@@ -204,6 +204,7 @@ namespace capaPresentacion
             this.eliminarExtraToolStripMenuItem.Name = "eliminarExtraToolStripMenuItem";
             this.eliminarExtraToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.eliminarExtraToolStripMenuItem.Text = "Eliminar extra";
+            this.eliminarExtraToolStripMenuItem.Click += new System.EventHandler(this.eliminarExtraToolStripMenuItem_Click);
             // 
             // tsmiCliente
             // 
