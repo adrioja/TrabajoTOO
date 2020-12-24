@@ -122,6 +122,7 @@ namespace capaPresentacion
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
             {
+                
                 RestoDatosVehiculo alta = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Alta);
                 DialogResult drAlta = alta.ShowDialog();
                 if (drAlta.Equals(DialogResult.OK))

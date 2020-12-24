@@ -18,14 +18,15 @@ namespace capaPresentacion
 
         public RestoDatosVehiculo(Vehiculo e, OpcionesOperacion o)
         {
-            this.opcion = o;
+            
             this.vehiculo = e;
             InitializeComponent();
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbNumeroBastidor.Text = vehiculo.NumBastidor;
             this.rbtNuevo.Checked = true;
-            InitializeComponent();
+            this.opcion = o;
+
         }
 
         /// <summary>
@@ -77,6 +78,7 @@ namespace capaPresentacion
             {
                 if (opcion.Equals(OpcionesOperacion.Alta))
                 {
+                    string num = this.tbNumeroBastidor.Text;
                     int potencia = (int) Double.Parse(this.tbPotencia.Text);
                     double precio = Double.Parse(this.tbPrecioRecomendado.Text);
 
@@ -104,7 +106,7 @@ namespace capaPresentacion
 
         private bool formatosCorrectos()
         {
-            return true; //-----------------------------------------------HACER QUE COMPRUEBE TODOS LOS FORMATOS
+            return 0==0; //-----------------------------------------------HACER QUE COMPRUEBE TODOS LOS FORMATOS
         }
     }
 }
