@@ -12,6 +12,31 @@ namespace LNVehiculo
     {
         //--------------------------------------METODOS VARIOS---------------------------------------
 
+        /// <summary>
+        /// PRE: v puede contener solo la clave, debe estar incializado
+        /// POST:comprueba que existe y si es asi lo borra y devuelve true y en cualquier otro caso false
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static bool eliminar(Vehiculo v)
+        {
+            bool eliminar = false;
+            if (existeYa(v))
+            {
+                VehiculoNuevo nuevo = Persistencia.Buscar(v) as VehiculoNuevo;
+                if(nuevo!=null)
+                {
+                    Persistencia.Borrar(nuevo);
+                }
+                else
+                {
+                    Persistencia.Borrar(Persistencia.Buscar(v) as VehiculoSegundaMano);
+                }
+                eliminar = true;
+                
+            }
+            return eliminar;
+        }
 
         /// <summary>
         /// Devuelve una lista con todos los vehiculos del concesionario

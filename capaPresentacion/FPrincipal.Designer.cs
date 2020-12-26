@@ -33,11 +33,11 @@ namespace capaPresentacion
             this.tsmiVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUnVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarLosVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBusquedaPorFiltros = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizaDatosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarLosVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExtra = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirNuevoExtraDisponibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,12 +95,6 @@ namespace capaPresentacion
             this.eliminarUnVehiculoToolStripMenuItem.Text = "Eliminar un vehiculo";
             this.eliminarUnVehiculoToolStripMenuItem.Click += new System.EventHandler(this.eliminarUnVehiculoToolStripMenuItem_Click);
             // 
-            // visualizarLosVehiculosToolStripMenuItem
-            // 
-            this.visualizarLosVehiculosToolStripMenuItem.Name = "visualizarLosVehiculosToolStripMenuItem";
-            this.visualizarLosVehiculosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.visualizarLosVehiculosToolStripMenuItem.Text = "Visualizar los vehiculos";
-            // 
             // buscarVehiculosToolStripMenuItem
             // 
             this.buscarVehiculosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -115,6 +109,7 @@ namespace capaPresentacion
             this.busquedaToolStripMenuItem.Name = "busquedaToolStripMenuItem";
             this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.busquedaToolStripMenuItem.Text = "Busqueda por numero de bastidor";
+            this.busquedaToolStripMenuItem.Click += new System.EventHandler(this.busquedaToolStripMenuItem_Click);
             // 
             // tsmiBusquedaPorFiltros
             // 
@@ -125,8 +120,15 @@ namespace capaPresentacion
             // actualizaDatosVehiculoToolStripMenuItem
             // 
             this.actualizaDatosVehiculoToolStripMenuItem.Name = "actualizaDatosVehiculoToolStripMenuItem";
-            this.actualizaDatosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.actualizaDatosVehiculoToolStripMenuItem.Text = "Actualiza datos vehiculo";
+            this.actualizaDatosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.actualizaDatosVehiculoToolStripMenuItem.Text = "Actualizar datos vehiculo";
+            this.actualizaDatosVehiculoToolStripMenuItem.Click += new System.EventHandler(this.actualizaDatosVehiculoToolStripMenuItem_Click);
+            // 
+            // visualizarLosVehiculosToolStripMenuItem
+            // 
+            this.visualizarLosVehiculosToolStripMenuItem.Name = "visualizarLosVehiculosToolStripMenuItem";
+            this.visualizarLosVehiculosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.visualizarLosVehiculosToolStripMenuItem.Text = "Visualizar los vehiculos";
             // 
             // tsmiExtra
             // 

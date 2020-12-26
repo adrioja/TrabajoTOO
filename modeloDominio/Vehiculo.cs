@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
-    public class Vehiculo:IEquatable<Vehiculo>  //ANTES ESTABA COMO ABSTRACT
+    public abstract class Vehiculo:IEquatable<Vehiculo> 
     {
 
         /////////////////////////// ATRIBUTOS ///////////////////////////

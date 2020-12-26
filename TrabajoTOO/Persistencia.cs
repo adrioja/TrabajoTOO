@@ -21,11 +21,21 @@ namespace TrabajoTOO
         /// </summary>
         /// <param name="v1"></param>
         /// <returns></returns>
-        public static Vehiculo Buscar(Vehiculo v1)
+        public static Vehiculo Buscar(Vehiculo v1)                          
         {
             VehiculoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
-            VehiculoDatos dev = BD.SelectVehiculo(v);
-            return new Vehiculo(dev.NumBastidor, dev.Potencia, dev.Modelo, dev.Marca, dev.PvRecomendado);              //-------------------ESTO MIRAR
+            VehiculoDatos dev = BD.devTipoVehiculo(v);
+            VNuevoDatos nuevo = dev as VNuevoDatos;
+            if(nuevo!=null)
+            {
+                return new VehiculoNuevo(dev.NumBastidor, dev.Potencia, dev.Modelo, dev.Marca, dev.PvRecomendado);
+            }
+            else
+            {
+                VSegundaManoDatos seg = dev as VSegundaManoDatos;
+                return new VehiculoSegundaMano(seg.NumBastidor, seg.Potencia, seg.Modelo, seg.Marca, seg.PvRecomendado, seg.Matricula, seg.FechaMatriculacion);
+            }
+                        
         }
 
         public static bool Existe(Vehiculo v1)

@@ -27,12 +27,11 @@ namespace capaPresentacion
             this.rbtNuevo.Checked = true;
             this.opcion = o;
 
-            if(this.opcion.Equals(OpcionesOperacion.Baja))
+            if(this.opcion.Equals(OpcionesOperacion.Baja) || this.opcion.Equals(OpcionesOperacion.Busqueda))
             {
                 this.asignarDatos();
                 VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
-                VehiculoSegundaMano v = LNVehiculo.LogicaNegocioVehiculo.buscar(this.vehiculo) as VehiculoSegundaMano;
-                if (v==null)
+                if (ve==null)
                 {
                     this.rbtNuevo.Checked = true;
                     
@@ -40,15 +39,48 @@ namespace capaPresentacion
                 else
                 {
                     this.rbtSegundaMano.Checked = true;
+                    this.tbMatricula.Text = ve.Matricula;
+                    this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
                 }
                 this.deshabilitar();
+                if(this.opcion.Equals(OpcionesOperacion.Busqueda))
+                {
+                    this.btCancelar.Visible = false;
+                }
+            }
+
+            if (opcion.Equals(OpcionesOperacion.Actualizar))
+            {
+                this.rbtNuevo.Enabled = false;
+                this.rbtSegundaMano.Enabled = false;
+                this.asignarDatos();
+                VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
+                if (ve == null)
+                {
+                    this.rbtNuevo.Checked = true;
+
+                }
+                else
+                {
+                    this.rbtSegundaMano.Checked = true;
+                    this.tbMatricula.Text = ve.Matricula;
+                    this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
+                }
             }
 
         }
 
         public void deshabilitar()
         {
-
+            this.tbNumeroBastidor.Enabled = false;
+            this.tbMarca.Enabled = false;
+            this.tbModelo.Enabled = false;
+            this.tbPotencia.Enabled = false;
+            this.tbPrecioRecomendado.Enabled = false;
+            this.tbMatricula.Enabled = false;
+            this.tbFechaMatriculacion.Enabled = false;
+            this.rbtNuevo.Enabled = false;
+            this.rbtSegundaMano.Enabled = false;
         }
 
         public void asignarDatos()
@@ -143,7 +175,25 @@ namespace capaPresentacion
                     }
                 }
 
-                //-----
+
+                if (opcion.Equals(OpcionesOperacion.Actualizar))
+                {
+                    string num = this.tbNumeroBastidor.Text;
+                    int potencia = (int)Double.Parse(this.tbPotencia.Text);
+                    double precio = Double.Parse(this.tbPrecioRecomendado.Text);
+
+                    if (this.rbtNuevo.Checked)
+                    {
+                        this.vehiculo = new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
+                    }
+                    else
+                    {
+                        String[] s = this.tbFechaMatriculacion.Text.Split('/');
+                        DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
+                        this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text, fecha);
+                    }
+                }
+                
             }
             else
             {

@@ -35,6 +35,25 @@ namespace TrabajoTOO
 
         /// <summary>
         /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Devuelve el vehiculo del tipo al que pertenece
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static VehiculoDatos devTipoVehiculo(VehiculoDatos v)        //---------------------------------- NUEVO
+        {
+            if(BD.VNuevos.Contains(v.Identificador))
+            {
+                return BD.VNuevos[v.Identificador];
+            }
+            else
+            {
+                return BD.VSegundaMano[v.Identificador];
+            }
+            
+        }
+
+        /// <summary>
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
         /// POST: Añade el vehiculo
         /// </summary>
         /// <param name="v"></param>
@@ -146,7 +165,6 @@ namespace TrabajoTOO
         {
             BD.DeleteVSegundaMano(v);
             BD.DeleteVehiculo(v);
-            BD.InsertVehiculo(v);
             BD.InsertVSegundaMano(v);
         }
 
@@ -223,7 +241,6 @@ namespace TrabajoTOO
         {
             BD.DeleteVNuevos(v);
             BD.DeleteVehiculo(v);
-            BD.InsertVehiculo(v);
             BD.InsertVNuevos(v);
         }
 

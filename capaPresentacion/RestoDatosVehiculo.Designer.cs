@@ -217,11 +217,11 @@ namespace capaPresentacion
             // 
             this.lDescripcion.AutoSize = true;
             this.lDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescripcion.Location = new System.Drawing.Point(293, 23);
+            this.lDescripcion.Location = new System.Drawing.Point(325, 25);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(199, 20);
+            this.lDescripcion.Size = new System.Drawing.Size(118, 20);
             this.lDescripcion.TabIndex = 18;
-            this.lDescripcion.Text = "Introduce el resto de datos";
+            this.lDescripcion.Text = "Resto de datos";
             // 
             // RestoDatosVehiculo
             // 

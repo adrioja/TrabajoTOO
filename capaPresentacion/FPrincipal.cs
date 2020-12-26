@@ -104,11 +104,6 @@ namespace capaPresentacion
 
         }
 
-        private void todosLosExtrasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizadorGeneral visualizador = new VisualizadorGeneral("extras", OpcionesTipo.Extra);
@@ -157,18 +152,60 @@ namespace capaPresentacion
             if (dr.Equals(DialogResult.OK))
             {
                 Vehiculo v = f.devolverVehiculo();
-                Vehiculo ve = new VehiculoNuevo(v.NumBastidor);
-                RestoDatosVehiculo baja = new RestoDatosVehiculo(LNVehiculo.LogicaNegocioVehiculo.buscar(ve), OpcionesOperacion.Baja);
+                RestoDatosVehiculo baja = new RestoDatosVehiculo(v, OpcionesOperacion.Baja);
                 DialogResult drBaja = baja.ShowDialog();
                 if (drBaja.Equals(DialogResult.OK))
                 {
-                    /*LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devExtra());
-                    MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                    LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devVehiculo());
+                    MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     baja.Dispose();
                 }
+            }
+        }
+
+        private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Busqueda);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                RestoDatosVehiculo busqueda = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Busqueda);
+                DialogResult drBusqueda = busqueda.ShowDialog();
+                busqueda.Dispose();
+            }
+        }
+
+        private void actualizaDatosVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Busqueda);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                RestoDatosVehiculo actualizar = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Actualizar);
+                DialogResult drActualizar = actualizar.ShowDialog();
+                if (drActualizar.Equals(DialogResult.OK))
+                {
+                    Vehiculo v = actualizar.devVehiculo();
+                    VehiculoNuevo nuevo = v as VehiculoNuevo;
+                    if(nuevo!=null)
+                    {
+                        LNVehiculo.LogicaNegocioVehiculo.actualizar(nuevo);
+                    }
+                    else
+                    {
+                        LNVehiculo.LogicaNegocioVehiculo.actualizar(v as VehiculoSegundaMano);
+                    }
+                    
+                    MessageBox.Show("El vehiculo se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    actualizar.Dispose();
+                }
+
             }
         }
     }
