@@ -52,6 +52,18 @@
     <Compile Include="FClaveVehiculo.Designer.cs">
       <DependentUpon>FClaveVehiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FClaveCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FClaveCliente.Designer.cs">
+      <DependentUpon>FClaveCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestoDatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoDatosCliente.Designer.cs">
+      <DependentUpon>RestoDatosCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpcionesTipo.cs" />
     <Compile Include="RestoDatosExtra.cs">
       <SubType>Form</SubType>
@@ -94,6 +106,12 @@
     </Compile>
     <EmbeddedResource Include="FClaveVehiculo.resx">
       <DependentUpon>FClaveVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FClaveCliente.resx">
+      <DependentUpon>FClaveCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestoDatosCliente.resx">
+      <DependentUpon>RestoDatosCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestoDatosExtra.resx">
       <DependentUpon>RestoDatosExtra.cs</DependentUpon>

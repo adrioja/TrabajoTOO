@@ -8,6 +8,6 @@ namespace capaPresentacion
 {
     public enum OpcionesTipo
     {
-        Vehiculo, VehiculoNuevo, VehiculoSegundaMano, Extra
+        Vehiculo, VehiculoNuevo, VehiculoSegundaMano, Extra, Cliente
     }
 }

@@ -24,7 +24,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool Añadir(Cliente c)
+        public static bool Añadir(Cliente c)
         {
             if(!Persistencia.Existe(c))
             {
@@ -41,7 +41,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        private bool Existe(Cliente c)
+        public static bool Existe(Cliente c)
         {
             return Persistencia.Existe(c);
         }
@@ -53,7 +53,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool Eliminar(Cliente c)
+        public static bool Eliminar(Cliente c)
         {
             if (!Persistencia.Existe(c))
             {
@@ -70,7 +70,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public Cliente Buscar(Cliente c)
+        public static Cliente Buscar(Cliente c)
         {
             if (Persistencia.Existe(c))
             {
@@ -86,7 +86,7 @@ namespace LNCliente
         /// </summary>
         /// <param name="c"></param>
         /// <returns></returns>
-        public bool Actualizar(Cliente c)
+        public static bool Actualizar(Cliente c)
         {
             if (Persistencia.Existe(c))
             {
