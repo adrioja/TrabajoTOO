@@ -119,7 +119,7 @@ namespace modeloDominio
         /// <returns></returns>
         public override string ToString()
         {
-            return "- Vehiculo nuevo: [Vehiculo: " + base.ToString() + "], [Lista de extras: " + this.listaExtrasAñadidos().ToString() + "]";
+            return "- Vehiculo nuevo: [" + base.ToString() + "]";
         }
     }
 }

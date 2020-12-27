@@ -1,7 +1,7 @@
 ﻿
 namespace capaPresentacion
 {
-    partial class VisualizadorGeneral
+    partial class VisualizadorGeneralExtras
     {
         /// <summary>
         /// Required designer variable.
@@ -44,9 +44,9 @@ namespace capaPresentacion
             this.lDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lDescripcion.Location = new System.Drawing.Point(22, 9);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(137, 20);
+            this.lDescripcion.Size = new System.Drawing.Size(195, 20);
             this.lDescripcion.TabIndex = 1;
-            this.lDescripcion.Text = "Lista de todos los ";
+            this.lDescripcion.Text = "Lista de extras disponibles";
             // 
             // lbListaElementos
             // 
@@ -101,7 +101,7 @@ namespace capaPresentacion
             this.lbBuscar.TabIndex = 7;
             this.lbBuscar.Text = "Se mostraran los extras que contengan dicha palabara en su nombre";
             // 
-            // VisualizadorGeneral
+            // VisualizadorGeneralExtras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +114,7 @@ namespace capaPresentacion
             this.Controls.Add(this.lbListaElementos);
             this.Controls.Add(this.lDescripcion);
             this.MaximizeBox = false;
-            this.Name = "VisualizadorGeneral";
+            this.Name = "VisualizadorGeneralExtras";
             this.Text = "VisualizadorGeneral";
             this.ResumeLayout(false);
             this.PerformLayout();

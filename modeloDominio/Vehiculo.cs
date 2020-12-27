@@ -135,11 +135,11 @@ namespace modeloDominio
             {
                 if (this is VehiculoNuevo)
                 {
-                    return 10;
+                    return 0.1;
                 }
                 else
                 {
-                    return 21;
+                    return 0.21;
                 }
             }
         }
@@ -178,7 +178,7 @@ namespace modeloDominio
         /// <returns></returns>
         public override string ToString()
         {
-            return "- Vehiculo: [Nº Bastidor: " + this.NumBastidor + "], [Potencia: " + this.Potencia + "], [Modelo: " + this.Modelo + "], [Marca: " + this.Marca + "], [Precio de venta recomendado: "+this.PvRecomendado+"], [PVP: "+this.PVP+"], [IVA: "+this.IVA+"]";
+            return "[Nº Bastidor: " + this.NumBastidor + "], [Potencia: " + this.Potencia + "], [Modelo: " + this.Modelo + "], [Marca: " + this.Marca + "], [Precio de venta : "+this.PVP+"]";
         }
     }
 }

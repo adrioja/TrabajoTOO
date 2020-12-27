@@ -11,16 +11,12 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
-    public partial class VisualizadorGeneral : Form
+    public partial class VisualizadorGeneralExtras : Form
     {
-        private OpcionesTipo o;
-
-        public VisualizadorGeneral(string nombreMuestra, OpcionesTipo o)
+        public VisualizadorGeneralExtras()
         {
-            this.o = o;
             InitializeComponent();
             this.lbListaElementos.Enabled = false;
-            this.lDescripcion.Text += nombreMuestra;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.mostrarTodos();
             
@@ -32,11 +28,9 @@ namespace capaPresentacion
             this.mostrarTodos();
         }
 
-        public void mostrarTodos()
+        private void mostrarTodos()
         {
             this.lbListaElementos.Items.Clear();
-            if (this.o.Equals(OpcionesTipo.Extra))
-            {
                 List<Extra> lista = LNVehiculo.LogicaNegocioVehiculo.listaTodosLosExtras();
                 foreach (Extra e in lista)
                 {
@@ -45,14 +39,11 @@ namespace capaPresentacion
                     extra = extra.Replace(']', ' ');
                     this.lbListaElementos.Items.Add(extra);
                 }
-            }
         }
 
         private void btBuscar_Click(object sender, EventArgs e2)
         {
             this.lbListaElementos.Items.Clear();
-            if(this.o.Equals(OpcionesTipo.Extra))
-            {
                 List<Extra> lista = LNVehiculo.LogicaNegocioVehiculo.buscarExtras(this.tbBuscar.Text);
                 foreach (Extra e in lista)
                 {
@@ -61,7 +52,6 @@ namespace capaPresentacion
                     extra = extra.Replace(']', ' ');
                     this.lbListaElementos.Items.Add(extra);
                 }
-            }
             
         }
     }

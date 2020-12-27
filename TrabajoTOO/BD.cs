@@ -164,7 +164,6 @@ namespace TrabajoTOO
         public static void UpdateVSegundaMano(VSegundaManoDatos v)
         {
             BD.DeleteVSegundaMano(v);
-            BD.DeleteVehiculo(v);
             BD.InsertVSegundaMano(v);
         }
 
@@ -240,7 +239,6 @@ namespace TrabajoTOO
         public static void UpdateVNuevo(VNuevoDatos v)
         {
             BD.DeleteVNuevos(v);
-            BD.DeleteVehiculo(v);
             BD.InsertVNuevos(v);
         }
 

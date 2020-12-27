@@ -106,7 +106,7 @@ namespace capaPresentacion
 
         private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            VisualizadorGeneral visualizador = new VisualizadorGeneral("extras", OpcionesTipo.Extra);
+            VisualizadorGeneralExtras visualizador = new VisualizadorGeneralExtras();
             DialogResult dr = visualizador.ShowDialog();
             visualizador.Dispose();
         }
@@ -207,6 +207,13 @@ namespace capaPresentacion
                 }
 
             }
+        }
+
+        private void visualizarLosVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizadorGeneralVehiculo visualizador = new VisualizadorGeneralVehiculo();
+            DialogResult dr = visualizador.ShowDialog();
+            visualizador.Dispose();
         }
     }
 }

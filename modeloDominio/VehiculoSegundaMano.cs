@@ -90,7 +90,7 @@ namespace modeloDominio
         /// <returns></returns>
         public override string ToString()
         {
-            return "- Vehiculo de segunda mano: [Vehiculo: " + base.ToString() + "], [Matricula: " + this.Matricula+ "], [Fecha de matriculacion: "+this.FechaMatriculacion.ToString()+"]";
+            return "- Vehiculo de segunda mano: [" + base.ToString() + "], [Matricula: " + this.Matricula+ "], [Fecha de matriculacion: "+this.FechaMatriculacion.ToString()+"]";
         }
     }
 }

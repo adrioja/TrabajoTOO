@@ -98,8 +98,14 @@ namespace LNVehiculo
             bool potenci = potencia != 0;
             bool mode = !modelo.Equals("");
             bool marc = !modelo.Equals("");
-            bool pvRec = pvp != 0;
-            foreach(Vehiculo v in Persistencia.listaVehiculos())
+            bool pvPublico = pvp != 0;
+            List<Vehiculo> lista = new List<Vehiculo>();
+            foreach (Vehiculo ve in listaDeTodosLosVehiculos())
+            {
+                lista.Add(buscar(ve));
+            }
+
+            foreach (Vehiculo v in lista)
             {
                 bool añadir = true;
                 if (bastidor && añadir)
@@ -130,7 +136,7 @@ namespace LNVehiculo
                         añadir = false;
                     }
                 }
-                if(pvRec && añadir)
+                if(pvPublico && añadir)
                 {
                     if(v.PVP > pvp)
                     {

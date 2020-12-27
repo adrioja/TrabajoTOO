@@ -14,7 +14,7 @@ namespace capaPresentacion
 {
     public partial class RestoDatosCliente : Form
     {
-        private Cliente cliente;
+        /*private Cliente cliente;
         private OpcionesOperacion opcion;
 
         public RestoDatosCliente(Cliente c, OpcionesOperacion o)
@@ -206,6 +206,6 @@ namespace capaPresentacion
         private bool formatosCorrectos()
         {
             return 0 == 0; //-----------------------------------------------HACER QUE COMPRUEBE TODOS LOS FORMATOS
-        }
+        }*/
     }
 }

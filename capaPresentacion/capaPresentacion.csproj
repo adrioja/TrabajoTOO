@@ -98,11 +98,17 @@
     <Compile Include="RestoDatosVehiculo.Designer.cs">
       <DependentUpon>RestoDatosVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisualizadorGeneral.cs">
+    <Compile Include="VisualizadorGeneralExtras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VisualizadorGeneral.Designer.cs">
-      <DependentUpon>VisualizadorGeneral.cs</DependentUpon>
+    <Compile Include="VisualizadorGeneralExtras.Designer.cs">
+      <DependentUpon>VisualizadorGeneralExtras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizadorGeneralVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizadorGeneralVehiculo.Designer.cs">
+      <DependentUpon>VisualizadorGeneralVehiculo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FClaveVehiculo.resx">
       <DependentUpon>FClaveVehiculo.cs</DependentUpon>
@@ -137,8 +143,11 @@
     <EmbeddedResource Include="RestoDatosVehiculo.resx">
       <DependentUpon>RestoDatosVehiculo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VisualizadorGeneral.resx">
-      <DependentUpon>VisualizadorGeneral.cs</DependentUpon>
+    <EmbeddedResource Include="VisualizadorGeneralExtras.resx">
+      <DependentUpon>VisualizadorGeneralExtras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizadorGeneralVehiculo.resx">
+      <DependentUpon>VisualizadorGeneralVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
