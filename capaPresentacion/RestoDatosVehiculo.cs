@@ -204,7 +204,39 @@ namespace capaPresentacion
 
         private bool formatosCorrectos()
         {
-            return 0==0; //-----------------------------------------------HACER QUE COMPRUEBE TODOS LOS FORMATOS
+            String potencia = this.tbPotencia.Text;
+            if(!int.TryParse(potencia, out int potenciaNumero))
+            { //Comprobamos que la potencia es un numero entero?
+                return false;
+            }
+
+            String precioRecomendado = this.tbPrecioRecomendado.Text;
+            if(!double.TryParse(precioRecomendado, out double precioRecomendadoNumero))
+            { //Comprobamos que es un numero coon decimales
+                return false;
+            }
+
+            if(this.rbtNuevo.Checked)
+            { //Esta seleccionado que es un v nuevo
+
+            } 
+            else if(this.rbtSegundaMano.Checked)
+            {// Esta seleccionado que es un v de segunda mano
+
+                String matricula = this.tbMatricula.Text;       //Comprobar el formato de matricula y la fecha de matriculación:
+                if(matricula.Length != )
+
+
+
+            } else
+            { //Ninguna opción seleccionada
+                return false;
+            }
+
+
+
+
+            return true; //si todo está bien
         }
     }
 }

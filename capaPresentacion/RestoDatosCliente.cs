@@ -14,7 +14,7 @@ namespace capaPresentacion
 {
     public partial class RestoDatosCliente : Form
     {
-        /*private Cliente cliente;
+        private Cliente cliente;
         private OpcionesOperacion opcion;
 
         public RestoDatosCliente(Cliente c, OpcionesOperacion o)
@@ -23,7 +23,7 @@ namespace capaPresentacion
             InitializeComponent();
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
-            this.lb.Text = vehiculo.NumBastidor;
+            this.tbDNI.Text = this.cliente.DNI;
             
             this.opcion = o;
 
@@ -33,18 +33,6 @@ namespace capaPresentacion
             if (this.opcion.Equals(OpcionesOperacion.Baja) || this.opcion.Equals(OpcionesOperacion.Busqueda))
             {
                 this.asignarDatos();
-                VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
-                if (ve == null)
-                {
-                    this.rbtNuevo.Checked = true;
-
-                }
-                else
-                {
-                    this.rbtSegundaMano.Checked = true;
-                    this.tbMatricula.Text = ve.Matricula;
-                    this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
-                }
                 this.deshabilitar();
                 if (this.opcion.Equals(OpcionesOperacion.Busqueda))
                 {
@@ -54,21 +42,14 @@ namespace capaPresentacion
 
             if (opcion.Equals(OpcionesOperacion.Actualizar))
             {
-                this.rbtNuevo.Enabled = false;
-                this.rbtSegundaMano.Enabled = false;
                 this.asignarDatos();
-                VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
-                if (ve == null)
-                {
-                    this.rbtNuevo.Checked = true;
+                this.tbDNI.Enabled = false;
+            }
 
-                }
-                else
-                {
-                    this.rbtSegundaMano.Checked = true;
-                    this.tbMatricula.Text = ve.Matricula;
-                    this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
-                }
+            if(opcion.Equals(OpcionesOperacion.Alta))
+            {
+                this.tbDNI.Text = this.cliente.DNI;
+                this.tbDNI.Enabled = false;
             }
         }
 
@@ -84,6 +65,10 @@ namespace capaPresentacion
             this.rbC.Enabled = false;
         }
 
+        /// <summary>
+        /// Dado el cliente que tenemos, se reyenan todos los textBox del formulario con sus datos
+        /// </summary>
+        /// <returns></returns>
         public void asignarDatos()
         {
             this.tbDNI.Text = this.cliente.DNI;
@@ -112,26 +97,27 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// solo se le puede llamar cuando la clase este incializada y los datos del formulario cumplen el formato
+        /// Devuelve un cliente reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
         /// </summary>
         /// <returns></returns>
         public Cliente devCliente()
-        {
+        {           
+            CategoriaCliente categoria;
 
-
-            ///Esto cambiar v
-            int potencia = Int32.Parse(this.tbPotencia.Text);
-            double precio = Double.Parse(this.tbPrecioRecomendado.Text);
-            if (this.rbtNuevo.Checked)
+            if (this.rbA.Checked)
             {
-                return new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
+                categoria = CategoriaCliente.A;
+            }
+            else if(this.rbB.Checked)
+            {
+                categoria = CategoriaCliente.B;
             }
             else
             {
-                String[] s = this.tbFechaMatriculacion.Text.Split('/');
-                DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
-                return new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text, fecha);
+                categoria = CategoriaCliente.C;
             }
+
+            return new Cliente(this.tbDNI.Text, this.tbNombre.Text, this.tbTelefono.Text, categoria);
         }
 
 
@@ -148,26 +134,12 @@ namespace capaPresentacion
             {
                 if (opcion.Equals(OpcionesOperacion.Alta))
                 {
-                    string num = this.tbNumeroBastidor.Text;
-                    int potencia = (int)Double.Parse(this.tbPotencia.Text);
-                    double precio = Double.Parse(this.tbPrecioRecomendado.Text);
-
-                    if (this.rbtNuevo.Checked)
-                    {
-                        this.vehiculo = new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
-                    }
-                    else
-                    {
-                        String[] s = this.tbFechaMatriculacion.Text.Split('/');
-                        DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
-                        this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text, fecha);
-                    }
-
+                    this.cliente = this.devCliente();
                 }
 
                 if (opcion.Equals(OpcionesOperacion.Baja))
                 {
-                    DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este vehiculo?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este cliente?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dr.Equals(DialogResult.No))
                     {
                         this.DialogResult = DialogResult.None;
@@ -178,20 +150,7 @@ namespace capaPresentacion
 
                 if (opcion.Equals(OpcionesOperacion.Actualizar))
                 {
-                    string num = this.tbNumeroBastidor.Text;
-                    int potencia = (int)Double.Parse(this.tbPotencia.Text);
-                    double precio = Double.Parse(this.tbPrecioRecomendado.Text);
-
-                    if (this.rbtNuevo.Checked)
-                    {
-                        this.vehiculo = new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
-                    }
-                    else
-                    {
-                        String[] s = this.tbFechaMatriculacion.Text.Split('/');
-                        DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
-                        this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text, fecha);
-                    }
+                    this.cliente = this.devCliente();
                 }
 
             }
@@ -205,7 +164,28 @@ namespace capaPresentacion
 
         private bool formatosCorrectos()
         {
-            return 0 == 0; //-----------------------------------------------HACER QUE COMPRUEBE TODOS LOS FORMATOS
-        }*/
+            String dni = this.tbDNI.Text;
+            if(dni.Length != 9)
+            { //Comprobamos si el tamaño es correcto
+                return false;
+            }
+            if(!long.TryParse(dni, out long dniNumero)) 
+            { //Comprobamos si son todo numeros
+                return false;
+            }
+
+
+            String telefono = this.tbTelefono.Text;
+            if(telefono.Length!=9)
+            { //Comprobamos si el tamaño es correcto
+                return false;
+            }
+            if(!long.TryParse(dni, out long telefonoNumero))
+            { //Comprobamos si son todo numeros
+                return false;
+            }
+
+            return true; //Si se cumple todo
+        }
     }
 }

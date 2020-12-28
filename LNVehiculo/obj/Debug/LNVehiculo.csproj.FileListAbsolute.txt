@@ -9,3 +9,7 @@ C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CoreCom
 C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete
 C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.dll
 C:\Users\adria\Desktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.pdb

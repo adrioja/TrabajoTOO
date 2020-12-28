@@ -9,3 +9,14 @@ C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CoreCompi
 C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
 C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
 C:\Users\adria\Desktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\LNCliente.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\LNCliente.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb

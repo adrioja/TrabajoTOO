@@ -4,3 +4,9 @@ C:\Users\adria\Desktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.csprojAs
 C:\Users\adria\Desktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.csproj.CoreCompileInputs.cache
 C:\Users\adria\Desktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.dll
 C:\Users\adria\Desktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\bin\Debug\modeloDominio.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\bin\Debug\modeloDominio.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.pdb

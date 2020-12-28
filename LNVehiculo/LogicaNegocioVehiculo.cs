@@ -19,23 +19,25 @@ namespace LNVehiculo
         /// <param name="v"></param>
         /// <returns></returns>
         public static bool eliminar(Vehiculo v)
-        {
-            bool eliminar = false;
+        {           
             if (existeYa(v))
-            {
-                VehiculoNuevo nuevo = Persistencia.Buscar(v) as VehiculoNuevo;
-                if(nuevo!=null)
-                {
-                    Persistencia.Borrar(nuevo);
+            {// Existe:
+
+                VehiculoNuevo busquedaNuevo = v as VehiculoNuevo;
+
+                if(busquedaNuevo != null)
+                { //Se trata de un v nuevo 
+                    Persistencia.Borrar(busquedaNuevo);
+                    return true;
                 }
                 else
-                {
-                    Persistencia.Borrar(Persistencia.Buscar(v) as VehiculoSegundaMano);
+                { //Se trata de un v de segunda mano
+                    VehiculoSegundaMano busquedaSegundaMano = v as VehiculoSegundaMano;
+                    Persistencia.Borrar(busquedaSegundaMano);
+                    return true;
                 }
-                eliminar = true;
-                
             }
-            return eliminar;
+            return false;
         }
 
         /// <summary>
