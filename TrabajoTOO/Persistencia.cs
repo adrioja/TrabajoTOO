@@ -14,6 +14,36 @@ namespace TrabajoTOO
 
         //------------------------------------------METODOS VARIOS---------------------------------------------
 
+        /// <summary>	
+        /// PRE:la clase que se pasa como parametro debe de estar incializada	
+        /// POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), obtendremos un vehiculoNuevo con todos sus campos, no se contempla el caso en el que el VehiculoNuevo no esta en la BD 	
+        /// </summary>	
+        /// <param name="v1"></param>	
+        /// <returns></returns>	
+        public static Vehiculo Buscar(Vehiculo v1)
+        {
+            VehiculoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            VehiculoDatos dev = BD.devTipoVehiculo(v);
+            VNuevoDatos nuevo = dev as VNuevoDatos;
+            if (nuevo != null)
+            {
+                return new VehiculoNuevo(dev.NumBastidor, dev.Potencia, dev.Modelo, dev.Marca, dev.PvRecomendado);
+            }
+            else
+            {
+                VSegundaManoDatos seg = dev as VSegundaManoDatos;
+                return new VehiculoSegundaMano(seg.NumBastidor, seg.Potencia, seg.Modelo, seg.Marca, seg.PvRecomendado, seg.Matricula, seg.FechaMatriculacion);
+            }
+
+        }
+
+        public static bool Existe(Vehiculo v1)
+        {
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            return BD.ExistsVNuevo(v);
+        }
+
+
         /// <summary>
         /// Devuelve la lista de todos los extras que se pueden poner
         /// </summary>
