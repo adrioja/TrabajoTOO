@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using modeloDominio;
@@ -203,40 +204,57 @@ namespace capaPresentacion
         }
 
         private bool formatosCorrectos()
-        {
+        { 
+            bool v = true;
+            String mensaje = "";
+            
             String potencia = this.tbPotencia.Text;
             if(!int.TryParse(potencia, out int potenciaNumero))
-            { //Comprobamos que la potencia es un numero entero?
-                return false;
+            { //Comprobamos que la potencia es un numero entero
+                mensaje = "La potencia no es un número";
+                v= false;
             }
 
             String precioRecomendado = this.tbPrecioRecomendado.Text;
-            if(!double.TryParse(precioRecomendado, out double precioRecomendadoNumero))
+            if(v && !double.TryParse(precioRecomendado, out double precioRecomendadoNumero))
             { //Comprobamos que es un numero coon decimales
-                return false;
+                mensaje = "El precio no es un número";
+                v= false;
             }
 
-            if(this.rbtNuevo.Checked)
-            { //Esta seleccionado que es un v nuevo
-
-            } 
-            else if(this.rbtSegundaMano.Checked)
+            if(v && this.rbtSegundaMano.Checked)
             {// Esta seleccionado que es un v de segunda mano
 
                 String matricula = this.tbMatricula.Text;       //Comprobar el formato de matricula y la fecha de matriculación:
-                if(matricula.Length != )
+                Regex rg = new Regex("[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]");
+                if(v && !rg.IsMatch(matricula))
+                {
+                    mensaje = "Formato de matrícula incorrecto";
+                    v = false;
+                }
 
-
-
-            } else
-            { //Ninguna opción seleccionada
-                return false;
+                String fecha = this.tbFechaMatriculacion.Text;
+                
+                
+                if(v && !DateTime.TryParse(fecha, out DateTime resultado) ){
+                    mensaje = "El formato de la fecha es incorrecto";
+                    v = false;
+                }
+                
             }
 
 
+            if (!v)
+            {
+                DialogResult dr = MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dr.Equals(DialogResult.OK))
+                {
+                    this.DialogResult = DialogResult.None;
 
+                }
+            }
 
-            return true; //si todo está bien
+            return v; //si todo está bien
         }
     }
 }

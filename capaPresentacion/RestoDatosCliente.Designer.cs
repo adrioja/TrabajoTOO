@@ -32,9 +32,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.groupCategoria = new System.Windows.Forms.GroupBox();
-            this.rbA = new System.Windows.Forms.RadioButton();
-            this.rbB = new System.Windows.Forms.RadioButton();
             this.rbC = new System.Windows.Forms.RadioButton();
+            this.rbB = new System.Windows.Forms.RadioButton();
+            this.rbA = new System.Windows.Forms.RadioButton();
             this.tbDNI = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbTelefono = new System.Windows.Forms.TextBox();
@@ -82,16 +82,16 @@
             this.groupCategoria.TabStop = false;
             this.groupCategoria.Text = "Categoría";
             // 
-            // rbA
+            // rbC
             // 
-            this.rbA.AutoSize = true;
-            this.rbA.Location = new System.Drawing.Point(24, 31);
-            this.rbA.Name = "rbA";
-            this.rbA.Size = new System.Drawing.Size(32, 17);
-            this.rbA.TabIndex = 0;
-            this.rbA.TabStop = true;
-            this.rbA.Text = "A";
-            this.rbA.UseVisualStyleBackColor = true;
+            this.rbC.AutoSize = true;
+            this.rbC.Location = new System.Drawing.Point(104, 31);
+            this.rbC.Name = "rbC";
+            this.rbC.Size = new System.Drawing.Size(32, 17);
+            this.rbC.TabIndex = 2;
+            this.rbC.TabStop = true;
+            this.rbC.Text = "C";
+            this.rbC.UseVisualStyleBackColor = true;
             // 
             // rbB
             // 
@@ -104,19 +104,20 @@
             this.rbB.Text = "B";
             this.rbB.UseVisualStyleBackColor = true;
             // 
-            // rbC
+            // rbA
             // 
-            this.rbC.AutoSize = true;
-            this.rbC.Location = new System.Drawing.Point(104, 31);
-            this.rbC.Name = "rbC";
-            this.rbC.Size = new System.Drawing.Size(32, 17);
-            this.rbC.TabIndex = 2;
-            this.rbC.TabStop = true;
-            this.rbC.Text = "C";
-            this.rbC.UseVisualStyleBackColor = true;
+            this.rbA.AutoSize = true;
+            this.rbA.Location = new System.Drawing.Point(24, 31);
+            this.rbA.Name = "rbA";
+            this.rbA.Size = new System.Drawing.Size(32, 17);
+            this.rbA.TabIndex = 0;
+            this.rbA.TabStop = true;
+            this.rbA.Text = "A";
+            this.rbA.UseVisualStyleBackColor = true;
             // 
             // tbDNI
             // 
+            this.tbDNI.Enabled = false;
             this.tbDNI.Location = new System.Drawing.Point(136, 54);
             this.tbDNI.Name = "tbDNI";
             this.tbDNI.Size = new System.Drawing.Size(100, 20);
@@ -154,6 +155,7 @@
             this.btAceptar.TabIndex = 7;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // RestoDatosCliente
             // 

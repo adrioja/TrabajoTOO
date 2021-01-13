@@ -16,3 +16,12 @@ C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistenc
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csprojAssemblyReference.cache
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CoreCompileInputs.cache
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb

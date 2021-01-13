@@ -20,3 +20,14 @@ C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.cspro
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\LNCliente.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\LNCliente.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csprojAssemblyReference.cache
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CoreCompileInputs.cache
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb

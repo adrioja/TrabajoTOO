@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LNCliente;
 using modeloDominio;
+using System.Text.RegularExpressions;
 
 namespace capaPresentacion
 {
@@ -19,6 +20,7 @@ namespace capaPresentacion
         public FClaveCliente(OpcionesOperacion o)
         {
             this.opcion = o;
+            this.inicializarComponentes();
         }
 
         private void inicializarComponentes()
@@ -31,11 +33,28 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (opcion.Equals(OpcionesOperacion.Alta))
-            {
-                if (LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
+          
+                if (opcion.Equals(OpcionesOperacion.Alta))
                 {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (comprobarFormato())
+                {
+                    if (LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
+                    {
+                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr.Equals(DialogResult.No))
+                        {
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            this.tbIdentificador.Text = "";
+                        }
+                        this.DialogResult = DialogResult.None;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Error en el formato", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                     if (dr.Equals(DialogResult.No))
                     {
                         this.Dispose();
@@ -46,39 +65,40 @@ namespace capaPresentacion
                     }
                     this.DialogResult = DialogResult.None;
                 }
-            }
-            if (opcion.Equals(OpcionesOperacion.Baja))
-            {
-                if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
                 }
-            }
-            if (opcion.Equals(OpcionesOperacion.Busqueda))
-            {
-                if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
+                if (opcion.Equals(OpcionesOperacion.Baja))
                 {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
+                    if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
                     {
-                        this.Dispose();
+                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr.Equals(DialogResult.No))
+                        {
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            this.tbIdentificador.Text = "";
+                        }
+                        this.DialogResult = DialogResult.None;
                     }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
                 }
-            }
+                if (opcion.Equals(OpcionesOperacion.Busqueda))
+                {
+                    if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
+                    {
+                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr.Equals(DialogResult.No))
+                        {
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            this.tbIdentificador.Text = "";
+                        }
+                        this.DialogResult = DialogResult.None;
+                    }
+                }
+         
 
 
         }
@@ -95,9 +115,33 @@ namespace capaPresentacion
         /// <returns></returns>
         internal Cliente devolverCliente()
         {
-            return new Cliente(this.tbIdentificador.Text);
+            Cliente c = new Cliente(this.tbIdentificador.Text);
+            Cliente nuevo = LNCliente.LogicaNegocioCliente.Buscar(c);
+            if (nuevo != null)
+            {
+                return nuevo;
+            }
+            else
+            {
+                return c;
+            }
         }
 
+        
+
+
+        private bool comprobarFormato()
+        {
+            Regex regex = new Regex("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][A-Z]");
+            
+            String dni = this.tbIdentificador.Text;
+            if (!regex.IsMatch(dni))
+            { //Comprobamos si el tamaño es correcto
+                return false;
+            }
+           
+            return true;
+        }
 
     }
 

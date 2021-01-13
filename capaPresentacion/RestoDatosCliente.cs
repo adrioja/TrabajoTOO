@@ -27,7 +27,6 @@ namespace capaPresentacion
             
             this.opcion = o;
 
-            InitializeComponent();
 
 
             if (this.opcion.Equals(OpcionesOperacion.Baja) || this.opcion.Equals(OpcionesOperacion.Busqueda))
@@ -164,28 +163,41 @@ namespace capaPresentacion
 
         private bool formatosCorrectos()
         {
-            String dni = this.tbDNI.Text;
-            if(dni.Length != 9)
-            { //Comprobamos si el tamaño es correcto
-                return false;
-            }
-            if(!long.TryParse(dni, out long dniNumero)) 
-            { //Comprobamos si son todo numeros
-                return false;
-            }
+            String mensaje ="";
+            bool v = true;
 
+            
+            if(v && String.IsNullOrEmpty(this.tbNombre.Text ))
+            {
+                mensaje = "El nombre está vacio";
+                v = false;
+            }
 
             String telefono = this.tbTelefono.Text;
-            if(telefono.Length!=9)
+            if(v && telefono.Length!=9)
             { //Comprobamos si el tamaño es correcto
-                return false;
+                mensaje = "El formato del telefono es incorrecto";
+                v = false;
             }
-            if(!long.TryParse(dni, out long telefonoNumero))
+            if(v && !long.TryParse(telefono, out long telefonoNumero))
             { //Comprobamos si son todo numeros
-                return false;
+                mensaje = "El formato del telefono es incorrecto";
+                v = false;
             }
 
-            return true; //Si se cumple todo
+
+            if (!v) {
+                DialogResult dr = MessageBox.Show( mensaje , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dr.Equals(DialogResult.OK))
+                {
+                    this.DialogResult = DialogResult.None;
+                    
+                }
+            }
+
+
+
+            return v; //Si se cumple todo
         }
     }
 }

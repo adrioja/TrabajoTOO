@@ -49,6 +49,11 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -82,14 +87,14 @@ namespace capaPresentacion
             // añadirUnVehiculoToolStripMenuItem
             // 
             this.añadirUnVehiculoToolStripMenuItem.Name = "añadirUnVehiculoToolStripMenuItem";
-            this.añadirUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.añadirUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.añadirUnVehiculoToolStripMenuItem.Text = "Añadir un vehiculo";
             this.añadirUnVehiculoToolStripMenuItem.Click += new System.EventHandler(this.añadirUnVehiculoToolStripMenuItem_Click);
             // 
             // eliminarUnVehiculoToolStripMenuItem
             // 
             this.eliminarUnVehiculoToolStripMenuItem.Name = "eliminarUnVehiculoToolStripMenuItem";
-            this.eliminarUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.eliminarUnVehiculoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.eliminarUnVehiculoToolStripMenuItem.Text = "Eliminar un vehiculo";
             this.eliminarUnVehiculoToolStripMenuItem.Click += new System.EventHandler(this.eliminarUnVehiculoToolStripMenuItem_Click);
             // 
@@ -103,7 +108,7 @@ namespace capaPresentacion
             // actualizaDatosVehiculoToolStripMenuItem
             // 
             this.actualizaDatosVehiculoToolStripMenuItem.Name = "actualizaDatosVehiculoToolStripMenuItem";
-            this.actualizaDatosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.actualizaDatosVehiculoToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.actualizaDatosVehiculoToolStripMenuItem.Text = "Actualizar datos vehiculo";
             this.actualizaDatosVehiculoToolStripMenuItem.Click += new System.EventHandler(this.actualizaDatosVehiculoToolStripMenuItem_Click);
             // 
@@ -163,6 +168,12 @@ namespace capaPresentacion
             // 
             // tsmiCliente
             // 
+            this.tsmiCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1,
+            this.eliminarClienteToolStripMenuItem1,
+            this.buscarUnClienteToolStripMenuItem1,
+            this.actualizarUnClienteToolStripMenuItem,
+            this.visualizarToolStripMenuItem1});
             this.tsmiCliente.Name = "tsmiCliente";
             this.tsmiCliente.Size = new System.Drawing.Size(56, 19);
             this.tsmiCliente.Text = "Cliente";
@@ -218,6 +229,40 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // añadirNuevoClienteDisponibleToolStripMenuItem1
+            // 
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Name = "añadirNuevoClienteDisponibleToolStripMenuItem1";
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Text = "Añadir nuevo cliente disponible";
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Click += new System.EventHandler(this.añadirNuevoClienteDisponibleToolStripMenuItem1_Click);
+            // 
+            // eliminarClienteToolStripMenuItem1
+            // 
+            this.eliminarClienteToolStripMenuItem1.Name = "eliminarClienteToolStripMenuItem1";
+            this.eliminarClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.eliminarClienteToolStripMenuItem1.Text = "Eliminar cliente";
+            this.eliminarClienteToolStripMenuItem1.Click += new System.EventHandler(this.eliminarClienteToolStripMenuItem1_Click);
+            // 
+            // buscarUnClienteToolStripMenuItem1
+            // 
+            this.buscarUnClienteToolStripMenuItem1.Name = "buscarUnClienteToolStripMenuItem1";
+            this.buscarUnClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.buscarUnClienteToolStripMenuItem1.Text = "Buscar un cliente";
+            this.buscarUnClienteToolStripMenuItem1.Click += new System.EventHandler(this.buscarUnClienteToolStripMenuItem1_Click);
+            // 
+            // actualizarUnClienteToolStripMenuItem
+            // 
+            this.actualizarUnClienteToolStripMenuItem.Name = "actualizarUnClienteToolStripMenuItem";
+            this.actualizarUnClienteToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.actualizarUnClienteToolStripMenuItem.Text = "Actualizar un cliente";
+            this.actualizarUnClienteToolStripMenuItem.Click += new System.EventHandler(this.actualizarUnClienteToolStripMenuItem_Click);
+            // 
+            // visualizarToolStripMenuItem1
+            // 
+            this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
+            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.visualizarToolStripMenuItem1.Text = "Visualizar";
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,5 +305,10 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem buscarUnExtraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiActualizarExtra;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirNuevoClienteDisponibleToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem eliminarClienteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem buscarUnClienteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem actualizarUnClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem1;
     }
 }

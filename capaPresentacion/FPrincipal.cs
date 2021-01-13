@@ -215,5 +215,90 @@ namespace capaPresentacion
             DialogResult dr = visualizador.ShowDialog();
             visualizador.Dispose();
         }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////Clientes////////////////////////////////////////////////////////////////////////////////
+        private void añadirNuevoClienteDisponibleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FClaveCliente c = new FClaveCliente(OpcionesOperacion.Alta);
+            DialogResult dr = c.ShowDialog();
+            if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+            {
+
+                RestoDatosCliente alta = new RestoDatosCliente(c.devolverCliente(), OpcionesOperacion.Alta);
+                DialogResult drAlta = alta.ShowDialog();
+                if (drAlta.Equals(DialogResult.OK))
+                {
+                    Cliente cliente = alta.devCliente();
+                   
+                        LNCliente.LogicaNegocioCliente.Añadir(cliente);
+                    
+                    MessageBox.Show("El Cliente se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    alta.Dispose();
+                }
+            }
+            else
+            {
+                c.Dispose();
+            }
+        }
+
+        private void eliminarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FClaveCliente f = new FClaveCliente(OpcionesOperacion.Baja);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                Cliente c = f.devolverCliente();
+                RestoDatosCliente baja = new RestoDatosCliente(c, OpcionesOperacion.Baja);
+                DialogResult drBaja = baja.ShowDialog();
+                if (drBaja.Equals(DialogResult.OK))
+                {
+                    LNCliente.LogicaNegocioCliente.Eliminar(c);
+                    MessageBox.Show("El cliente se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    baja.Dispose();
+                }
+            }
+        }
+
+        private void buscarUnClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FClaveCliente f = new FClaveCliente(OpcionesOperacion.Busqueda);
+            DialogResult dr = f.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                RestoDatosCliente busqueda = new RestoDatosCliente(f.devolverCliente(), OpcionesOperacion.Busqueda);
+                DialogResult drBusqueda = busqueda.ShowDialog();
+                busqueda.Dispose();
+            }
+        }
+
+        private void actualizarUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FClaveCliente c = new FClaveCliente(OpcionesOperacion.Busqueda);
+            DialogResult dr = c.ShowDialog();
+            if (dr.Equals(DialogResult.OK))
+            {
+                RestoDatosCliente actualizar = new RestoDatosCliente(c.devolverCliente(), OpcionesOperacion.Actualizar);
+                DialogResult drActualizar = actualizar.ShowDialog();
+                if (drActualizar.Equals(DialogResult.OK))
+                {
+                    Cliente v = actualizar.devCliente();
+                    LNCliente.LogicaNegocioCliente.Actualizar(v);
+                    
+
+                    MessageBox.Show("El cliente se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    actualizar.Dispose();
+                }
+
+            }
+        }
     }
 }

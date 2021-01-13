@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LNVehiculo;
@@ -29,9 +30,25 @@ namespace capaPresentacion
         {
             if (opcion.Equals(OpcionesOperacion.Alta))
             {
-                if (LogicaNegocioVehiculo.existeYa(new VehiculoNuevo(this.tbIdentificador.Text)))
+                if (comprobarFormato())
                 {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (LogicaNegocioVehiculo.existeYa(new VehiculoNuevo(this.tbIdentificador.Text)))
+                    {
+                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr.Equals(DialogResult.No))
+                        {
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            this.tbIdentificador.Text = "";
+                        }
+                        this.DialogResult = DialogResult.None;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Error en el formato", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                     if (dr.Equals(DialogResult.No))
                     {
                         this.Dispose();
@@ -99,6 +116,11 @@ namespace capaPresentacion
                 return new VehiculoSegundaMano(this.tbIdentificador.Text);
             }
 
+        }
+
+        private bool comprobarFormato()
+        {
+            return this.tbIdentificador.Text.Length == 17;
         }
     }
 }
