@@ -15,11 +15,8 @@ namespace capaPresentacion
 {
     public partial class FClaveCliente : Form
     {
-        private OpcionesOperacion opcion;
-
-        public FClaveCliente(OpcionesOperacion o)
-        {
-            this.opcion = o;
+        public FClaveCliente()
+        {    
             this.inicializarComponentes();
         }
 
@@ -33,74 +30,12 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-          
-                if (opcion.Equals(OpcionesOperacion.Alta))
-                {
-                if (comprobarFormato())
-                {
-                    if (LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
-                    {
-                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dr.Equals(DialogResult.No))
-                        {
-                            this.Dispose();
-                        }
-                        else
-                        {
-                            this.tbIdentificador.Text = "";
-                        }
-                        this.DialogResult = DialogResult.None;
-                    }
-                }
-                else
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Error en el formato", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-                }
-                if (opcion.Equals(OpcionesOperacion.Baja))
-                {
-                    if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
-                    {
-                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dr.Equals(DialogResult.No))
-                        {
-                            this.Dispose();
-                        }
-                        else
-                        {
-                            this.tbIdentificador.Text = "";
-                        }
-                        this.DialogResult = DialogResult.None;
-                    }
-                }
-                if (opcion.Equals(OpcionesOperacion.Busqueda))
-                {
-                    if (!LogicaNegocioCliente.Existe(new Cliente(this.tbIdentificador.Text)))
-                    {
-                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dr.Equals(DialogResult.No))
-                        {
-                            this.Dispose();
-                        }
-                        else
-                        {
-                            this.tbIdentificador.Text = "";
-                        }
-                        this.DialogResult = DialogResult.None;
-                    }
-                }
-         
-
-
+            if (this.tbIdentificador.Text.Trim(' ').Length == 0  || !this.comprobarFormato())
+            {
+                //caso no cumple el formato
+                this.DialogResult = DialogResult.None;
+                DialogResult dr = MessageBox.Show("El formato del dni es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -110,21 +45,13 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// Solo se puede llamar si la clase esta incializada y si el dni introducido no existe ya en el sistema
+        /// Solo se puede llamar si la clase esta incializada y si el dni introducido no existe ya en el sistema.
+        /// Devuelve un objeto cliente con el campo clave iniciado
         /// </summary>
         /// <returns></returns>
         internal Cliente devolverCliente()
         {
-            Cliente c = new Cliente(this.tbIdentificador.Text);
-            Cliente nuevo = LNCliente.LogicaNegocioCliente.Buscar(c);
-            if (nuevo != null)
-            {
-                return nuevo;
-            }
-            else
-            {
-                return c;
-            }
+            return new Cliente(this.tbIdentificador.Text);
         }
 
         

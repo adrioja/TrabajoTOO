@@ -96,6 +96,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// Solo se puede llamar si la clase esta incializada y si el nombre introducido no existe ya en el sistema
+        /// Devuelve un objeto extra con el campo clave iniciado
         /// </summary>
         /// <returns></returns>
         internal Extra devolverExtra()

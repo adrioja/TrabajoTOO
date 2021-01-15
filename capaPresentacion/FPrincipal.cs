@@ -58,12 +58,14 @@ namespace capaPresentacion
                         continuar = true;
 
                         RestoDatosExtra alta = new RestoDatosExtra(f.devolverExtra().Nombre);
+                        alta.Name = "Dar de alta";
                         DialogResult drAlta = alta.ShowDialog();
                         if (drAlta.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
                             Extra extra = alta.devExtra();
                             LNVehiculo.LogicaNegocioVehiculo.añadir(extra);
                             MessageBox.Show("El extra se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            alta.Dispose();
                         }
                         else
                         {
@@ -85,6 +87,62 @@ namespace capaPresentacion
 
         private void eliminarExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClaveExtra f = new FClaveExtra();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
+                {
+                    //comprobar si ya existe;
+                    Extra comprobar = f.devolverExtra();
+                    if (LogicaNegocioVehiculo.existeYa(comprobar))
+                    {
+                        continuar = true;
+
+                        Extra resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(comprobar);
+                        RestoDatosExtra busqueda = new RestoDatosExtra(resultadoBusqueda);
+                        busqueda.Name = "Eliminar extra";
+                        DialogResult drBusqueda = busqueda.ShowDialog();
+                        if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
+                        {
+                            LNVehiculo.LogicaNegocioVehiculo.eliminar(resultadoBusqueda);
+                            MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            busqueda.Dispose();
+                        }
+                        else
+                        {
+                            busqueda.Dispose();
+                        }
+
+                    }
+                    else
+                    {
+                        //caso que no existe
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+
+                    }
+                    //---------------------------------
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
+
+
             /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Baja);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
@@ -105,6 +163,60 @@ namespace capaPresentacion
 
         private void buscarUnExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClaveExtra f = new FClaveExtra();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
+                {
+                    //comprobar si ya existe;
+                    Extra comprobar = f.devolverExtra();
+                    if (LogicaNegocioVehiculo.existeYa(comprobar))
+                    {
+                        continuar = true;
+
+                        Extra resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(comprobar);
+                        RestoDatosExtra busqueda = new RestoDatosExtra(resultadoBusqueda);
+                        busqueda.Name = "Buscar extra";
+                        DialogResult drBusqueda = busqueda.ShowDialog();
+                        if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
+                        {
+                            busqueda.Dispose();
+                        }
+                        else
+                        {
+                            busqueda.Dispose();
+                        }
+
+                    }
+                    else
+                    {
+                        //caso que no existe
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                        
+                    }
+                    //---------------------------------
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
+
+
             /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
@@ -117,6 +229,58 @@ namespace capaPresentacion
 
         private void tsmiActualizarExtra_Click(object sender, EventArgs e)
         {
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClaveExtra f = new FClaveExtra();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
+                {
+                    //comprobar si ya existe;
+                    Extra comprobar = f.devolverExtra();
+                    if (LogicaNegocioVehiculo.existeYa(comprobar))
+                    {
+                        continuar = true;
+    
+                        RestoDatosExtra busqueda = new RestoDatosExtra(comprobar.Nombre);
+                        busqueda.Name = "Actualizar extra";
+                        DialogResult drBusqueda = busqueda.ShowDialog();
+                        if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
+                        {
+                            LNVehiculo.LogicaNegocioVehiculo.actualizar(busqueda.devExtra());
+                            busqueda.Dispose();
+                        }
+                        else
+                        {
+                            busqueda.Dispose();
+                        }
+
+                    }
+                    else
+                    {
+                        //caso que no existe
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+
+                    }
+                    //---------------------------------
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
             /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))

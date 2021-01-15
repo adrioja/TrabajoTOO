@@ -116,7 +116,14 @@ namespace capaPresentacion
         /// <returns></returns>
         public Extra devExtra()
         {
+            this.reyenarDatos(); //Esto no se si hay que ponerlo aquí
             return this.extra;
+        }
+
+        public void reyenarDatos()
+        { //Para construir el objeto a partir de los datos de los textbox
+            double.TryParse(this.tbPrecio.Text, out double precio);
+            this.extra.PrecioFijo = precio;           
         }
     }
 }

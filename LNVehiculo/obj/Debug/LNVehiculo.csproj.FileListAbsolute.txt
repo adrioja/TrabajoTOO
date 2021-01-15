@@ -24,3 +24,10 @@ C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.cs
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.dll
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.dll
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete

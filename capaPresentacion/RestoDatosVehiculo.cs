@@ -15,9 +15,13 @@ namespace capaPresentacion
     public partial class RestoDatosVehiculo : Form
     {
         private Vehiculo vehiculo;
-        private OpcionesOperacion opcion;
+        public RestoDatosVehiculo(String b)
+        {
+            //para el caso de dar alta y actualizar
+            
+        }
 
-        public RestoDatosVehiculo(Vehiculo e, OpcionesOperacion o)
+        public RestoDatosVehiculo(Vehiculo e)
         {
             
             this.vehiculo = e;

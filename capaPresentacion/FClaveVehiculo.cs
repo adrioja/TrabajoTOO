@@ -15,12 +15,9 @@ namespace capaPresentacion
 {
     public partial class FClaveVehiculo : Form
     {
-        private OpcionesOperacion opcion;
-
-
-        public FClaveVehiculo(OpcionesOperacion o)
-        {
-            this.opcion = o;
+       
+        public FClaveVehiculo()
+        {         
             InitializeComponent();
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
@@ -28,6 +25,13 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
+            if ( (this.tbIdentificador.Text.Trim(' ').Length == 0) || (this.tbIdentificador.Text.Length != 17))
+            {
+                //caso no cumple el formato
+                this.DialogResult = DialogResult.None;
+                DialogResult dr = MessageBox.Show("El formato del bastidor es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            /*
             if (opcion.Equals(OpcionesOperacion.Alta))
             {
                 if (comprobarFormato())
@@ -91,7 +95,7 @@ namespace capaPresentacion
                     }
                     this.DialogResult = DialogResult.None;
                 }
-            }
+            }*/
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -101,15 +105,16 @@ namespace capaPresentacion
 
         /// <summary>
         /// Solo se puede llamar si la clase esta incializada y si el nombre introducido no existe ya en el sistema
+        /// Devuelve un objeto vehiculo con la clave iniciada
         /// </summary>
         /// <returns></returns>
         internal Vehiculo devolverVehiculo()
-        {
+        { //No creo que esté bien del todo:
             Vehiculo ve = new VehiculoNuevo(this.tbIdentificador.Text);
             Vehiculo nuevo = LNVehiculo.LogicaNegocioVehiculo.buscar(ve);
             if (nuevo!=null)
             {
-                return nuevo;
+                return ve;
             }
             else
             {
@@ -118,9 +123,5 @@ namespace capaPresentacion
 
         }
 
-        private bool comprobarFormato()
-        {
-            return this.tbIdentificador.Text.Length == 17;
-        }
     }
 }
