@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+    /// <summary>
+    /// Clase que representa un vehiculo de segunda mano 
+    /// </summary>
     public class VehiculoSegundaMano: Vehiculo
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
@@ -37,14 +40,14 @@ namespace modeloDominio
         /// <param name="numBastidor"></param>
         public VehiculoSegundaMano(String numBastidor) : base(numBastidor)
         {
-            
+
         }
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
-        
+
         /// <summary>
-        /// PRE: la clase debe de estar inicializada
+        /// PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
         /// POST: devuelve la matricula
         /// </summary>
         public string Matricula
@@ -56,7 +59,7 @@ namespace modeloDominio
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar inicializada
+        /// PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
         /// POST: devuelve la fecha de matriculacion
         /// </summary>
         public DateTime FechaMatriculacion
@@ -69,7 +72,7 @@ namespace modeloDominio
         }
 
         /// <summary>
-        /// PRE: la clase debe de estar inicializada
+        /// PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
         /// POST: devuelve el pvp
         /// </summary>
         public override double PVP
@@ -84,7 +87,7 @@ namespace modeloDominio
         /////////////////////////// METODOS ///////////////////////////  
 
         /// <summary>
-        /// PRE:la clase debe de estar inicializada
+        /// PRE:la clase debe de estar inicializada por completo
         /// POST:POST: devuelve una cadena con los datos del vehiculo
         /// </summary>
         /// <returns></returns>

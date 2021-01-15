@@ -6,7 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 namespace TrabajoTOO
 {
-   public class VehiculoDatos :Entity<String>
+
+    /// <summary>
+    /// Representa la forma que tienen los datos de la tabla vehiculo en el sistema de persistencia
+    /// </summary>
+    public class VehiculoDatos :Entity<String>
     {
         private String numBastidor;
         private String marca;

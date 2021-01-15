@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
+    /// <summary>
+    /// Representa la forma que tienen los datos de un cliente en el sistema de persistencia
+    /// </summary>
     class ClienteDatos : Entity<String>
     {
         private string dni;

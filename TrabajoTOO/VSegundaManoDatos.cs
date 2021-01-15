@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
+
+    /// <summary>
+    /// Representa la forma que tienen los datos de la tabla VNuevoExtras en el sistema de persistencia
+    /// </summary>
     public class VSegundaManoDatos : VehiculoDatos
     {
         private String matricula;

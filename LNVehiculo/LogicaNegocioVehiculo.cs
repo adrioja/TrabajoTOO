@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using TrabajoTOO;
 
 
-/// <summary>
-/// Contiene toda la logica de negocio ligada a los vehiculos, la parte de extras tambien
-/// </summary>
+
 namespace LNVehiculo
 {
+    /// <summary>
+    /// Contiene toda la logica de negocio ligada a los vehiculos, la parte de extras tambien
+    /// </summary>
     public class LogicaNegocioVehiculo
     {
         //--------------------------------------METODOS VARIOS---------------------------------------
@@ -154,7 +155,12 @@ namespace LNVehiculo
             return l;
         }
 
-
+        /// <summary>
+        /// PRE: v debe de estar incializado
+        /// POST: devuelve null si el vehiculo que se le pasa no exite y en caso de existir devuelve el vehiculo buscado con toda su informacion y del tipo al que corresponde
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
         public static Vehiculo buscar(Vehiculo v)
         {
             Vehiculo dev = null;
@@ -166,6 +172,12 @@ namespace LNVehiculo
             return dev;
         }
 
+        /// <summary>
+        /// PRE: v debe de estar incializado
+        /// POST: devuelve true si el vehiculo que se le pasa existe y falso en caso contrario
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
         public static bool existeYa(Vehiculo v)
         {
             return Persistencia.Existe(v);
@@ -174,7 +186,7 @@ namespace LNVehiculo
         //--------------------------------------METODOS VEHICULO NUEVO---------------------------------------
         /// <summary>
         /// PRE: v debe de estar inicializado
-        /// POST: comprueba que no esta añadido y si no esta lo añadE, en caso de añadirlo devuelve true y falso en cualquier otro caso
+        /// POST: comprueba que no esta añadido y si no esta lo añade, en caso de añadirlo devuelve true y falso en cualquier otro caso
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -239,7 +251,7 @@ namespace LNVehiculo
 
         /// <summary>
         /// PRE:v debe de estar incializado y debe contener los datos actualizados del vehiculo que se quiere actualizar(tienen en mismo numBatidor)
-        /// POST:comprueba que existe un coche con dicho numBastidor y si es asi lo actualiza y devuelve true y false en cualquier otro caso
+        /// POST:comprueba que existe un vehiculo con dicho numBastidor y si es asi lo actualiza y devuelve true y false en cualquier otro caso
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -259,7 +271,7 @@ namespace LNVehiculo
 
         /// <summary>
         /// PRE:ambos parametros deben estar incializados
-        /// POST:devuelve true si se ha consegido añadir el extra y falso en cualquier otro caso
+        /// POST:devuelve true si se ha consegido añadir el extra al vehiculo y falso en cualquier otro caso, comprueba que tanto el vehiculo como el extra existen y que este no lo tiene ya agregado
         /// </summary>
         /// <param name="v"></param>
         /// <param name="e"></param>
@@ -279,7 +291,7 @@ namespace LNVehiculo
 
         /// <summary>
         /// PRE:ambos parametros deben estar incializados
-        /// POST:devuelve true si se ha consegido quitar el extra y falso en cualquier otro caso(aunque dicho coche no tenga ese extra)
+        /// POST:devuelve true si se ha consegido quitar el extra y falso en cualquier otro caso(aunque dicho coche no tenga ese extra), comprueba que tanto el vehiculo como el extra existen y que este lo tiene agregado
         /// </summary>
         /// <param name="v"></param>
         /// <param name="e"></param>

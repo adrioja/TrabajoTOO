@@ -15,14 +15,21 @@ namespace capaPresentacion
 {
     public partial class FPrincipal : Form
     {
-        public FPrincipal(FLogearse log,String usuario)
+        /*public FPrincipal(FLogearse log,String usuario)
         {
             log.Hide();
             InitializeComponent();
             this.IsMdiContainer = true;
             this.tsslUsuarioSesion.Text = usuario;
             this.tsslFechaActual.Text = DateTime.Now.ToLongDateString();
-            
+        }*/
+
+        public FPrincipal()
+        {
+            InitializeComponent();
+            this.IsMdiContainer = true;
+            this.tsslUsuarioSesion.Text = "pondremos el usuario";
+            this.tsslFechaActual.Text = DateTime.Now.ToLongDateString();
         }
 
         private void añadirNuevoExtraDisponibleToolStripMenuItem_Click(object sender, EventArgs e)

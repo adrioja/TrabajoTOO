@@ -68,7 +68,7 @@ namespace modeloDominio
 
         /// <summary>
         /// PRE:la clase debe de estar incializada
-        /// POST: devuelve o asigna la potencia
+        /// POST: devuelve o asigna la potencia de dicho vehiculo
         /// </summary>
         public int Potencia
         {
@@ -85,7 +85,7 @@ namespace modeloDominio
 
         /// <summary>
         /// PRE:la clase debe de estar incializada
-        /// POST: devuelve el modelo
+        /// POST: devuelve el modelo a la que pertenece el vehiculo
         /// </summary>
         public string Modelo
         {
@@ -97,7 +97,7 @@ namespace modeloDominio
 
         /// <summary>
         /// PRE:la clase debe de estar incializada
-        /// POST:devuelve la marca
+        /// POST:devuelve la marca a la que pertenece el vehiculo
         /// </summary>
         public string Marca
         {
@@ -110,7 +110,7 @@ namespace modeloDominio
 
         /// <summary>
         /// PRE:la clase debe de estar incializada
-        /// POST:devuleve o asigna el precio recomendado
+        /// POST:devuleve o asigna el precio recomendado al vehiculo
         /// </summary>
         public double PvRecomendado
         {
@@ -146,7 +146,7 @@ namespace modeloDominio
 
 
         /// <summary>
-        /// PRE:la clase debe de estar incializada
+        /// PRE:la clase debe de estar incializada por completo(no solo con el constructor de un parametro)
         /// POST: devuelve el pvp de dicho vehiculo
         /// </summary>
         public virtual double PVP

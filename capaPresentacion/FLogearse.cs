@@ -19,7 +19,7 @@ namespace capaPresentacion
 
         private void btEntrar_Click(object sender, EventArgs e)
         {
-            String usuario = this.tbUsuario.Text;
+            /*String usuario = this.tbUsuario.Text;
             String contrasela = this.tbContraseña.Text;
 
             if (true)//------------------------------------------------------------CAMBIAR PARA QUE COMPRUEBEN QUE ESTA EN LA BD
@@ -30,7 +30,7 @@ namespace capaPresentacion
             else
             {
                 MessageBox.Show("El usuario y/o contraseña son incorrectos");
-            }
+            }*/
         }
     }
 }

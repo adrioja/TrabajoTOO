@@ -8,6 +8,9 @@ using modeloDominio;
 
 namespace TrabajoTOO
 {
+    /// <summary>
+    /// Clase que contiene los metodos que posee el sistema de persistencia
+    /// </summary>
     public class Persistencia
     {
         public Persistencia() { }
@@ -144,7 +147,7 @@ namespace TrabajoTOO
 
         }
 
-	/// <summary>
+	    /// <summary>
         /// Devuelve la lista de todos los presupuestos del concesionario
         /// </summary>
         /// <returns></returns>

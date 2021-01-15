@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+    /// <summary>
+    /// Clase que sirve para representar un extra de un coche
+    /// </summary>
     public class Extra: IEquatable<Extra>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////

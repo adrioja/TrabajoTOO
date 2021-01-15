@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+
+    /// <summary>
+    /// Clase que sirve para representar un vehiculo nuevo del concesionario
+    /// </summary>
     public class VehiculoNuevo: Vehiculo
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
@@ -29,19 +33,19 @@ namespace modeloDominio
 
 
         /// <summary>
-        /// Inicializa la clase (solo el atributo numero de bastidor) y llama al constructor de la clase padre
+        /// Inicializa la clase y llama al constructor de la clase padre
         /// </summary>
         /// <param name="numBastidor"></param>
         public VehiculoNuevo(String numBastidor) : base(numBastidor)
         {
-            
+            this.extrasAñadidos = new List<Extra>();
         }
 
 
         /////////////////////////// PROPIEDADES ///////////////////////////
 
         /// <summary>
-        /// PRE: la clase debe de estar incializada
+        /// PRE: la clase debe de estar incializada por completo(no solo el campo numero de bastidor)
         /// POST: devuelve el pvp del vehiculo
         /// </summary>
         public override double PVP

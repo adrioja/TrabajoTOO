@@ -8,6 +8,9 @@ using TrabajoTOO;
 
 namespace LNCliente
 {
+    /// <summary>
+    /// Contiene toda la logica de negocio ligada a los clientes
+    /// </summary>
     public class LogicaNegocioCliente
     {
 

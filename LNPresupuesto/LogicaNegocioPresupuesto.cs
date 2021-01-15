@@ -8,6 +8,9 @@ using TrabajoTOO;
 
 namespace LNPresupuesto
 {
+    /// <summary>
+    /// Contiene toda la logica de negocio ligada a los presupuestos
+    /// </summary>
     public class LogicaNegocioPresupuesto
     {
         /// <summary>
@@ -30,7 +33,7 @@ namespace LNPresupuesto
 
         /// <summary>
         /// Pre: P debe estar inicializado.
-        /// Post: Si el presupuesto existe, lo elimina de la base de datos y devuelve true, en caso contrario devuelve false.
+        /// Post: Si el presupuesto existe en la bd, lo elimina de la base de datos y devuelve true, en caso contrario devuelve false.
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
@@ -59,7 +62,7 @@ namespace LNPresupuesto
 
         /// <summary>
         /// Pre: P debe estar inicializado.
-        /// Post: Si existe p, busca en la base de datos un presupuesto con el mismo id que p. Si lo encuentra actualiza sus valores con los de los campos de p y devuelve true. En caso contrario devuelve false.
+        /// Post: Si existe p en la bd(un preuspuesto con el mismo id), busca en la base de datos un presupuesto con el mismo id que p. Si lo encuentra actualiza sus valores con los de los campos de p y devuelve true. En caso contrario devuelve false.
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>

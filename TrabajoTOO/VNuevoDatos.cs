@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
+    /// <summary>
+    /// Representa la forma que tienen los datos de la tabla vehiculosNuevos en el sistema de persistencia
+    /// </summary>
     public class VNuevoDatos:VehiculoDatos
     {
         /// <summary>

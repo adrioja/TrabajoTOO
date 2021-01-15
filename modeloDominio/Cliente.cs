@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+
+    /// <summary>
+    /// Sirve para representar a un cliente del concesionario
+    /// </summary>
     public class Cliente:IEquatable<Cliente>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////
@@ -28,8 +32,7 @@ namespace modeloDominio
             this.dni = dni;
             this.nombre = nombre;
             this.telefono = telefono;
-            this.categoria = categoria;
-            
+            this.categoria = categoria; 
         }
 
         /// <summary>
@@ -133,8 +136,8 @@ namespace modeloDominio
 
 
         /// <summary>
-        /// PRE: el parametro debe de estar incializado
-        /// POST: devuelve true si ambos clientes son iguales comparando su DNI y falso en caso contrario
+        /// PRE: la clase y el parametro que se le pasa debe de estar incializado
+        /// POST: devuelve true si ambos clientes son iguales comparando por su DNI y falso en caso contrario
         /// </summary>
         /// <param name="other"></param>
         /// <returns></returns>

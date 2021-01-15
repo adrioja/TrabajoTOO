@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
+
+    
     class VNuevoExtrasClave
     {
         private string numBastidor;

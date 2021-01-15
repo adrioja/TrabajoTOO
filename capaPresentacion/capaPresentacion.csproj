@@ -64,7 +64,6 @@
     <Compile Include="RestoDatosCliente.Designer.cs">
       <DependentUpon>RestoDatosCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpcionesTipo.cs" />
     <Compile Include="RestoDatosExtra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +88,6 @@
     <Compile Include="FPrincipal.Designer.cs">
       <DependentUpon>FPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpcionesOperacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestoDatosVehiculo.cs">
