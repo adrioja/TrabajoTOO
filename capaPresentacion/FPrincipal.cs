@@ -538,87 +538,212 @@ namespace capaPresentacion
         ////////////////////////////////////////////////////////////////////////////////////////////////////Clientes////////////////////////////////////////////////////////////////////////////////
         private void añadirNuevoClienteDisponibleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*FClaveCliente c = new FClaveCliente(OpcionesOperacion.Alta);
-            DialogResult dr = c.ShowDialog();
-            if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+            bool continuar = false;
+            while (!continuar)
             {
-
-                RestoDatosCliente alta = new RestoDatosCliente(c.devolverCliente(), OpcionesOperacion.Alta);
-                DialogResult drAlta = alta.ShowDialog();
-                if (drAlta.Equals(DialogResult.OK))
+                FClaveCliente c = new FClaveCliente();
+                DialogResult dr = c.ShowDialog();
+                if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
                 {
-                    Cliente cliente = alta.devCliente();
-                   
-                        LNCliente.LogicaNegocioCliente.Añadir(cliente);
+                    Cliente cliente1 = c.devolverCliente();
+                    if(LNCliente.LogicaNegocioCliente.Existe(cliente1))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            c.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            c.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+                        RestoDatosCliente alta = new RestoDatosCliente(c.devolverCliente().DNI);
+                        alta.Name = "Dar de alta un cliente";
+                        DialogResult drAlta = alta.ShowDialog();
+                        if (drAlta.Equals(DialogResult.OK))
+                        {
+                            Cliente cliente = alta.devCliente();
+                            LNCliente.LogicaNegocioCliente.Añadir(cliente);
+                            MessageBox.Show("El Cliente se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            alta.Dispose();
+                        }
+                        else
+                        {
+                            alta.Dispose();
+                        }
+                    }
                     
-                    MessageBox.Show("El Cliente se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    alta.Dispose();
+                    c.Dispose();
+                    continuar = true;
                 }
             }
-            else
-            {
-                c.Dispose();
-            }*/
         }
 
         private void eliminarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*FClaveCliente f = new FClaveCliente(OpcionesOperacion.Baja);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+            bool continuar = false;
+            while (!continuar)
             {
-                Cliente c = f.devolverCliente();
-                RestoDatosCliente baja = new RestoDatosCliente(c, OpcionesOperacion.Baja);
-                DialogResult drBaja = baja.ShowDialog();
-                if (drBaja.Equals(DialogResult.OK))
+                FClaveCliente f = new FClaveCliente();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
                 {
-                    LNCliente.LogicaNegocioCliente.Eliminar(c);
-                    MessageBox.Show("El cliente se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Cliente c = f.devolverCliente();
+                    if (!LNCliente.LogicaNegocioCliente.Existe(c))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+                        Cliente resultadoBusqueda = LNCliente.LogicaNegocioCliente.Buscar(c);
+                        RestoDatosCliente baja = new RestoDatosCliente(resultadoBusqueda);
+                        baja.Name = "Dar de baja un cliente";
+                        DialogResult drBaja = baja.ShowDialog();
+                        if (drBaja.Equals(DialogResult.OK))
+                        {
+                            LNCliente.LogicaNegocioCliente.Eliminar(c);
+                            MessageBox.Show("El cliente se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            baja.Dispose();
+                        }
+                        else
+                        {
+                            baja.Dispose();
+                        }
+                    }  
                 }
                 else
                 {
-                    baja.Dispose();
+                    f.Dispose();
+                    continuar = true;
                 }
-            }*/
+            }
         }
 
         private void buscarUnClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            /*FClaveCliente f = new FClaveCliente(OpcionesOperacion.Busqueda);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+            bool continuar = false;
+            while (!continuar)
             {
-                RestoDatosCliente busqueda = new RestoDatosCliente(f.devolverCliente(), OpcionesOperacion.Busqueda);
-                DialogResult drBusqueda = busqueda.ShowDialog();
-                busqueda.Dispose();
-            }*/
+                FClaveCliente f = new FClaveCliente();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
+                {
+                    Cliente c = f.devolverCliente();
+                    if(!LNCliente.LogicaNegocioCliente.Existe(c))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+                        Cliente resultadoBusqueda = LNCliente.LogicaNegocioCliente.Buscar(c);
+                        RestoDatosCliente busqueda = new RestoDatosCliente(resultadoBusqueda);
+                        busqueda.Name = "Busqueda de un cliente";
+                        DialogResult drBusqueda = busqueda.ShowDialog();
+                        if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
+                        {
+                            busqueda.Dispose();
+                        }
+                        else
+                        {
+                            busqueda.Dispose();
+                        }
+                        MessageBox.Show("Busqueda finalizada", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        busqueda.Dispose();
+                    }
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }   
         }
 
         private void actualizarUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*FClaveCliente c = new FClaveCliente(OpcionesOperacion.Busqueda);
-            DialogResult dr = c.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+            bool continuar = false;
+            while (!continuar)
             {
-                RestoDatosCliente actualizar = new RestoDatosCliente(c.devolverCliente(), OpcionesOperacion.Actualizar);
-                DialogResult drActualizar = actualizar.ShowDialog();
-                if (drActualizar.Equals(DialogResult.OK))
+                FClaveCliente c = new FClaveCliente();
+                DialogResult dr = c.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
                 {
-                    Cliente v = actualizar.devCliente();
-                    LNCliente.LogicaNegocioCliente.Actualizar(v);
-                    
+                    Cliente cliente = c.devolverCliente();
+                    if(!LNCliente.LogicaNegocioCliente.Existe(cliente))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con dicho DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            c.Dispose();
+                            continuar = true;
 
-                    MessageBox.Show("El cliente se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            c.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+
+                        RestoDatosCliente actualizar = new RestoDatosCliente(c.devolverCliente().DNI);
+                        actualizar.Name = "Actualizar un cliente";
+                        DialogResult drActualizar = actualizar.ShowDialog();
+                        if (drActualizar.Equals(DialogResult.OK))
+                        {
+                            Cliente v = actualizar.devCliente();
+                            LNCliente.LogicaNegocioCliente.Actualizar(v);
+                            MessageBox.Show("El cliente se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            actualizar.Dispose();
+                        }
+                        else
+                        {
+                            actualizar.Dispose();
+                        }
+                    }
                 }
                 else
                 {
-                    actualizar.Dispose();
+                    c.Dispose();
+                    continuar = true;
                 }
-
-            }*/
+            }
         }
     }
 }

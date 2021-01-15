@@ -43,17 +43,16 @@ namespace capaPresentacion
             this.tsmiActualizarExtra = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.añadirNuevoClienteDisponibleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUnClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -172,11 +171,38 @@ namespace capaPresentacion
             this.añadirNuevoClienteDisponibleToolStripMenuItem1,
             this.eliminarClienteToolStripMenuItem1,
             this.buscarUnClienteToolStripMenuItem1,
-            this.actualizarUnClienteToolStripMenuItem,
-            this.visualizarToolStripMenuItem1});
+            this.actualizarUnClienteToolStripMenuItem});
             this.tsmiCliente.Name = "tsmiCliente";
             this.tsmiCliente.Size = new System.Drawing.Size(56, 19);
             this.tsmiCliente.Text = "Cliente";
+            // 
+            // añadirNuevoClienteDisponibleToolStripMenuItem1
+            // 
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Name = "añadirNuevoClienteDisponibleToolStripMenuItem1";
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Text = "Añadir nuevo cliente disponible";
+            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Click += new System.EventHandler(this.añadirNuevoClienteDisponibleToolStripMenuItem1_Click);
+            // 
+            // eliminarClienteToolStripMenuItem1
+            // 
+            this.eliminarClienteToolStripMenuItem1.Name = "eliminarClienteToolStripMenuItem1";
+            this.eliminarClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.eliminarClienteToolStripMenuItem1.Text = "Eliminar cliente";
+            this.eliminarClienteToolStripMenuItem1.Click += new System.EventHandler(this.eliminarClienteToolStripMenuItem1_Click);
+            // 
+            // buscarUnClienteToolStripMenuItem1
+            // 
+            this.buscarUnClienteToolStripMenuItem1.Name = "buscarUnClienteToolStripMenuItem1";
+            this.buscarUnClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
+            this.buscarUnClienteToolStripMenuItem1.Text = "Buscar un cliente";
+            this.buscarUnClienteToolStripMenuItem1.Click += new System.EventHandler(this.buscarUnClienteToolStripMenuItem1_Click);
+            // 
+            // actualizarUnClienteToolStripMenuItem
+            // 
+            this.actualizarUnClienteToolStripMenuItem.Name = "actualizarUnClienteToolStripMenuItem";
+            this.actualizarUnClienteToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.actualizarUnClienteToolStripMenuItem.Text = "Actualizar un cliente";
+            this.actualizarUnClienteToolStripMenuItem.Click += new System.EventHandler(this.actualizarUnClienteToolStripMenuItem_Click);
             // 
             // tsmiPresupuesto
             // 
@@ -229,40 +255,6 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // añadirNuevoClienteDisponibleToolStripMenuItem1
-            // 
-            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Name = "añadirNuevoClienteDisponibleToolStripMenuItem1";
-            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
-            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Text = "Añadir nuevo cliente disponible";
-            this.añadirNuevoClienteDisponibleToolStripMenuItem1.Click += new System.EventHandler(this.añadirNuevoClienteDisponibleToolStripMenuItem1_Click);
-            // 
-            // eliminarClienteToolStripMenuItem1
-            // 
-            this.eliminarClienteToolStripMenuItem1.Name = "eliminarClienteToolStripMenuItem1";
-            this.eliminarClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
-            this.eliminarClienteToolStripMenuItem1.Text = "Eliminar cliente";
-            this.eliminarClienteToolStripMenuItem1.Click += new System.EventHandler(this.eliminarClienteToolStripMenuItem1_Click);
-            // 
-            // buscarUnClienteToolStripMenuItem1
-            // 
-            this.buscarUnClienteToolStripMenuItem1.Name = "buscarUnClienteToolStripMenuItem1";
-            this.buscarUnClienteToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
-            this.buscarUnClienteToolStripMenuItem1.Text = "Buscar un cliente";
-            this.buscarUnClienteToolStripMenuItem1.Click += new System.EventHandler(this.buscarUnClienteToolStripMenuItem1_Click);
-            // 
-            // actualizarUnClienteToolStripMenuItem
-            // 
-            this.actualizarUnClienteToolStripMenuItem.Name = "actualizarUnClienteToolStripMenuItem";
-            this.actualizarUnClienteToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.actualizarUnClienteToolStripMenuItem.Text = "Actualizar un cliente";
-            this.actualizarUnClienteToolStripMenuItem.Click += new System.EventHandler(this.actualizarUnClienteToolStripMenuItem_Click);
-            // 
-            // visualizarToolStripMenuItem1
-            // 
-            this.visualizarToolStripMenuItem1.Name = "visualizarToolStripMenuItem1";
-            this.visualizarToolStripMenuItem1.Size = new System.Drawing.Size(241, 22);
-            this.visualizarToolStripMenuItem1.Text = "Visualizar";
-            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +301,5 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem eliminarClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem buscarUnClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem actualizarUnClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem1;
     }
 }

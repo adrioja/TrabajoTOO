@@ -15,9 +15,41 @@ namespace capaPresentacion
     public partial class RestoDatosCliente : Form
     {
         private Cliente cliente;
-        private OpcionesOperacion opcion;
 
-        public RestoDatosCliente(Cliente c, OpcionesOperacion o)
+        public RestoDatosCliente(String c)
+        {
+            InitializeComponent();
+            this.cliente = new Cliente(c);
+            this.btCancelar.DialogResult = DialogResult.Cancel;
+            this.btAceptar.DialogResult = DialogResult.OK;
+            this.tbDNI.Text = this.cliente.DNI;
+            this.tbDNI.Enabled = false;
+
+            this.cliente = LNCliente.LogicaNegocioCliente.Buscar(this.cliente);
+            if(this.cliente != null)
+            {
+                this.asignarDatos();
+            }
+            else
+            {
+                this.cliente = new Cliente(c);
+            }
+
+        }
+
+        public RestoDatosCliente(Cliente c)
+        {
+            InitializeComponent();
+            this.cliente = c;
+            this.btCancelar.DialogResult = DialogResult.Cancel;
+            this.btAceptar.DialogResult = DialogResult.OK;
+            this.tbDNI.Text = this.cliente.DNI;
+            this.tbDNI.Enabled = false;
+            this.asignarDatos();
+            this.deshabilitar();
+        }
+
+        /*public RestoDatosCliente(Cliente c, OpcionesOperacion o)
         {
             this.cliente = c;
             InitializeComponent();
@@ -50,7 +82,7 @@ namespace capaPresentacion
                 this.tbDNI.Text = this.cliente.DNI;
                 this.tbDNI.Enabled = false;
             }
-        }
+        }*/
 
 
         public void deshabilitar()
@@ -128,7 +160,13 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            //Esto cambiar v
+            
+            if(!this.formatosCorrectos())
+            {
+                this.DialogResult = DialogResult.None;
+            }
+            
+            /*//Esto cambiar v
             if (formatosCorrectos())
             {
                 if (opcion.Equals(OpcionesOperacion.Alta))
@@ -157,7 +195,7 @@ namespace capaPresentacion
             {
                 this.DialogResult = DialogResult.None;
                 //PONER MENSAJES DE FORMATOS QUE HAY INCORRECTOS
-            }
+            }*/
         }
 
 
