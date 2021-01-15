@@ -14,36 +14,58 @@ namespace capaPresentacion
     public partial class RestoDatosExtra : Form
     {
         private Extra extra;
-        private OpcionesOperacion opcion;
 
-        public RestoDatosExtra(Extra e,OpcionesOperacion o)
+        public RestoDatosExtra(String s)
         {
-            this.opcion = o;
-            this.extra = e;
+            //para el caso de dar alta y actualizar
             InitializeComponent();
+            this.extra = new Extra(s);
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbNombre.Text = extra.Nombre;
-            if (opcion.Equals(OpcionesOperacion.Baja) ||opcion.Equals(OpcionesOperacion.Busqueda))
-            {
-                this.tbNombre.Enabled = false;
-                this.tbPrecio.Enabled = false;
-                this.tbPrecio.Text = this.extra.PrecioFijo+"";
-                if(opcion.Equals(OpcionesOperacion.Busqueda))
-                {
-                    this.btCancelar.Visible = false;
-                }
-            }
-            if(opcion.Equals(OpcionesOperacion.Actualizar))
+            this.extra = LNVehiculo.LogicaNegocioVehiculo.buscar(this.extra);
+            if (extra!=null) //caso actualizar
             {
                 this.tbPrecio.Text = this.extra.PrecioFijo + "";
             }
-            
+            else
+            {
+                this.extra = new Extra(s);
+            }
         }
+
+        public RestoDatosExtra(Extra e)
+        {
+            // para eliminar y buscar
+            InitializeComponent();
+            this.extra = e;
+            this.btCancelar.DialogResult = DialogResult.Cancel;
+            this.btAceptar.DialogResult = DialogResult.OK;
+            this.tbNombre.Text = extra.Nombre;
+            this.tbNombre.Enabled = false;
+            this.tbPrecio.Enabled = false;
+            this.tbPrecio.Text = this.extra.PrecioFijo + "";
+
+            //en la busqueda hay que deshabilitar el boton cancelar                 //-------------------------FALTA
+        }
+
+
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(opcion.Equals(OpcionesOperacion.Alta))
+            double precio;
+            if (!Double.TryParse(this.tbPrecio.Text, out precio))
+            {
+                MessageBox.Show("Debes introducir una cantidad numerica para el precio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.None;
+            }
+            else
+            {
+                this.extra.PrecioFijo = precio;
+            }
+
+
+            /*if(opcion.Equals(OpcionesOperacion.Alta))
             {
                 double precio;
                 if (!Double.TryParse(this.tbPrecio.Text, out precio))
@@ -77,7 +99,7 @@ namespace capaPresentacion
                 {
                     this.extra.PrecioFijo = precio;
                 }
-            }
+            }*/
 
 
         }

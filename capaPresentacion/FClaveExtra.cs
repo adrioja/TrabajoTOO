@@ -15,11 +15,8 @@ namespace capaPresentacion
     public partial class FClaveExtra : Form
     {
 
-        private OpcionesOperacion opcion;
-
-        public FClaveExtra(OpcionesOperacion o)
+        public FClaveExtra()
         {
-            this.opcion = o;
             this.inicializarComponentes();
         }
 
@@ -32,7 +29,14 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(opcion.Equals(OpcionesOperacion.Alta))
+            if (this.tbIdentificador.Text.Trim(' ').Length == 0)
+            {
+                //caso no cumple el formato
+                this.DialogResult = DialogResult.None;
+                DialogResult dr = MessageBox.Show("El formato del nombre de un extra no puede ser vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            /*if(opcion.Equals(OpcionesOperacion.Alta))
             {
                 if (LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
                 {
@@ -79,7 +83,7 @@ namespace capaPresentacion
                     }
                     this.DialogResult = DialogResult.None;
                 }
-            }
+            }*/
             
             
         }

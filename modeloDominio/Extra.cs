@@ -68,7 +68,6 @@ namespace modeloDominio
             }
         }        
 
-
         /////////////////////////// METODOS ///////////////////////////
         
         /// <summary>
