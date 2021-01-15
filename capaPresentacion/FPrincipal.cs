@@ -241,7 +241,6 @@ namespace capaPresentacion
                     if (LogicaNegocioVehiculo.existeYa(comprobar))
                     {
                         continuar = true;
-    
                         RestoDatosExtra busqueda = new RestoDatosExtra(comprobar.Nombre);
                         busqueda.Name = "Actualizar extra";
                         DialogResult drBusqueda = busqueda.ShowDialog();
@@ -308,101 +307,225 @@ namespace capaPresentacion
             visualizador.Dispose();
         }
 
+
+        //----------------------------VEHICULO----------------------------//
+
         private void añadirUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Alta);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+            bool continuar = false;
+            while (!continuar)
             {
-                
-                RestoDatosVehiculo alta = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Alta);
-                DialogResult drAlta = alta.ShowDialog();
-                if (drAlta.Equals(DialogResult.OK))
+                FClaveVehiculo f = new FClaveVehiculo();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
                 {
-                    Vehiculo vehiculo = alta.devVehiculo();
-                    VehiculoNuevo v = vehiculo as VehiculoNuevo;
-                    if(v!=null)
+                    Vehiculo vehiculo1 = f.devolverVehiculo();
+                    if(LNVehiculo.LogicaNegocioVehiculo.existeYa(vehiculo1))
                     {
-                        LNVehiculo.LogicaNegocioVehiculo.añadir(v);
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
                     }
                     else
                     {
-                        LNVehiculo.LogicaNegocioVehiculo.añadir(vehiculo as VehiculoSegundaMano);
-                    }
-                    MessageBox.Show("El vehiculo se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        continuar = true;
+                        
+                        RestoDatosVehiculo alta = new RestoDatosVehiculo(f.devolverVehiculo().NumBastidor);
+                        alta.Name = "Dar de alta un vehiculo";
+                        DialogResult drAlta = alta.ShowDialog();
+                        if (drAlta.Equals(DialogResult.OK))
+                        {
+                            Vehiculo vehiculo = alta.devVehiculo();
+                            VehiculoNuevo v = vehiculo as VehiculoNuevo;
+                            if (v != null)
+                            {
+                                LNVehiculo.LogicaNegocioVehiculo.añadir(v);
+                            }
+                            else
+                            {
+                                LNVehiculo.LogicaNegocioVehiculo.añadir(vehiculo as VehiculoSegundaMano);
+                            }
+                            MessageBox.Show("El vehiculo se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            alta.Dispose();
+                        }
+                        else
+                        {
+                            alta.Dispose();
+                        }
+                        
+                    }   
                 }
                 else
                 {
-                    alta.Dispose();
+                    f.Dispose();
+                    continuar = true;
                 }
             }
-            else
-            {
-                f.Dispose();
-            }
+
+            
         }
 
         private void eliminarUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e) //mal CON SEGUNDA MANO
         {
-            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Baja);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+            bool continuar = false;
+            while (!continuar)
             {
-                Vehiculo v = f.devolverVehiculo();
-                RestoDatosVehiculo baja = new RestoDatosVehiculo(v, OpcionesOperacion.Baja);
-                DialogResult drBaja = baja.ShowDialog();
-                if (drBaja.Equals(DialogResult.OK))
+                FClaveVehiculo f = new FClaveVehiculo();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
                 {
-                    LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devVehiculo());
-                    MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Vehiculo v = f.devolverVehiculo();
+                    if (!LogicaNegocioVehiculo.existeYa(v))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un vehiculo con dicho nnumero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+                        }
+                        else
+                        {
+                            f.Dispose();
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+                        Vehiculo resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(v);
+                        RestoDatosVehiculo baja = new RestoDatosVehiculo(resultadoBusqueda);
+                        baja.Name = "Dar de baja un vehiculo";
+                        DialogResult drBaja = baja.ShowDialog();
+                        if (drBaja.Equals(DialogResult.OK))
+                        {
+                            LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devVehiculo());
+                            MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            baja.Dispose();
+                        }
+                        else
+                        {
+                            baja.Dispose();
+                        }
+                    }
+                    
                 }
                 else
                 {
-                    baja.Dispose();
+                    f.Dispose();
+                    continuar = true;
                 }
             }
+
+            
         }
 
         private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Busqueda);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+            bool continuar = false;
+            while (!continuar)
             {
-                RestoDatosVehiculo busqueda = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Busqueda);
-                DialogResult drBusqueda = busqueda.ShowDialog();
-                busqueda.Dispose();
+                FClaveVehiculo f = new FClaveVehiculo();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
+                {
+                    Vehiculo v = f.devolverVehiculo();
+                    if(!LogicaNegocioVehiculo.existeYa(v))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+                        }
+                        else
+                        {
+                            f.Dispose();
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+                        Vehiculo resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(v);
+                        RestoDatosVehiculo busqueda = new RestoDatosVehiculo(resultadoBusqueda);
+                        busqueda.Name = "Busqueda de un vehiculo";
+                        DialogResult drBusqueda = busqueda.ShowDialog();
+                        if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
+                        {
+                            busqueda.Dispose();
+                        }
+                        else
+                        {
+                            busqueda.Dispose();
+                        }
+                        MessageBox.Show("Busqueda finalizada", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
             }
+
+            
         }
 
         private void actualizaDatosVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveVehiculo f = new FClaveVehiculo(OpcionesOperacion.Busqueda);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
+
+            bool continuar = false;
+            while (!continuar)
             {
-                RestoDatosVehiculo actualizar = new RestoDatosVehiculo(f.devolverVehiculo(), OpcionesOperacion.Actualizar);
-                DialogResult drActualizar = actualizar.ShowDialog();
-                if (drActualizar.Equals(DialogResult.OK))
+                FClaveVehiculo f = new FClaveVehiculo();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK))
                 {
-                    Vehiculo v = actualizar.devVehiculo();
-                    VehiculoNuevo nuevo = v as VehiculoNuevo;
-                    if(nuevo!=null)
+                    Vehiculo v1 = f.devolverVehiculo();
+                    if(!LNVehiculo.LogicaNegocioVehiculo.existeYa(v1))
                     {
-                        LNVehiculo.LogicaNegocioVehiculo.actualizar(nuevo);
+
                     }
                     else
                     {
-                        LNVehiculo.LogicaNegocioVehiculo.actualizar(v as VehiculoSegundaMano);
+                        continuar = true;
+                        RestoDatosVehiculo actualizar = new RestoDatosVehiculo(v1.NumBastidor);
+                        actualizar.Name = "Actualizar un vehiculo";
+                        DialogResult drActualizar = actualizar.ShowDialog();
+                        if (drActualizar.Equals(DialogResult.OK))
+                        {
+                            Vehiculo v = actualizar.devVehiculo();
+                            VehiculoNuevo nuevo = v as VehiculoNuevo;
+                            if (nuevo != null)
+                            {
+                                LNVehiculo.LogicaNegocioVehiculo.actualizar(nuevo);
+                            }
+                            else
+                            {
+                                LNVehiculo.LogicaNegocioVehiculo.actualizar(v as VehiculoSegundaMano);
+                            }
+
+                            MessageBox.Show("El vehiculo se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            actualizar.Dispose();
+                        }
+                        else
+                        {
+                            actualizar.Dispose();
+                        }
                     }
-                    
-                    MessageBox.Show("El vehiculo se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    actualizar.Dispose();
+                    f.Dispose();
+                    continuar = true;
                 }
-
             }
         }
 
@@ -415,7 +538,7 @@ namespace capaPresentacion
         ////////////////////////////////////////////////////////////////////////////////////////////////////Clientes////////////////////////////////////////////////////////////////////////////////
         private void añadirNuevoClienteDisponibleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FClaveCliente c = new FClaveCliente(OpcionesOperacion.Alta);
+            /*FClaveCliente c = new FClaveCliente(OpcionesOperacion.Alta);
             DialogResult dr = c.ShowDialog();
             if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
             {
@@ -438,12 +561,12 @@ namespace capaPresentacion
             else
             {
                 c.Dispose();
-            }
+            }*/
         }
 
         private void eliminarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FClaveCliente f = new FClaveCliente(OpcionesOperacion.Baja);
+            /*FClaveCliente f = new FClaveCliente(OpcionesOperacion.Baja);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
             {
@@ -459,24 +582,24 @@ namespace capaPresentacion
                 {
                     baja.Dispose();
                 }
-            }
+            }*/
         }
 
         private void buscarUnClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FClaveCliente f = new FClaveCliente(OpcionesOperacion.Busqueda);
+            /*FClaveCliente f = new FClaveCliente(OpcionesOperacion.Busqueda);
             DialogResult dr = f.ShowDialog();
             if (dr.Equals(DialogResult.OK))
             {
                 RestoDatosCliente busqueda = new RestoDatosCliente(f.devolverCliente(), OpcionesOperacion.Busqueda);
                 DialogResult drBusqueda = busqueda.ShowDialog();
                 busqueda.Dispose();
-            }
+            }*/
         }
 
         private void actualizarUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FClaveCliente c = new FClaveCliente(OpcionesOperacion.Busqueda);
+            /*FClaveCliente c = new FClaveCliente(OpcionesOperacion.Busqueda);
             DialogResult dr = c.ShowDialog();
             if (dr.Equals(DialogResult.OK))
             {
@@ -495,7 +618,7 @@ namespace capaPresentacion
                     actualizar.Dispose();
                 }
 
-            }
+            }*/
         }
     }
 }

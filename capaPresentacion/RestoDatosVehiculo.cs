@@ -15,31 +15,26 @@ namespace capaPresentacion
     public partial class RestoDatosVehiculo : Form
     {
         private Vehiculo vehiculo;
+
         public RestoDatosVehiculo(String b)
         {
-            //para el caso de dar alta y actualizar
-            
-        }
-
-        public RestoDatosVehiculo(Vehiculo e)
-        {
-            
-            this.vehiculo = e;
             InitializeComponent();
+            this.vehiculo = new VehiculoNuevo(b);
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbNumeroBastidor.Text = vehiculo.NumBastidor;
             this.rbtNuevo.Checked = true;
-            this.opcion = o;
 
-            if(this.opcion.Equals(OpcionesOperacion.Baja) || this.opcion.Equals(OpcionesOperacion.Busqueda))
+            this.vehiculo = LNVehiculo.LogicaNegocioVehiculo.buscar(this.vehiculo);
+            if (vehiculo != null) //caso actualizar
             {
+                this.rbtNuevo.Enabled = false;
+                this.rbtSegundaMano.Enabled = false;
                 this.asignarDatos();
                 VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
-                if (ve==null)
+                if (ve == null)
                 {
                     this.rbtNuevo.Checked = true;
-                    
                 }
                 else
                 {
@@ -47,14 +42,43 @@ namespace capaPresentacion
                     this.tbMatricula.Text = ve.Matricula;
                     this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
                 }
-                this.deshabilitar();
-                if(this.opcion.Equals(OpcionesOperacion.Busqueda))
-                {
-                    this.btCancelar.Visible = false;
-                }
+            }
+            else
+            {
+                this.vehiculo = new VehiculoNuevo(b);
             }
 
-            if (opcion.Equals(OpcionesOperacion.Actualizar))
+        }
+
+        public RestoDatosVehiculo(Vehiculo e)
+        {
+            
+            InitializeComponent();
+            this.vehiculo = e;
+            this.btCancelar.DialogResult = DialogResult.Cancel;
+            this.btAceptar.DialogResult = DialogResult.OK;
+            this.tbNumeroBastidor.Text = vehiculo.NumBastidor;
+            this.rbtNuevo.Checked = true;
+
+            this.asignarDatos();
+            VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
+            if (ve == null)
+            {
+                this.rbtNuevo.Checked = true;
+
+            }
+            else
+            {
+                this.rbtSegundaMano.Checked = true;
+                this.tbMatricula.Text = ve.Matricula;
+                this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
+            }
+            this.deshabilitar();
+
+
+         
+
+            /*if (opcion.Equals(OpcionesOperacion.Actualizar))
             {
                 this.rbtNuevo.Enabled = false;
                 this.rbtSegundaMano.Enabled = false;
@@ -71,7 +95,7 @@ namespace capaPresentacion
                     this.tbMatricula.Text = ve.Matricula;
                     this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
                 }
-            }
+            }*/
 
         }
 
@@ -149,7 +173,12 @@ namespace capaPresentacion
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if(formatosCorrectos())
+            if(!formatosCorrectos())
+            {
+                this.DialogResult = DialogResult.None;
+            }
+
+            /*if(formatosCorrectos())
             {
                 if (opcion.Equals(OpcionesOperacion.Alta))
                 {
@@ -204,7 +233,7 @@ namespace capaPresentacion
             {
                 this.DialogResult = DialogResult.None;
                 //PONER MENSAJES DE FORMATOS QUE HAY INCORRECTOS
-            }
+            }*/
         }
 
         private bool formatosCorrectos()
