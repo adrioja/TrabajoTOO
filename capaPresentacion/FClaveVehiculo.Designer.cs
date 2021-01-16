@@ -71,7 +71,7 @@ namespace capaPresentacion
             this.lDescripcion.Location = new System.Drawing.Point(36, 61);
             this.lDescripcion.Name = "lDescripcion";
             this.lDescripcion.Size = new System.Drawing.Size(234, 20);
-            this.lDescripcion.TabIndex = 3;
+            this.lDescripcion.TabIndex = 4;
             this.lDescripcion.Text = "Introduce el numero de bastidor";
             // 
             // lNumeroBastidor
@@ -96,7 +96,7 @@ namespace capaPresentacion
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Name = "FClaveVehiculo";
-            this.Text = "FClaveVehiculo";
+            this.Text = "Vehiculo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

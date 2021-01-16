@@ -70,14 +70,14 @@ namespace capaPresentacion
             this.tbBuscar.Location = new System.Drawing.Point(74, 75);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(210, 20);
-            this.tbBuscar.TabIndex = 4;
+            this.tbBuscar.TabIndex = 0;
             // 
             // btBuscar
             // 
             this.btBuscar.Location = new System.Drawing.Point(74, 101);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btBuscar.TabIndex = 5;
+            this.btBuscar.TabIndex = 1;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
             this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
@@ -87,7 +87,7 @@ namespace capaPresentacion
             this.btLimpiar.Location = new System.Drawing.Point(209, 101);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btLimpiar.TabIndex = 6;
+            this.btLimpiar.TabIndex = 2;
             this.btLimpiar.Text = "Limpiar";
             this.btLimpiar.UseVisualStyleBackColor = true;
             this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
@@ -115,7 +115,7 @@ namespace capaPresentacion
             this.Controls.Add(this.lDescripcion);
             this.MaximizeBox = false;
             this.Name = "VisualizadorGeneralExtras";
-            this.Text = "VisualizadorGeneral";
+            this.Text = "Visualizador extras";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -11,8 +11,14 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para visualizar los vehiculos que estan agregados en el sistema y permite filtar 
+    /// </summary>
     public partial class VisualizadorGeneralVehiculo : Form
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public VisualizadorGeneralVehiculo()
         {
             InitializeComponent();
@@ -21,6 +27,10 @@ namespace capaPresentacion
             this.mostrarTodos();
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: muestra todos los vehiculos disponible
+        /// </summary>
         private void mostrarTodos()
         {
             this.lbListaVehiculos.Items.Clear();
@@ -38,6 +48,10 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: vacia todos los cuadros de tecto por los que se puede filtrar
+        /// </summary>
         private void vaciar()
         {
             this.tbNumeroBastidor.Text = "";
@@ -47,12 +61,25 @@ namespace capaPresentacion
             this.tbPrecio.Text = "";
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia los filtros y muestra todos los vehiculos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.vaciar();
             this.mostrarTodos();
         }
 
+
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en el boton buscar, muestra en la lista los vehiculos que cumplen los filtros, si algun campo no cumple el fromato lo ignora
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btBuscar_Click(object sender, EventArgs e)
         {
             this.lbListaVehiculos.Items.Clear();

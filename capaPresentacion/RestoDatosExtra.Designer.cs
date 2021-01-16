@@ -58,7 +58,7 @@ namespace capaPresentacion
             this.lNombre.Location = new System.Drawing.Point(58, 55);
             this.lNombre.Name = "lNombre";
             this.lNombre.Size = new System.Drawing.Size(44, 13);
-            this.lNombre.TabIndex = 2;
+            this.lNombre.TabIndex = 4;
             this.lNombre.Text = "Nombre";
             // 
             // lPrecio
@@ -67,7 +67,7 @@ namespace capaPresentacion
             this.lPrecio.Location = new System.Drawing.Point(58, 108);
             this.lPrecio.Name = "lPrecio";
             this.lPrecio.Size = new System.Drawing.Size(37, 13);
-            this.lPrecio.TabIndex = 3;
+            this.lPrecio.TabIndex = 5;
             this.lPrecio.Text = "Precio";
             // 
             // btAceptar
@@ -75,7 +75,7 @@ namespace capaPresentacion
             this.btAceptar.Location = new System.Drawing.Point(134, 166);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 4;
+            this.btAceptar.TabIndex = 2;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
@@ -86,7 +86,7 @@ namespace capaPresentacion
             this.btCancelar.Location = new System.Drawing.Point(282, 166);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 5;
+            this.btCancelar.TabIndex = 3;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);

@@ -12,10 +12,17 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para recoger/introducir el resto de datos de un cliente
+    /// </summary>
     public partial class RestoDatosCliente : Form
     {
         private Cliente cliente;
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// </summary>
+        /// <param name="c"></param>
         public RestoDatosCliente(String c)
         {
             InitializeComponent();
@@ -37,6 +44,10 @@ namespace capaPresentacion
 
         }
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// </summary>
+        /// <param name="c"></param>
         public RestoDatosCliente(Cliente c)
         {
             InitializeComponent();
@@ -49,43 +60,11 @@ namespace capaPresentacion
             this.deshabilitar();
         }
 
-        /*public RestoDatosCliente(Cliente c, OpcionesOperacion o)
-        {
-            this.cliente = c;
-            InitializeComponent();
-            this.btCancelar.DialogResult = DialogResult.Cancel;
-            this.btAceptar.DialogResult = DialogResult.OK;
-            this.tbDNI.Text = this.cliente.DNI;
-            
-            this.opcion = o;
-
-
-
-            if (this.opcion.Equals(OpcionesOperacion.Baja) || this.opcion.Equals(OpcionesOperacion.Busqueda))
-            {
-                this.asignarDatos();
-                this.deshabilitar();
-                if (this.opcion.Equals(OpcionesOperacion.Busqueda))
-                {
-                    this.btCancelar.Visible = false;
-                }
-            }
-
-            if (opcion.Equals(OpcionesOperacion.Actualizar))
-            {
-                this.asignarDatos();
-                this.tbDNI.Enabled = false;
-            }
-
-            if(opcion.Equals(OpcionesOperacion.Alta))
-            {
-                this.tbDNI.Text = this.cliente.DNI;
-                this.tbDNI.Enabled = false;
-            }
-        }*/
-
-
-        public void deshabilitar()
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: pone todos los textbox y botones circulares como deshabilitados
+        /// </summary>
+        private void deshabilitar()
         {
             this.tbDNI.Enabled = false;
             this.tbNombre.Enabled = false;
@@ -97,10 +76,11 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Dado el cliente que tenemos, se reyenan todos los textBox del formulario con sus datos
+        /// PRE: la clase debe de estar incializada
+        /// POST: Dado el cliente que tenemos, se reyenar todos los textBox del formulario con sus datos
         /// </summary>
         /// <returns></returns>
-        public void asignarDatos()
+        private void asignarDatos()
         {
             this.tbDNI.Text = this.cliente.DNI;
             this.tbNombre.Text = this.cliente.Nombre;
@@ -128,10 +108,11 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// Devuelve un cliente reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
+        /// PRE: la clase debe de estar incializada
+        /// POST: Devuelve un cliente reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
         /// </summary>
         /// <returns></returns>
-        public Cliente devCliente()
+        internal Cliente devCliente()
         {           
             CategoriaCliente categoria;
 
@@ -151,13 +132,23 @@ namespace capaPresentacion
             return new Cliente(this.tbDNI.Text, this.tbNombre.Text, this.tbTelefono.Text, categoria);
         }
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             
@@ -165,40 +156,13 @@ namespace capaPresentacion
             {
                 this.DialogResult = DialogResult.None;
             }
-            
-            /*//Esto cambiar v
-            if (formatosCorrectos())
-            {
-                if (opcion.Equals(OpcionesOperacion.Alta))
-                {
-                    this.cliente = this.devCliente();
-                }
-
-                if (opcion.Equals(OpcionesOperacion.Baja))
-                {
-                    DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este cliente?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.DialogResult = DialogResult.None;
-                        this.Dispose();
-                    }
-                }
-
-
-                if (opcion.Equals(OpcionesOperacion.Actualizar))
-                {
-                    this.cliente = this.devCliente();
-                }
-
-            }
-            else
-            {
-                this.DialogResult = DialogResult.None;
-                //PONER MENSAJES DE FORMATOS QUE HAY INCORRECTOS
-            }*/
         }
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+        /// </summary>
+        /// <returns></returns>
         private bool formatosCorrectos()
         {
             String mensaje ="";
@@ -232,10 +196,7 @@ namespace capaPresentacion
                     
                 }
             }
-
-
-
-            return v; //Si se cumple todo
+            return v; 
         }
     }
 }

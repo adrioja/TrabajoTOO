@@ -13,9 +13,14 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para introducir la numero de bastidor del vehiculo
+    /// </summary>
     public partial class FClaveVehiculo : Form
     {
-       
+       /// <summary>
+       /// Inicializa la clase
+       /// </summary>
         public FClaveVehiculo()
         {         
             InitializeComponent();
@@ -23,6 +28,12 @@ namespace capaPresentacion
             this.btAceptar.DialogResult = DialogResult.OK;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si el formato del numero de bastidor no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if ( (this.tbIdentificador.Text.Trim(' ').Length == 0) || (this.tbIdentificador.Text.Length != 17))
@@ -98,13 +109,19 @@ namespace capaPresentacion
             }*/
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
         /// <summary>
-        /// Solo se puede llamar si la clase esta incializada y si el nombre introducido no existe ya en el sistema
+        /// Solo se puede llamar si la clase esta incializada y si el numero de bastidor cumple el formato
         /// Devuelve un objeto vehiculo con la clave iniciada
         /// </summary>
         /// <returns></returns>

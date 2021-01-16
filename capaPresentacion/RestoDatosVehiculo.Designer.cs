@@ -55,7 +55,7 @@ namespace capaPresentacion
             this.btAceptar.Location = new System.Drawing.Point(297, 337);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 0;
+            this.btAceptar.TabIndex = 7;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
@@ -66,7 +66,7 @@ namespace capaPresentacion
             this.btCancelar.Location = new System.Drawing.Point(417, 337);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 1;
+            this.btCancelar.TabIndex = 8;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -78,35 +78,35 @@ namespace capaPresentacion
             this.tbNumeroBastidor.Name = "tbNumeroBastidor";
             this.tbNumeroBastidor.ReadOnly = true;
             this.tbNumeroBastidor.Size = new System.Drawing.Size(100, 20);
-            this.tbNumeroBastidor.TabIndex = 2;
+            this.tbNumeroBastidor.TabIndex = 0;
             // 
             // tbModelo
             // 
             this.tbModelo.Location = new System.Drawing.Point(185, 153);
             this.tbModelo.Name = "tbModelo";
             this.tbModelo.Size = new System.Drawing.Size(100, 20);
-            this.tbModelo.TabIndex = 3;
+            this.tbModelo.TabIndex = 2;
             // 
             // tbMarca
             // 
             this.tbMarca.Location = new System.Drawing.Point(185, 111);
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(100, 20);
-            this.tbMarca.TabIndex = 4;
+            this.tbMarca.TabIndex = 1;
             // 
             // tbPrecioRecomendado
             // 
             this.tbPrecioRecomendado.Location = new System.Drawing.Point(185, 237);
             this.tbPrecioRecomendado.Name = "tbPrecioRecomendado";
             this.tbPrecioRecomendado.Size = new System.Drawing.Size(100, 20);
-            this.tbPrecioRecomendado.TabIndex = 5;
+            this.tbPrecioRecomendado.TabIndex = 4;
             // 
             // tbPotencia
             // 
             this.tbPotencia.Location = new System.Drawing.Point(185, 192);
             this.tbPotencia.Name = "tbPotencia";
             this.tbPotencia.Size = new System.Drawing.Size(100, 20);
-            this.tbPotencia.TabIndex = 6;
+            this.tbPotencia.TabIndex = 3;
             // 
             // lNumeroBastidor
             // 
@@ -182,7 +182,7 @@ namespace capaPresentacion
             this.tbMatricula.Location = new System.Drawing.Point(549, 156);
             this.tbMatricula.Name = "tbMatricula";
             this.tbMatricula.Size = new System.Drawing.Size(152, 20);
-            this.tbMatricula.TabIndex = 14;
+            this.tbMatricula.TabIndex = 5;
             this.tbMatricula.Visible = false;
             // 
             // tbFechaMatriculacion
@@ -190,7 +190,7 @@ namespace capaPresentacion
             this.tbFechaMatriculacion.Location = new System.Drawing.Point(549, 211);
             this.tbFechaMatriculacion.Name = "tbFechaMatriculacion";
             this.tbFechaMatriculacion.Size = new System.Drawing.Size(152, 20);
-            this.tbFechaMatriculacion.TabIndex = 15;
+            this.tbFechaMatriculacion.TabIndex = 6;
             this.tbFechaMatriculacion.Visible = false;
             // 
             // lMatricula

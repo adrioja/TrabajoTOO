@@ -42,7 +42,7 @@
             this.lbDescripcion.Location = new System.Drawing.Point(130, 22);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(113, 18);
-            this.lbDescripcion.TabIndex = 5;
+            this.lbDescripcion.TabIndex = 10;
             this.lbDescripcion.Text = "Introduce el DNI";
             // 
             // tbIdentificador
@@ -50,7 +50,7 @@
             this.tbIdentificador.Location = new System.Drawing.Point(105, 86);
             this.tbIdentificador.Name = "tbIdentificador";
             this.tbIdentificador.Size = new System.Drawing.Size(173, 20);
-            this.tbIdentificador.TabIndex = 7;
+            this.tbIdentificador.TabIndex = 0;
             // 
             // lIdentificador
             // 
@@ -58,34 +58,36 @@
             this.lIdentificador.Location = new System.Drawing.Point(58, 90);
             this.lIdentificador.Name = "lIdentificador";
             this.lIdentificador.Size = new System.Drawing.Size(29, 13);
-            this.lIdentificador.TabIndex = 6;
+            this.lIdentificador.TabIndex = 11;
             this.lIdentificador.Text = "DNI:";
             // 
             // btCancelar
             // 
             this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btCancelar.Location = new System.Drawing.Point(105, 122);
+            this.btCancelar.Location = new System.Drawing.Point(203, 122);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 9;
+            this.btCancelar.TabIndex = 2;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(203, 122);
+            this.btAceptar.Location = new System.Drawing.Point(105, 122);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 8;
+            this.btAceptar.TabIndex = 1;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // FClaveCliente
             // 
+            this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(372, 175);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
@@ -93,7 +95,7 @@
             this.Controls.Add(this.lIdentificador);
             this.Controls.Add(this.lbDescripcion);
             this.Name = "FClaveCliente";
-            this.Text = "Form1";
+            this.Text = "Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 

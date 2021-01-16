@@ -13,24 +13,30 @@ using System.Text.RegularExpressions;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para introducir la clave del cliente(DNI)
+    /// </summary>
     public partial class FClaveCliente : Form
     {
+        /// <summary>
+        /// Incializa la clase
+        /// </summary>
         public FClaveCliente()
-        {    
-            this.inicializarComponentes();
-        }
-
-        private void inicializarComponentes()
         {
             InitializeComponent();
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
         }
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si el formato del DNI  no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (this.tbIdentificador.Text.Trim(' ').Length == 0  || !this.comprobarFormato())
+            if (!this.comprobarFormato())
             {
                 //caso no cumple el formato
                 this.DialogResult = DialogResult.None;
@@ -38,6 +44,12 @@ namespace capaPresentacion
             }  
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -45,7 +57,7 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// Solo se puede llamar si la clase esta incializada y si el dni introducido no existe ya en el sistema.
+        /// Solo se puede llamar si la clase esta incializada y si el DNI cumple el formato
         /// Devuelve un objeto cliente con el campo clave iniciado
         /// </summary>
         /// <returns></returns>
@@ -54,9 +66,13 @@ namespace capaPresentacion
             return new Cliente(this.tbIdentificador.Text);
         }
 
-        
 
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve true si el DNI introducido cumple el formato y falso en caso contrario
+        /// </summary>
+        /// <returns></returns>
         private bool comprobarFormato()
         {
             Regex regex = new Regex("[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][A-Z]");

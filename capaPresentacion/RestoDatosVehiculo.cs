@@ -12,10 +12,17 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para recoger/introducir el resto de datos de un extra
+    /// </summary>
     public partial class RestoDatosVehiculo : Form
     {
         private Vehiculo vehiculo;
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// </summary>
+        /// <param name="b"></param>
         public RestoDatosVehiculo(String b)
         {
             InitializeComponent();
@@ -50,6 +57,10 @@ namespace capaPresentacion
 
         }
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// </summary>
+        /// <param name="e"></param>
         public RestoDatosVehiculo(Vehiculo e)
         {
             
@@ -74,32 +85,13 @@ namespace capaPresentacion
                 this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
             }
             this.deshabilitar();
-
-
-         
-
-            /*if (opcion.Equals(OpcionesOperacion.Actualizar))
-            {
-                this.rbtNuevo.Enabled = false;
-                this.rbtSegundaMano.Enabled = false;
-                this.asignarDatos();
-                VehiculoSegundaMano ve = this.vehiculo as VehiculoSegundaMano;
-                if (ve == null)
-                {
-                    this.rbtNuevo.Checked = true;
-
-                }
-                else
-                {
-                    this.rbtSegundaMano.Checked = true;
-                    this.tbMatricula.Text = ve.Matricula;
-                    this.tbFechaMatriculacion.Text = ve.FechaMatriculacion.Date.ToShortDateString();
-                }
-            }*/
-
         }
 
-        public void deshabilitar()
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: pone todos los textbox y botones circulares como deshabilitados
+        /// </summary>
+        private void deshabilitar()
         {
             this.tbNumeroBastidor.Enabled = false;
             this.tbMarca.Enabled = false;
@@ -111,8 +103,11 @@ namespace capaPresentacion
             this.rbtNuevo.Enabled = false;
             this.rbtSegundaMano.Enabled = false;
         }
-
-        public void asignarDatos()
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: Dado el vehiculo que tenemos, se reyenan todos los textBox del formulario con sus datos
+        /// </summary>
+        private void asignarDatos()
         {
             this.tbNumeroBastidor.Text = this.vehiculo.NumBastidor;
             this.tbMarca.Text = this.vehiculo.Marca;
@@ -122,10 +117,11 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// solo se le puede llamar cuando la clase este incializada y los datos del formulario cumplen el formato
+        /// PRE: la clase debe de estar incializada
+        /// POST: Devuelve un vehiculo reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
         /// </summary>
         /// <returns></returns>
-        public Vehiculo devVehiculo()
+        internal Vehiculo devVehiculo()
         {
             int potencia = Int32.Parse(this.tbPotencia.Text) ;
             double precio = Double.Parse(this.tbPrecioRecomendado.Text);
@@ -141,6 +137,12 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en en el boton circular segunda mano, hace que si se hace click en este boton el de nuevo no se seleccione y hace visible las caracteristicas de matricula y fecha matriculacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbtSegundaMano_CheckedChanged(object sender, EventArgs e)
         {
             if(this.rbtSegundaMano.Checked)
@@ -154,6 +156,12 @@ namespace capaPresentacion
             this.tbFechaMatriculacion.Visible = true;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en en el boton circular nuevo, hace que si se hace click en este boton el de segunda mano no se seleccione y no hace visible las caracteristicas de matricula y fecha matriculacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rbtNuevo_CheckedChanged(object sender, EventArgs e)
         {
             if(this.rbtNuevo.Checked)
@@ -166,76 +174,36 @@ namespace capaPresentacion
             this.tbFechaMatriculacion.Visible = false;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if(!formatosCorrectos())
             {
                 this.DialogResult = DialogResult.None;
             }
-
-            /*if(formatosCorrectos())
-            {
-                if (opcion.Equals(OpcionesOperacion.Alta))
-                {
-                    string num = this.tbNumeroBastidor.Text;
-                    int potencia = (int) Double.Parse(this.tbPotencia.Text);
-                    double precio = Double.Parse(this.tbPrecioRecomendado.Text);
-
-                    if(this.rbtNuevo.Checked)
-                    {
-                        this.vehiculo = new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
-                    }
-                    else
-                    {
-                        String[] s = this.tbFechaMatriculacion.Text.Split('/');
-                        DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
-                        this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio,this.tbMatricula.Text,fecha);
-                    }
-
-                }
-
-                if (opcion.Equals(OpcionesOperacion.Baja))
-                {
-                    DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este vehiculo?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.DialogResult = DialogResult.None;
-                        this.Dispose();
-                    }
-                }
-
-
-                if (opcion.Equals(OpcionesOperacion.Actualizar))
-                {
-                    string num = this.tbNumeroBastidor.Text;
-                    int potencia = (int)Double.Parse(this.tbPotencia.Text);
-                    double precio = Double.Parse(this.tbPrecioRecomendado.Text);
-
-                    if (this.rbtNuevo.Checked)
-                    {
-                        this.vehiculo = new VehiculoNuevo(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio);
-                    }
-                    else
-                    {
-                        String[] s = this.tbFechaMatriculacion.Text.Split('/');
-                        DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
-                        this.vehiculo = new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text, fecha);
-                    }
-                }
-                
-            }
-            else
-            {
-                this.DialogResult = DialogResult.None;
-                //PONER MENSAJES DE FORMATOS QUE HAY INCORRECTOS
-            }*/
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+        /// </summary>
+        /// <returns></returns>
         private bool formatosCorrectos()
         { 
             bool v = true;
@@ -287,7 +255,7 @@ namespace capaPresentacion
                 }
             }
 
-            return v; //si todo está bien
+            return v; 
         }
     }
 }

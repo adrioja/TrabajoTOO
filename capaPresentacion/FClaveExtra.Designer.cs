@@ -41,7 +41,7 @@ namespace capaPresentacion
             this.btAceptar.Location = new System.Drawing.Point(105, 110);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 0;
+            this.btAceptar.TabIndex = 1;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
@@ -52,7 +52,7 @@ namespace capaPresentacion
             this.btCancelar.Location = new System.Drawing.Point(203, 110);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 1;
+            this.btCancelar.TabIndex = 2;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -63,7 +63,7 @@ namespace capaPresentacion
             this.lIdentificador.Location = new System.Drawing.Point(22, 70);
             this.lIdentificador.Name = "lIdentificador";
             this.lIdentificador.Size = new System.Drawing.Size(44, 13);
-            this.lIdentificador.TabIndex = 2;
+            this.lIdentificador.TabIndex = 3;
             this.lIdentificador.Text = "Nombre";
             // 
             // tbIdentificador
@@ -71,7 +71,7 @@ namespace capaPresentacion
             this.tbIdentificador.Location = new System.Drawing.Point(105, 67);
             this.tbIdentificador.Name = "tbIdentificador";
             this.tbIdentificador.Size = new System.Drawing.Size(173, 20);
-            this.tbIdentificador.TabIndex = 3;
+            this.tbIdentificador.TabIndex = 0;
             // 
             // lbDescripcion
             // 
@@ -97,7 +97,7 @@ namespace capaPresentacion
             this.Controls.Add(this.btAceptar);
             this.MaximizeBox = false;
             this.Name = "FClaveExtra";
-            this.Text = "FClave";
+            this.Text = "Extra";
             this.ResumeLayout(false);
             this.PerformLayout();
 

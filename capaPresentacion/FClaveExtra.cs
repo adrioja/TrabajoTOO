@@ -12,21 +12,28 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para introducir la nombre del extra
+    /// </summary>
     public partial class FClaveExtra : Form
     {
 
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public FClaveExtra()
-        {
-            this.inicializarComponentes();
-        }
-
-        private void inicializarComponentes()
         {
             InitializeComponent();
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si el formato del nombre no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if (this.tbIdentificador.Text.Trim(' ').Length == 0)
@@ -88,6 +95,12 @@ namespace capaPresentacion
             
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -95,7 +108,7 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// Solo se puede llamar si la clase esta incializada y si el nombre introducido no existe ya en el sistema
+        /// Solo se puede llamar si la clase esta incializada y si el nombre del extra cumple el formato
         /// Devuelve un objeto extra con el campo clave iniciado
         /// </summary>
         /// <returns></returns>

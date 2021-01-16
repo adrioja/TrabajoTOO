@@ -121,21 +121,21 @@
             this.tbDNI.Location = new System.Drawing.Point(136, 54);
             this.tbDNI.Name = "tbDNI";
             this.tbDNI.Size = new System.Drawing.Size(100, 20);
-            this.tbDNI.TabIndex = 4;
+            this.tbDNI.TabIndex = 0;
             // 
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(136, 87);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(100, 20);
-            this.tbNombre.TabIndex = 5;
+            this.tbNombre.TabIndex = 1;
             // 
             // tbTelefono
             // 
             this.tbTelefono.Location = new System.Drawing.Point(136, 120);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(100, 20);
-            this.tbTelefono.TabIndex = 6;
+            this.tbTelefono.TabIndex = 2;
             // 
             // btCancelar
             // 
@@ -143,7 +143,7 @@
             this.btCancelar.Location = new System.Drawing.Point(161, 255);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btCancelar.TabIndex = 8;
+            this.btCancelar.TabIndex = 4;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             // 
@@ -152,15 +152,17 @@
             this.btAceptar.Location = new System.Drawing.Point(76, 255);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btAceptar.TabIndex = 7;
+            this.btAceptar.TabIndex = 3;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // RestoDatosCliente
             // 
+            this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(309, 298);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);

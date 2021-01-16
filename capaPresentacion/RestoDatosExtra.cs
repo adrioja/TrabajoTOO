@@ -11,10 +11,17 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para recoger/introducir el resto de datos de un extra
+    /// </summary>
     public partial class RestoDatosExtra : Form
     {
         private Extra extra;
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// </summary>
+        /// <param name="s"></param>
         public RestoDatosExtra(String s)
         {
             //para el caso de dar alta y actualizar
@@ -34,6 +41,10 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// </summary>
+        /// <param name="e"></param>
         public RestoDatosExtra(Extra e)
         {
             // para eliminar y buscar
@@ -45,12 +56,15 @@ namespace capaPresentacion
             this.tbNombre.Enabled = false;
             this.tbPrecio.Enabled = false;
             this.tbPrecio.Text = this.extra.PrecioFijo + "";
-
-            //en la busqueda hay que deshabilitar el boton cancelar                 //-------------------------FALTA
         }
 
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto  asigna el precio al extra y deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             double precio;
@@ -63,47 +77,14 @@ namespace capaPresentacion
             {
                 this.extra.PrecioFijo = precio;
             }
-
-
-            /*if(opcion.Equals(OpcionesOperacion.Alta))
-            {
-                double precio;
-                if (!Double.TryParse(this.tbPrecio.Text, out precio))
-                {
-                    MessageBox.Show("Debes introducir una cantidad numerica para el precio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.None;
-                }
-                else
-                {
-                    this.extra.PrecioFijo = precio;
-                }
-            }
-            if (opcion.Equals(OpcionesOperacion.Baja))
-            {
-                DialogResult dr = MessageBox.Show("¿Seguro que quieres eliminar este extra?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if(dr.Equals(DialogResult.No))
-                {
-                    this.DialogResult = DialogResult.None;
-                    this.Dispose();
-                }
-            }
-            if(opcion.Equals(OpcionesOperacion.Actualizar))
-            {
-                double precio;
-                if (!Double.TryParse(this.tbPrecio.Text, out precio))
-                {
-                    MessageBox.Show("Debes introducir una cantidad numerica para el precio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.DialogResult = DialogResult.None;
-                }
-                else
-                {
-                    this.extra.PrecioFijo = precio;
-                }
-            }*/
-
-
         }
 
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -111,17 +92,22 @@ namespace capaPresentacion
 
 
         /// <summary>
-        /// solo se le puede llamar cuando la clase este incializada y los datos del formulario cumplen el formato
+        /// PRE: la clase debe de estar incializada
+        /// POST: solo se le puede llamar cuando la clase este incializada,sin comprobar que los datos cumplen el formarmato
         /// </summary>
         /// <returns></returns>
-        public Extra devExtra()
+        internal Extra devExtra()
         {
-            this.reyenarDatos(); //Esto no se si hay que ponerlo aquí
+            this.reyenarDatos(); 
             return this.extra;
         }
 
-        public void reyenarDatos()
-        { //Para construir el objeto a partir de los datos de los textbox
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: construye el objeto a partir de los datos de los textbox
+        /// </summary>
+        private void reyenarDatos()
+        { 
             double.TryParse(this.tbPrecio.Text, out double precio);
             this.extra.PrecioFijo = precio;           
         }

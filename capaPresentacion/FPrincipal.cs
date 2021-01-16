@@ -15,15 +15,6 @@ namespace capaPresentacion
 {
     public partial class FPrincipal : Form
     {
-        /*public FPrincipal(FLogearse log,String usuario)
-        {
-            log.Hide();
-            InitializeComponent();
-            this.IsMdiContainer = true;
-            this.tsslUsuarioSesion.Text = usuario;
-            this.tsslFechaActual.Text = DateTime.Now.ToLongDateString();
-        }*/
-
         public FPrincipal()
         {
             InitializeComponent();
@@ -65,7 +56,7 @@ namespace capaPresentacion
                         continuar = true;
 
                         RestoDatosExtra alta = new RestoDatosExtra(f.devolverExtra().Nombre);
-                        alta.Name = "Dar de alta";
+                        alta.Text = "Dar de alta un extra";
                         DialogResult drAlta = alta.ShowDialog();
                         if (drAlta.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -109,7 +100,7 @@ namespace capaPresentacion
 
                         Extra resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(comprobar);
                         RestoDatosExtra busqueda = new RestoDatosExtra(resultadoBusqueda);
-                        busqueda.Name = "Eliminar extra";
+                        busqueda.Text = "Eliminar extra";
                         DialogResult drBusqueda = busqueda.ShowDialog();
                         if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -148,24 +139,6 @@ namespace capaPresentacion
                     continuar = true;
                 }
             }
-
-
-            /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Baja);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
-            {
-                RestoDatosExtra baja = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Baja);
-                DialogResult drBaja = baja.ShowDialog();
-                if (drBaja.Equals(DialogResult.OK))
-                {
-                    LNVehiculo.LogicaNegocioVehiculo.eliminar(baja.devExtra());
-                    MessageBox.Show("El extra se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    baja.Dispose();
-                }
-            }*/
         }
 
         private void buscarUnExtraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,7 +158,7 @@ namespace capaPresentacion
 
                         Extra resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(comprobar);
                         RestoDatosExtra busqueda = new RestoDatosExtra(resultadoBusqueda);
-                        busqueda.Name = "Buscar extra";
+                        busqueda.Text = "Buscar extra";
                         DialogResult drBusqueda = busqueda.ShowDialog();
                         if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -222,16 +195,6 @@ namespace capaPresentacion
                     continuar = true;
                 }
             }
-
-
-            /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
-            {
-                RestoDatosExtra busqueda = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Busqueda);
-                DialogResult drBusqueda = busqueda.ShowDialog();
-                busqueda.Dispose();
-            }*/
         }
 
         private void tsmiActualizarExtra_Click(object sender, EventArgs e)
@@ -249,7 +212,7 @@ namespace capaPresentacion
                     {
                         continuar = true;
                         RestoDatosExtra busqueda = new RestoDatosExtra(comprobar.Nombre);
-                        busqueda.Name = "Actualizar extra";
+                        busqueda.Text = "Actualizar extra";
                         DialogResult drBusqueda = busqueda.ShowDialog();
                         if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -287,24 +250,6 @@ namespace capaPresentacion
                     continuar = true;
                 }
             }
-            /*FClaveExtra f = new FClaveExtra(OpcionesOperacion.Busqueda);
-            DialogResult dr = f.ShowDialog();
-            if (dr.Equals(DialogResult.OK))
-            {
-                RestoDatosExtra actualizar = new RestoDatosExtra(LNVehiculo.LogicaNegocioVehiculo.buscar(f.devolverExtra()), OpcionesOperacion.Actualizar);
-                DialogResult drActualizar = actualizar.ShowDialog();
-                if (drActualizar.Equals(DialogResult.OK))
-                {
-                    LNVehiculo.LogicaNegocioVehiculo.actualizar(actualizar.devExtra());
-                    MessageBox.Show("El extra se ha actualizado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    actualizar.Dispose();
-                }
-                
-            }*/
-
         }
 
         private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -347,7 +292,7 @@ namespace capaPresentacion
                         continuar = true;
                         
                         RestoDatosVehiculo alta = new RestoDatosVehiculo(f.devolverVehiculo().NumBastidor);
-                        alta.Name = "Dar de alta un vehiculo";
+                        alta.Text = "Dar de alta un vehiculo";
                         DialogResult drAlta = alta.ShowDialog();
                         if (drAlta.Equals(DialogResult.OK))
                         {
@@ -409,7 +354,7 @@ namespace capaPresentacion
                         continuar = true;
                         Vehiculo resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(v);
                         RestoDatosVehiculo baja = new RestoDatosVehiculo(resultadoBusqueda);
-                        baja.Name = "Dar de baja un vehiculo";
+                        baja.Text = "Dar de baja un vehiculo";
                         DialogResult drBaja = baja.ShowDialog();
                         if (drBaja.Equals(DialogResult.OK))
                         {
@@ -462,7 +407,7 @@ namespace capaPresentacion
                         continuar = true;
                         Vehiculo resultadoBusqueda = LNVehiculo.LogicaNegocioVehiculo.buscar(v);
                         RestoDatosVehiculo busqueda = new RestoDatosVehiculo(resultadoBusqueda);
-                        busqueda.Name = "Busqueda de un vehiculo";
+                        busqueda.Text = "Busqueda de un vehiculo";
                         DialogResult drBusqueda = busqueda.ShowDialog();
                         if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -498,13 +443,22 @@ namespace capaPresentacion
                     Vehiculo v1 = f.devolverVehiculo();
                     if(!LNVehiculo.LogicaNegocioVehiculo.existeYa(v1))
                     {
-
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+                        }
+                        else
+                        {
+                            f.Dispose();
+                        }
                     }
                     else
                     {
                         continuar = true;
                         RestoDatosVehiculo actualizar = new RestoDatosVehiculo(v1.NumBastidor);
-                        actualizar.Name = "Actualizar un vehiculo";
+                        actualizar.Text = "Actualizar un vehiculo";
                         DialogResult drActualizar = actualizar.ShowDialog();
                         if (drActualizar.Equals(DialogResult.OK))
                         {
@@ -572,7 +526,7 @@ namespace capaPresentacion
                     {
                         continuar = true;
                         RestoDatosCliente alta = new RestoDatosCliente(c.devolverCliente().DNI);
-                        alta.Name = "Dar de alta un cliente";
+                        alta.Text = "Dar de alta un cliente";
                         DialogResult drAlta = alta.ShowDialog();
                         if (drAlta.Equals(DialogResult.OK))
                         {
@@ -626,7 +580,7 @@ namespace capaPresentacion
                         continuar = true;
                         Cliente resultadoBusqueda = LNCliente.LogicaNegocioCliente.Buscar(c);
                         RestoDatosCliente baja = new RestoDatosCliente(resultadoBusqueda);
-                        baja.Name = "Dar de baja un cliente";
+                        baja.Text = "Dar de baja un cliente";
                         DialogResult drBaja = baja.ShowDialog();
                         if (drBaja.Equals(DialogResult.OK))
                         {
@@ -678,7 +632,7 @@ namespace capaPresentacion
                         continuar = true;
                         Cliente resultadoBusqueda = LNCliente.LogicaNegocioCliente.Buscar(c);
                         RestoDatosCliente busqueda = new RestoDatosCliente(resultadoBusqueda);
-                        busqueda.Name = "Busqueda de un cliente";
+                        busqueda.Text = "Busqueda de un cliente";
                         DialogResult drBusqueda = busqueda.ShowDialog();
                         if (drBusqueda.Equals(DialogResult.OK)) //solo entra si los formatos han validado ya correctamente
                         {
@@ -730,7 +684,7 @@ namespace capaPresentacion
                         continuar = true;
 
                         RestoDatosCliente actualizar = new RestoDatosCliente(c.devolverCliente().DNI);
-                        actualizar.Name = "Actualizar un cliente";
+                        actualizar.Text = "Actualizar un cliente";
                         DialogResult drActualizar = actualizar.ShowDialog();
                         if (drActualizar.Equals(DialogResult.OK))
                         {
