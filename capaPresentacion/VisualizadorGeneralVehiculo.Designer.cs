@@ -52,6 +52,7 @@ namespace capaPresentacion
             this.lbListaVehiculos.Name = "lbListaVehiculos";
             this.lbListaVehiculos.Size = new System.Drawing.Size(739, 394);
             this.lbListaVehiculos.TabIndex = 0;
+            this.lbListaVehiculos.TabStop = false;
             // 
             // btBuscar
             // 

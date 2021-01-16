@@ -171,7 +171,7 @@
     <value>43, 13</value>
   </data>
   <data name="lUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lUsuario.Text" xml:space="preserve">
     <value>Usuario</value>
@@ -198,7 +198,7 @@
     <value>61, 13</value>
   </data>
   <data name="lContraseña.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lContraseña.Text" xml:space="preserve">
     <value>Contraseña</value>

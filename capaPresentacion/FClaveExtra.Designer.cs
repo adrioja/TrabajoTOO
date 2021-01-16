@@ -77,7 +77,7 @@ namespace capaPresentacion
             // 
             this.lbDescripcion.AutoSize = true;
             this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescripcion.Location = new System.Drawing.Point(102, 13);
+            this.lbDescripcion.Location = new System.Drawing.Point(93, 23);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(202, 18);
             this.lbDescripcion.TabIndex = 4;

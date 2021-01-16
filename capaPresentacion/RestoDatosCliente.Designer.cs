@@ -89,7 +89,6 @@
             this.rbC.Name = "rbC";
             this.rbC.Size = new System.Drawing.Size(32, 17);
             this.rbC.TabIndex = 2;
-            this.rbC.TabStop = true;
             this.rbC.Text = "C";
             this.rbC.UseVisualStyleBackColor = true;
             // 
@@ -100,13 +99,13 @@
             this.rbB.Name = "rbB";
             this.rbB.Size = new System.Drawing.Size(32, 17);
             this.rbB.TabIndex = 1;
-            this.rbB.TabStop = true;
             this.rbB.Text = "B";
             this.rbB.UseVisualStyleBackColor = true;
             // 
             // rbA
             // 
             this.rbA.AutoSize = true;
+            this.rbA.Checked = true;
             this.rbA.Location = new System.Drawing.Point(24, 31);
             this.rbA.Name = "rbA";
             this.rbA.Size = new System.Drawing.Size(32, 17);
@@ -117,9 +116,9 @@
             // 
             // tbDNI
             // 
-            this.tbDNI.Enabled = false;
             this.tbDNI.Location = new System.Drawing.Point(136, 54);
             this.tbDNI.Name = "tbDNI";
+            this.tbDNI.ReadOnly = true;
             this.tbDNI.Size = new System.Drawing.Size(100, 20);
             this.tbDNI.TabIndex = 0;
             // 

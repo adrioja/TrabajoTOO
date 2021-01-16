@@ -30,7 +30,7 @@ namespace capaPresentacion
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbDNI.Text = this.cliente.DNI;
-            this.tbDNI.Enabled = false;
+            this.tbDNI.ReadOnly = true;
 
             this.cliente = LNCliente.LogicaNegocioCliente.Buscar(this.cliente);
             if(this.cliente != null)
@@ -55,7 +55,7 @@ namespace capaPresentacion
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbDNI.Text = this.cliente.DNI;
-            this.tbDNI.Enabled = false;
+            this.tbDNI.ReadOnly = true;
             this.asignarDatos();
             this.deshabilitar();
         }
@@ -66,9 +66,9 @@ namespace capaPresentacion
         /// </summary>
         private void deshabilitar()
         {
-            this.tbDNI.Enabled = false;
-            this.tbNombre.Enabled = false;
-            this.tbTelefono.Enabled = false;
+            this.tbDNI.ReadOnly = true;
+            this.tbNombre.ReadOnly = true;
+            this.tbTelefono.ReadOnly = true;
             
             this.rbA.Enabled = false;
             this.rbB.Enabled = false;
@@ -169,7 +169,7 @@ namespace capaPresentacion
             bool v = true;
 
             
-            if(v && String.IsNullOrEmpty(this.tbNombre.Text ))
+            if(v && String.IsNullOrEmpty(this.tbNombre.Text.TrimStart(' ') ))
             {
                 mensaje = "El nombre está vacio";
                 v = false;

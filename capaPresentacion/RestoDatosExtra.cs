@@ -53,8 +53,8 @@ namespace capaPresentacion
             this.btCancelar.DialogResult = DialogResult.Cancel;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbNombre.Text = extra.Nombre;
-            this.tbNombre.Enabled = false;
-            this.tbPrecio.Enabled = false;
+            this.tbNombre.ReadOnly = true;
+            this.tbPrecio.ReadOnly = true;
             this.tbPrecio.Text = this.extra.PrecioFijo + "";
         }
 

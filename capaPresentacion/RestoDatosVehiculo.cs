@@ -93,13 +93,13 @@ namespace capaPresentacion
         /// </summary>
         private void deshabilitar()
         {
-            this.tbNumeroBastidor.Enabled = false;
-            this.tbMarca.Enabled = false;
-            this.tbModelo.Enabled = false;
-            this.tbPotencia.Enabled = false;
-            this.tbPrecioRecomendado.Enabled = false;
-            this.tbMatricula.Enabled = false;
-            this.tbFechaMatriculacion.Enabled = false;
+            this.tbNumeroBastidor.ReadOnly = true;
+            this.tbMarca.ReadOnly = true;
+            this.tbModelo.ReadOnly = true;
+            this.tbPotencia.ReadOnly = true;
+            this.tbPrecioRecomendado.ReadOnly = true;
+            this.tbMatricula.ReadOnly = true;
+            this.tbFechaMatriculacion.ReadOnly = true;
             this.rbtNuevo.Enabled = false;
             this.rbtSegundaMano.Enabled = false;
         }

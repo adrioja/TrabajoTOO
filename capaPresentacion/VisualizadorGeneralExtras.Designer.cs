@@ -42,7 +42,7 @@ namespace capaPresentacion
             // 
             this.lDescripcion.AutoSize = true;
             this.lDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescripcion.Location = new System.Drawing.Point(22, 9);
+            this.lDescripcion.Location = new System.Drawing.Point(89, 20);
             this.lDescripcion.Name = "lDescripcion";
             this.lDescripcion.Size = new System.Drawing.Size(195, 20);
             this.lDescripcion.TabIndex = 1;
@@ -55,6 +55,7 @@ namespace capaPresentacion
             this.lbListaElementos.Name = "lbListaElementos";
             this.lbListaElementos.Size = new System.Drawing.Size(334, 290);
             this.lbListaElementos.TabIndex = 2;
+            this.lbListaElementos.TabStop = false;
             // 
             // btAceptar
             // 

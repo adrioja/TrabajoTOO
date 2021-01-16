@@ -73,7 +73,6 @@ namespace capaPresentacion
             // 
             // tbNumeroBastidor
             // 
-            this.tbNumeroBastidor.Enabled = false;
             this.tbNumeroBastidor.Location = new System.Drawing.Point(185, 67);
             this.tbNumeroBastidor.Name = "tbNumeroBastidor";
             this.tbNumeroBastidor.ReadOnly = true;
@@ -161,7 +160,6 @@ namespace capaPresentacion
             this.rbtNuevo.Name = "rbtNuevo";
             this.rbtNuevo.Size = new System.Drawing.Size(57, 17);
             this.rbtNuevo.TabIndex = 12;
-            this.rbtNuevo.TabStop = true;
             this.rbtNuevo.Text = "Nuevo";
             this.rbtNuevo.UseVisualStyleBackColor = true;
             this.rbtNuevo.CheckedChanged += new System.EventHandler(this.rbtNuevo_CheckedChanged);
