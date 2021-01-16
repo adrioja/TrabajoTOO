@@ -31,3 +31,13 @@ C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.dll
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.pdb
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.pdb
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\LNVehiculo.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\modeloDominio.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\bin\Debug\TrabajoTOO.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csprojAssemblyReference.cache
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.csproj.CopyComplete
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNVehiculo\obj\Debug\LNVehiculo.pdb

@@ -23,6 +23,12 @@ namespace capaPresentacion
             this.tsslFechaActual.Text = DateTime.Now.ToLongDateString();
         }
 
+        /// <summary>
+        /// Pre: la clase debe de estar incializada
+        /// Post: Si el extra a añadir ya existe nos pregunta si queremos introducir otro. Si no existe lo añadira si cumple con el formato.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void añadirNuevoExtraDisponibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -83,6 +89,12 @@ namespace capaPresentacion
 
         }
 
+        /// <summary>
+        /// Pre: la clase debe de estar incializada
+        /// Post: Si el extra existe y tiene un formato valido se elimina, si el extra no existe nos preguna si queremos introducir otro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void eliminarExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -141,6 +153,12 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Pre: la clase debe de estar incializada
+        /// Post: Si el nombre del extra existe nos mostrara los datos del extra, si no existe no preguntara si queremos introducir otro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buscarUnExtraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -196,7 +214,12 @@ namespace capaPresentacion
                 }
             }
         }
-
+        /// <summary>
+        /// Pre: la clase debe de estar incializada
+        /// Post: Si el nombre del extra existe nos actualizara los datos del extra, si no existe no preguntara si queremos introducir otro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiActualizarExtra_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -252,6 +275,11 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Muestra el formulario VisualizadorGenerakExtras
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizadorGeneralExtras visualizador = new VisualizadorGeneralExtras();
@@ -261,7 +289,12 @@ namespace capaPresentacion
 
 
         //----------------------------VEHICULO----------------------------//
-
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el vehiculo ya existe preguna si quieres introducir otro. Si no existe se añade el vehiculo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void añadirUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -326,6 +359,12 @@ namespace capaPresentacion
             
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el vehiculo no existe preguna si queremos introducir otro. Si existe lo elimina.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void eliminarUnVehiculoToolStripMenuItem_Click(object sender, EventArgs e) //mal CON SEGUNDA MANO
         {
             bool continuar = false;
@@ -379,6 +418,12 @@ namespace capaPresentacion
             
         }
 
+        /// <summary>
+        /// Pre: la calse debe estar inicializada
+        /// Post: Si el vehiculo existe y el formato es correcto se muestran los datos del vehiculo. Si no existe se pregunta si se quiere introducir otro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void busquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -430,6 +475,12 @@ namespace capaPresentacion
             
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el vehiculo existe se actualizan los datos, si no existe se pregunta si se quiere introducir otro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void actualizaDatosVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -490,6 +541,11 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Se muestra el formulario VisualizadorGeneralVehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void visualizarLosVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizadorGeneralVehiculo visualizador = new VisualizadorGeneralVehiculo();
@@ -497,6 +553,12 @@ namespace capaPresentacion
             visualizador.Dispose();
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////Clientes////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el cliente ya existe se pregunta si se quiere introducir otro cliente. Si no existe y el formato es correcto se añadira el cliente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void añadirNuevoClienteDisponibleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -550,6 +612,12 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el cliente no existe se preguntara si se quiere introducir otro. Si no existe se elimina.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void eliminarClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -602,6 +670,12 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el cliente introducido no existe se preguntara si se quiere introducir otro. Si existe y el formato es correcto se mostaran los datos del cliente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buscarUnClienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -654,6 +728,12 @@ namespace capaPresentacion
             }   
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el cliente no existe se pregunara si se quiere introducir otro. Si existe y el formato es correcto se actualizaran sus datos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void actualizarUnClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;

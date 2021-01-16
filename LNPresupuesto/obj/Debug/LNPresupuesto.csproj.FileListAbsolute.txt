@@ -31,3 +31,13 @@ C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupue
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csproj.CopyComplete
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.dll
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\LNPresupuesto.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\LNPresupuesto.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\modeloDominio.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\TrabajoTOO.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\modeloDominio.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\bin\Debug\TrabajoTOO.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csprojAssemblyReference.cache
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.csproj.CopyComplete
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNPresupuesto\obj\Debug\LNPresupuesto.pdb

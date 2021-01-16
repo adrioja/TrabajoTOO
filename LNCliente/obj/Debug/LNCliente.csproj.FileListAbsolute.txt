@@ -31,3 +31,13 @@ C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.cspr
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\LNCliente.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\LNCliente.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\modeloDominio.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\bin\Debug\TrabajoTOO.pdb
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csprojAssemblyReference.cache
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\obj\Debug\LNCliente.csproj.CopyComplete
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\obj\Debug\LNCliente.dll
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\LNCliente\obj\Debug\LNCliente.pdb
