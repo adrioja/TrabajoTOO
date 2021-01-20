@@ -124,3 +124,10 @@ C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FR
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoClientes.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoVehiculo.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FBusquedaClienteDNI.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClavePresupuesto.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoClientes.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoVehiculo.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerCliente.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientes.resources

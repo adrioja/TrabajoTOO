@@ -20,11 +20,13 @@ namespace LNCliente
         {
             return Persistencia.listaClientes();
         }
-        
-        /*public static List<Cliente> ListaClientesOrdenados( Criterio )
+
+        public static List<Cliente> ListaClientesOrdenados(Comparison<Cliente> criterio) 
         {
-            ListaClientes().Sort(Criterio);
-        }*/
+            List<Cliente> lista = ListaClientes();
+            lista.Sort(criterio);
+            return lista; 
+        }
 
         //--------------------------Metodos CRUD----------------------------------------------------------------------------
         /// <summary>

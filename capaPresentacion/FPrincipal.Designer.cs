@@ -51,13 +51,14 @@ namespace capaPresentacion
             this.actualizarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recorrerClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaDatosClientePorDNIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarClientesOrdenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -195,7 +196,8 @@ namespace capaPresentacion
             this.actualizarUnClienteToolStripMenuItem,
             this.recorrerClientesToolStripMenuItem,
             this.busquedaDatosClientePorDNIToolStripMenuItem,
-            this.listadoClientesToolStripMenuItem});
+            this.listadoClientesToolStripMenuItem,
+            this.listarClientesOrdenadosToolStripMenuItem});
             this.tsmiCliente.Name = "tsmiCliente";
             this.tsmiCliente.Size = new System.Drawing.Size(56, 19);
             this.tsmiCliente.Text = "Cliente";
@@ -241,6 +243,13 @@ namespace capaPresentacion
             this.busquedaDatosClientePorDNIToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this.busquedaDatosClientePorDNIToolStripMenuItem.Text = "Busqueda datos cliente por DNI";
             this.busquedaDatosClientePorDNIToolStripMenuItem.Click += new System.EventHandler(this.busquedaDatosClientePorDNIToolStripMenuItem_Click);
+            // 
+            // listadoClientesToolStripMenuItem
+            // 
+            this.listadoClientesToolStripMenuItem.Name = "listadoClientesToolStripMenuItem";
+            this.listadoClientesToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.listadoClientesToolStripMenuItem.Text = "Listar clientes";
+            this.listadoClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoClientesToolStripMenuItem_Click);
             // 
             // tsmiPresupuesto
             // 
@@ -293,12 +302,12 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // listadoClientesToolStripMenuItem
+            // listarClientesOrdenadosToolStripMenuItem
             // 
-            this.listadoClientesToolStripMenuItem.Name = "listadoClientesToolStripMenuItem";
-            this.listadoClientesToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.listadoClientesToolStripMenuItem.Text = "Listado clientes";
-            this.listadoClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoClientesToolStripMenuItem_Click);
+            this.listarClientesOrdenadosToolStripMenuItem.Name = "listarClientesOrdenadosToolStripMenuItem";
+            this.listarClientesOrdenadosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.listarClientesOrdenadosToolStripMenuItem.Text = "Listar clientes ordenados";
+            this.listarClientesOrdenadosToolStripMenuItem.Click += new System.EventHandler(this.listarClientesOrdenadosToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -351,5 +360,6 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem busquedaDatosClientePorDNIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recorrerVehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarClientesOrdenadosToolStripMenuItem;
     }
 }

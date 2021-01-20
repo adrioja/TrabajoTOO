@@ -855,5 +855,12 @@ namespace capaPresentacion
             DialogResult d = f.ShowDialog();
             f.Dispose();
         }
+
+        private void listarClientesOrdenadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListadoClientes l = new ListadoClientes(LNCliente.LogicaNegocioCliente.ListaClientes());
+            DialogResult d = l.ShowDialog();
+            l.Dispose();
+        }
     }
 }
