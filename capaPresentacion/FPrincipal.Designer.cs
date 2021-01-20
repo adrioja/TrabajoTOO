@@ -37,6 +37,7 @@ namespace capaPresentacion
             this.actualizaDatosVehiculoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarLosVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeLosVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorrerVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExtra = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirNuevoExtraDisponibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,7 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.recorrerVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -131,6 +132,13 @@ namespace capaPresentacion
             this.listadoDeLosVehiculosToolStripMenuItem.Text = "Listado de los vehiculos";
             this.listadoDeLosVehiculosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeLosVehiculosToolStripMenuItem_Click);
             // 
+            // recorrerVehiculosToolStripMenuItem
+            // 
+            this.recorrerVehiculosToolStripMenuItem.Name = "recorrerVehiculosToolStripMenuItem";
+            this.recorrerVehiculosToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.recorrerVehiculosToolStripMenuItem.Text = "Recorrer vehiculos";
+            this.recorrerVehiculosToolStripMenuItem.Click += new System.EventHandler(this.recorrerVehiculosToolStripMenuItem_Click);
+            // 
             // tsmiExtra
             // 
             this.tsmiExtra.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -186,7 +194,8 @@ namespace capaPresentacion
             this.buscarUnClienteToolStripMenuItem1,
             this.actualizarUnClienteToolStripMenuItem,
             this.recorrerClientesToolStripMenuItem,
-            this.busquedaDatosClientePorDNIToolStripMenuItem});
+            this.busquedaDatosClientePorDNIToolStripMenuItem,
+            this.listadoClientesToolStripMenuItem});
             this.tsmiCliente.Name = "tsmiCliente";
             this.tsmiCliente.Size = new System.Drawing.Size(56, 19);
             this.tsmiCliente.Text = "Cliente";
@@ -284,12 +293,12 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // recorrerVehiculosToolStripMenuItem
+            // listadoClientesToolStripMenuItem
             // 
-            this.recorrerVehiculosToolStripMenuItem.Name = "recorrerVehiculosToolStripMenuItem";
-            this.recorrerVehiculosToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.recorrerVehiculosToolStripMenuItem.Text = "Recorrer vehiculos";
-            this.recorrerVehiculosToolStripMenuItem.Click += new System.EventHandler(this.recorrerVehiculosToolStripMenuItem_Click);
+            this.listadoClientesToolStripMenuItem.Name = "listadoClientesToolStripMenuItem";
+            this.listadoClientesToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.listadoClientesToolStripMenuItem.Text = "Listado clientes";
+            this.listadoClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoClientesToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -341,5 +350,6 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem listadoDeLosVehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaDatosClientePorDNIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recorrerVehiculosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
     }
 }

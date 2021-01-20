@@ -787,6 +787,14 @@ namespace capaPresentacion
             }
         }
 
+
+
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en recorrerClientes, muestra el formulario FRecorrerCliente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void recorrerClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FRecorrerCliente form = new FRecorrerCliente(LNCliente.LogicaNegocioCliente.ListaClientes());
@@ -795,6 +803,12 @@ namespace capaPresentacion
 
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en listado de los vehiculos, muestra el formulario FListadoVehiculos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listadoDeLosVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FListadoVehiculo listadoVehiculo = new FListadoVehiculo();
@@ -802,6 +816,13 @@ namespace capaPresentacion
             listadoVehiculo.Dispose();
         }
 
+
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en busqueda datos cliente por DNI, muestra el formulario FbusquedaClienteDNI
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void busquedaDatosClientePorDNIToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FBusquedaClienteDNI f = new FBusquedaClienteDNI();
@@ -809,11 +830,30 @@ namespace capaPresentacion
             f.Dispose();
         }
 
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en recorrer vehiculos, muestra el formulario FRecorrerVehiculo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void recorrerVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FRecorrerVehiculo form = new FRecorrerVehiculo();
             DialogResult d = form.ShowDialog();
             form.Dispose();
+        }
+
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en listado clientes, muestra el formulario FListadoClientes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listadoClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FListadoClientes f = new FListadoClientes();
+            DialogResult d = f.ShowDialog();
+            f.Dispose();
         }
     }
 }

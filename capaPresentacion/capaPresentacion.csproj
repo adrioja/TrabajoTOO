@@ -70,6 +70,12 @@
     <Compile Include="FClavePresupuesto.Designer.cs">
       <DependentUpon>FClavePresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FListadoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FListadoClientes.Designer.cs">
+      <DependentUpon>FListadoClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRecorrerVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,11 @@
     <Compile Include="RestoDatosPresupuesto.Designer.cs">
       <DependentUpon>RestoDatosPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoVehiculo.cs">
+    <Compile Include="FListadoVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoVehiculo.Designer.cs">
-      <DependentUpon>ListadoVehiculo.cs</DependentUpon>
+    <Compile Include="FListadoVehiculo.Designer.cs">
+      <DependentUpon>FListadoVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="FRecorrerCliente.cs">
       <SubType>Form</SubType>
@@ -155,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FClaveCliente.resx">
       <DependentUpon>FClaveCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FListadoClientes.resx">
+      <DependentUpon>FListadoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FListadoVehiculo.resx">
+      <DependentUpon>FListadoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRecorrerCliente.resx">
       <DependentUpon>FRecorrerCliente.cs</DependentUpon>

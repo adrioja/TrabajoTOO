@@ -272,7 +272,7 @@
             this.rbA.Text = "A";
             this.rbA.UseVisualStyleBackColor = true;
             // 
-            // RecorrerCliente
+            // FRecorrerCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,8 +285,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDNI);
             this.Controls.Add(this.bindingNavigator1);
-            this.Name = "RecorrerCliente";
-            this.Text = "Form1";
+            this.Name = "FRecorrerCliente";
+            this.Text = "Datos de un cliente";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();

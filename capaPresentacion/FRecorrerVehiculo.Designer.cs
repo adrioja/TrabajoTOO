@@ -32,17 +32,17 @@ namespace capaPresentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRecorrerVehiculo));
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbNumeroBastidor = new System.Windows.Forms.TextBox();
             this.tbMarca = new System.Windows.Forms.TextBox();
@@ -51,8 +51,8 @@ namespace capaPresentacion
             this.tbMatricula = new System.Windows.Forms.TextBox();
             this.tbFechaMatricula = new System.Windows.Forms.TextBox();
             this.tipos = new System.Windows.Forms.GroupBox();
-            this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.rbtSegundaMano = new System.Windows.Forms.RadioButton();
+            this.rbtNuevo = new System.Windows.Forms.RadioButton();
             this.lNumBast = new System.Windows.Forms.Label();
             this.lMarca = new System.Windows.Forms.Label();
             this.lPotencia = new System.Windows.Forms.Label();
@@ -95,6 +95,33 @@ namespace capaPresentacion
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Enabled = false;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Enabled = false;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -128,16 +155,9 @@ namespace capaPresentacion
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -160,28 +180,8 @@ namespace capaPresentacion
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Enabled = false;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Enabled = false;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // tbNumeroBastidor
             // 
@@ -243,6 +243,17 @@ namespace capaPresentacion
             this.tipos.TabStop = false;
             this.tipos.Text = "Tipo de vehiculo";
             // 
+            // rbtSegundaMano
+            // 
+            this.rbtSegundaMano.AutoSize = true;
+            this.rbtSegundaMano.Location = new System.Drawing.Point(16, 67);
+            this.rbtSegundaMano.Name = "rbtSegundaMano";
+            this.rbtSegundaMano.Size = new System.Drawing.Size(97, 17);
+            this.rbtSegundaMano.TabIndex = 1;
+            this.rbtSegundaMano.TabStop = true;
+            this.rbtSegundaMano.Text = "Segunda mano";
+            this.rbtSegundaMano.UseVisualStyleBackColor = true;
+            // 
             // rbtNuevo
             // 
             this.rbtNuevo.AutoSize = true;
@@ -253,17 +264,6 @@ namespace capaPresentacion
             this.rbtNuevo.TabStop = true;
             this.rbtNuevo.Text = "Nuevo";
             this.rbtNuevo.UseVisualStyleBackColor = true;
-            // 
-            // rbtSegundaMAno
-            // 
-            this.rbtSegundaMano.AutoSize = true;
-            this.rbtSegundaMano.Location = new System.Drawing.Point(16, 67);
-            this.rbtSegundaMano.Name = "rbtSegundaMAno";
-            this.rbtSegundaMano.Size = new System.Drawing.Size(97, 17);
-            this.rbtSegundaMano.TabIndex = 1;
-            this.rbtSegundaMano.TabStop = true;
-            this.rbtSegundaMano.Text = "Segunda mano";
-            this.rbtSegundaMano.UseVisualStyleBackColor = true;
             // 
             // lNumBast
             // 
@@ -358,7 +358,7 @@ namespace capaPresentacion
             this.Controls.Add(this.tbNumeroBastidor);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "FRecorrerVehiculo";
-            this.Text = "FRecorrerVehiculo";
+            this.Text = "Datos de un vehiculo";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();

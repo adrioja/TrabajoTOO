@@ -42,7 +42,7 @@ namespace LNVehiculo
         }
 
         /// <summary>
-        /// Devuelve una lista con todos los vehiculos del concesionario
+        /// Devuelve una lista con todos los vehiculos del concesionario(como vehiculos nuevos)
         /// </summary>
         /// <returns></returns>
         public static List<Vehiculo> listaDeTodosLosVehiculos()

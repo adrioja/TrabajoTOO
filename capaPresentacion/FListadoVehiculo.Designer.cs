@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.listado = new System.Windows.Forms.DataGridView();
-            this.vehiculoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vSegundaManoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.logicaNegocioVehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.NumBastidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioRecm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PVP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vehiculoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vSegundaManoDatosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.logicaNegocioVehiculoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoDatosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vSegundaManoDatosBindingSource)).BeginInit();
@@ -50,8 +50,8 @@
             // 
             this.listado.AllowUserToAddRows = false;
             this.listado.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.listado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -61,15 +61,10 @@
             this.Potencia,
             this.PrecioRecm,
             this.PVP});
-            this.listado.Location = new System.Drawing.Point(1, 0);
+            this.listado.Location = new System.Drawing.Point(24, 21);
             this.listado.Name = "listado";
             this.listado.Size = new System.Drawing.Size(758, 240);
             this.listado.TabIndex = 0;
-
-            // 
-            // logicaNegocioVehiculoBindingSource
-            // 
-            this.logicaNegocioVehiculoBindingSource.DataSource = typeof(LNVehiculo.LogicaNegocioVehiculo);
             // 
             // NumBastidor
             // 
@@ -107,14 +102,18 @@
             this.PVP.Name = "PVP";
             this.PVP.ReadOnly = true;
             // 
-            // ListadoVehiculo
+            // logicaNegocioVehiculoBindingSource
+            // 
+            this.logicaNegocioVehiculoBindingSource.DataSource = typeof(LNVehiculo.LogicaNegocioVehiculo);
+            // 
+            // FListadoVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 241);
+            this.ClientSize = new System.Drawing.Size(811, 287);
             this.Controls.Add(this.listado);
-            this.Name = "ListadoVehiculo";
-            this.Text = "ListadoVehiculo";
+            this.Name = "FListadoVehiculo";
+            this.Text = "Listado de vehiculos";
             ((System.ComponentModel.ISupportInitialize)(this.listado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehiculoDatosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vSegundaManoDatosBindingSource)).EndInit();

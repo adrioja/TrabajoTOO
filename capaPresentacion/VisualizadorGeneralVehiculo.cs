@@ -22,29 +22,33 @@ namespace capaPresentacion
         public VisualizadorGeneralVehiculo()
         {
             InitializeComponent();
-            this.lbListaVehiculos.Enabled = false;
             this.btAceptar.DialogResult = DialogResult.OK;
             this.mostrarTodos();
         }
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: muestra todos los vehiculos disponible
+        /// POST: hace que se muestren todos los vehiculos disponible
         /// </summary>
         private void mostrarTodos()
         {
-            this.lbListaVehiculos.Items.Clear();
-            List<Vehiculo> lista =new List<Vehiculo>();
-            foreach(Vehiculo ve in LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculos())
-            {
-                lista.Add(LNVehiculo.LogicaNegocioVehiculo.buscar(ve));
-            }
+            this.listado.Rows.Clear();
+            List<Vehiculo> lista = LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculos();
+            
             foreach (Vehiculo v in lista)
             {
-                String vehiculo = v.ToString();
-                vehiculo = vehiculo.Replace('[', ' ');
-                vehiculo = vehiculo.Replace(']', ' ');
-                this.lbListaVehiculos.Items.Add(vehiculo);
+                VehiculoSegundaMano seg = LNVehiculo.LogicaNegocioVehiculo.buscar(v) as VehiculoSegundaMano;
+                if (seg==null)
+                {
+                    string[]  vehiculo = { v.NumBastidor, v.Marca, v.Modelo, v.Potencia.ToString(), v.PvRecomendado.ToString(), v.PVP.ToString(), null ,null };
+                    this.listado.Rows.Add(vehiculo);
+                }
+                else
+                {
+                    string[] vehiculo = { v.NumBastidor, v.Marca, v.Modelo, v.Potencia.ToString(), v.PvRecomendado.ToString(), v.PVP.ToString(), seg.Matricula, seg.FechaMatriculacion.ToShortDateString() };
+                    this.listado.Rows.Add(vehiculo);
+                }
+                
             }
         }
 
@@ -82,7 +86,7 @@ namespace capaPresentacion
         /// <param name="e"></param>
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            this.lbListaVehiculos.Items.Clear();
+            this.listado.Rows.Clear();
             String numBastidor = this.tbNumeroBastidor.Text;
             String marca = this.tbMarca.Text;
             String modelo = this.tbModelo.Text;
@@ -97,12 +101,21 @@ namespace capaPresentacion
                 precio =0;
             }
             List<Vehiculo> lista = LNVehiculo.LogicaNegocioVehiculo.busquedaFiltrada(numBastidor,potencia,modelo,marca,precio);
-            foreach(Vehiculo v in lista)
+
+            foreach (Vehiculo v in lista)
             {
-                String s = v.ToString();
-                s = s.Replace('[', ' ');
-                s = s.Replace(']', ' ');
-                this.lbListaVehiculos.Items.Add(s);
+                VehiculoSegundaMano seg = LNVehiculo.LogicaNegocioVehiculo.buscar(v) as VehiculoSegundaMano;
+                if (seg == null)
+                {
+                    string[] vehiculo = { v.NumBastidor, v.Marca, v.Modelo, v.Potencia.ToString(), v.PvRecomendado.ToString(), v.PVP.ToString(), null, null };
+                    this.listado.Rows.Add(vehiculo);
+                }
+                else
+                {
+                    string[] vehiculo = { v.NumBastidor, v.Marca, v.Modelo, v.Potencia.ToString(), v.PvRecomendado.ToString(), v.PVP.ToString(), seg.Matricula, seg.FechaMatriculacion.ToShortDateString() };
+                    this.listado.Rows.Add(vehiculo);
+                }
+
             }
         }
     }
