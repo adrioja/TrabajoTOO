@@ -120,4 +120,5 @@ C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RecorrerCliente.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FBusquedaClienteDNI.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClavePresupuesto.resources
-C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RecorrerCliente.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerCliente.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources

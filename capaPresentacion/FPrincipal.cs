@@ -789,8 +789,9 @@ namespace capaPresentacion
 
         private void recorrerClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //RecorrerCliente form = new RecorrerCliente();
-            //form.ShowDialog();
+            FRecorrerCliente form = new FRecorrerCliente(LNCliente.LogicaNegocioCliente.ListaClientes());
+            DialogResult d =  form.ShowDialog();
+            form.Dispose();
 
         }
 
@@ -806,6 +807,13 @@ namespace capaPresentacion
             FBusquedaClienteDNI f = new FBusquedaClienteDNI();
             DialogResult d = f.ShowDialog();
             f.Dispose();
+        }
+
+        private void recorrerVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRecorrerVehiculo form = new FRecorrerVehiculo();
+            DialogResult d = form.ShowDialog();
+            form.Dispose();
         }
     }
 }

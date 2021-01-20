@@ -11,11 +11,14 @@ using System.Windows.Forms;
 
 namespace capaPresentacion
 {
-    public partial class RecorrerCliente : Form
+    public partial class FRecorrerCliente : Form
     {
         
-        
-        public RecorrerCliente(List<Cliente> listaClientes)
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
+        /// <param name="listaClientes"></param>
+        public FRecorrerCliente(List<Cliente> listaClientes)
         {
             
             InitializeComponent();
@@ -30,12 +33,13 @@ namespace capaPresentacion
             
 
         }
+
         /// <summary>
         /// Metodo de respuesta al evento CurrentChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void cambio(Object sender, EventArgs e)
+        private void cambio(Object sender, EventArgs e)
         {
             this.tbDNI.Text = ((Cliente)this.bindingSource.Current).DNI;
             this.tbNombre.Text = ((Cliente)this.bindingSource.Current).Nombre;

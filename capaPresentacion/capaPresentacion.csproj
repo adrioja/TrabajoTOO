@@ -70,6 +70,12 @@
     <Compile Include="FClavePresupuesto.Designer.cs">
       <DependentUpon>FClavePresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRecorrerVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRecorrerVehiculo.Designer.cs">
+      <DependentUpon>FRecorrerVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="RestoDatosPresupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,11 @@
     <Compile Include="ListadoVehiculo.Designer.cs">
       <DependentUpon>ListadoVehiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecorrerCliente.cs">
+    <Compile Include="FRecorrerCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecorrerCliente.Designer.cs">
-      <DependentUpon>RecorrerCliente.cs</DependentUpon>
+    <Compile Include="FRecorrerCliente.Designer.cs">
+      <DependentUpon>FRecorrerCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="RestoDatosCliente.cs">
       <SubType>Form</SubType>
@@ -150,8 +156,11 @@
     <EmbeddedResource Include="FClaveCliente.resx">
       <DependentUpon>FClaveCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecorrerCliente.resx">
-      <DependentUpon>RecorrerCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FRecorrerCliente.resx">
+      <DependentUpon>FRecorrerCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRecorrerVehiculo.resx">
+      <DependentUpon>FRecorrerVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestoDatosCliente.resx">
       <DependentUpon>RestoDatosCliente.cs</DependentUpon>

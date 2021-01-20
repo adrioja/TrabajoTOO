@@ -49,13 +49,14 @@ namespace capaPresentacion
             this.buscarUnClienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarUnClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recorrerClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.busquedaDatosClientePorDNIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.busquedaDatosClientePorDNIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorrerVehiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +83,8 @@ namespace capaPresentacion
             this.buscarVehiculosToolStripMenuItem,
             this.actualizaDatosVehiculoToolStripMenuItem,
             this.visualizarLosVehiculosToolStripMenuItem,
-            this.listadoDeLosVehiculosToolStripMenuItem});
+            this.listadoDeLosVehiculosToolStripMenuItem,
+            this.recorrerVehiculosToolStripMenuItem});
             this.tsmiVehiculo.Name = "tsmiVehiculo";
             this.tsmiVehiculo.Size = new System.Drawing.Size(64, 19);
             this.tsmiVehiculo.Text = "Vehiculo";
@@ -224,6 +226,13 @@ namespace capaPresentacion
             this.recorrerClientesToolStripMenuItem.Text = "Recorrer clientes";
             this.recorrerClientesToolStripMenuItem.Click += new System.EventHandler(this.recorrerClientesToolStripMenuItem_Click);
             // 
+            // busquedaDatosClientePorDNIToolStripMenuItem
+            // 
+            this.busquedaDatosClientePorDNIToolStripMenuItem.Name = "busquedaDatosClientePorDNIToolStripMenuItem";
+            this.busquedaDatosClientePorDNIToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.busquedaDatosClientePorDNIToolStripMenuItem.Text = "Busqueda datos cliente por DNI";
+            this.busquedaDatosClientePorDNIToolStripMenuItem.Click += new System.EventHandler(this.busquedaDatosClientePorDNIToolStripMenuItem_Click);
+            // 
             // tsmiPresupuesto
             // 
             this.tsmiPresupuesto.Name = "tsmiPresupuesto";
@@ -275,12 +284,12 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // busquedaDatosClientePorDNIToolStripMenuItem
+            // recorrerVehiculosToolStripMenuItem
             // 
-            this.busquedaDatosClientePorDNIToolStripMenuItem.Name = "busquedaDatosClientePorDNIToolStripMenuItem";
-            this.busquedaDatosClientePorDNIToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.busquedaDatosClientePorDNIToolStripMenuItem.Text = "Busqueda datos cliente por DNI";
-            this.busquedaDatosClientePorDNIToolStripMenuItem.Click += new System.EventHandler(this.busquedaDatosClientePorDNIToolStripMenuItem_Click);
+            this.recorrerVehiculosToolStripMenuItem.Name = "recorrerVehiculosToolStripMenuItem";
+            this.recorrerVehiculosToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
+            this.recorrerVehiculosToolStripMenuItem.Text = "Recorrer vehiculos";
+            this.recorrerVehiculosToolStripMenuItem.Click += new System.EventHandler(this.recorrerVehiculosToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -331,5 +340,6 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem recorrerClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeLosVehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaDatosClientePorDNIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorrerVehiculosToolStripMenuItem;
     }
 }

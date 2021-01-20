@@ -66,7 +66,7 @@ namespace TrabajoTOO
         }
         
         /// <summary>
-        /// Devuelve la lista de todos los vehiculos que posee el concesionario
+        /// Devuelve la lista de todos los vehiculos que posee el concesionario construidos como vehiculos nuevos
         /// </summary>
         /// <returns></returns>
         public static List<Vehiculo> listaVehiculos()
