@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FBusquedaClienteDNI .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBusquedaClienteDNI .Designer.cs">
+      <DependentUpon>FBusquedaClienteDNI .cs</DependentUpon>
+    </Compile>
     <Compile Include="FClaveVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,30 @@
     </Compile>
     <Compile Include="FClaveCliente.Designer.cs">
       <DependentUpon>FClaveCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FClavePresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FClavePresupuesto.Designer.cs">
+      <DependentUpon>FClavePresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestoDatosPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoDatosPresupuesto.Designer.cs">
+      <DependentUpon>RestoDatosPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoVehiculo.Designer.cs">
+      <DependentUpon>ListadoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecorrerCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecorrerCliente.Designer.cs">
+      <DependentUpon>RecorrerCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="RestoDatosCliente.cs">
       <SubType>Form</SubType>
@@ -108,11 +138,20 @@
     <Compile Include="VisualizadorGeneralVehiculo.Designer.cs">
       <DependentUpon>VisualizadorGeneralVehiculo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FBusquedaClienteDNI .resx">
+      <DependentUpon>FBusquedaClienteDNI .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FClavePresupuesto.resx">
+      <DependentUpon>FClavePresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FClaveVehiculo.resx">
       <DependentUpon>FClaveVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FClaveCliente.resx">
       <DependentUpon>FClaveCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecorrerCliente.resx">
+      <DependentUpon>RecorrerCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestoDatosCliente.resx">
       <DependentUpon>RestoDatosCliente.cs</DependentUpon>
@@ -147,6 +186,7 @@
     <EmbeddedResource Include="VisualizadorGeneralVehiculo.resx">
       <DependentUpon>VisualizadorGeneralVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\LNCliente.LogicaNegocioCliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,6 +217,9 @@
       <Project>{e0bd98b3-4442-493d-8e47-d7096c971879}</Project>
       <Name>modeloDominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

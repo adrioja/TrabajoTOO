@@ -117,3 +117,4 @@ C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
+C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RecorrerCliente.resources

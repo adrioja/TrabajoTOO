@@ -18,7 +18,7 @@ namespace LNPresupuesto
         /// Post: Si el presupuesto no existe, se añade a la base de datos y devuelve true, en caso contrario devuelve false.
         /// </summary>
         /// <param name="p"></param>
-        public bool añadirPresupuesto(Presupuesto p)
+        public static bool añadirPresupuesto(Presupuesto p)
         {
             if (Persistencia.Existe(p))
             {
@@ -37,7 +37,7 @@ namespace LNPresupuesto
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public bool eliminarPresupuesto(Presupuesto p)
+        public static bool eliminarPresupuesto(Presupuesto p)
         {
             if (Persistencia.Existe(p)){
                 Persistencia.Borrar(p);
@@ -55,7 +55,7 @@ namespace LNPresupuesto
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public bool existePresupuesto(Presupuesto p)
+        public static bool existePresupuesto(Presupuesto p)
         {
             return Persistencia.Existe(p);
         }
@@ -66,7 +66,7 @@ namespace LNPresupuesto
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public bool actualizarPresupuesto(Presupuesto p)
+        public static bool actualizarPresupuesto(Presupuesto p)
         {
             if (Persistencia.Existe(p))
             {
@@ -85,7 +85,7 @@ namespace LNPresupuesto
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public Presupuesto buscarPresupuesto(Presupuesto p)
+        public static Presupuesto buscarPresupuesto(Presupuesto p)
         {
             if (Persistencia.Existe(p))
             {

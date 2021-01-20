@@ -786,5 +786,12 @@ namespace capaPresentacion
                 }
             }
         }
+
+        private void recorrerClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //RecorrerCliente form = new RecorrerCliente();
+            //form.ShowDialog();
+
+        }
     }
 }

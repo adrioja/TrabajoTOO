@@ -53,6 +53,7 @@ namespace capaPresentacion
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.recorrerClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -171,7 +172,8 @@ namespace capaPresentacion
             this.añadirNuevoClienteDisponibleToolStripMenuItem1,
             this.eliminarClienteToolStripMenuItem1,
             this.buscarUnClienteToolStripMenuItem1,
-            this.actualizarUnClienteToolStripMenuItem});
+            this.actualizarUnClienteToolStripMenuItem,
+            this.recorrerClientesToolStripMenuItem});
             this.tsmiCliente.Name = "tsmiCliente";
             this.tsmiCliente.Size = new System.Drawing.Size(56, 19);
             this.tsmiCliente.Text = "Cliente";
@@ -255,6 +257,13 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // recorrerClientesToolStripMenuItem
+            // 
+            this.recorrerClientesToolStripMenuItem.Name = "recorrerClientesToolStripMenuItem";
+            this.recorrerClientesToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.recorrerClientesToolStripMenuItem.Text = "Recorrer clientes";
+            this.recorrerClientesToolStripMenuItem.Click += new System.EventHandler(this.recorrerClientesToolStripMenuItem_Click);
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,5 +310,6 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem eliminarClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem buscarUnClienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem actualizarUnClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorrerClientesToolStripMenuItem;
     }
 }

@@ -16,9 +16,15 @@ namespace LNCliente
 
         //--------------------------Metodos de busqueda---------------------------------------------------------------------
 
-
+        public static List<Cliente> ListaClientes()
+        {
+            return Persistencia.listaClientes();
+        }
         
-        
+        /*public static List<Cliente> ListaClientesOrdenados( Criterio )
+        {
+            ListaClientes().Sort(Criterio);
+        }*/
 
         //--------------------------Metodos CRUD----------------------------------------------------------------------------
         /// <summary>
