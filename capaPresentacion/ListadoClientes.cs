@@ -24,6 +24,11 @@ namespace capaPresentacion
             
             this.bs.DataSource = this.listaClientes;
 
+            this.asignarDatos();
+        }
+
+        private void asignarDatos()
+        {
             lbDNI.DataSource = bs;
             lbDNI.DisplayMember = "DNI";
             lbTelefono.DataSource = bs;
@@ -34,32 +39,23 @@ namespace capaPresentacion
 
         private void btDNI_Click(object sender, EventArgs e)
         {
-            this.listaClientes.Sort(new Comparison<Cliente>((Cliente a, Cliente b) => { return (b.DNI.CompareTo(a.DNI)); }));
 
-            
-            lbDNI.Refresh();
-            lbNombre.Refresh();
-            lbTelefono.Refresh();
+        
+            this.listaClientes= this.listaClientes.OrderBy((Cliente a) => a.DNI).ToList();
+            this.bs.DataSource = this.listaClientes;
+
         }
 
         private void btNombre_Click(object sender, EventArgs e)
         {
-            this.listaClientes.Sort(new Comparison<Cliente>((Cliente a, Cliente b) => { return (a.Nombre.CompareTo(b.Nombre)); }));
-
-            
-            lbDNI.Refresh();
-            lbNombre.Refresh();
-            lbTelefono.Refresh();
+            this.listaClientes = this.listaClientes.OrderBy((Cliente a) => a.Nombre).ToList();
+            this.bs.DataSource = this.listaClientes;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.listaClientes.Sort(new Comparison<Cliente>((Cliente a, Cliente b) => { return (a.Telefono.CompareTo(b.Telefono)); }));
-
-          
-            lbDNI.Refresh();
-            lbNombre.Refresh();
-            lbTelefono.Refresh();
+            this.listaClientes = this.listaClientes.OrderBy((Cliente a) => a.Telefono).ToList();
+            this.bs.DataSource = this.listaClientes;
         }
         
     }
