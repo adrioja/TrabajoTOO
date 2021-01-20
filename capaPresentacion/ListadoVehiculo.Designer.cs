@@ -1,6 +1,6 @@
 ﻿namespace capaPresentacion
 {
-    partial class ListadoVehiculo
+    partial class FListadoVehiculo
     {
         /// <summary>
         /// Required designer variable.

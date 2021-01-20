@@ -44,7 +44,7 @@ namespace capaPresentacion
         /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
         /// </summary>
         /// <param name="c"></param>
-        public RestoDatosCliente(Presupuesto p)
+        public RestoDatosPresupuesto(Presupuesto p)
         {
             InitializeComponent();
             this.presupuesto = p;

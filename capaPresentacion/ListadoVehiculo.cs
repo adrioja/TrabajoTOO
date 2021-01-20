@@ -14,12 +14,12 @@ namespace capaPresentacion
     /// <summary>
     /// Formulario para visualizar en forma de tabla los vehiculos existentes
     /// </summary>
-    public partial class ListadoVehiculo : Form
+    public partial class FListadoVehiculo : Form
     {
         /// <summary>
         /// Inicializa la clase e introduce en el listado los coches existentes
         /// </summary>
-        public ListadoVehiculo()
+        public FListadoVehiculo()
         {
             InitializeComponent();
             this.Text = "Listado de vehiculos";

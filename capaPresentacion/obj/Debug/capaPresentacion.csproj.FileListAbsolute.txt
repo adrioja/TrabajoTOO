@@ -118,3 +118,6 @@ C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
 C:\Users\ikjadraq\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RecorrerCliente.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FBusquedaClienteDNI.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClavePresupuesto.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RecorrerCliente.resources

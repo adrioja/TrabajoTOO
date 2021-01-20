@@ -793,5 +793,19 @@ namespace capaPresentacion
             //form.ShowDialog();
 
         }
+
+        private void listadoDeLosVehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FListadoVehiculo listadoVehiculo = new FListadoVehiculo();
+            DialogResult d = listadoVehiculo.ShowDialog();
+            listadoVehiculo.Dispose();
+        }
+
+        private void busquedaDatosClientePorDNIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FBusquedaClienteDNI f = new FBusquedaClienteDNI();
+            DialogResult d = f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace capaPresentacion
             {
                 this.rbtA.Checked = true;
             }
-            if (c.Categoria == CategoriaCliente.B)
+            else if (c.Categoria == CategoriaCliente.B)
             {
                 this.rbtB.Checked = true;
             }
