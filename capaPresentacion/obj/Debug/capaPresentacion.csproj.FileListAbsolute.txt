@@ -130,5 +130,5 @@ C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPres
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoVehiculo.resources
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerCliente.resources
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
-C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientes.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientes.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientesOrdeanados.resources

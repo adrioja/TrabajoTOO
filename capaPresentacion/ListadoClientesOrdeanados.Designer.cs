@@ -1,6 +1,6 @@
 ﻿namespace capaPresentacion
 {
-    partial class ListadoClientes
+    partial class ListadoClientesOrdeanados
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,7 @@
             this.lbNombre = new System.Windows.Forms.ListBox();
             this.lbTelefono = new System.Windows.Forms.ListBox();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
+            this.btCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             this.lbTelefono.Size = new System.Drawing.Size(115, 199);
             this.lbTelefono.TabIndex = 5;
             // 
+            // btCancelar
+            // 
+            this.btCancelar.Location = new System.Drawing.Point(202, 282);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(115, 23);
+            this.btCancelar.TabIndex = 6;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
             // ListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 301);
+            this.ClientSize = new System.Drawing.Size(519, 317);
+            this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.lbTelefono);
             this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbDNI);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.ListBox lbNombre;
         private System.Windows.Forms.ListBox lbTelefono;
         private System.Windows.Forms.BindingSource bs;
+        private System.Windows.Forms.Button btCancelar;
     }
 }

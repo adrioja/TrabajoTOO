@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario para visualizar todos los clientes y recorrerlos de uno en uno
+    /// </summary>
     public partial class FRecorrerCliente : Form
     {
         

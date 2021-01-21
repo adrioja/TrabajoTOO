@@ -11,6 +11,10 @@ using modeloDominio;
 
 namespace capaPresentacion
 {
+
+    /// <summary>
+    /// Formulario para buscar clientes seleccionando un DNI de los existentes
+    /// </summary>
     public partial class FBusquedaClienteDNI : Form
     {
         /// <summary>
@@ -26,6 +30,12 @@ namespace capaPresentacion
             }
         }
 
+        /// <summary>
+        /// Cada vez que cambia el cliente seleccionado.
+        /// Este metodo se encarga de visualizar el nuevo cliente seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbDNIs_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cliente c = LNCliente.LogicaNegocioCliente.Buscar(new Cliente(this.cbDNIs.SelectedItem.ToString()));
@@ -43,6 +53,16 @@ namespace capaPresentacion
             {
                 this.rbtC.Checked = true;
             }
+        }
+
+        /// <summary>
+        ///Click en cerrar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btCerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -13,8 +13,15 @@ using LNVehiculo;
 
 namespace capaPresentacion
 {
+    /// <summary>
+    /// Formulario principal de la aplicación 
+    /// </summary>
     public partial class FPrincipal : Form
     {
+
+        /// <summary>
+        /// Constructor de la clase
+        /// </summary>
         public FPrincipal()
         {
             InitializeComponent();
@@ -856,9 +863,15 @@ namespace capaPresentacion
             f.Dispose();
         }
 
+        /// <summary>
+        /// Pre: la clase debe de estar incializada
+        /// Post: evento que se produce al hacer click en listado clientes ordenado, muestra el formulario ListadoClientesOrdenados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listarClientesOrdenadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListadoClientes l = new ListadoClientes(LNCliente.LogicaNegocioCliente.ListaClientes());
+            ListadoClientesOrdeanados l = new ListadoClientesOrdeanados(LNCliente.LogicaNegocioCliente.ListaClientes());
             DialogResult d = l.ShowDialog();
             l.Dispose();
         }

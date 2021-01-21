@@ -39,6 +39,7 @@
             this.lNombre = new System.Windows.Forms.Label();
             this.lDni = new System.Windows.Forms.Label();
             this.cbDNIs = new System.Windows.Forms.ComboBox();
+            this.btCerrar = new System.Windows.Forms.Button();
             this.grupo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,11 +158,22 @@
             this.cbDNIs.TabIndex = 2;
             this.cbDNIs.SelectedIndexChanged += new System.EventHandler(this.cbDNIs_SelectedIndexChanged);
             // 
+            // btCerrar
+            // 
+            this.btCerrar.Location = new System.Drawing.Point(137, 301);
+            this.btCerrar.Name = "btCerrar";
+            this.btCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btCerrar.TabIndex = 3;
+            this.btCerrar.Text = "Cerrar";
+            this.btCerrar.UseVisualStyleBackColor = true;
+            this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
+            // 
             // FBusquedaClienteDNI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 319);
+            this.ClientSize = new System.Drawing.Size(349, 336);
+            this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.cbDNIs);
             this.Controls.Add(this.lDni);
             this.Controls.Add(this.grupo);
@@ -187,5 +199,6 @@
         private System.Windows.Forms.Label lCategoria;
         private System.Windows.Forms.RadioButton rbtC;
         private System.Windows.Forms.RadioButton rbtB;
+        private System.Windows.Forms.Button btCerrar;
     }
 }
