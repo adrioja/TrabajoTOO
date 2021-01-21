@@ -40,73 +40,8 @@ namespace capaPresentacion
             {
                 //caso no cumple el formato
                 this.DialogResult = DialogResult.None;
-                DialogResult dr = MessageBox.Show("El formato del bastidor es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dr = MessageBox.Show("El formato del bastidor es incorrecto deben de ser 17 caracteres numericos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /*
-            if (opcion.Equals(OpcionesOperacion.Alta))
-            {
-                if (comprobarFormato())
-                {
-                    if (LogicaNegocioVehiculo.existeYa(new VehiculoNuevo(this.tbIdentificador.Text)))
-                    {
-                        DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dr.Equals(DialogResult.No))
-                        {
-                            this.Dispose();
-                        }
-                        else
-                        {
-                            this.tbIdentificador.Text = "";
-                        }
-                        this.DialogResult = DialogResult.None;
-                    }
-                }
-                else
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Error en el formato", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }
-            if (opcion.Equals(OpcionesOperacion.Baja))
-            {
-                if (!LogicaNegocioVehiculo.existeYa(new VehiculoNuevo(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un vehiculo con dicho nnumero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }
-            if (opcion.Equals(OpcionesOperacion.Busqueda))
-            {
-                if (!LogicaNegocioVehiculo.existeYa(new VehiculoNuevo(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un vehiculo con dicho numero de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }*/
         }
 
         /// <summary>

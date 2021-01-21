@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.CheckedListBox;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace capaPresentacion
 {
@@ -33,10 +35,25 @@ namespace capaPresentacion
             if (this.presupuesto != null)
             {
                 this.asignarDatos();
+                
             }
             else
             {
                 this.presupuesto = new Presupuesto(id);
+                //para poder asignar el presupuesto a un cliente
+                List<Cliente> lista = LNCliente.LogicaNegocioCliente.ListaClientes();
+                foreach (Cliente c in lista)
+                {
+                    this.cCliente.Items.Add(c.DNI);
+                }
+
+                List<Vehiculo> listaV = LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculos();
+                foreach (Vehiculo v in listaV)
+                {
+                    String s =v.NumBastidor + "-" +v.Modelo + "-" + v.Marca + "-" + v.PvRecomendado.ToString();
+                    this.clbVehiculos.Items.Add(s);
+                }
+
             }
         }
 
@@ -72,6 +89,59 @@ namespace capaPresentacion
 
         }
 
+        private void clbVehiculos_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // para cuando se selecciona un elemento hay que hacer que este se añada al posible vehiculo comprado
 
+            //limpiamos la lista
+            this.cVehiculoComprado.Items.Clear();
+
+            //cogemos los seleccionados y los añadimos
+            CheckedItemCollection l = this.clbVehiculos.CheckedItems;
+            foreach(Item i in l)
+            {
+                this.cVehiculoComprado.Items.Add(i.ToString());
+            }
+
+        }
+
+        private void btAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool formatosCorrectos()
+        {
+            return true;
+        }
+
+        internal Presupuesto devolverPresupuesto()
+
+            //REPASAR falta caso que no halla ninguno comprado ---------------------------------------------------------    ISRA ESTA MAL REPASALO CORRIGELO 
+        {
+            Cliente c = LNCliente.LogicaNegocioCliente.Buscar(new Cliente(this.cCliente.SelectedItem.ToString()));
+            String[] s = this.tbFecha.Text.Split('/');
+            DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
+
+            CheckedItemCollection l = this.clbVehiculos.CheckedItems;
+            List<Vehiculo> vehiculos = new List<Vehiculo>();
+
+            foreach(Item i in l)
+            {
+                string []t = i.ToString().Split('-');
+                Vehiculo v2 = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(t[0]));
+                vehiculos.Add(v2);
+            }
+
+            string[] p = this.cVehiculoComprado.SelectedItem.ToString().Split('-');
+            Vehiculo v=null;
+            if(p!=null)//caso hay uno seleccionado
+            {
+                v = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(p[0]));
+            }
+            
+
+            return new Presupuesto(this.tbIdentificador.Text, c, fecha, this.tbEstado.Text,vehiculos,v);
+        }
     }
 }

@@ -208,9 +208,23 @@ namespace capaPresentacion
         { 
             bool v = true;
             String mensaje = "";
-            
+
+            String marca = this.tbMarca.Text;
+            if(v && marca.TrimStart(' ').Length==0)
+            {
+                mensaje = "La marca no puede estar vacia";
+                v = false;
+            }
+
+            String modelo = this.tbModelo.Text;
+            if (v && modelo.TrimStart(' ').Length == 0)
+            {
+                mensaje = "El modelo no puede estar vacia";
+                v = false;
+            }
+
             String potencia = this.tbPotencia.Text;
-            if(!int.TryParse(potencia, out int potenciaNumero))
+            if(v && !int.TryParse(potencia, out int potenciaNumero))
             { //Comprobamos que la potencia es un numero entero
                 mensaje = "La potencia no es un número";
                 v= false;
@@ -230,7 +244,7 @@ namespace capaPresentacion
                 Regex rg = new Regex("[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]");
                 if(v && !rg.IsMatch(matricula))
                 {
-                    mensaje = "Formato de matrícula incorrecto";
+                    mensaje = "Formato de matrícula incorrecto deben de ser 4 numeros segidos de 3 letras mayusculas";
                     v = false;
                 }
 

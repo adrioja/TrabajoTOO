@@ -33,14 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbFecha = new System.Windows.Forms.TextBox();
-            this.tbCliente = new System.Windows.Forms.TextBox();
             this.tbEstado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbVehiculoComprado = new System.Windows.Forms.TextBox();
+            this.cCliente = new System.Windows.Forms.ComboBox();
+            this.clbVehiculos = new System.Windows.Forms.CheckedListBox();
+            this.cVehiculoComprado = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,9 +55,10 @@
             // 
             // tbIdentificador
             // 
-            this.tbIdentificador.Location = new System.Drawing.Point(132, 31);
+            this.tbIdentificador.Location = new System.Drawing.Point(148, 31);
             this.tbIdentificador.Name = "tbIdentificador";
-            this.tbIdentificador.Size = new System.Drawing.Size(100, 20);
+            this.tbIdentificador.ReadOnly = true;
+            this.tbIdentificador.Size = new System.Drawing.Size(121, 20);
             this.tbIdentificador.TabIndex = 1;
             // 
             // label2
@@ -73,27 +75,20 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.Size = new System.Drawing.Size(105, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "fechaRealizacion";
+            this.label3.Text = "Fecha de realizacion";
             // 
             // tbFecha
             // 
-            this.tbFecha.Location = new System.Drawing.Point(132, 102);
+            this.tbFecha.Location = new System.Drawing.Point(148, 102);
             this.tbFecha.Name = "tbFecha";
             this.tbFecha.Size = new System.Drawing.Size(100, 20);
             this.tbFecha.TabIndex = 4;
             // 
-            // tbCliente
-            // 
-            this.tbCliente.Location = new System.Drawing.Point(132, 69);
-            this.tbCliente.Name = "tbCliente";
-            this.tbCliente.Size = new System.Drawing.Size(100, 20);
-            this.tbCliente.TabIndex = 5;
-            // 
             // tbEstado
             // 
-            this.tbEstado.Location = new System.Drawing.Point(132, 137);
+            this.tbEstado.Location = new System.Drawing.Point(148, 137);
             this.tbEstado.Name = "tbEstado";
             this.tbEstado.Size = new System.Drawing.Size(100, 20);
             this.tbEstado.TabIndex = 6;
@@ -109,16 +104,18 @@
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(132, 220);
+            this.btAceptar.Location = new System.Drawing.Point(210, 391);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
             this.btAceptar.TabIndex = 8;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(276, 219);
+            this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btCancelar.Location = new System.Drawing.Point(349, 391);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 9;
@@ -128,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(276, 31);
+            this.label5.Location = new System.Drawing.Point(37, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 10;
@@ -137,32 +134,55 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(276, 71);
+            this.label6.Location = new System.Drawing.Point(187, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Vehiculo comprado";
             // 
-            // tbVehiculoComprado
+            // cCliente
             // 
-            this.tbVehiculoComprado.Location = new System.Drawing.Point(410, 72);
-            this.tbVehiculoComprado.Name = "tbVehiculoComprado";
-            this.tbVehiculoComprado.Size = new System.Drawing.Size(100, 20);
-            this.tbVehiculoComprado.TabIndex = 12;
+            this.cCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cCliente.FormattingEnabled = true;
+            this.cCliente.Location = new System.Drawing.Point(148, 71);
+            this.cCliente.Name = "cCliente";
+            this.cCliente.Size = new System.Drawing.Size(121, 21);
+            this.cCliente.TabIndex = 13;
+            // 
+            // clbVehiculos
+            // 
+            this.clbVehiculos.FormattingEnabled = true;
+            this.clbVehiculos.Location = new System.Drawing.Point(148, 198);
+            this.clbVehiculos.Name = "clbVehiculos";
+            this.clbVehiculos.Size = new System.Drawing.Size(513, 94);
+            this.clbVehiculos.TabIndex = 14;
+            this.clbVehiculos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbVehiculos_ItemCheck);
+            // 
+            // cVehiculoComprado
+            // 
+            this.cVehiculoComprado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cVehiculoComprado.FormattingEnabled = true;
+            this.cVehiculoComprado.Location = new System.Drawing.Point(303, 326);
+            this.cVehiculoComprado.Name = "cVehiculoComprado";
+            this.cVehiculoComprado.Size = new System.Drawing.Size(121, 21);
+            this.cVehiculoComprado.TabIndex = 15;
             // 
             // RestoDatosPresupuesto
             // 
+            this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 450);
-            this.Controls.Add(this.tbVehiculoComprado);
+            this.CancelButton = this.btCancelar;
+            this.ClientSize = new System.Drawing.Size(688, 450);
+            this.Controls.Add(this.cVehiculoComprado);
+            this.Controls.Add(this.clbVehiculos);
+            this.Controls.Add(this.cCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbEstado);
-            this.Controls.Add(this.tbCliente);
             this.Controls.Add(this.tbFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -182,13 +202,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbFecha;
-        private System.Windows.Forms.TextBox tbCliente;
         private System.Windows.Forms.TextBox tbEstado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbVehiculoComprado;
+        private System.Windows.Forms.ComboBox cCliente;
+        private System.Windows.Forms.CheckedListBox clbVehiculos;
+        private System.Windows.Forms.ComboBox cVehiculoComprado;
     }
 }

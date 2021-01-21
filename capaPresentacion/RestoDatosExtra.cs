@@ -98,7 +98,7 @@ namespace capaPresentacion
         /// <returns></returns>
         internal Extra devExtra()
         {
-            this.reyenarDatos(); 
+            this.rellenarDatos(); 
             return this.extra;
         }
 
@@ -106,7 +106,7 @@ namespace capaPresentacion
         /// PRE: la clase debe de estar incializada
         /// POST: construye el objeto a partir de los datos de los textbox
         /// </summary>
-        private void reyenarDatos()
+        private void rellenarDatos()
         { 
             double.TryParse(this.tbPrecio.Text, out double precio);
             this.extra.PrecioFijo = precio;           

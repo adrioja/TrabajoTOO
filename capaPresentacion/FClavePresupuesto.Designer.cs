@@ -47,6 +47,7 @@
             // 
             // btCancelar
             // 
+            this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancelar.Location = new System.Drawing.Point(242, 164);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
@@ -84,8 +85,10 @@
             // 
             // FClavePresupuesto
             // 
+            this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(426, 235);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbIdentificador);

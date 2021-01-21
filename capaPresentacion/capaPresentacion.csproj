@@ -207,6 +207,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RestoDatosPresupuesto.resx">
+      <DependentUpon>RestoDatosPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RestoDatosVehiculo.resx">
       <DependentUpon>RestoDatosVehiculo.cs</DependentUpon>
     </EmbeddedResource>

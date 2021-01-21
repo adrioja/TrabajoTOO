@@ -40,7 +40,7 @@ namespace capaPresentacion
             {
                 //caso no cumple el formato
                 this.DialogResult = DialogResult.None;
-                DialogResult dr = MessageBox.Show("El formato del dni es incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dr = MessageBox.Show("El formato del dni es incorrecto deben ser 8 numeros y al final una letra mayuscula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }  
         }
 
