@@ -132,7 +132,8 @@ namespace capaPresentacion
             else
             {
                 String []s = this.tbFechaMatriculacion.Text.Split('/');
-                DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
+                DateTime fecha;
+                DateTime.TryParse(this.tbFechaMatriculacion.Text, out fecha);
                 return new VehiculoSegundaMano(this.tbNumeroBastidor.Text, potencia, this.tbModelo.Text, this.tbMarca.Text, precio, this.tbMatricula.Text,fecha);
             }
         }
