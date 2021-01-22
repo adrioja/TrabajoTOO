@@ -125,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 209);
+            this.label5.Location = new System.Drawing.Point(37, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 10;
@@ -134,7 +134,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(187, 329);
+            this.label6.Location = new System.Drawing.Point(32, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 13);
             this.label6.TabIndex = 11;
@@ -152,9 +152,9 @@
             // clbVehiculos
             // 
             this.clbVehiculos.FormattingEnabled = true;
-            this.clbVehiculos.Location = new System.Drawing.Point(148, 198);
+            this.clbVehiculos.Location = new System.Drawing.Point(148, 183);
             this.clbVehiculos.Name = "clbVehiculos";
-            this.clbVehiculos.Size = new System.Drawing.Size(513, 94);
+            this.clbVehiculos.Size = new System.Drawing.Size(513, 109);
             this.clbVehiculos.TabIndex = 14;
             this.clbVehiculos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbVehiculos_ItemCheck);
             // 
@@ -162,9 +162,9 @@
             // 
             this.cVehiculoComprado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cVehiculoComprado.FormattingEnabled = true;
-            this.cVehiculoComprado.Location = new System.Drawing.Point(303, 326);
+            this.cVehiculoComprado.Location = new System.Drawing.Point(148, 326);
             this.cVehiculoComprado.Name = "cVehiculoComprado";
-            this.cVehiculoComprado.Size = new System.Drawing.Size(121, 21);
+            this.cVehiculoComprado.Size = new System.Drawing.Size(358, 21);
             this.cVehiculoComprado.TabIndex = 15;
             // 
             // RestoDatosPresupuesto

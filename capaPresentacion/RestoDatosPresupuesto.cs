@@ -50,7 +50,7 @@ namespace capaPresentacion
                 List<Vehiculo> listaV = LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculos();
                 foreach (Vehiculo v in listaV)
                 {
-                    String s =v.NumBastidor + "-" +v.Modelo + "-" + v.Marca + "-" + v.PvRecomendado.ToString();
+                    String s =v.NumBastidor + "- " +v.Modelo + "  -  " + v.Marca + "  -  " + v.PvRecomendado.ToString();
                     this.clbVehiculos.Items.Add(s);
                 }
 
@@ -95,52 +95,113 @@ namespace capaPresentacion
 
             //limpiamos la lista
             this.cVehiculoComprado.Items.Clear();
+            List<String> l = new List<string>();
 
-            //cogemos los seleccionados y los añadimos
-            CheckedItemCollection l = this.clbVehiculos.CheckedItems;
-            foreach(Item i in l)
+            foreach(var v in this.clbVehiculos.CheckedItems)
             {
-                this.cVehiculoComprado.Items.Add(i.ToString());
+                l.Add(v.ToString());
+            }
+
+            if (e.NewValue== CheckState.Checked)
+            {
+                l.Add(this.clbVehiculos.Items[e.Index].ToString());
+            }
+            else
+            {
+                l.Remove(this.clbVehiculos.Items[e.Index].ToString());
+            }
+
+            //cogemos los seleccionados y los añadimos al posible vehiculo comprado
+            
+            foreach(String i in l)
+            {
+                this.cVehiculoComprado.Items.Add(i);
             }
 
         }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-
+            if (!this.formatosCorrectos())
+            {
+                this.DialogResult = DialogResult.None;
+            }
         }
 
         private bool formatosCorrectos()
         {
-            return true;
+            bool correcto = true;
+            String mensaje = "";
+
+            Object c =  this.cCliente.SelectedItem;
+            if(correcto && c==null) //no hay ningun cliente seleccionado
+            {
+                mensaje = "Selecciona un cliente";
+                correcto = false;
+            }
+
+
+            String fecha = this.tbFecha.Text;
+            DateTime resultado;
+            if (correcto && !DateTime.TryParse(fecha, out resultado))
+            {
+                mensaje = "El formato de la fecha es incorrecto";
+                correcto = false;
+            }
+
+            if (correcto && this.tbEstado.Text.TrimStart().Length==0)
+            {
+                mensaje = "Introduce el estado";
+                correcto = false;
+            }
+
+            if(correcto && this.clbVehiculos.CheckedItems.Count==0)
+            {
+                mensaje = "Debes añadir algun vehiculo al presupuesto";
+                correcto = false;
+            }
+
+
+            if (!correcto)
+            {
+                DialogResult dr = MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dr.Equals(DialogResult.OK))
+                {
+                    this.DialogResult = DialogResult.None;
+
+                }
+            }
+
+
+            return correcto;
         }
 
         internal Presupuesto devolverPresupuesto()
-
+            //se usa cunado los formatos ya se saben que son correctos
             //REPASAR falta caso que no halla ninguno comprado ---------------------------------------------------------    ISRA ESTA MAL REPASALO CORRIGELO 
         {
             Cliente c = LNCliente.LogicaNegocioCliente.Buscar(new Cliente(this.cCliente.SelectedItem.ToString()));
-            String[] s = this.tbFecha.Text.Split('/');
-            DateTime fecha = new DateTime(Int16.Parse(s[2]), Int16.Parse(s[1]), Int16.Parse(s[0]));
+
+            DateTime fecha;
+            DateTime.TryParse(this.tbFecha.Text,out fecha);
 
             CheckedItemCollection l = this.clbVehiculos.CheckedItems;
             List<Vehiculo> vehiculos = new List<Vehiculo>();
 
-            foreach(Item i in l)
+            foreach (String i in l)
             {
                 string []t = i.ToString().Split('-');
                 Vehiculo v2 = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(t[0]));
                 vehiculos.Add(v2);
             }
 
-            string[] p = this.cVehiculoComprado.SelectedItem.ToString().Split('-');
+            Object p = this.cVehiculoComprado.SelectedItem;
             Vehiculo v=null;
-            if(p!=null)//caso hay uno seleccionado
+            if(p!=null)
             {
-                v = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(p[0]));
+                string[] r = this.cVehiculoComprado.SelectedItem.ToString().Split('-');
+                v = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(r[0]));
             }
-            
-
             return new Presupuesto(this.tbIdentificador.Text, c, fecha, this.tbEstado.Text,vehiculos,v);
         }
     }

@@ -52,13 +52,14 @@ namespace capaPresentacion
             this.recorrerClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaDatosClientePorDNIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarClientesOrdenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.listarClientesOrdenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -251,8 +252,17 @@ namespace capaPresentacion
             this.listadoClientesToolStripMenuItem.Text = "Listar clientes";
             this.listadoClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoClientesToolStripMenuItem_Click);
             // 
+            // listarClientesOrdenadosToolStripMenuItem
+            // 
+            this.listarClientesOrdenadosToolStripMenuItem.Name = "listarClientesOrdenadosToolStripMenuItem";
+            this.listarClientesOrdenadosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.listarClientesOrdenadosToolStripMenuItem.Text = "Listar clientes ordenados";
+            this.listarClientesOrdenadosToolStripMenuItem.Click += new System.EventHandler(this.listarClientesOrdenadosToolStripMenuItem_Click);
+            // 
             // tsmiPresupuesto
             // 
+            this.tsmiPresupuesto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.añadirPresupuestoToolStripMenuItem});
             this.tsmiPresupuesto.Name = "tsmiPresupuesto";
             this.tsmiPresupuesto.Size = new System.Drawing.Size(84, 19);
             this.tsmiPresupuesto.Text = "Presupuesto";
@@ -302,12 +312,12 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // listarClientesOrdenadosToolStripMenuItem
+            // añadirPresupuestoToolStripMenuItem
             // 
-            this.listarClientesOrdenadosToolStripMenuItem.Name = "listarClientesOrdenadosToolStripMenuItem";
-            this.listarClientesOrdenadosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.listarClientesOrdenadosToolStripMenuItem.Text = "Listar clientes ordenados";
-            this.listarClientesOrdenadosToolStripMenuItem.Click += new System.EventHandler(this.listarClientesOrdenadosToolStripMenuItem_Click);
+            this.añadirPresupuestoToolStripMenuItem.Name = "añadirPresupuestoToolStripMenuItem";
+            this.añadirPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirPresupuestoToolStripMenuItem.Text = "Añadir presupuesto";
+            this.añadirPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPresupuestoToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -361,5 +371,6 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem recorrerVehiculosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarClientesOrdenadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem añadirPresupuestoToolStripMenuItem;
     }
 }

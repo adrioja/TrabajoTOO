@@ -151,7 +151,6 @@ namespace capaPresentacion
         /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            
             if(!this.formatosCorrectos())
             {
                 this.DialogResult = DialogResult.None;

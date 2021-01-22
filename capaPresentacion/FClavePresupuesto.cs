@@ -38,7 +38,7 @@ namespace capaPresentacion
             {
                 //caso no cumple el formato
                 this.DialogResult = DialogResult.None;
-                DialogResult dr = MessageBox.Show("El formato del id es incorrecto deben de ser 3 numeros segidos de 4 letras mayusculas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dr = MessageBox.Show("El formato del id es incorrecto deben de ser 3 numeros seguidos de 3 letras mayusculas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

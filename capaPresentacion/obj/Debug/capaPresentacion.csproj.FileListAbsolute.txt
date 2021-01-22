@@ -130,7 +130,6 @@ C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPres
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoVehiculo.resources
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerCliente.resources
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
-C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientes.resources
 C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientesOrdeanados.resources
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.exe.config
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.exe
@@ -169,3 +168,5 @@ C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPres
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientesOrdeanados.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RestoDatosPresupuesto.resources

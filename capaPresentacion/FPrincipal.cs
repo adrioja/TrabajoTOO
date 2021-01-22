@@ -875,5 +875,65 @@ namespace capaPresentacion
             DialogResult d = l.ShowDialog();
             l.Dispose();
         }
+
+
+        //----------------PRESUPUESTOS-------------------------
+
+
+        private void añadirPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClavePresupuesto f = new FClavePresupuesto();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+                {
+                    Presupuesto presupuesto = f.devolverPresupuesto();
+                    if (LNPresupuesto.LogicaNegocioPresupuesto.existePresupuesto(presupuesto))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+
+                        RestoDatosPresupuesto alta = new RestoDatosPresupuesto(f.devolverPresupuesto().Id);
+                        alta.Text = "Crear un presupuesto";
+                        DialogResult drAlta = alta.ShowDialog();
+                        if (drAlta.Equals(DialogResult.OK))
+                        {
+                            Presupuesto p = alta.devolverPresupuesto();
+                            LNPresupuesto.LogicaNegocioPresupuesto.añadirPresupuesto(p);
+                            MessageBox.Show("El presupuesto se ha añadido correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            alta.Dispose();
+                        }
+                        else
+                        {
+                            alta.Dispose();
+                        }
+
+                    }
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
+
+        }
     }
 }

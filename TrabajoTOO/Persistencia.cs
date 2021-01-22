@@ -493,16 +493,22 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void Añadir(Presupuesto p)
         {
-            String vehiculoComprado;
+            String vehiculoComprado="";
             if (p.VehiculoComprado ==null)
             {
                 vehiculoComprado = "";
             } else
             {
                 vehiculoComprado = p.VehiculoComprado.NumBastidor;
-            } 
+            }
+            /*string cliente = "";
+            if (p.ClienteAsociado != null)
+            {
+                vehiculoComprado = p.VehiculoComprado.NumBastidor;
+            }*/
 
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, p.VehiculoComprado.NumBastidor);
+
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, vehiculoComprado);
             BD.InsertPresupuesto(presupuesto);
 
             if (p.Vehiculos.Count != 0)
@@ -613,7 +619,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static bool Existe(Presupuesto p)
         {
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, null, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
             return BD.ExistsPresupuesto(presupuesto);
         }
     }
