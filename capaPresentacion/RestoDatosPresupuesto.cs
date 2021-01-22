@@ -31,11 +31,15 @@ namespace capaPresentacion
             this.btAceptar.DialogResult = DialogResult.OK;
             this.tbIdentificador.Text = this.presupuesto.Id;
             this.tbIdentificador.ReadOnly = true;
+            
             this.presupuesto = LNPresupuesto.LogicaNegocioPresupuesto.buscarPresupuesto(this.presupuesto);
-            if (this.presupuesto != null)
+
+            if (this.presupuesto != null) //caso actualizar
             {
                 this.asignarDatos();
-                
+                this.cCliente.Enabled = false;
+                this.tbFecha.ReadOnly = true;
+                this.clbVehiculos.Enabled = false;
             }
             else
             {
@@ -78,7 +82,12 @@ namespace capaPresentacion
         /// </summary>
         private void deshabilitar()
         {
-
+            this.cCliente.Enabled = false;
+            this.tbFecha.ReadOnly = true;
+            this.clbVehiculos.Enabled = false;
+            this.tbFecha.ReadOnly = true;
+            this.tbEstado.ReadOnly = true;
+            this.cVehiculoComprado.Enabled = false;
         }
         /// <summary>
         /// PRE: la clase debe de estar incializada
@@ -86,6 +95,26 @@ namespace capaPresentacion
         /// </summary>
         private void asignarDatos()
         {
+            this.cCliente.Items.Add(this.presupuesto.ClienteAsociado.DNI);
+            this.cCliente.SelectedIndex = 0;
+            this.tbFecha.Text = this.presupuesto.FechaRealizacion.ToShortDateString();
+            this.tbEstado.Text = this.presupuesto.Estado;
+
+            int cont = 0;
+            foreach(Vehiculo v in this.presupuesto.Vehiculos)
+            {
+                String s = v.NumBastidor + "- " + v.Modelo + "  -  " + v.Marca + "  -  " + v.PvRecomendado.ToString();
+                this.clbVehiculos.Items.Add(s);
+                this.clbVehiculos.SetItemChecked(cont, true);
+                cont++;
+            }
+            
+            if(this.presupuesto.VehiculoComprado!=null) //caso comprado uno
+            {
+                String s = this.presupuesto.VehiculoComprado.NumBastidor + "- " + this.presupuesto.VehiculoComprado.Modelo + "  -  " + this.presupuesto.VehiculoComprado.Marca + "  -  " + this.presupuesto.VehiculoComprado.PvRecomendado.ToString();
+                this.cVehiculoComprado.Items.Add(s);
+                this.cVehiculoComprado.SelectedIndex = 0;
+            }
 
         }
 
@@ -178,7 +207,6 @@ namespace capaPresentacion
 
         internal Presupuesto devolverPresupuesto()
             //se usa cunado los formatos ya se saben que son correctos
-            //REPASAR falta caso que no halla ninguno comprado ---------------------------------------------------------    ISRA ESTA MAL REPASALO CORRIGELO 
         {
             Cliente c = LNCliente.LogicaNegocioCliente.Buscar(new Cliente(this.cCliente.SelectedItem.ToString()));
 

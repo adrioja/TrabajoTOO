@@ -547,7 +547,7 @@ namespace TrabajoTOO
         /// <returns></returns>
         public static Presupuesto Buscar(Presupuesto p)
         {
-            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
+            PresupuestosDato presupuesto = new PresupuestosDato(p.Id, null, p.FechaRealizacion, p.Estado, ""); //Solo nos interesa la clave
             PresupuestosDato dev =  BD.SelectPresupuesto(presupuesto);
 
             //Cliente asociado:
@@ -555,7 +555,7 @@ namespace TrabajoTOO
             
             //Vehiculo comprado:
             Vehiculo vehiculoComprado;
-            if(dev.VehiculoComprado!= "")
+            if(dev.VehiculoComprado == "")
             {
                 vehiculoComprado = null;
             } else

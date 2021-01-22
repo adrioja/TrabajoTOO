@@ -54,12 +54,14 @@ namespace capaPresentacion
             this.listadoClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarClientesOrdenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.añadirPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -262,10 +264,19 @@ namespace capaPresentacion
             // tsmiPresupuesto
             // 
             this.tsmiPresupuesto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.añadirPresupuestoToolStripMenuItem});
+            this.añadirPresupuestoToolStripMenuItem,
+            this.eliminarPresupuestoToolStripMenuItem,
+            this.buscarUnPresupuestoToolStripMenuItem});
             this.tsmiPresupuesto.Name = "tsmiPresupuesto";
             this.tsmiPresupuesto.Size = new System.Drawing.Size(84, 19);
             this.tsmiPresupuesto.Text = "Presupuesto";
+            // 
+            // añadirPresupuestoToolStripMenuItem
+            // 
+            this.añadirPresupuestoToolStripMenuItem.Name = "añadirPresupuestoToolStripMenuItem";
+            this.añadirPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirPresupuestoToolStripMenuItem.Text = "Añadir presupuesto";
+            this.añadirPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPresupuestoToolStripMenuItem_Click);
             // 
             // ssBarraEstado
             // 
@@ -312,12 +323,19 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // añadirPresupuestoToolStripMenuItem
+            // eliminarPresupuestoToolStripMenuItem
             // 
-            this.añadirPresupuestoToolStripMenuItem.Name = "añadirPresupuestoToolStripMenuItem";
-            this.añadirPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.añadirPresupuestoToolStripMenuItem.Text = "Añadir presupuesto";
-            this.añadirPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPresupuestoToolStripMenuItem_Click);
+            this.eliminarPresupuestoToolStripMenuItem.Name = "eliminarPresupuestoToolStripMenuItem";
+            this.eliminarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.eliminarPresupuestoToolStripMenuItem.Text = "Eliminar presupuesto";
+            this.eliminarPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.eliminarPresupuestoToolStripMenuItem_Click);
+            // 
+            // buscarUnPresupuestoToolStripMenuItem
+            // 
+            this.buscarUnPresupuestoToolStripMenuItem.Name = "buscarUnPresupuestoToolStripMenuItem";
+            this.buscarUnPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.buscarUnPresupuestoToolStripMenuItem.Text = "Buscar un presupuesto";
+            this.buscarUnPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.buscarUnPresupuestoToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -372,5 +390,7 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem listadoClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarClientesOrdenadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem añadirPresupuestoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarPresupuestoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarUnPresupuestoToolStripMenuItem;
     }
 }

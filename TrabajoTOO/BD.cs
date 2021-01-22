@@ -508,7 +508,7 @@ namespace TrabajoTOO
         /// <param name="p"></param>
         public static void DeletePresupuesto_Vehiculos(Presupuesto_VehiculosDato p)
         {
-            BD.Presupuesto_vehiculos.Remove(p.Identificador);
+            BD.Presupuesto_vehiculos.Remove(p.Clave);
         }
 
         /// <summary>

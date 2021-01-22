@@ -893,7 +893,7 @@ namespace capaPresentacion
                     Presupuesto presupuesto = f.devolverPresupuesto();
                     if (LNPresupuesto.LogicaNegocioPresupuesto.existePresupuesto(presupuesto))
                     {
-                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un vehiculo con dicho bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un presupuesto con dicho id", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (aviso.Equals(DialogResult.No))
                         {
                             f.Dispose();
@@ -934,6 +934,105 @@ namespace capaPresentacion
                 }
             }
 
+        }
+
+        private void eliminarPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClavePresupuesto f = new FClavePresupuesto();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+                {
+                    Presupuesto presupuesto = f.devolverPresupuesto();
+                    if (!LNPresupuesto.LogicaNegocioPresupuesto.existePresupuesto(presupuesto))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un presupuesto con dicho id", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+
+                        RestoDatosPresupuesto baja = new RestoDatosPresupuesto(LNPresupuesto.LogicaNegocioPresupuesto.buscarPresupuesto(presupuesto));
+                        baja.Text = "Eliminar un presupuesto";
+                        DialogResult drBaja = baja.ShowDialog();
+                        if (drBaja.Equals(DialogResult.OK))
+                        {
+                            Presupuesto p = baja.devolverPresupuesto();
+                            LNPresupuesto.LogicaNegocioPresupuesto.eliminarPresupuesto(p);
+                            MessageBox.Show("El presupuesto se ha eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            baja.Dispose();
+                        }
+                        else
+                        {
+                            baja.Dispose();
+                        }
+
+                    }
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
+        }
+
+        private void buscarUnPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool continuar = false;
+            while (!continuar)
+            {
+                FClavePresupuesto f = new FClavePresupuesto();
+                DialogResult dr = f.ShowDialog();
+                if (dr.Equals(DialogResult.OK)) //caso en el que se puede introducir
+                {
+                    Presupuesto presupuesto = f.devolverPresupuesto();
+                    if (!LNPresupuesto.LogicaNegocioPresupuesto.existePresupuesto(presupuesto))
+                    {
+                        DialogResult aviso = MessageBox.Show("¿Quieres introducir otro?", "No existe un presupuesto con dicho id", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (aviso.Equals(DialogResult.No))
+                        {
+                            f.Dispose();
+                            continuar = true;
+
+                        }
+                        else
+                        {
+                            f.Dispose();
+
+                        }
+                    }
+                    else
+                    {
+                        continuar = true;
+
+                        RestoDatosPresupuesto baja = new RestoDatosPresupuesto(LNPresupuesto.LogicaNegocioPresupuesto.buscarPresupuesto(presupuesto));
+                        baja.Text = "Buscar un presupuesto";
+                        DialogResult drBaja = baja.ShowDialog();
+                        MessageBox.Show("La busqueda ha finalizado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        baja.Dispose();
+
+                    }
+                }
+                else
+                {
+                    f.Dispose();
+                    continuar = true;
+                }
+            }
         }
     }
 }
