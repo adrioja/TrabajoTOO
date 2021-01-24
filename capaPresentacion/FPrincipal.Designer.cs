@@ -55,13 +55,15 @@ namespace capaPresentacion
             this.listarClientesOrdenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.añadirPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUnPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recorrerPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssBarraEstado = new System.Windows.Forms.StatusStrip();
             this.tsslFecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslUsuarioSesion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.eliminarPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUnPresupuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarPresupuestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.ssBarraEstado.SuspendLayout();
             this.SuspendLayout();
@@ -266,7 +268,9 @@ namespace capaPresentacion
             this.tsmiPresupuesto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirPresupuestoToolStripMenuItem,
             this.eliminarPresupuestoToolStripMenuItem,
-            this.buscarUnPresupuestoToolStripMenuItem});
+            this.buscarUnPresupuestoToolStripMenuItem,
+            this.recorrerPresupuestosToolStripMenuItem,
+            this.listarPresupuestosToolStripMenuItem});
             this.tsmiPresupuesto.Name = "tsmiPresupuesto";
             this.tsmiPresupuesto.Size = new System.Drawing.Size(84, 19);
             this.tsmiPresupuesto.Text = "Presupuesto";
@@ -274,9 +278,30 @@ namespace capaPresentacion
             // añadirPresupuestoToolStripMenuItem
             // 
             this.añadirPresupuestoToolStripMenuItem.Name = "añadirPresupuestoToolStripMenuItem";
-            this.añadirPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.añadirPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.añadirPresupuestoToolStripMenuItem.Text = "Añadir presupuesto";
             this.añadirPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.añadirPresupuestoToolStripMenuItem_Click);
+            // 
+            // eliminarPresupuestoToolStripMenuItem
+            // 
+            this.eliminarPresupuestoToolStripMenuItem.Name = "eliminarPresupuestoToolStripMenuItem";
+            this.eliminarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.eliminarPresupuestoToolStripMenuItem.Text = "Eliminar presupuesto";
+            this.eliminarPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.eliminarPresupuestoToolStripMenuItem_Click);
+            // 
+            // buscarUnPresupuestoToolStripMenuItem
+            // 
+            this.buscarUnPresupuestoToolStripMenuItem.Name = "buscarUnPresupuestoToolStripMenuItem";
+            this.buscarUnPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.buscarUnPresupuestoToolStripMenuItem.Text = "Buscar un presupuesto";
+            this.buscarUnPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.buscarUnPresupuestoToolStripMenuItem_Click);
+            // 
+            // recorrerPresupuestosToolStripMenuItem
+            // 
+            this.recorrerPresupuestosToolStripMenuItem.Name = "recorrerPresupuestosToolStripMenuItem";
+            this.recorrerPresupuestosToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.recorrerPresupuestosToolStripMenuItem.Text = "Recorrer presupuestos";
+            this.recorrerPresupuestosToolStripMenuItem.Click += new System.EventHandler(this.recorrerPresupuestosToolStripMenuItem_Click);
             // 
             // ssBarraEstado
             // 
@@ -323,19 +348,12 @@ namespace capaPresentacion
             this.tsslUsuarioSesion.Text = "UsuarioSesion";
             this.tsslUsuarioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // eliminarPresupuestoToolStripMenuItem
+            // listarPresupuestosToolStripMenuItem
             // 
-            this.eliminarPresupuestoToolStripMenuItem.Name = "eliminarPresupuestoToolStripMenuItem";
-            this.eliminarPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.eliminarPresupuestoToolStripMenuItem.Text = "Eliminar presupuesto";
-            this.eliminarPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.eliminarPresupuestoToolStripMenuItem_Click);
-            // 
-            // buscarUnPresupuestoToolStripMenuItem
-            // 
-            this.buscarUnPresupuestoToolStripMenuItem.Name = "buscarUnPresupuestoToolStripMenuItem";
-            this.buscarUnPresupuestoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.buscarUnPresupuestoToolStripMenuItem.Text = "Buscar un presupuesto";
-            this.buscarUnPresupuestoToolStripMenuItem.Click += new System.EventHandler(this.buscarUnPresupuestoToolStripMenuItem_Click);
+            this.listarPresupuestosToolStripMenuItem.Name = "listarPresupuestosToolStripMenuItem";
+            this.listarPresupuestosToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.listarPresupuestosToolStripMenuItem.Text = "Listar presupuestos";
+            this.listarPresupuestosToolStripMenuItem.Click += new System.EventHandler(this.listarPresupuestosToolStripMenuItem_Click);
             // 
             // FPrincipal
             // 
@@ -392,5 +410,7 @@ namespace capaPresentacion
         private System.Windows.Forms.ToolStripMenuItem añadirPresupuestoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarPresupuestoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarUnPresupuestoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recorrerPresupuestosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarPresupuestosToolStripMenuItem;
     }
 }

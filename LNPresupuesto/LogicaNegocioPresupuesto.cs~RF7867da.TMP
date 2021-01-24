@@ -96,14 +96,5 @@ namespace LNPresupuesto
                 return null;
             }
         }
-        /// <summary>
-        /// Pre: la clase debe estar inicializada
-        /// Post: devuelve la lista de los presupuestos
-        /// </summary>
-        /// <returns></returns>
-        public static List<Presupuesto> ListaPresupuestos()
-        {
-            return Persistencia.listaPresupuesto();
-        }
     }
 }

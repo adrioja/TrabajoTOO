@@ -28,7 +28,7 @@ namespace capaPresentacion
 
             
             this.bindingSource.CurrentItemChanged += cambio;
-
+            
             this.bindingNavigator1.BindingSource = this.bindingSource;
             this.bindingSource.DataSource = listaClientes;
 

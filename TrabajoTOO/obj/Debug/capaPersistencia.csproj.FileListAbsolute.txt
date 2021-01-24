@@ -42,3 +42,11 @@ C:\Users\adrioja\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistenc
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
 C:\Users\adrioja\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.dll
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\TrabajoTOO.pdb
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.dll
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.pdb
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csprojAssemblyReference.cache
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
+C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb

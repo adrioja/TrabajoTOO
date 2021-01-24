@@ -76,6 +76,18 @@
     <Compile Include="FListadoClientes.Designer.cs">
       <DependentUpon>FListadoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FListadoPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FListadoPresupuestos.Designer.cs">
+      <DependentUpon>FListadoPresupuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRecorrerPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRecorrerPresupuesto.Designer.cs">
+      <DependentUpon>FRecorrerPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoClientesOrdeanados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,11 +183,17 @@
     <EmbeddedResource Include="FListadoClientes.resx">
       <DependentUpon>FListadoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FListadoPresupuestos.resx">
+      <DependentUpon>FListadoPresupuestos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FListadoVehiculo.resx">
       <DependentUpon>FListadoVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRecorrerCliente.resx">
       <DependentUpon>FRecorrerCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRecorrerPresupuesto.resx">
+      <DependentUpon>FRecorrerPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRecorrerVehiculo.resx">
       <DependentUpon>FRecorrerVehiculo.cs</DependentUpon>

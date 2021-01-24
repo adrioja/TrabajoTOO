@@ -1034,5 +1034,25 @@ namespace capaPresentacion
                 }
             }
         }
+
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: evento que se produce al hacer clic en recorrer presupuestos. Muestra el formulario FRecorrerPresupuesto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void recorrerPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRecorrerPresupuesto form = new FRecorrerPresupuesto(LNPresupuesto.LogicaNegocioPresupuesto.ListaPresupuestos());
+            DialogResult d = form.ShowDialog();
+            form.Dispose();
+        }
+
+        private void listarPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FListadoPresupuestos form = new FListadoPresupuestos();
+            DialogResult d = form.ShowDialog();
+            form.Dispose();
+        }
     }
 }
