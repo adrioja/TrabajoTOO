@@ -209,3 +209,5 @@ C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPr
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.pdb
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerPresupuesto.resources
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
+C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerPresupuesto.resources

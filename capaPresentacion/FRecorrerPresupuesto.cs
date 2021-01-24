@@ -23,24 +23,33 @@ namespace capaPresentacion
         public FRecorrerPresupuesto(List<Presupuesto> listaPresupuestos)
         {
             InitializeComponent();
-            this.bindingSource.CurrentItemChanged += cambio;
+            this.bindingSource.CurrentItemChanged += asignar;
             this.bindingNavigator1.BindingSource = this.bindingSource;
             this.bindingSource.DataSource = listaPresupuestos;
         }
 
-        private void cambio(Object sender, EventArgs e)
+        private void asignar(object sender, EventArgs e)
         {
+            this.listaVehiculos.Items.Clear();
             this.tbIdentificador.Text = ((Presupuesto)this.bindingSource.Current).Id;
-            this.cCliente.Text = ((Presupuesto)this.bindingSource.Current).ClienteAsociado.DNI;
+            this.tbCliente.Text = ((Presupuesto)this.bindingSource.Current).ClienteAsociado.DNI;
             this.tbFecha.Text = ((Presupuesto)this.bindingSource.Current).FechaRealizacion.ToShortDateString();
             this.tbEstado.Text = ((Presupuesto)this.bindingSource.Current).Estado;
             List<Vehiculo> listaV = ((Presupuesto)this.bindingSource.Current).Vehiculos;
             foreach (Vehiculo v in listaV)
             {
                 String s = v.NumBastidor + "- " + v.Modelo + "  -  " + v.Marca + "  -  " + v.PvRecomendado.ToString();
-                this.clbVehiculos.Items.Add(s);
+                this.listaVehiculos.Items.Add(s);
             }
-            this.cVehiculoComprado.Text = ((Presupuesto)this.bindingSource.Current).VehiculoComprado.NumBastidor;
+
+            if(((Presupuesto)this.bindingSource.Current).VehiculoComprado ==null)
+            {
+                this.tbVehiculoComprado.Text = "";
+            }
+            else
+            {
+                this.tbVehiculoComprado.Text = ((Presupuesto)this.bindingSource.Current).VehiculoComprado.NumBastidor;
+            }
         }
     }
 }

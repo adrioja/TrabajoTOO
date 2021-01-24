@@ -154,31 +154,34 @@ namespace TrabajoTOO
         public static List<Presupuesto> listaPresupuesto()
         {
             List<Presupuesto> lista = new List<Presupuesto>();
-            List<Vehiculo> vehiculos = new List<Vehiculo>();
+            
             int tam = BD.Presupuestos.Count;
             for (int i = 0; i < tam; i++)
             {
+                List<Vehiculo> vehiculos = new List<Vehiculo>();
                 PresupuestosDato pd = BD.Presupuestos[i];
 		        Cliente c=new Cliente(pd.Cliente);
                 c = Buscar(c);
                 VehiculoNuevo vnuevo = new VehiculoNuevo(pd.VehiculoComprado);
-                Vehiculo v;
-                if (Existe(vnuevo)==true)
+                Vehiculo v = null;
+                if (Existe(vnuevo))
                 {
-                    v = Buscar(vnuevo);
-                }
-                else
-                {
-                    VehiculoSegundaMano vsm = new VehiculoSegundaMano(pd.VehiculoComprado);
-                    v=Buscar(vsm);
+                    if(ExisteVehiculoNuevo(vnuevo))  
+                    {
+                        v = Buscar(vnuevo);
+                    }
+                    else
+                    {
+                        v = Buscar(new VehiculoSegundaMano(pd.VehiculoComprado));
+                    }
                 }
 		        int t = BD.Presupuesto_vehiculos.Count;
             	for (int i2 = 0; i2 < t; i2++){
-                    Presupuesto_VehiculosDato pvd = BD.Presupuesto_vehiculos[i];
+                    Presupuesto_VehiculosDato pvd = BD.Presupuesto_vehiculos[i2];
                     if (pd.Id.Equals(pvd.Clave.Id))
                     {
                         VehiculoNuevo vn = new VehiculoNuevo(pvd.Clave.Vehiculo);
-                        if (Existe(vn)==true)
+                        if (ExisteVehiculoNuevo(vn))
                         {
                             vehiculos.Add(Buscar(vn));
                         }
@@ -263,7 +266,7 @@ namespace TrabajoTOO
 
         /// <summary>
         /// PRE:la clase que se pasa como parametro debe de estar incializada
-        /// POST: Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo nuevo cuya clave coincida con v1, false en caso contrario
+        /// POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
         /// </summary>
         /// <param name="v1"></param>
         /// <returns></returns>
@@ -271,6 +274,18 @@ namespace TrabajoTOO
         {
             VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
             return BD.ExistsVNuevo(v);
+        }
+
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
+        public static bool ExisteVehiculoNuevo(VehiculoNuevo v1)
+        {
+            VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
+            return BD.ExistsVehiculoNuevo(v);
         }
 
 

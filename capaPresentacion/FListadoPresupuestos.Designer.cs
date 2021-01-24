@@ -33,7 +33,6 @@
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vehiculos = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Vcomprado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.listado)).BeginInit();
             this.SuspendLayout();
@@ -46,50 +45,47 @@
             this.Cliente,
             this.fecha,
             this.estado,
-            this.vehiculos,
             this.Vcomprado});
             this.listado.Location = new System.Drawing.Point(12, 12);
             this.listado.Name = "listado";
-            this.listado.Size = new System.Drawing.Size(646, 150);
+            this.listado.Size = new System.Drawing.Size(646, 237);
             this.listado.TabIndex = 0;
             // 
             // id
             // 
             this.id.HeaderText = "Id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // Cliente
             // 
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
             // 
             // fecha
             // 
             this.fecha.HeaderText = "Fecha realizacion";
             this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
             // 
             // estado
             // 
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
-            // 
-            // vehiculos
-            // 
-            this.vehiculos.HeaderText = "Vehiculos";
-            this.vehiculos.Name = "vehiculos";
-            this.vehiculos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.vehiculos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.estado.ReadOnly = true;
             // 
             // Vcomprado
             // 
             this.Vcomprado.HeaderText = "Vehiculo comprado";
             this.Vcomprado.Name = "Vcomprado";
+            this.Vcomprado.ReadOnly = true;
             // 
             // FListadoPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(682, 273);
             this.Controls.Add(this.listado);
             this.Name = "FListadoPresupuestos";
             this.Text = "FListadoPresupuestos";
@@ -105,7 +101,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewComboBoxColumn vehiculos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vcomprado;
     }
 }

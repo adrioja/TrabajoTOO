@@ -45,16 +45,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbIdentificador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cCliente = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbFecha = new System.Windows.Forms.TextBox();
             this.tbEstado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.clbVehiculos = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cVehiculoComprado = new System.Windows.Forms.ComboBox();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbVehiculoComprado = new System.Windows.Forms.TextBox();
+            this.listaVehiculos = new System.Windows.Forms.ListBox();
+            this.tbCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
@@ -84,7 +84,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(520, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -179,7 +179,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 71);
+            this.label1.Location = new System.Drawing.Point(101, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 1;
@@ -187,7 +187,7 @@
             // 
             // tbIdentificador
             // 
-            this.tbIdentificador.Location = new System.Drawing.Point(166, 71);
+            this.tbIdentificador.Location = new System.Drawing.Point(136, 50);
             this.tbIdentificador.Name = "tbIdentificador";
             this.tbIdentificador.ReadOnly = true;
             this.tbIdentificador.Size = new System.Drawing.Size(100, 20);
@@ -196,26 +196,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 108);
+            this.label2.Location = new System.Drawing.Point(78, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cliente";
             // 
-            // cCliente
-            // 
-            this.cCliente.Enabled = false;
-            this.cCliente.FormattingEnabled = true;
-            this.cCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cCliente.Location = new System.Drawing.Point(166, 108);
-            this.cCliente.Name = "cCliente";
-            this.cCliente.Size = new System.Drawing.Size(121, 21);
-            this.cCliente.TabIndex = 4;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 147);
+            this.label3.Location = new System.Drawing.Point(12, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 13);
             this.label3.TabIndex = 5;
@@ -224,7 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(77, 186);
+            this.label4.Location = new System.Drawing.Point(77, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 6;
@@ -232,7 +222,7 @@
             // 
             // tbFecha
             // 
-            this.tbFecha.Location = new System.Drawing.Point(166, 147);
+            this.tbFecha.Location = new System.Drawing.Point(136, 126);
             this.tbFecha.Name = "tbFecha";
             this.tbFecha.ReadOnly = true;
             this.tbFecha.Size = new System.Drawing.Size(100, 20);
@@ -240,7 +230,7 @@
             // 
             // tbEstado
             // 
-            this.tbEstado.Location = new System.Drawing.Point(166, 186);
+            this.tbEstado.Location = new System.Drawing.Point(136, 165);
             this.tbEstado.Name = "tbEstado";
             this.tbEstado.ReadOnly = true;
             this.tbEstado.Size = new System.Drawing.Size(100, 20);
@@ -249,53 +239,59 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 233);
+            this.label5.Location = new System.Drawing.Point(25, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Lista de vehiculos";
             // 
-            // clbVehiculos
-            // 
-            this.clbVehiculos.FormattingEnabled = true;
-            this.clbVehiculos.Location = new System.Drawing.Point(166, 233);
-            this.clbVehiculos.Name = "clbVehiculos";
-            this.clbVehiculos.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.clbVehiculos.Size = new System.Drawing.Size(554, 124);
-            this.clbVehiculos.TabIndex = 10;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 377);
+            this.label6.Location = new System.Drawing.Point(19, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Vehiculo comprado";
             // 
-            // cVehiculoComprado
+            // tbVehiculoComprado
             // 
-            this.cVehiculoComprado.Enabled = false;
-            this.cVehiculoComprado.FormattingEnabled = true;
-            this.cVehiculoComprado.Location = new System.Drawing.Point(166, 377);
-            this.cVehiculoComprado.Name = "cVehiculoComprado";
-            this.cVehiculoComprado.Size = new System.Drawing.Size(280, 21);
-            this.cVehiculoComprado.TabIndex = 12;
+            this.tbVehiculoComprado.Location = new System.Drawing.Point(136, 356);
+            this.tbVehiculoComprado.Name = "tbVehiculoComprado";
+            this.tbVehiculoComprado.ReadOnly = true;
+            this.tbVehiculoComprado.Size = new System.Drawing.Size(314, 20);
+            this.tbVehiculoComprado.TabIndex = 12;
+            // 
+            // listaVehiculos
+            // 
+            this.listaVehiculos.FormattingEnabled = true;
+            this.listaVehiculos.Location = new System.Drawing.Point(136, 212);
+            this.listaVehiculos.Name = "listaVehiculos";
+            this.listaVehiculos.Size = new System.Drawing.Size(314, 121);
+            this.listaVehiculos.TabIndex = 13;
+            // 
+            // tbCliente
+            // 
+            this.tbCliente.Location = new System.Drawing.Point(136, 87);
+            this.tbCliente.Name = "tbCliente";
+            this.tbCliente.ReadOnly = true;
+            this.tbCliente.Size = new System.Drawing.Size(100, 20);
+            this.tbCliente.TabIndex = 14;
             // 
             // FRecorrerPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cVehiculoComprado);
+            this.ClientSize = new System.Drawing.Size(520, 411);
+            this.Controls.Add(this.tbCliente);
+            this.Controls.Add(this.listaVehiculos);
+            this.Controls.Add(this.tbVehiculoComprado);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.clbVehiculos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbEstado);
             this.Controls.Add(this.tbFecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbIdentificador);
             this.Controls.Add(this.label1);
@@ -328,15 +324,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbIdentificador;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbFecha;
         private System.Windows.Forms.TextBox tbEstado;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckedListBox clbVehiculos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cVehiculoComprado;
         private System.Windows.Forms.BindingSource bindingSource;
+        private System.Windows.Forms.TextBox tbVehiculoComprado;
+        private System.Windows.Forms.ListBox listaVehiculos;
+        private System.Windows.Forms.TextBox tbCliente;
     }
 }

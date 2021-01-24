@@ -219,7 +219,9 @@ namespace capaPresentacion
             foreach (String i in l)
             {
                 string []t = i.ToString().Split('-');
-                Vehiculo v2 = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(t[0]));
+                
+                Vehiculo v2 = new VehiculoNuevo(t[0]);
+                v2 = LNVehiculo.LogicaNegocioVehiculo.buscar(v2);
                 vehiculos.Add(v2);
             }
 
@@ -228,7 +230,8 @@ namespace capaPresentacion
             if(p!=null)
             {
                 string[] r = this.cVehiculoComprado.SelectedItem.ToString().Split('-');
-                v = LNVehiculo.LogicaNegocioVehiculo.buscar(new VehiculoNuevo(r[0]));
+                v = new VehiculoNuevo(r[0]);
+                v = LNVehiculo.LogicaNegocioVehiculo.buscar(v);
             }
             return new Presupuesto(this.tbIdentificador.Text, c, fecha, this.tbEstado.Text,vehiculos,v);
         }

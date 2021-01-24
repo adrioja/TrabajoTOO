@@ -26,7 +26,7 @@ namespace capaPresentacion
             List<Presupuesto> lista = LNPresupuesto.LogicaNegocioPresupuesto.ListaPresupuestos();
             foreach (Presupuesto p in lista)
             {
-                Object[] presupuesto = { p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion.ToShortDateString(), p.Estado, p.Vehiculos, p.VehiculoComprado.NumBastidor };
+                object[] presupuesto = { p.Id, p.ClienteAsociado.DNI, p.FechaRealizacion.ToShortDateString(), p.Estado, p.VehiculoComprado.NumBastidor };
                 this.listado.Rows.Add(presupuesto);
             }
         }

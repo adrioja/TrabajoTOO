@@ -247,7 +247,7 @@ namespace TrabajoTOO
 
         /// <summary>
         /// PRE: La clase que se pasa como parametro debe de estar incializada
-        /// POST: Dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario
+        /// POST: Dice si el vehiculo existe en la bd y si es asi devuelve true y falso en caso contrario
         /// </summary>
         /// <param name="v"></param>
         /// <returns></returns>
@@ -256,6 +256,17 @@ namespace TrabajoTOO
             return BD.ExistsVehiculo(v);
         }
 
+
+        /// <summary>
+        /// PRE: La clase que se pasa como parametro debe de estar incializada
+        /// POST: Dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario(no es general)
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+        public static bool ExistsVehiculoNuevo(VNuevoDatos v)
+        {
+            return BD.VNuevos.Contains(v.Identificador);
+        }
 
         //-------------------------------------------------------------------------------------------------------------------
         //-------------EXTRA-------------------------------------------------------------------------------------------------
