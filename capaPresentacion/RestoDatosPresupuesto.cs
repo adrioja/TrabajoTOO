@@ -21,7 +21,7 @@ namespace capaPresentacion
         private Presupuesto presupuesto;
 
         /// <summary>
-        /// 
+        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
         /// </summary>
         public RestoDatosPresupuesto(String id)
         {
@@ -118,6 +118,11 @@ namespace capaPresentacion
 
         }
 
+        /// <summary>
+        /// Evento generado cuando se hace clic en un checkbox de la lista de los vehiculos. Se queda marcado el checkbox y se añade el vehiculo a el combobox de vehiculo comprado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clbVehiculos_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             // para cuando se selecciona un elemento hay que hacer que este se añada al posible vehiculo comprado
@@ -148,7 +153,12 @@ namespace capaPresentacion
             }
 
         }
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if (!this.formatosCorrectos())
@@ -156,7 +166,11 @@ namespace capaPresentacion
                 this.DialogResult = DialogResult.None;
             }
         }
-
+        /// <summary>
+        /// PRE: la clase debe estar inicializada
+        /// POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+        /// </summary>
+        /// <returns></returns>
         private bool formatosCorrectos()
         {
             bool correcto = true;
@@ -204,7 +218,11 @@ namespace capaPresentacion
 
             return correcto;
         }
-
+        /// <summary>
+        /// PRE: la clase debe estar inicializada
+        /// POST:Devuelve un presupuesto reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
+        /// </summary>
+        /// <returns></returns>
         internal Presupuesto devolverPresupuesto()
             //se usa cunado los formatos ya se saben que son correctos
         {

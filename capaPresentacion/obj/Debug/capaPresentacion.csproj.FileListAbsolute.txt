@@ -211,3 +211,13 @@ C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPr
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
 C:\Users\adria\Desktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerPresupuesto.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FBusquedaClienteDNI.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FClavePresupuesto.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoClientes.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoVehiculo.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerCliente.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerPresupuesto.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientesOrdeanados.resources
+C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RestoDatosPresupuesto.resources

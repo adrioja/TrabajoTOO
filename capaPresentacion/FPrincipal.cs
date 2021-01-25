@@ -879,7 +879,12 @@ namespace capaPresentacion
 
         //----------------PRESUPUESTOS-------------------------
 
-
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el presupuesto ya existe preguna si quieres introducir otro. Si no existe y el formato es correcto se añade el presupuesto.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void añadirPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -935,7 +940,12 @@ namespace capaPresentacion
             }
 
         }
-
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el presupuesto no existe preguna si queremos introducir otro. Si existe lo elimina.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void eliminarPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -989,7 +999,12 @@ namespace capaPresentacion
                 }
             }
         }
-
+        /// <summary>
+        /// Pre: la clase debe estar inicializada
+        /// Post: Si el presupuesto introducido no existe se preguntara si se quiere introducir otro. Si existe y el formato es correcto se mostaran los datos del presupuesto.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buscarUnPresupuestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool continuar = false;
@@ -1047,7 +1062,12 @@ namespace capaPresentacion
             DialogResult d = form.ShowDialog();
             form.Dispose();
         }
-
+        /// <summary>
+        /// Pre:la clase debe estar inicializada
+        /// Post: evento que se produce al hacer click en listado de los presupuestos, muestra el formulario FListadoPresupuestos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listarPresupuestosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FListadoPresupuestos form = new FListadoPresupuestos();
