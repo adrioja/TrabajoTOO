@@ -42,56 +42,6 @@ namespace capaPresentacion
                 this.DialogResult = DialogResult.None;
                 DialogResult dr = MessageBox.Show("El formato del nombre de un extra no puede ser vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            /*if(opcion.Equals(OpcionesOperacion.Alta))
-            {
-                if (LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "Ya existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }
-            if(opcion.Equals(OpcionesOperacion.Baja))
-            {
-                if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";                        
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }
-            if(opcion.Equals(OpcionesOperacion.Busqueda))
-            {
-                if (!LogicaNegocioVehiculo.existeYa(new Extra(this.tbIdentificador.Text)))
-                {
-                    DialogResult dr = MessageBox.Show("¿Quieres introducir otro?", "No existe un extra con dicho nombre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dr.Equals(DialogResult.No))
-                    {
-                        this.Dispose();
-                    }
-                    else
-                    {
-                        this.tbIdentificador.Text = "";                        
-                    }
-                    this.DialogResult = DialogResult.None;
-                }
-            }*/
-            
             
         }
 

@@ -20,7 +20,7 @@ namespace capaPresentacion
         private Vehiculo vehiculo;
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
         /// </summary>
         /// <param name="b"></param>
         public RestoDatosVehiculo(String b)
@@ -58,7 +58,7 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
         /// </summary>
         /// <param name="e"></param>
         public RestoDatosVehiculo(Vehiculo e)
@@ -140,7 +140,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en en el boton circular segunda mano, hace que si se hace click en este boton el de nuevo no se seleccione y hace visible las caracteristicas de matricula y fecha matriculacion
+        /// POST: Metodo de respuesta que se da lugar al hacer click en en el boton circular segunda mano, hace que si se hace click en este boton el de nuevo no se seleccione y hace visible las caracteristicas de matricula y fecha matriculacion
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -159,7 +159,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en en el boton circular nuevo, hace que si se hace click en este boton el de segunda mano no se seleccione y no hace visible las caracteristicas de matricula y fecha matriculacion
+        /// POST: Metodo de respuesta que se da lugar al hacer click en en el boton circular nuevo, hace que si se hace click en este boton el de segunda mano no se seleccione y no hace visible las caracteristicas de matricula y fecha matriculacion
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -177,7 +177,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// POST: Metodo de respuesta que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -188,7 +188,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+        /// POST: Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

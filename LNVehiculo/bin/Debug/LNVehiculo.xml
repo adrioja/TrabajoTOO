@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LNVehiculo</name>
+    </assembly>
+    <members>
+        <member name="T:LNVehiculo.LogicaNegocioVehiculo">
+            <summary>
+            Contiene toda la logica de negocio ligada a los vehiculos, la parte de extras tambien
+            </summary>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.eliminar(modeloDominio.Vehiculo)">
+            <summary>
+            PRE: v puede contener solo la clave, debe estar incializado
+            POST:comprueba que existe y si es asi lo borra y devuelve true y en cualquier otro caso false
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculos">
+            <summary>
+            Devuelve una lista con todos los vehiculos del concesionario(como vehiculos nuevos)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculosNuevos">
+            <summary>
+            Devuelve una lista con todos los vehiculos NUEVOS del concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.listaDeTodosLosVehiculosSegundaMano">
+            <summary>
+            Devuelve una lista con todos los vehiculos de SEGUNDA MANO del concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.busquedaFiltrada(System.String,System.Int32,System.String,System.String,System.Double)">
+            <summary>
+            Devuelve una lista con los vehiculos que poseen dichas caracteristicas, si en algun campo no se pone nada(se pone como vacio o si es de tipo numerico 0) no se filtra por dicho parametro
+            si se pone el parametro pvp busca vehiculos de un precio inferior a ese y si se especifica la potencia de mayor que esa
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="potencia"></param>
+            <param name="modelo"></param>
+            <param name="marca"></param>
+            <param name="pvp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.buscar(modeloDominio.Vehiculo)">
+            <summary>
+            PRE: v debe de estar incializado
+            POST: devuelve null si el vehiculo que se le pasa no exite y en caso de existir devuelve el vehiculo buscado con toda su informacion y del tipo al que corresponde
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.existeYa(modeloDominio.Vehiculo)">
+            <summary>
+            PRE: v debe de estar incializado
+            POST: devuelve true si el vehiculo que se le pasa existe y falso en caso contrario
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.añadir(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE: v debe de estar inicializado
+            POST: comprueba que no esta añadido y si no esta lo añade, en caso de añadirlo devuelve true y falso en cualquier otro caso
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.existeYa(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE: v debe de estar inicializado
+            POST: devuelve true si dicho vehiculo estan en nuestra coleccion y falso en caso contrario
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.eliminar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE: v puede contener solo la clave, debe estar incializado
+            POST:comprueba que existe y si es asi lo borra y devuelve true y en cualquier otro caso false
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.buscar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE: v debe de estar incializado
+            POST: en caso de existir lo busca y lo devuelve y si no existe devuelve null
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.actualizar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:v debe de estar incializado y debe contener los datos actualizados del vehiculo que se quiere actualizar(tienen en mismo numBatidor)
+            POST:comprueba que existe un vehiculo con dicho numBastidor y si es asi lo actualiza y devuelve true y false en cualquier otro caso
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.añadirExtra(modeloDominio.VehiculoNuevo,modeloDominio.Extra)">
+            <summary>
+            PRE:ambos parametros deben estar incializados
+            POST:devuelve true si se ha consegido añadir el extra al vehiculo y falso en cualquier otro caso, comprueba que tanto el vehiculo como el extra existen y que este no lo tiene ya agregado
+            </summary>
+            <param name="v"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.quitarExtra(modeloDominio.VehiculoNuevo,modeloDominio.Extra)">
+            <summary>
+            PRE:ambos parametros deben estar incializados
+            POST:devuelve true si se ha consegido quitar el extra y falso en cualquier otro caso(aunque dicho coche no tenga ese extra), comprueba que tanto el vehiculo como el extra existen y que este lo tiene agregado
+            </summary>
+            <param name="v"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.añadir(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:v debe de estar inicializado
+            POST:comprueba que no esta añadido y si no esta lo añado en caso de añadirlo devuelve true y falso en cualquier otro caso
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.existeYa(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE: v debe de estar inicializado
+            POST: devuelve true si el vehiculo que se la psa como parametro esta en nuestra coleccion
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.eliminar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:v debe de estar inicializado
+            POST:comprueba que existe y si es asi lo borra y devuelve true y en cualquier otro caso false
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.buscar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:v debe de estar inicializado
+            POST:en caso de existir lo busca y lo devuelve y si no existe devuelve null
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.actualizar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:v debe de estar incializado y debe contener los datos actualizados del vehiculo que se quiere actualizar(tienen en mismo numBatidor)
+            POST:comprueba que existe un coche con dicho numBastidor y si es asi lo actualiza y devuelve true y false en cualquier otro caso
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.existeYa(modeloDominio.Extra)">
+            <summary>
+            PRE: e debe de estar inicializado
+            POST: devuelve true si el extra que se la pasa como parametro esta en nuestra coleccion
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.añadir(modeloDominio.Extra)">
+            <summary>
+            PRE: el parametro debe de estar incializado
+            POST: comprueba que el extra no este añadido ya en nuestro sistema y si no esta lo añade y devuelve tue, en caso de estar devuelve false
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.eliminar(modeloDominio.Extra)">
+            <summary>
+            PRE:el parametro debe de estar incializado
+            POST:omprueba que el extra este añadido ya en nuestro sistema y si  esta lo elimina y devuelve tue, en caso de no estar devuelve false
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.buscar(modeloDominio.Extra)">
+            <summary>
+            PRE:e debe de estar inicializado
+            POST:en caso de existir lo busca y lo devuelve y si no existe devuelve null
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.actualizar(modeloDominio.Extra)">
+            <summary>
+            PRE:e debe de estar incializado y debe contener los datos actualizados del extra que se quiere actualizar(tienen en mismo nombre)
+            POST:comprueba que existe un coche con dicho numBastidor y si es asi lo actualiza y devuelve true y false en cualquier otro caso
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.buscarExtras(System.String)">
+            <summary>
+            PRE: el parametro contiene parte del nombre del extra
+            POST: devuelve una lista con los extras cuyos nombres contienen el parteNombre
+            </summary>
+            <param name="parteNombre"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNVehiculo.LogicaNegocioVehiculo.listaTodosLosExtras">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve una lista de todos los extras
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

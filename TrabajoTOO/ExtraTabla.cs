@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class ExtraTabla : KeyedGeneral<String, ExtraDatos>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public ExtraTabla() : base() { }
     }
 }

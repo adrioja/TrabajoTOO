@@ -32,3 +32,4 @@ C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\modeloDominio\bin\Debug\modeloDom
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.csprojAssemblyReference.cache
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.dll
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\modeloDominio\obj\Debug\modeloDominio.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\modeloDominio\bin\Debug\modeloDominio.xml

@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class ClienteTabla : KeyedGeneral<string, ClienteDatos>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public ClienteTabla() : base() { }
     }
 }

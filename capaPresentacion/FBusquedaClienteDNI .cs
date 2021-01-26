@@ -56,7 +56,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        ///Click en cerrar
+        /// PRE: la clase debe de estar incializada
+        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

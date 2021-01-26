@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class VNuevoExtrasTabla : KeyedGeneral<VNuevoExtrasClave, VNuevoExtrasDatos>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public VNuevoExtrasTabla() : base() { }
     }
 }

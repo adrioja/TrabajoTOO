@@ -96,7 +96,7 @@
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Name = "FClavePresupuesto";
-            this.Text = "FClavePresupuesto";
+            this.Text = "Clave presupuesto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

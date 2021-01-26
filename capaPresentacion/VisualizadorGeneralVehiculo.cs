@@ -67,7 +67,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia los filtros y muestra todos los vehiculos
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia los filtros y muestra todos los vehiculos
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -80,7 +80,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en el boton buscar, muestra en la lista los vehiculos que cumplen los filtros, si algun campo no cumple el fromato lo ignora
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en el boton buscar, muestra en la lista los vehiculos que cumplen los filtros, si algun campo no cumple el fromato lo ignora
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

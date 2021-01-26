@@ -221,3 +221,11 @@ C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerVehiculo.resources
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.ListadoClientesOrdeanados.resources
 C:\Users\LuisJesus\Documents\GitHub\Presupuestos\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RestoDatosPresupuesto.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FListadoPresupuestos.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.FRecorrerPresupuesto.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\obj\Debug\capaPresentacion.RestoDatosPresupuesto.resources
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\bin\Debug\capaPresentacion.xml
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\bin\Debug\LNCliente.xml
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\bin\Debug\LNPresupuesto.xml
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\bin\Debug\LNVehiculo.xml
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\capaPresentacion\bin\Debug\modeloDominio.xml

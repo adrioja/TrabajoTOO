@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class VSegundaManoTabla : KeyedGeneral<String, VSegundaManoDatos>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public VSegundaManoTabla() : base() { }
     }
 }

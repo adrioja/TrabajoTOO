@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+    /// <summary>
+    /// Clase que sirve para representar un presupuesto
+    /// </summary>
     public class Presupuesto:IEquatable<Presupuesto>
     {
         /////////////////////////// ATRIBUTOS ///////////////////////////

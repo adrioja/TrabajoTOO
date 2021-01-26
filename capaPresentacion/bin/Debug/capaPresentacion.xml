@@ -1,0 +1,1225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>capaPresentacion</name>
+    </assembly>
+    <members>
+        <member name="T:capaPresentacion.FBusquedaClienteDNI">
+            <summary>
+            Formulario para buscar clientes seleccionando un DNI de los existentes
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FBusquedaClienteDNI.#ctor">
+            <summary>
+            Inicializa la clase (añade al textBox los DNIs seleccionables)
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FBusquedaClienteDNI.cbDNIs_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Cada vez que cambia el cliente seleccionado.
+            Este metodo se encarga de visualizar el nuevo cliente seleccionado
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FBusquedaClienteDNI.btCerrar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.FBusquedaClienteDNI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FBusquedaClienteDNI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FBusquedaClienteDNI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FClaveVehiculo">
+            <summary>
+            Formulario para introducir la numero de bastidor del vehiculo
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en aceptar si el formato del numero de bastidor no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.devolverVehiculo">
+            <summary>
+            Solo se puede llamar si la clase esta incializada y si el numero de bastidor cumple el formato
+            Devuelve un objeto vehiculo con la clave iniciada
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.FClaveVehiculo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FClaveVehiculo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FClaveCliente">
+            <summary>
+            Formulario para introducir la clave del cliente(DNI)
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.#ctor">
+            <summary>
+            Incializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en aceptar si el formato del DNI  no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.devolverCliente">
+            <summary>
+            Solo se puede llamar si la clase esta incializada y si el DNI cumple el formato
+            Devuelve un objeto cliente con el campo clave iniciado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.comprobarFormato">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve true si el DNI introducido cumple el formato y falso en caso contrario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.FClaveCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FClaveCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FClavePresupuesto">
+            <summary>
+            Formulario para introducir el id del presupuesto
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en aceptar si el formato del id  no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.devolverPresupuesto">
+            <summary>
+            Solo se puede llamar si la clase esta incializada y si el id cumple el formato
+            Devuelve un objeto presupuesto con el campo clave iniciado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.comprobarFormato">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve true si el id introducido cumple el formato y falso en caso contrario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.FClavePresupuesto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FClavePresupuesto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FListadoClientes">
+            <summary>
+            Formulario para visualizar en forma de tabla los clientes existentes
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoClientes.#ctor">
+            <summary>
+            Inicializa la clase e introduce en el listado los clientes existentes
+            </summary>
+        </member>
+        <member name="F:capaPresentacion.FListadoClientes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoClientes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FListadoClientes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FListadoPresupuestos">
+            <summary>
+            Formulario para visualizar en forma de tabla los presupuestos existentes
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoPresupuestos.#ctor">
+            <summary>
+            Inicializa el clase e introduce en el listado los presupuestos existentes
+            </summary>
+        </member>
+        <member name="F:capaPresentacion.FListadoPresupuestos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoPresupuestos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FListadoPresupuestos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FRecorrerPresupuesto">
+            <summary>
+            Formulario para visualizar todos los presupuestos y recorrerlos de uno a uno.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerPresupuesto.#ctor(System.Collections.Generic.List{modeloDominio.Presupuesto})">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="listaPresupuestos"></param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerPresupuesto.asignar(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.FRecorrerPresupuesto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerPresupuesto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerPresupuesto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.ListadoClientesOrdeanados">
+            <summary>
+            Formulario para visualizar todos los clientes en un orden
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.#ctor(System.Collections.Generic.List{modeloDominio.Cliente})">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="lista"></param>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.btDNI_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Click en DNI, se ordenan teniendo el cuenta el DNI
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.btNombre_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Click en Nombre, se ordenan teniendo el cuenta el Nombre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Click en Telefono, se ordenan teniendo el cuenta el Telefono
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Click en Cancelar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.ListadoClientesOrdeanados.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.ListadoClientesOrdeanados.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FRecorrerVehiculo">
+            <summary>
+            Formulario para recorrer todos los vehiculos existentes
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.cambio(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el vehiculo correspondiente
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.noMostrarSegundaDatos">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: hace que los elementos que solo contienen datos de vehiculos de segunda mano no esten visibles
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.mostrarSegundaDatos">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: hace que los elementos que solo contienen datos de vehiculos de segunda mano sean visibles
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.asignarDatos">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: asigna los datos comunes a los textBox del vehiculo correspondiente
+            </summary>
+        </member>
+        <member name="F:capaPresentacion.FRecorrerVehiculo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerVehiculo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.RestoDatosPresupuesto">
+            <summary>
+            Formulario para introducir el restode datos de un presupuesto
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.#ctor(System.String)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.#ctor(modeloDominio.Presupuesto)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.deshabilitar">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: pone todos los textbox como deshabilitados
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.asignarDatos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Dado el presupuesto que tenemos, se rellenan todos los textBox del formulario con sus datos
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.clbVehiculos_ItemCheck(System.Object,System.Windows.Forms.ItemCheckEventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Metodo de respuesta a cuando se hace clic en un checkbox de la lista de los vehiculos. Se queda marcado el checkbox y se añade el vehiculo a el combobox de vehiculo comprado
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.formatosCorrectos">
+            <summary>
+            PRE: la clase debe estar inicializada
+            POST: Devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.devolverPresupuesto">
+            <summary>
+            PRE: la clase debe estar inicializada
+            POST:Devuelve un presupuesto reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.RestoDatosPresupuesto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosPresupuesto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FListadoVehiculo">
+            <summary>
+            Formulario para visualizar en forma de tabla los vehiculos existentes
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoVehiculo.#ctor">
+            <summary>
+            Inicializa la clase e introduce en el listado los coches existentes
+            </summary>
+        </member>
+        <member name="F:capaPresentacion.FListadoVehiculo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FListadoVehiculo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FListadoVehiculo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FRecorrerCliente">
+            <summary>
+            Formulario para visualizar todos los clientes y recorrerlos de uno en uno
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerCliente.#ctor(System.Collections.Generic.List{modeloDominio.Cliente})">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="listaClientes"></param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerCliente.cambio(System.Object,System.EventArgs)">
+            <summary>
+            PRE: La clase debe estar inicializada
+            POS: Metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.FRecorrerCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FRecorrerCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.RestoDatosCliente">
+            <summary>
+            Formulario para recoger/introducir el resto de datos de un cliente
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.#ctor(System.String)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.#ctor(modeloDominio.Cliente)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.deshabilitar">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: pone todos los textbox y botones circulares como deshabilitados
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.asignarDatos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Dado el cliente que tenemos, se reyenar todos los textBox del formulario con sus datos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.devCliente">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Devuelve un cliente reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.formatosCorrectos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.RestoDatosCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.RestoDatosExtra">
+            <summary>
+            Formulario para recoger/introducir el resto de datos de un extra
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.#ctor(System.String)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+            </summary>
+            <param name="s"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.#ctor(modeloDominio.Extra)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto  asigna el precio al extra y deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.devExtra">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: solo se le puede llamar cuando la clase este incializada,sin comprobar que los datos cumplen el formarmato
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.rellenarDatos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: construye el objeto a partir de los datos de los textbox
+            </summary>
+        </member>
+        <member name="F:capaPresentacion.RestoDatosExtra.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosExtra.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FClaveExtra">
+            <summary>
+            Formulario para introducir la nombre del extra
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en aceptar si el formato del nombre no es correcto no deja continuar y muestra un mensaje de error, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.devolverExtra">
+            <summary>
+            Solo se puede llamar si la clase esta incializada y si el nombre del extra cumple el formato
+            Devuelve un objeto extra con el campo clave iniciado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.FClaveExtra.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FClaveExtra.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FLogearse">
+            <summary>
+            Formulario para hacer un LOGIN --esta incompleto porque todavia no lo utlizamos
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FLogearse.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FLogearse.btEntrar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: POST: evento que se da lugar al hacer click en entrar si el usuario y contraseña estan registrados en el sistema deja continuar, sino no
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.FLogearse.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FLogearse.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:capaPresentacion.FLogearse.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.FPrincipal">
+            <summary>
+            Formulario principal de la aplicación 
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.#ctor">
+            <summary>
+            Constructor de la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.añadirNuevoExtraDisponibleToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Si el extra a añadir ya existe nos pregunta si queremos introducir otro. Si no existe lo añadira si cumple con el formato.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.eliminarExtraToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Si el extra existe y tiene un formato valido se elimina, si el extra no existe nos preguna si queremos introducir otro.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.buscarUnExtraToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Si el nombre del extra existe nos mostrara los datos del extra, si no existe no preguntara si queremos introducir otro.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.tsmiActualizarExtra_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Si el nombre del extra existe nos actualizara los datos del extra, si no existe no preguntara si queremos introducir otro.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.visualizarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Muestra el visualizador general de Extras
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.añadirUnVehiculoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el vehiculo ya existe preguna si quieres introducir otro. Si no existe se añade el vehiculo.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.eliminarUnVehiculoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el vehiculo no existe preguna si queremos introducir otro. Si existe lo elimina.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.busquedaToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la calse debe estar inicializada
+            Post: Si el vehiculo existe y el formato es correcto se muestran los datos del vehiculo. Si no existe se pregunta si se quiere introducir otro.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.actualizaDatosVehiculoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el vehiculo existe se actualizan los datos, si no existe se pregunta si se quiere introducir otro.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.visualizarLosVehiculosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: Se muestra el visualizador general de vehiculos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.añadirNuevoClienteDisponibleToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el cliente ya existe se pregunta si se quiere introducir otro cliente. Si no existe y el formato es correcto se añadira el cliente.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.eliminarClienteToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el cliente no existe se preguntara si se quiere introducir otro. Si no existe se elimina.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.buscarUnClienteToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el cliente introducido no existe se preguntara si se quiere introducir otro. Si existe y el formato es correcto se mostaran los datos del cliente.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.actualizarUnClienteToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el cliente no existe se pregunara si se quiere introducir otro. Si existe y el formato es correcto se actualizaran sus datos.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.recorrerClientesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer click en recorrerClientes, muestra el formulario FRecorrerCliente
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.listadoDeLosVehiculosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer click en listado de los vehiculos, muestra el formulario FListadoVehiculos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.busquedaDatosClientePorDNIToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer click en busqueda datos cliente por DNI, muestra el formulario FbusquedaClienteDNI
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.recorrerVehiculosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer click en recorrer vehiculos, muestra el formulario FRecorrerVehiculo
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.listadoClientesToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer click en listado clientes, muestra el formulario FListadoClientes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.listarClientesOrdenadosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe de estar incializada
+            Post: evento que se produce al hacer click en listado clientes ordenado, muestra el formulario ListadoClientesOrdenados
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.añadirPresupuestoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el presupuesto ya existe preguna si quieres introducir otro. Si no existe y el formato es correcto se añade el presupuesto.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.eliminarPresupuestoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el presupuesto no existe preguna si queremos introducir otro. Si existe lo elimina.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.buscarUnPresupuestoToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: Si el presupuesto introducido no existe se preguntara si se quiere introducir otro. Si existe y el formato es correcto se mostaran los datos del presupuesto.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.recorrerPresupuestosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: evento que se produce al hacer clic en recorrer presupuestos. Muestra el formulario FRecorrerPresupuesto
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.listarPresupuestosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pre:la clase debe estar inicializada
+            Post: evento que se produce al hacer click en listado de los presupuestos, muestra el formulario FListadoPresupuestos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.FPrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.FPrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.RestoDatosVehiculo">
+            <summary>
+            Formulario para recoger/introducir el resto de datos de un extra
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.#ctor(System.String)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+            </summary>
+            <param name="b"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.#ctor(modeloDominio.Vehiculo)">
+            <summary>
+            Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.deshabilitar">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: pone todos los textbox y botones circulares como deshabilitados
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.asignarDatos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Dado el vehiculo que tenemos, se reyenan todos los textBox del formulario con sus datos
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.devVehiculo">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Devuelve un vehiculo reyenandolo con los datos que hay en los textBox, sin comprobar que estos sean datos correctos.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.rbtSegundaMano_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en en el boton circular segunda mano, hace que si se hace click en este boton el de nuevo no se seleccione y hace visible las caracteristicas de matricula y fecha matriculacion
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.rbtNuevo_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en en el boton circular nuevo, hace que si se hace click en este boton el de segunda mano no se seleccione y no hace visible las caracteristicas de matricula y fecha matriculacion
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.btCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.btAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.formatosCorrectos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:capaPresentacion.RestoDatosVehiculo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.RestoDatosVehiculo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.VisualizadorGeneralExtras">
+            <summary>
+            Formulario para visualizar los extras que estan agregados en el sistema y permite filtar por el nombre
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.btLimpiar_Click(System.Object,System.EventArgs)">
+            <summary>
+             PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia el filtro del nombre del nombre y muestra todos los extras
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.mostrarTodos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: muestra todos los extras disponibles
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.btBuscar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en el boton buscar, mustra en la lista los extras que contienen en su nombre lo que contiene el textbox
+            </summary>
+            <param name="sender"></param>
+            <param name="e2"></param>
+        </member>
+        <member name="F:capaPresentacion.VisualizadorGeneralExtras.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralExtras.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.VisualizadorGeneralVehiculo">
+            <summary>
+            Formulario para visualizar los vehiculos que estan agregados en el sistema y permite filtar 
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.mostrarTodos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: hace que se muestren todos los vehiculos disponible
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.vaciar">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: vacia todos los cuadros de tecto por los que se puede filtrar
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia los filtros y muestra todos los vehiculos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.btBuscar_Click(System.Object,System.EventArgs)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:  Metodo de respuesta que se da lugar al hacer click en el boton buscar, muestra en la lista los vehiculos que cumplen los filtros, si algun campo no cumple el fromato lo ignora
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:capaPresentacion.VisualizadorGeneralVehiculo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:capaPresentacion.VisualizadorGeneralVehiculo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:capaPresentacion.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:capaPresentacion.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:capaPresentacion.Properties.Resources.Culture">
+            <summary>
+              Invalida la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos usando esta clase de recursos fuertemente tipados.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -21,7 +21,7 @@ namespace capaPresentacion
         private Presupuesto presupuesto;
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
         /// </summary>
         public RestoDatosPresupuesto(String id)
         {
@@ -62,9 +62,9 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
         /// </summary>
-        /// <param name="c"></param>
+        /// <param name="p"></param>
         public RestoDatosPresupuesto(Presupuesto p)
         {
             InitializeComponent();
@@ -119,7 +119,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Evento generado cuando se hace clic en un checkbox de la lista de los vehiculos. Se queda marcado el checkbox y se añade el vehiculo a el combobox de vehiculo comprado
+        /// PRE: La clase debe estar inicializada
+        /// POS: Metodo de respuesta a cuando se hace clic en un checkbox de la lista de los vehiculos. Se queda marcado el checkbox y se añade el vehiculo a el combobox de vehiculo comprado
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -155,7 +156,7 @@ namespace capaPresentacion
         }
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
+        /// POST: Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto deja continuar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -168,7 +169,7 @@ namespace capaPresentacion
         }
         /// <summary>
         /// PRE: la clase debe estar inicializada
-        /// POST: devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
+        /// POST: Devuelve true si todos los campos cumplen el formato y falso en caso contrario y muestra un mensaje de error del primer formato que se ha encontrado erroneo
         /// </summary>
         /// <returns></returns>
         private bool formatosCorrectos()

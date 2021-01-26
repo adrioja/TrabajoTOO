@@ -10,7 +10,7 @@ namespace TrabajoTOO
     /// <summary>
     /// Clase que sirve para representar el sistema de persistencia usado
     /// </summary>
-    class BD
+    internal class BD
     {
         /// <summary>
         /// incializa la bd

@@ -19,7 +19,7 @@ namespace capaPresentacion
         private Extra extra;
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de alta o actualizacion
         /// </summary>
         /// <param name="s"></param>
         public RestoDatosExtra(String s)
@@ -42,7 +42,7 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Inicializa la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
+        /// Constructor de la clase, se debe utlizar cuando se quiera hacer una operacion de baja o de busqueda
         /// </summary>
         /// <param name="e"></param>
         public RestoDatosExtra(Extra e)
@@ -61,7 +61,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto  asigna el precio al extra y deja continuar
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en aceptar si los formatos no son correcto no deja continuar, si es correcto  asigna el precio al extra y deja continuar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -81,7 +81,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en cancelar, libera los recursos que utliza el formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

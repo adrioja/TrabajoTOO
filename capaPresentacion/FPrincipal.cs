@@ -283,7 +283,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Muestra el formulario VisualizadorGenerakExtras
+        /// Pre: la clase debe de estar incializada
+        /// Post: Muestra el visualizador general de Extras
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -549,7 +550,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Se muestra el formulario VisualizadorGeneralVehiculo
+        /// Pre: la clase debe de estar incializada
+        /// Post: Se muestra el visualizador general de vehiculos
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -50,3 +50,5 @@ C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersiste
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\capaPersistencia.csproj.CopyComplete
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.dll
 C:\Users\LuisJesus\Documents\GitHub\TrabajoTOO\TrabajoTOO\obj\Debug\TrabajoTOO.pdb
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\bin\Debug\capaPersistencia.xml
+C:\Users\PC\Desktop\GitHUbDesktop\TrabajoTOO\TrabajoTOO\bin\Debug\modeloDominio.xml

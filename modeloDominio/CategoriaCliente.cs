@@ -12,8 +12,17 @@ namespace modeloDominio
     /// </summary>
     public enum CategoriaCliente
     {
+        /// <summary>
+        /// Clientes de la categoria A
+        /// </summary>
         A,
+        /// <summary>
+        /// Clientes de la categoria B
+        /// </summary>
         B,
+        /// <summary>
+        /// Clientes de la categoria C
+        /// </summary>
         C
     }
 }

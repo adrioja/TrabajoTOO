@@ -61,7 +61,7 @@ namespace capaPresentacion
         /// </summary>
         /// <returns></returns>
         internal Vehiculo devolverVehiculo()
-        { //No creo que esté bien del todo:
+        { 
             Vehiculo ve = new VehiculoNuevo(this.tbIdentificador.Text);
             Vehiculo nuevo = LNVehiculo.LogicaNegocioVehiculo.buscar(ve);
             if (nuevo!=null)

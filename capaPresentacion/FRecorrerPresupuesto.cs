@@ -28,6 +28,12 @@ namespace capaPresentacion
             this.bindingSource.DataSource = listaPresupuestos;
         }
 
+        /// <summary>
+        /// PRE: La clase debe estar inicializada
+        /// POS: Metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void asignar(object sender, EventArgs e)
         {
             this.listaVehiculos.Items.Clear();

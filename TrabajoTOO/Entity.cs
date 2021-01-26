@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace TrabajoTOO
 {
+    /// <summary>
+    /// Clase abstracta de la que derivan las tablas con los datos, El parametro genérico se corresponde con el tipo de la clave
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class Entity<T> : IEquatable<Entity<T>>
     {
         private T identificador;
@@ -32,7 +36,7 @@ namespace TrabajoTOO
 
 
         /// <summary>
-        /// Devuelve true si tienen la misma clave y false en caso contrario
+        /// PRE: La clase y el parámetro other tinen que estar inicializados
         /// </summary>
         /// <param name="other"></param>
         /// <returns></returns>

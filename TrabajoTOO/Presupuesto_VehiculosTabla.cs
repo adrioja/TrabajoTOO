@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class Presupuesto_VehiculosTabla : KeyedGeneral<Presupuesto_VehiculoClave, Presupuesto_VehiculosDato>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public Presupuesto_VehiculosTabla() : base() { }
     }
 }

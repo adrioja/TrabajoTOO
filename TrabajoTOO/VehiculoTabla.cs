@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class VehiculoTabla : KeyedGeneral<String, VehiculoDatos>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public VehiculoTabla() : base() { }
     }
 }

@@ -23,7 +23,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar inicializada
-        /// POST: metodo de respuesta al evento CurrentChanged de BindingSource, actualiza los textBox para mostrar el vehiculo correspondiente
+        /// POST: metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el vehiculo correspondiente
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

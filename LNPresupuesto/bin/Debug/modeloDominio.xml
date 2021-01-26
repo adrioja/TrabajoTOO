@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>modeloDominio</name>
+    </assembly>
+    <members>
+        <member name="T:modeloDominio.VehiculoSegundaMano">
+            <summary>
+            Clase que representa un vehiculo de segunda mano 
+            </summary>
+        </member>
+        <member name="M:modeloDominio.VehiculoSegundaMano.#ctor(System.String,System.Int32,System.String,System.String,System.Double,System.String,System.DateTime)">
+            <summary>
+            Incializa la clase por completo y llama al constructor de la clase padre
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="potencia"></param>
+            <param name="modelo"></param>
+            <param name="marca"></param>
+            <param name="pvRecomendado"></param>
+            <param name="matricula"></param>
+            <param name="fechaMatriculacion"></param>
+        </member>
+        <member name="M:modeloDominio.VehiculoSegundaMano.#ctor(System.String)">
+            <summary>
+            Incializa la clase (solo el atributo numero de bastidor) y llama al constructor de la clase padre
+            </summary>
+            <param name="numBastidor"></param>
+        </member>
+        <member name="P:modeloDominio.VehiculoSegundaMano.Matricula">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
+            POST: devuelve la matricula
+            </summary>
+        </member>
+        <member name="P:modeloDominio.VehiculoSegundaMano.FechaMatriculacion">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
+            POST: devuelve la fecha de matriculacion
+            </summary>
+        </member>
+        <member name="P:modeloDominio.VehiculoSegundaMano.PVP">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo (no solo el campo numero de bastidor)
+            POST: devuelve el pvp
+            </summary>
+        </member>
+        <member name="M:modeloDominio.VehiculoSegundaMano.ToString">
+            <summary>
+            PRE:la clase debe de estar inicializada por completo
+            POST:POST: devuelve una cadena con los datos del vehiculo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.VehiculoNuevo">
+            <summary>
+            Clase que sirve para representar un vehiculo nuevo del concesionario
+            </summary>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.#ctor(System.String,System.Int32,System.String,System.String,System.Double)">
+            <summary>
+            Inicializa la clase por completo y llama al constructor de la clase padre
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="potencia"></param>
+            <param name="modelo"></param>
+            <param name="marca"></param>
+            <param name="pvRecomendado"></param>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.#ctor(System.String)">
+            <summary>
+            Inicializa la clase y llama al constructor de la clase padre
+            </summary>
+            <param name="numBastidor"></param>
+        </member>
+        <member name="P:modeloDominio.VehiculoNuevo.PVP">
+            <summary>
+            PRE: la clase debe de estar incializada por completo(no solo el campo numero de bastidor)
+            POST: devuelve el pvp del vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.VehiculoNuevo.Extras">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:devuelve la lista con los extras que tiene añadido ese coche
+            </summary>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.anadirExtra(modeloDominio.Extra)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: si el vehiculo no tiene ya añadido ese extra lo añade, sino no hace nada
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.eliminarExtra(modeloDominio.Extra)">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: comprueba que el coche contiene ese extra y si es asi lo elimina, sino no hace nada
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.listaExtrasAñadidos">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve una lista con los extras del coche
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:modeloDominio.VehiculoNuevo.ToString">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:devuelve una cadena con los datos del vehiculo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.Presupuesto">
+            <summary>
+            Clase que sirve para representar un presupuesto
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Presupuesto.#ctor(System.String,modeloDominio.Cliente,System.DateTime,System.String,System.Collections.Generic.List{modeloDominio.Vehiculo},modeloDominio.Vehiculo)">
+            <summary>
+            Inicializa la clase por completo
+            </summary>
+            <param name="id"></param>
+            <param name="cliente"></param>
+            <param name="fechaRealizacion"></param>
+            <param name="estado"></param>
+            <param name="vehiculos"></param>
+            <param name="vehiculoComprado"></param>
+        </member>
+        <member name="M:modeloDominio.Presupuesto.#ctor(System.String)">
+            <summary>
+            Inicializa la clase (solo el id)
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.Id">
+            <summary>
+            PRE: la clase debe de estar inicializada 
+            POST: devuelve el id
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.ClienteAsociado">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo
+            POST: devuelve el cliente asociado
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.FechaRealizacion">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo
+            POST: devuelve la fecha en que se realizo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.Estado">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo
+            POST: devuelve o asigna el estado
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.Vehiculos">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo
+            POST: devuelve la lista de los vehiculos a los que se les ha echo el presupuesto
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Presupuesto.VehiculoComprado">
+            <summary>
+            PRE: la clase debe de estar inicializada por completo
+            POST: devuelve o asigna el vheiculo comprado
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Presupuesto.Equals(modeloDominio.Presupuesto)">
+            <summary>
+            PRE: la clase y el parametro deben de estar inicializadas
+            POST: devuelve true si ambos presupuestos tienen el mismo id y falso en caso contrario
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:modeloDominio.Presupuesto.ToString">
+            <summary>
+            PRE: la clase y el parametro deben de estar inicializadas(la clase por completo)
+            POST: devuelve una cadeena con los datos del presupuesto
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.Extra">
+            <summary>
+            Clase que sirve para representar un extra de un coche
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Extra.#ctor(System.String,System.Double)">
+            <summary>
+            Inicializa la clase por completo
+            </summary>
+            <param name="nombre"></param>
+            <param name="precioFijo"></param>
+        </member>
+        <member name="M:modeloDominio.Extra.#ctor(System.String)">
+            <summary>
+            Inicializa el atributo nombre del extra
+            </summary>
+            <param name="nombre"></param>
+        </member>
+        <member name="P:modeloDominio.Extra.Nombre">
+            <summary>
+            PRE:la clase debe estar incializada
+            POST:devuelve el nombre del extra
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Extra.PrecioFijo">
+            <summary>
+            PRE:PRE:la clase debe estar incializada
+            POST:devuelve o asigna el precio de dicho extra
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Extra.Equals(modeloDominio.Extra)">
+            <summary>
+            PRE: la clase y el parametro deben de estar inicializadas
+            POST:devuelve true si ambos extras son iguales comparando por el nombre
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:modeloDominio.Extra.ToString">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: devuelve una cadena con los datos del extra
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.Vehiculo">
+            <summary>
+            Clase que sirve para representar un vehiculo
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Vehiculo.#ctor(System.String,System.Int32,System.String,System.String,System.Double)">
+            <summary>
+            Inicializa la clase por completo
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="potencia"></param>
+            <param name="modelo"></param>
+            <param name="marca"></param>
+            <param name="pvRecomendado"></param>
+        </member>
+        <member name="M:modeloDominio.Vehiculo.#ctor(System.String)">
+            <summary>
+            Inicializa la clase, solo el atributo numBastidor
+            </summary>
+            <param name="numBastidor"></param>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.NumBastidor">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el numero de bastidor
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.Potencia">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve o asigna la potencia de dicho vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.Modelo">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve el modelo a la que pertenece el vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.Marca">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST:devuelve la marca a la que pertenece el vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.PvRecomendado">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST:devuleve o asigna el precio recomendado al vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.IVA">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve el IVA correspondiente en funcion del tipo de vehiculo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Vehiculo.PVP">
+            <summary>
+            PRE:la clase debe de estar incializada por completo(no solo con el constructor de un parametro)
+            POST: devuelve el pvp de dicho vehiculo
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Vehiculo.Equals(modeloDominio.Vehiculo)">
+            <summary>
+            PRE: la clase y el parametro deben de estar inicializadas
+            POST: devuelve true si ambos vehiculos tienen el mismo numero de bastidor y falso en caso contrario
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:modeloDominio.Vehiculo.ToString">
+            <summary>
+            PRE:la clase debe de estar inicializada
+            POST:POST: devuelve una cadena con los datos del vehiculo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.Cliente">
+            <summary>
+            Sirve para representar a un cliente del concesionario
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Cliente.#ctor(System.String,System.String,System.String,modeloDominio.CategoriaCliente)">
+            <summary>
+            Inicializa los atributos
+            </summary>
+            <param name="dni"></param>
+            <param name="nombre"></param>
+            <param name="telefono"></param>
+            <param name="categoria"></param>
+        </member>
+        <member name="M:modeloDominio.Cliente.#ctor(System.String)">
+            <summary>
+            Incializa el atributo DNI
+            </summary>
+            <param name="dni"></param>
+        </member>
+        <member name="P:modeloDominio.Cliente.DNI">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve DNI
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Cliente.Nombre">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST:devuelve el nombre del cliente
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Cliente.Telefono">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve el telefono o da la posibilidad de cambiarlo
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Cliente.Categoria">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve la categoria o da la posibilidad de cambiarla
+            </summary>
+        </member>
+        <member name="P:modeloDominio.Cliente.Descuento">
+            <summary>
+            PRE:la clase debe de estar incializada por completo
+            POST:Devuelve el descuento segun la categoria del cliente, si el descuento es del 10%, devuelve 0.10 
+            </summary>
+        </member>
+        <member name="M:modeloDominio.Cliente.Equals(modeloDominio.Cliente)">
+            <summary>
+            PRE: la clase y el parametro que se le pasa debe de estar incializado
+            POST: devuelve true si ambos clientes son iguales comparando por su DNI y falso en caso contrario
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:modeloDominio.Cliente.ToString">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST: devuelve una cadena con los datos del cliente
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:modeloDominio.CategoriaCliente">
+            <summary>
+            Posibles categorias a las que puede pertenecer un cliente
+            </summary>
+        </member>
+        <member name="F:modeloDominio.CategoriaCliente.A">
+            <summary>
+            Clientes de la categoria A
+            </summary>
+        </member>
+        <member name="F:modeloDominio.CategoriaCliente.B">
+            <summary>
+            Clientes de la categoria B
+            </summary>
+        </member>
+        <member name="F:modeloDominio.CategoriaCliente.C">
+            <summary>
+            Clientes de la categoria C
+            </summary>
+        </member>
+    </members>
+</doc>

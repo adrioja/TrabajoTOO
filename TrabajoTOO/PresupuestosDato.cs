@@ -53,7 +53,10 @@ namespace TrabajoTOO
             get { return this.estado; }
         }
 
-
+        /// <summary>
+        /// PRE: la clase debe de estar incializada
+        /// POST: devulve el vehiculo comprado en el presupuesto
+        /// </summary>
         public String VehiculoComprado
         {
             get { return this.vehiculoComprado; }

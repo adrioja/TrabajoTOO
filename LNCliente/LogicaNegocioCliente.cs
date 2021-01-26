@@ -16,16 +16,12 @@ namespace LNCliente
 
         //--------------------------Metodos de busqueda---------------------------------------------------------------------
 
+        /// <summary>
+        /// Obtenemos una lista con todos los clientes de la BD
+        /// </summary>
         public static List<Cliente> ListaClientes()
         {
             return Persistencia.listaClientes();
-        }
-
-        public static List<Cliente> ListaClientesOrdenados(Comparison<Cliente> criterio) 
-        {
-            List<Cliente> lista = ListaClientes();
-            lista.Sort(criterio);
-            return lista; 
         }
 
         //--------------------------Metodos CRUD----------------------------------------------------------------------------

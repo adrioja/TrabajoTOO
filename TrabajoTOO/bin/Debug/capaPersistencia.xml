@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TrabajoTOO</name>
+    </assembly>
+    <members>
+        <member name="T:TrabajoTOO.BD">
+            <summary>
+            Clase que sirve para representar el sistema de persistencia usado
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.#ctor">
+            <summary>
+            incializa la bd
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.BD.Vehiculos">
+            <summary>
+            Devuelve la tabla de vehiculos
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.devTipoVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Devuelve el vehiculo del tipo al que pertenece
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el vehiculo
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el vehiculo
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada, el vehiculo que se le pasa debe de existir
+            POST: Devuelve el vehiculo
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el vehiculo con los datos del vehiculo que se pasa por parametro
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsVehiculo(TrabajoTOO.VehiculoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Devuelve true si el vehiculo se encuentra en nuestra coleccion y falso en caso contrario
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.VSegundaMano">
+            <summary>
+            Devuelve la tabla de vehiculos de segunda mano
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertVSegundaMano(TrabajoTOO.VSegundaManoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el vehiculo de segunda mano a la bd 
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteVSegundaMano(TrabajoTOO.VSegundaManoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el vehiculo de segunda mano a la bd 
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectVSegundaMano(TrabajoTOO.VSegundaManoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Busca el vehiculo de segunda mano en la bd 
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateVSegundaMano(TrabajoTOO.VSegundaManoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el vehiculode segunda mano en la bd el parametro contiene los datos del vehiculo actualizado
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsVSegundaMano(TrabajoTOO.VSegundaManoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si el vehiculo de segunda mano existe en la bd, si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.VNuevos">
+            <summary>
+            Devuelve la tabla de vehiculos nuevos
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertVNuevos(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el vehiculo nuevo a la bd
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteVNuevos(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el vehiculo nuevo de la bd
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectVNuevo(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Devuelve el vehiculo nuevo 
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateVNuevo(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el vehiculo nuevo en la bd, el parametro es el que contiene los datos actualizados
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsVNuevo(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si el vehiculo existe en la bd y si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsVehiculoNuevo(TrabajoTOO.VNuevoDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si el vehiculo nuevo existe en la bd y si es asi devuelve true y falso en caso contrario(no es general)
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.Extras">
+            <summary>
+            Devuelve la tabla de extras
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertExtras(TrabajoTOO.ExtraDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el extra a la bd
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteExtras(TrabajoTOO.ExtraDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el extra de la bd
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectExtra(TrabajoTOO.ExtraDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Devuleve el extra
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateExtra(TrabajoTOO.ExtraDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el extra de la bd, el extra que se pasa como parametro es el que contiene los datos actualizados
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsExtra(TrabajoTOO.ExtraDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si el extra existe en la bd si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.Clientes">
+            <summary>
+            Devuelve la tabla de cliente
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertCliente(TrabajoTOO.ClienteDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade cliente a la bd
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteCliente(TrabajoTOO.ClienteDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina cliente de la bd
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectCliente(TrabajoTOO.ClienteDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Devuelve el cliente
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateCliente(TrabajoTOO.ClienteDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el cliente de la bd, el cliente que se pasa como parametro es el que tiene los datos actualizados
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsCliente(TrabajoTOO.ClienteDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si existe el cliente en la bd, si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.Presupuestos">
+            <summary>
+            Devuelve la tabla de presupuestos
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertPresupuesto(TrabajoTOO.PresupuestosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el presupuesto a la bd
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeletePresupuesto(TrabajoTOO.PresupuestosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el presupuesto de la bd 
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectPresupuesto(TrabajoTOO.PresupuestosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Devuelve el Presupuesto 
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdatePresupuesto(TrabajoTOO.PresupuestosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza el Presupuesto con esa clave de la bd, el Presupuesto que se pasa como parametro es el que tiene los datos actualizados 
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.ExistsPresupuesto(TrabajoTOO.PresupuestosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Dice si existe el Presupuesto en la bd, si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TrabajoTOO.BD.Presupuesto_vehiculos">
+            <summary>
+            Devuelve la tabla de vehiculos PRESUPUESTO_VEHICULOS
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertPresupuesto_Vehiculos(TrabajoTOO.Presupuesto_VehiculosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade el presupuesto_vehiculo a la bd 
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeletePresupuesto_Vehiculos(TrabajoTOO.Presupuesto_VehiculosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Elimina el presupuesto_vehiculo de la bd 
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectPresupuesto_Vehiculos(TrabajoTOO.Presupuesto_VehiculosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Devuelve el Presupuesto_vehiculo 
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdatePresupuesto_Vehiculos(TrabajoTOO.Presupuesto_VehiculosDato)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Dice si existe el Presupuesto_vehiculo en la bd, si es asi devuelve true y falso en caso contrario
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="P:TrabajoTOO.BD.VNuevo_Extra">
+            <summary>
+            Devuelve la tabla de vehiculos VEHICULONUEVO_EXTRA
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.BD.InsertVNuevo_Extra(TrabajoTOO.VNuevoExtrasDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada
+            POST: Añade p a la bd
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.DeleteVNuevo_Extra(TrabajoTOO.VNuevoExtrasDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Borra p de la bd
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.BD.SelectVNuevo_Extra(TrabajoTOO.VNuevoExtrasDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Busca p en la bd y la devuelve
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.BD.UpdateVNuevo_Extra(TrabajoTOO.VNuevoExtrasDatos)">
+            <summary>
+            PRE: La clase que se pasa como parametro debe de estar incializada y debe existir
+            POST: Actualiza p en la bd, p contiene los datos del onjeto actualizados
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="T:TrabajoTOO.Entity`1">
+            <summary>
+            Clase abstracta de la que derivan las tablas con los datos, El parametro genérico se corresponde con el tipo de la clave
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TrabajoTOO.Entity`1.Identificador">
+            <summary>
+            Devuelve la clave de la tabla
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Entity`1.#ctor(`0)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="t"></param>
+        </member>
+        <member name="M:TrabajoTOO.Entity`1.Equals(TrabajoTOO.Entity{`0})">
+            <summary>
+            PRE: La clase y el parámetro other tinen que estar inicializados
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TrabajoTOO.KeyedGeneral`2">
+            <summary>
+            Todas las tablas heredan de esta clase
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.KeyedGeneral`2.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.KeyedGeneral`2.GetKeyForItem(`1)">
+            <summary>
+            PRE: La clase tiene que estar inicializada
+            POS: Devuelve la clave
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.Presupuesto_VehiculosTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que el id del presupuesto y el numero de bastidor es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Presupuesto_VehiculosTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.Presupuesto_VehiculosDato">
+            <summary>
+            Representa la forma que tienen los datos de la tabla Presupuesto_Vehiculo en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.Presupuesto_VehiculosDato.Clave">
+            <summary>
+            PRE: la clase debe de estar inicializada
+            POST:devuelve la clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Presupuesto_VehiculosDato.#ctor(TrabajoTOO.Presupuesto_VehiculoClave)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="clave"></param>
+        </member>
+        <member name="T:TrabajoTOO.Presupuesto_VehiculoClave">
+            <summary>
+            Representa la tabla Presupuesto_Vehiculo
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.Presupuesto_VehiculoClave.Id">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el id del presupuesto
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.Presupuesto_VehiculoClave.Vehiculo">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el numero de bastidor del vehiculo
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Presupuesto_VehiculoClave.#ctor(System.String,System.String)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="id"></param>
+            <param name="vehiculo"></param>
+        </member>
+        <member name="P:TrabajoTOO.VNuevoExtrasClave.NumBastidor">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devukve el numero de bastidor
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VNuevoExtrasClave.NombreExtra">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devukve el nombre del extra
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VNuevoExtrasClave.#ctor(System.String,System.String)">
+            <summary>
+            Incializa la clase
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="nombreExtra"></param>
+        </member>
+        <member name="T:TrabajoTOO.VNuevoExtrasTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que el numero de bastidor y el nombre del extra es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VNuevoExtrasTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.VNuevoExtrasDatos">
+            <summary>
+            Representa la forma que tienen los datos de la tabla VNuevoExtras en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VNuevoExtrasDatos.Clave">
+            <summary>
+            PRE: la clase debe  de estar incializada
+            POST: devuelve la clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VNuevoExtrasDatos.#ctor(TrabajoTOO.VNuevoExtrasClave)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="clave"></param>
+        </member>
+        <member name="T:TrabajoTOO.ClienteTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que DNI es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.ClienteTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.ClienteDatos">
+            <summary>
+            Representa la forma que tienen los datos de un cliente en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.ClienteDatos.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="dni"></param>
+            <param name="nombre"></param>
+            <param name="telefono"></param>
+            <param name="categoria"></param>
+        </member>
+        <member name="P:TrabajoTOO.ClienteDatos.DNI">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el dni
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.ClienteDatos.Nombre">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el nombre
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.ClienteDatos.Telefono">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:devueleve o asigna el telefono
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.ClienteDatos.Categoria">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST:devueleve o asigna la categoria
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.ExtraDatos">
+            <summary>
+            Representa la forma que tienen los datos de un extra en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.ExtraDatos.Nombre">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve el nombre del extra
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.ExtraDatos.PrecioFijo">
+            <summary>
+            PRE:la clase debe de estar incializada
+            POST: devuelve el precio de dicho extra
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.ExtraDatos.#ctor(System.String,System.Double)">
+            <summary>
+            Incializa la clase
+            </summary>
+            <param name="nombre"></param>
+            <param name="precioFijo"></param>
+        </member>
+        <member name="T:TrabajoTOO.ExtraTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que el no,bre del extra es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.ExtraTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.Persistencia">
+            <summary>
+            Clase que contiene los metodos que posee el sistema de persistencia
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.Vehiculo)">
+            <summary>	
+            PRE:la clase que se pasa como parametro debe de estar incializada	
+            POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), obtendremos un vehiculoNuevo con todos sus campos, no se contempla el caso en el que el VehiculoNuevo no esta en la BD 	
+            </summary>	
+            <param name="v1"></param>	
+            <returns></returns>	
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.Vehiculo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Vehiculo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaTodosExtras">
+            <summary>
+            Devuelve la lista de todos los extras que se pueden poner
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaVehiculos">
+            <summary>
+            Devuelve la lista de todos los vehiculos que posee el concesionario construidos como vehiculos nuevos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaVehiculosNuevos">
+            <summary>
+            Devuelve la lista de todos los vehiculos nuevos que posee el concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaVehiculosSegundaMano">
+            <summary>
+            Devuelve la lista de todos los vehiculos de segunda mano que posee el concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaClientes">
+            <summary>
+            Devuelve la lista de todos los clientes del concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.listaPresupuesto">
+            <summary>
+            Devuelve la lista de todos los presupuestos del concesionario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Añadir(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:el parametro debe de estar incializado
+            POST: Dado un VehiculoNuevo, se añade a la BD (Sin comprobar si ya existe), (Los extras que este vehiculo tiene asociados deben de ser añadidos explicitamente antes)
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Borrar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un VehiculoNuevo (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), obtendremos un vehiculoNuevo con todos sus campos, no se contempla el caso en el que el VehiculoNuevo no esta en la BD 
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Actualizar(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un VehiculoNuevo, se actualizara el vehiculo cuya clave coincida con v1 (No se contempla el caso en el que no existe ningun vehiculo con dicha clave), cambiando todos sus campos a los valores que trae v1
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.ExisteVehiculoNuevo(modeloDominio.VehiculoNuevo)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un VehiculoNuevo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Añadir(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un VehiculoSegundaMano, se añade a la BD (Sin comprobar si existe ya)
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Borrar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:  Dado un VehiculoSegundaMano (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un VehiculoSegundaMano (Del que solo se utilizara la clave), obtendremos un VehiculoSegundaMano con todos sus campos, no se contempla el caso en el que el VehiculoSegundaMano no esta en la BD
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Actualizar(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un VehiculoSegundaMano, se actualizara el vehiculo cuya clave coincida con v ,(No se contempla el caso en el que no existe ningun vehiculo con dicha clave),cambiando todos sus campos a los valores que trae v(los actualiza)
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.VehiculoSegundaMano)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un VehiculoNuvo (Del que solo se utilizara la clave), devuelve true si existe un vehiculoSegundaMano cuya clave coincida con v1, false en caso contrario
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Añadir(modeloDominio.Extra)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Extra, se añade a la BD (Sin comprobar si existe ya) 
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Borrar(modeloDominio.Extra)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Extra (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+            </summary>
+            <param name="v1"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.Extra)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Extra (Del que solo se utilizara la clave), obtendremos un Extra con todos sus campos, no se contempla el caso en el que el Extra no esta en la BD
+            </summary>
+            <param name="v1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Actualizar(modeloDominio.Extra)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Extra, se actualizara el extra cuya clave coincida con e (no se contempla el caso en el que no existe ningun extra con dicha clave), cambiando todos sus campos a los valores que trae e
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.Extra)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Extra (Del que solo se utilizara la clave), devuelve true si existe un extra cuya clave coincida con e, false en caso contrario
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Añadir(modeloDominio.Cliente)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Cliente, se añade a la BD (Sin comprobar si existe ya)
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Borrar(modeloDominio.Cliente)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Cliente (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.Cliente)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Cliente (Del que solo se utilizara la clave), obtendremos un Cliente con todos sus campos, no se contempla el caso en el que el Cliente no esta en la BD
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Actualizar(modeloDominio.Cliente)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Cliente, se actualizara el cliente cuya clave coincida con c (no se contempla el caso en el que no existe ningun cliente con dicha clave),cambiando todos sus campos a los valores que trae c 
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.Cliente)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Cliente (Del que solo se utilizara la clave), devuelve true si existe un cliente cuya clave coincida con c, false en caso contrario
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Añadir(modeloDominio.Presupuesto)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Presupuesto, se añade a la BD (Sin comprobar si existe ya).
+            Se añade tambien a la tabla presupuestoVehiculo las filas correspondientes
+            dando por echo que los vehiculos asociados ya se encuentran en la bd.
+            (Se da por echo tambien que el cliente asociado y el vehiculo comprado ya existen en la bd)
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Borrar(modeloDominio.Presupuesto)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Presupuesto (Puede ser que solo contenga la clave), se borrara sin comprobar si existe o no, su aparicion en la bd
+            Se borran tambien las filas de presupuestoVehiculo
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Buscar(modeloDominio.Presupuesto)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Presupuesto (Del que solo se utilizara la clave), obtendremos un Presupuesto con todos sus campos, 
+            no se contempla el caso en el que el Presupuesto no esta en la BD
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Actualizar(modeloDominio.Presupuesto)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST: Dado un Presupuesto, se actualizara el presupuesto cuya clave coincida con c 
+            (No se contempla el caso en el que no existe ningun presupuesto con dicha clave),
+            cambiando todos sus campos a los valores que trae p (Incluso la lista de vehiculos asociados)
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:TrabajoTOO.Persistencia.Existe(modeloDominio.Presupuesto)">
+            <summary>
+            PRE:la clase que se pasa como parametro debe de estar incializada
+            POST:Dado un Presupuesto (Del que solo se utilizara la clave), devuelve true si existe un presupuesto cuya clave coincida con c, false en caso contrario
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TrabajoTOO.PresupuestosDato">
+            <summary>
+            Representa la forma que tienen los datos de la tabla Presupuesto en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.PresupuestosDato.Id">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el id del presupuesto
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.PresupuestosDato.Cliente">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve el cliente DNI del cliente asociado a dicho presupuesto
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.PresupuestosDato.FechaRealizacion">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve la fecha en que se realizo dicho presupuesto
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.PresupuestosDato.Estado">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devulve el estado del presupuesto
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.PresupuestosDato.VehiculoComprado">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devulve el vehiculo comprado en el presupuesto
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.PresupuestosDato.#ctor(System.String,System.String,System.DateTime,System.String,System.String)">
+            <summary>
+            Inicializa la clase
+            </summary>
+            <param name="id"></param>
+            <param name="cliente"></param>
+            <param name="fecha"></param>
+            <param name="estado"></param>
+            <param name="vehiculoComprado"></param>
+        </member>
+        <member name="T:TrabajoTOO.PresupuestosTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que id es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.PresupuestosTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.VNuevoDatos">
+            <summary>
+            Representa la forma que tienen los datos de la tabla vehiculosNuevos en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VNuevoDatos.#ctor(System.String,System.String,System.String,System.Int32,System.Double)">
+            <summary>
+            Inicializa la clase y llama al constructor de la clase padre
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="marca"></param>
+            <param name="modelo"></param>
+            <param name="potencia"></param>
+            <param name="pvRecomen"></param>
+        </member>
+        <member name="T:TrabajoTOO.VNuevoTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que el numero de bastidor es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VNuevoTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.VSegundaManoTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que el numero de bastidor es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VSegundaManoTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.VSegundaManoDatos">
+            <summary>
+            Representa la forma que tienen los datos de la tabla VNuevoExtras en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VSegundaManoDatos.Matricula">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve la matricula
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VSegundaManoDatos.FechaMatriculacion">
+            <summary>
+            PRE: la clase debe de estar incializada
+            POST: devuelve la fecha de matriculacion
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VSegundaManoDatos.#ctor(System.String,System.DateTime,System.String,System.String,System.String,System.Int32,System.Double)">
+            <summary>
+            Incializa la clase
+            </summary>
+            <param name="matricula"></param>
+            <param name="fechaMatriculacion"></param>
+            <param name="numBastidor"></param>
+            <param name="marca"></param>
+            <param name="modelo"></param>
+            <param name="potencia"></param>
+            <param name="pvRecomen"></param>
+        </member>
+        <member name="T:TrabajoTOO.VehiculoTabla">
+            <summary>
+            la clase hereda de  KeyedGeneral y le decimos que numero de bastidor es nuestra clave
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VehiculoTabla.#ctor">
+            <summary>
+            Inicializa la clase
+            </summary>
+        </member>
+        <member name="T:TrabajoTOO.VehiculoDatos">
+            <summary>
+            Representa la forma que tienen los datos de la tabla vehiculo en el sistema de persistencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VehiculoDatos.NumBastidor">
+            <summary>
+            PRE: la clase debe de de estar incializada
+            POST: devuelve el numero de bastidor
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VehiculoDatos.Marca">
+            <summary>
+            PRE: la clase debe de de estar incializada
+            POST:devuelve la marca
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VehiculoDatos.Modelo">
+            <summary>
+            PRE: la clase debe de de estar incializada
+            POST: devuelve el modelo
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VehiculoDatos.Potencia">
+            <summary>
+            PRE: la clase debe de de estar incializada
+            POST:devuelve la potencia
+            </summary>
+        </member>
+        <member name="P:TrabajoTOO.VehiculoDatos.PvRecomendado">
+            <summary>
+            PRE: la clase debe de de estar incializada
+            POST:devuelve el pv recomendado
+            </summary>
+        </member>
+        <member name="M:TrabajoTOO.VehiculoDatos.#ctor(System.String,System.String,System.String,System.Int32,System.Double)">
+            <summary>
+            Incializa la clase
+            </summary>
+            <param name="numBastidor"></param>
+            <param name="marca"></param>
+            <param name="modelo"></param>
+            <param name="potencia"></param>
+            <param name="pvRecomen"></param>
+        </member>
+    </members>
+</doc>

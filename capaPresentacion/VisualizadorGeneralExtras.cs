@@ -30,7 +30,7 @@ namespace capaPresentacion
 
         /// <summary>
         ///  PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia el filtro del nombre del nombre y muestra todos los extras
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en el boton limpiar, hace que si se hace click en este boton limpia el filtro del nombre del nombre y muestra todos los extras
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -60,7 +60,7 @@ namespace capaPresentacion
 
         /// <summary>
         /// PRE: la clase debe de estar incializada
-        /// POST: evento que se da lugar al hacer click en el boton buscar, mustra en la lista los extras que contienen en su nombre lo que contiene el textbox
+        /// POST:  Metodo de respuesta que se da lugar al hacer click en el boton buscar, mustra en la lista los extras que contienen en su nombre lo que contiene el textbox
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e2"></param>

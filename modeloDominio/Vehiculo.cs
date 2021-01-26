@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace modeloDominio
 {
+    /// <summary>
+    /// Clase que sirve para representar un vehiculo
+    /// </summary>
     public abstract class Vehiculo:IEquatable<Vehiculo> 
     {
 

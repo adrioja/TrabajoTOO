@@ -13,6 +13,9 @@ namespace TrabajoTOO
     /// </summary>
     public class Persistencia
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public Persistencia() { }
 
         //------------------------------------------METODOS VARIOS---------------------------------------------
@@ -40,6 +43,12 @@ namespace TrabajoTOO
 
         }
 
+        /// <summary>
+        /// PRE:la clase que se pasa como parametro debe de estar incializada
+        /// POST: Dado un Vehiculo (Del que solo se utilizara la clave), devuelve true si existe un vehiculo  cuya clave coincida con v1, false en caso contrario
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <returns></returns>
         public static bool Existe(Vehiculo v1)
         {
             VNuevoDatos v = new VNuevoDatos(v1.NumBastidor, v1.Marca, v1.Modelo, v1.Potencia, v1.PvRecomendado);
@@ -630,7 +639,7 @@ namespace TrabajoTOO
         /// PRE:la clase que se pasa como parametro debe de estar incializada
         /// POST:Dado un Presupuesto (Del que solo se utilizara la clave), devuelve true si existe un presupuesto cuya clave coincida con c, false en caso contrario
         /// </summary>
-        /// <param name="c"></param>
+        /// <param name="p"></param>
         /// <returns></returns>
         public static bool Existe(Presupuesto p)
         {

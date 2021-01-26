@@ -38,7 +38,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Metodo de respuesta al evento CurrentChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
+        /// PRE: La clase debe estar inicializada
+        /// POS: Metodo de respuesta al evento CurrentItemChanged de BindingSource, actualiza los textBox para mostrar el cliente correspondiente 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

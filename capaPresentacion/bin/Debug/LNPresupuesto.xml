@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LNPresupuesto</name>
+    </assembly>
+    <members>
+        <member name="T:LNPresupuesto.LogicaNegocioPresupuesto">
+            <summary>
+            Contiene toda la logica de negocio ligada a los presupuestos
+            </summary>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.añadirPresupuesto(modeloDominio.Presupuesto)">
+            <summary>
+            Pre: P debe estar inicializado.
+            Post: Si el presupuesto no existe, se añade a la base de datos y devuelve true, en caso contrario devuelve false.
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.eliminarPresupuesto(modeloDominio.Presupuesto)">
+            <summary>
+            Pre: P debe estar inicializado.
+            Post: Si el presupuesto existe en la bd, lo elimina de la base de datos y devuelve true, en caso contrario devuelve false.
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.existePresupuesto(modeloDominio.Presupuesto)">
+            <summary>
+            Pre: P debe estar inicializado.
+            Post: Si el presupuesto existe devuelve true, en caso contrario devuelve false.
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.actualizarPresupuesto(modeloDominio.Presupuesto)">
+            <summary>
+            Pre: P debe estar inicializado.
+            Post: Si existe p en la bd(un preuspuesto con el mismo id), busca en la base de datos un presupuesto con el mismo id que p. Si lo encuentra actualiza sus valores con los de los campos de p y devuelve true. En caso contrario devuelve false.
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.buscarPresupuesto(modeloDominio.Presupuesto)">
+            <summary>
+            Pre: P debe estar inicializado.
+            Post: Si existe p, nos devuelve de la base de datos un objeto persistencia on todos sus valores. En caso contraio devuelve null.
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LNPresupuesto.LogicaNegocioPresupuesto.ListaPresupuestos">
+            <summary>
+            Pre: la clase debe estar inicializada
+            Post: devuelve la lista de los presupuestos
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

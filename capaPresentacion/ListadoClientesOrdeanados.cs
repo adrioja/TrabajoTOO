@@ -41,7 +41,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Click en DNI, se ordenan teniendo el cuenta el DNI
+        /// PRE: La clase debe estar inicializada
+        /// POS: Click en DNI, se ordenan teniendo el cuenta el DNI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -52,7 +53,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Click en Nombre, se ordenan teniendo el cuenta el Nombre
+        /// PRE: La clase debe estar inicializada
+        /// POS: Click en Nombre, se ordenan teniendo el cuenta el Nombre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -63,7 +65,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Click en Telefono, se ordenan teniendo el cuenta el Telefono
+        /// PRE: La clase debe estar inicializada
+        /// POS: Click en Telefono, se ordenan teniendo el cuenta el Telefono
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -74,7 +77,8 @@ namespace capaPresentacion
         }
 
         /// <summary>
-        /// Click en Cancelar
+        /// PRE: La clase debe estar inicializada
+        /// POS: Click en Cancelar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

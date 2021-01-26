@@ -12,6 +12,9 @@ namespace TrabajoTOO
     /// </summary>
     class PresupuestosTabla : KeyedGeneral<string, PresupuestosDato>
     {
+        /// <summary>
+        /// Inicializa la clase
+        /// </summary>
         public PresupuestosTabla() : base() { }
     }
 }
